@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Noto+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><link rel="stylesheet" href="css/main_admin.css"/><link rel="stylesheet" href="css/audit.css"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"tertiary-container":"#003211","on-error":"#ffffff","surface-variant":"#d3e4fe","on-tertiary-fixed":"#002109","on-background":"#0b1c30","outline":"#74777f","surface-bright":"#f8f9ff","background":"#f8f9ff","surface":"#f8f9ff","on-surface-variant":"#44474f","secondary-fixed-dim":"#ffb598","secondary":"#a63b00","surface-container":"#e5eeff","error":"#ba1a1a","on-surface":"#0b1c30","on-secondary":"#ffffff","surface-container-lowest":"#ffffff","on-tertiary-fixed-variant":"#005320","secondary-fixed":"#ffdbce","on-secondary-fixed":"#370e00","on-primary-fixed":"#001a41","outline-variant":"#c4c6d0","on-secondary-fixed-variant":"#7f2b00","surface-container-highest":"#d3e4fe","inverse-surface":"#213145","on-primary-container":"#7b91c0","surface-container-low":"#eff4ff","inverse-on-surface":"#eaf1ff","on-secondary-container":"#561b00","secondary-container":"#fc671e","tertiary-fixed":"#7ffc97","tertiary-fixed-dim":"#62df7d","error-container":"#ffdad6","primary":"#001435","primary-fixed":"#d8e2ff","on-error-container":"#93000a","inverse-primary":"#b0c7f9","tertiary":"#001b06","on-tertiary-container":"#1ea74d","surface-container-high":"#dce9ff","on-primary":"#ffffff","on-primary-fixed-variant":"#304671","primary-container":"#0f2952","surface-dim":"#cbdbf5","surface-tint":"#485e8a","on-tertiary":"#ffffff","primary-fixed-dim":"#b0c7f9"},borderRadius:{DEFAULT:"0.125rem",lg:"0.25rem",xl:"0.5rem",full:"0.75rem"},spacing:{"gutter-lg":"1.5rem",gutter:"1rem","space-xs":"0.25rem","margin-lg":"2rem","margin-md":"1.5rem",margin:"1rem","space-sm":"0.5rem","space-md":"0.75rem","space-lg":"1.25rem","space-xl":"2rem"},fontFamily:{"label-md":["Noto Sans"],"headline-lg-mobile":["Inter"],"headline-xl":["Inter"],"headline-sm":["Inter"],"label-sm":["Noto Sans"],"headline-md":["Inter"],"label-lg":["Noto Sans"],"body-md":["Inter"],"data-mono":["Inter"],"headline-lg":["Inter"],"body-lg":["Inter"],"body-sm":["Inter"]},fontSize:{"label-md":["12px",{lineHeight:"16px",letterSpacing:"0.02em",fontWeight:"600"}],"headline-lg-mobile":["20px",{lineHeight:"28px",fontWeight:"700"}],"headline-xl":["32px",{lineHeight:"40px",letterSpacing:"-0.02em",fontWeight:"700"}],"headline-sm":["16px",{lineHeight:"24px",fontWeight:"600"}],"label-sm":["11px",{lineHeight:"14px",letterSpacing:"0.04em",fontWeight:"500"}],"headline-md":["18px",{lineHeight:"26px",fontWeight:"600"}],"label-lg":["13px",{lineHeight:"18px",fontWeight:"600"}],"body-md":["13px",{lineHeight:"20px",fontWeight:"400"}],"data-mono":["12px",{lineHeight:"16px",fontWeight:"500"}],"headline-lg":["24px",{lineHeight:"32px",letterSpacing:"-0.015em",fontWeight:"700"}],"body-lg":["15px",{lineHeight:"22px",fontWeight:"400"}],"body-sm":["12px",{lineHeight:"18px",fontWeight:"400"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-64 bg-primary-container z-50 flex flex-col shadow-[0_1px_8px_rgba(0,0,0,0.12)]"><div class="h-14 px-margin flex items-center gap-space-sm bg-primary border-b-2 border-secondary"><span class="material-symbols-outlined text-secondary text-[24px]">verified</span><div class="flex flex-col"><span class="font-label-lg text-label-lg text-on-primary tracking-wide leading-tight">MahaKaushal</span><span class="font-label-sm text-[10px] text-primary-fixed-dim leading-none uppercase tracking-wider">Admin Portal</span></div></div><div class="px-margin py-space-sm bg-primary/40"><div class="flex items-center justify-between text-primary-fixed-dim font-label-sm text-label-sm"><span>JURISDICTION</span><span class="font-data-mono text-[10px] px-space-xs py-0.5 bg-secondary text-on-secondary rounded-DEFAULT font-bold">MH-PUN</span></div><p class="font-label-md text-label-md text-on-primary font-medium mt-0.5 truncate">Pune Divisional Commissionerate</p></div><nav class="flex-1 px-space-xs py-space-sm space-y-1 overflow-y-auto" data-active-classes="bg-primary text-on-primary border-l-4 border-secondary"><a class="flex items-center px-space-md py-space-sm text-surface-variant font-label-md text-label-md rounded-DEFAULT hover:bg-primary/50 hover:text-on-primary transition-colors" data-path="overview" href="index.html"><span class="material-symbols-outlined mr-space-md text-[18px]">dashboard</span>Overview</a><a aria-current="page" class="flex items-center px-space-md py-space-sm font-label-md rounded-DEFAULT transition-colors bg-primary text-on-primary border-l-4 border-secondary" data-path="trainee-records" href="records_audit.html"><span class="material-symbols-outlined mr-space-md text-[18px]">badge</span>Trainee Records</a><a class="flex items-center px-space-md py-space-sm text-surface-variant font-label-md text-label-md rounded-DEFAULT hover:bg-primary/50 hover:text-on-primary transition-colors" data-path="non-responder-queue" href="non_responder_queue.html"><span class="material-symbols-outlined mr-space-md text-[18px]">notification_important</span>Non-Responder Queue</a><a class="flex items-center px-space-md py-space-sm text-surface-variant font-label-md text-label-md rounded-DEFAULT hover:bg-primary/50 hover:text-on-primary transition-colors" data-path="employer-validation" href="employer_validation.html"><span class="material-symbols-outlined mr-space-md text-[18px]">apartment</span>Employer Validation</a><a class="flex items-center px-space-md py-space-sm text-surface-variant font-label-md text-label-md rounded-DEFAULT hover:bg-primary/50 hover:text-on-primary transition-colors" data-path="analytics-reports" href="analytics_reports.html"><span class="material-symbols-outlined mr-space-md text-[18px]">insights</span>Analytics &amp; Reports</a><a class="flex items-center px-space-md py-space-sm text-surface-variant font-label-md text-label-md rounded-DEFAULT hover:bg-primary/50 hover:text-on-primary transition-colors" data-path="skill-gap-analysis" href="skill_gap_analysis.html"><span class="material-symbols-outlined mr-space-md text-[18px]">troubleshoot</span>Skill Gap Analysis</a><a class="flex items-center px-space-md py-space-sm text-surface-variant font-label-md text-label-md rounded-DEFAULT hover:bg-primary/50 hover:text-on-primary transition-colors" data-path="provider-performance" href="provider_performance.html"><span class="material-symbols-outlined mr-space-md text-[18px]">military_tech</span>Provider Performance</a><a class="flex items-center px-space-md py-space-sm text-surface-variant font-label-md text-label-md rounded-DEFAULT hover:bg-primary/50 hover:text-on-primary transition-colors" data-path="policy-reports" href="#"><span class="material-symbols-outlined mr-space-md text-[18px]">policy</span>Policy Reports</a><a class="flex items-center px-space-md py-space-sm text-surface-variant font-label-md text-label-md rounded-DEFAULT hover:bg-primary/50 hover:text-on-primary transition-colors" data-path="system-access" href="login.html"><span class="material-symbols-outlined mr-space-md text-[18px]">admin_panel_settings</span>System &amp; Access</a></nav><div class="p-space-md bg-primary/60 border-t border-primary-container"><div class="flex items-center gap-space-sm"><div class="w-2 h-2 rounded-full bg-secondary animate-pulse"></div><div class="flex flex-col"><span class="font-label-sm text-[10px] text-surface-variant uppercase tracking-wider">Server Status: Online</span><span class="font-data-mono text-[10px] text-primary-fixed-dim">State Data Center, Mumbai</span></div></div></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-14 bg-surface-container-lowest z-40 shadow-[0_1px_8px_rgba(0,0,0,0.04)] px-margin-lg flex items-center justify-between"><div class="flex items-center gap-margin-md"><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded-DEFAULT bg-primary text-on-primary flex items-center justify-center font-bold text-xs">MH</div><div class="flex flex-col"><span class="font-label-md text-label-md text-primary font-bold leading-tight">महाराष्ट्र शासन</span><span class="font-label-sm text-[10px] text-on-surface-variant leading-none">Govt. of Maharashtra • SDED</span></div></div><div class="h-6 w-px bg-outline-variant"></div><div class="flex items-center bg-surface-container-low px-space-sm py-1 rounded-DEFAULT"><span class="font-label-sm text-label-sm text-on-surface-variant mr-space-xs">Cohort:</span><select class="bg-transparent font-label-md text-label-md text-on-surface font-semibold focus:outline-none cursor-pointer"><option>FY 2024-25 Q3</option><option>FY 2024-25 Q2</option><option>FY 2023-24 Annual</option></select></div><div class="flex items-center bg-surface-container-low px-space-sm py-1 rounded-DEFAULT"><span class="font-label-sm text-label-sm text-on-surface-variant mr-space-xs">District:</span><select class="bg-transparent font-label-md text-label-md text-on-surface font-semibold focus:outline-none cursor-pointer"><option>Pune (All Talukas)</option><option>Haveli</option><option>Baramati</option><option>Khed</option><option>Shirur</option></select></div></div><div class="flex items-center gap-space-md flex-1 max-w-xs mx-margin-md"><div class="relative w-full"><span class="material-symbols-outlined absolute left-2.5 top-1/2 -translate-y-1/2 text-[18px] text-outline">search</span><input class="w-full pl-8 pr-3 py-1 bg-surface-container-low text-on-surface font-body-sm text-body-sm rounded-DEFAULT placeholder:text-outline focus:outline-none focus:bg-surface-container-lowest focus:ring-1 focus:ring-primary" placeholder="Search Aadhaar, UID, Center ID..." type="text"/></div></div><div class="flex items-center gap-space-md"><button class="relative p-1.5 rounded-DEFAULT text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1 right-1 w-2 h-2 bg-secondary rounded-full"></span></button><button class="p-1.5 rounded-DEFAULT text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[20px]">help</span></button><div class="h-6 w-px bg-outline-variant"></div><div class="flex items-center gap-space-sm pl-space-xs"><div class="flex flex-col text-right"><span class="font-label-md text-label-md text-on-surface font-bold leading-tight">Rajesh Deshmukh, IAS</span><div class="flex items-center gap-1 justify-end"><span class="px-1.5 py-0.2 bg-secondary-fixed text-on-secondary-fixed font-label-sm text-[10px] rounded font-bold uppercase">District Skill Officer</span><span class="font-label-sm text-[10px] text-on-surface-variant">Pune</span></div></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-outline-variant" src="https://lh3.googleusercontent.com/aida/AEtjO1XZ5_RGann-JS9-SXlCwMRwGfPfXVcOVklpC5V0eTvQClSjZkunPNoV5M1DG7pVKUlM-w1Ek0_WIFB3LF3preqPJM9Nldd0dpUb6U78uOUf2vXckERfwAiRw05-48oV-hBpHoXbLbiqJLyACVA1ujnTD3gRId3eSN4SLj2tZ_j2UaTSnTOMTGjZRuwcMufJq9GC4jMZjSIIS2c2plWA8DUCu5w8ceF756YeOIrxRm0l6idfYW_EnUZYOFadZztVPjas9Jq8xf-bW3k"/></div></div></header><main class="relative pt-14 bg-surface w-full px-gutter-lg py-margin-md"><div class="flex flex-col w-full">
+<!-- Top Command & Filter Deck -->
+<div class="flex flex-col gap-space-md mb-margin">
+<!-- Title Strip & Key Metrics -->
+<div class="flex flex-wrap items-center justify-between gap-space-md">
+<div>
+<div class="flex items-center gap-space-sm">
+<span class="font-data-mono text-label-sm text-secondary uppercase tracking-widest">MSSDS Registry • SDED/TR-2025</span>
+<span class="w-1.5 h-1.5 rounded-full bg-outline-variant"></span>
+<span class="font-data-mono text-label-sm text-on-surface-variant">Pune Regional Command</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-primary tracking-tight mt-0.5">Trainee Records &amp; Verification Audit</h1>
+</div>
+<div class="flex items-center gap-space-sm">
+<button class="flex items-center gap-space-xs px-space-md py-1.5 bg-surface-container-lowest text-on-surface font-label-md text-label-md rounded shadow-sm hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined text-[18px] text-secondary">cloud_download</span>
+          Export Full Register (CSV)
+        </button>
+<button class="flex items-center gap-space-xs px-space-md py-1.5 bg-secondary text-on-secondary font-label-md text-label-md rounded shadow-sm hover:bg-secondary/90 transition-colors">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+          Initiate Batch Audit
+        </button>
+</div>
+</div>
+<!-- Status Tabs Strip -->
+<div class="flex items-center gap-space-xs overflow-x-auto pb-1 border-b-0">
+<button class="flex items-center gap-space-sm px-space-md py-2 rounded-t bg-surface-container-lowest text-primary font-label-md text-label-md shadow-sm">
+<span>All Trainees</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high text-primary font-data-mono text-label-sm">184,920</span>
+</button>
+<button class="flex items-center gap-space-sm px-space-md py-2 rounded-t bg-surface-container-low text-on-surface-variant hover:text-primary hover:bg-surface-container font-label-md text-label-md transition-colors">
+<span class="flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-on-tertiary-container"></span>
+          Fully Verified
+        </span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-highest text-on-surface-variant font-data-mono text-label-sm">128,450</span>
+</button>
+<button class="flex items-center gap-space-sm px-space-md py-2 rounded-t bg-surface-container-low text-on-surface-variant hover:text-primary hover:bg-surface-container font-label-md text-label-md transition-colors">
+<span class="flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+          Pending Follow-up
+        </span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-highest text-on-surface-variant font-data-mono text-label-sm">34,120</span>
+</button>
+<button class="flex items-center gap-space-sm px-space-md py-2 rounded-t bg-surface-container-low text-on-surface-variant hover:text-primary hover:bg-surface-container font-label-md text-label-md transition-colors">
+<span class="flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-error"></span>
+          Flagged / Audit
+        </span>
+<span class="px-1.5 py-0.5 rounded bg-error-container text-on-error-container font-data-mono text-label-sm">2,840</span>
+</button>
+<button class="flex items-center gap-space-sm px-space-md py-2 rounded-t bg-surface-container-low text-on-surface-variant hover:text-primary hover:bg-surface-container font-label-md text-label-md transition-colors">
+<span>Discontinued / Inactive</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-highest text-on-surface-variant font-data-mono text-label-sm">19,510</span>
+</button>
+</div>
+<!-- Multi-Filter Interactive Query Bar -->
+<div class="bg-surface-container-lowest p-space-md rounded shadow-sm flex flex-col gap-space-sm">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-space-sm">
+<!-- Primary Universal Search -->
+<div class="md:col-span-4 relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[20px]">search</span>
+<input class="w-full h-9 pl-10 pr-3 bg-surface-container-low text-on-surface font-body-sm text-body-sm rounded focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary placeholder:text-outline" id="traineeSearchInput" placeholder="Search Trainee ID, Aadhaar Hash, Candidate Name, Mobile..." type="text" value="MK-7892"/>
+</div>
+<!-- Course / Qualification Dropdown -->
+<div class="md:col-span-2">
+<select class="w-full h-9 px-2 bg-surface-container-low text-on-surface font-label-md text-label-md rounded focus:outline-none focus:ring-2 focus:ring-primary">
+<option selected="">All Sectors &amp; Courses</option>
+<option>Automotive • CNC Operator</option>
+<option>Healthcare • GDA &amp; Home Health</option>
+<option>Renewable Energy • Solar Technician</option>
+<option>IT-ITES • Web Developer</option>
+</select>
+</div>
+<!-- Training Partner (VTP) -->
+<div class="md:col-span-2">
+<select class="w-full h-9 px-2 bg-surface-container-low text-on-surface font-label-md text-label-md rounded focus:outline-none focus:ring-2 focus:ring-primary">
+<option selected="">Training Provider (All VTPs)</option>
+<option>Tata STRIVE Pune Center</option>
+<option>Apollo MedSkills Nashik</option>
+<option>MSME Technology Center Aurangabad</option>
+<option>Don Bosco Skill Mission Kurla</option>
+</select>
+</div>
+<!-- District / Taluka Filter -->
+<div class="md:col-span-2">
+<select class="w-full h-9 px-2 bg-surface-container-low text-on-surface font-label-md text-label-md rounded focus:outline-none focus:ring-2 focus:ring-primary">
+<option selected="">District: Pune (All Talukas)</option>
+<option>Haveli / Pune Urban</option>
+<option>Baramati &amp; Daund</option>
+<option>Khed (Chakan Auto Belt)</option>
+<option>Nashik (Nashik City)</option>
+<option>Aurangabad (Waluj MIDC)</option>
+</select>
+</div>
+<!-- Status Filter & Quick Action -->
+<div class="md:col-span-2 flex items-center gap-space-xs">
+<select class="w-full h-9 px-2 bg-surface-container-low text-on-surface font-label-md text-label-md rounded focus:outline-none focus:ring-2 focus:ring-primary">
+<option selected="">Status: All Records</option>
+<option>Employed (Verified)</option>
+<option>Pending ESIC/PF</option>
+<option>Caseworker Assigned</option>
+<option>Flagged Discrepancy</option>
+</select>
+<button class="h-9 w-9 flex items-center justify-center rounded bg-surface-container-low text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" title="Reset Filters">
+<span class="material-symbols-outlined text-[18px]">tune</span>
+</button>
+</div>
+</div>
+<!-- Live query telemetry pill -->
+<div class="flex flex-wrap items-center justify-between text-label-sm font-label-sm text-on-surface-variant pt-1 border-t-0">
+<div class="flex items-center gap-space-sm">
+<span>Active filter query:</span>
+<span class="inline-flex items-center gap-1 bg-surface-container-high px-2 py-0.5 rounded text-primary font-data-mono">
+<span>Center: All</span>
+<button class="hover:text-error"><span class="material-symbols-outlined text-[14px]">close</span></button>
+</span>
+<span class="inline-flex items-center gap-1 bg-surface-container-high px-2 py-0.5 rounded text-primary font-data-mono">
+<span>District: Pune</span>
+<button class="hover:text-error"><span class="material-symbols-outlined text-[14px]">close</span></button>
+</span>
+<button class="text-secondary hover:underline ml-1">Clear all parameters</button>
+</div>
+<div class="flex items-center gap-space-sm font-data-mono">
+<span>Showing records 1 - 6 of 184,920</span>
+<span class="w-1 h-1 rounded-full bg-outline"></span>
+<span>Indexed: 4 mins ago</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Primary Workspace: Split Grid (Left: Dense Table, Right: Sticky Verification Dossier) -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-gutter-lg items-start">
+<!-- Trainee Data Table Container (Takes 7 or 8 columns on large screens) -->
+<div class="xl:col-span-7 flex flex-col bg-surface-container-lowest rounded shadow-sm overflow-hidden">
+<!-- Table Header Utility Strip -->
+<div class="p-space-md flex items-center justify-between bg-surface-container-low">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[20px]">fact_check</span>
+<span class="font-headline-sm text-headline-sm text-primary">Master Trainee Ledger</span>
+<span class="px-2 py-0.5 bg-primary-fixed text-on-primary-fixed rounded font-data-mono text-label-sm font-bold">12 New Verifications</span>
+</div>
+<div class="flex items-center gap-space-xs text-label-sm font-label-sm text-on-surface-variant">
+<span>Sort:</span>
+<button class="font-bold text-primary hover:underline">Verification Date (Recent)</button>
+</div>
+</div>
+<!-- High Density Table -->
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container text-on-surface-variant font-label-sm text-label-sm tracking-wider uppercase">
+<th class="py-2.5 px-space-md font-semibold">Trainee ID &amp; Demographics</th>
+<th class="py-2.5 px-space-sm font-semibold">Course &amp; Center</th>
+<th class="py-2.5 px-space-sm font-semibold">Employment Status</th>
+<th class="py-2.5 px-space-sm font-semibold">Audit Level</th>
+<th class="py-2.5 px-space-sm font-semibold text-right">Reported CTC</th>
+<th class="py-2.5 px-space-md font-semibold text-center">Action</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-low font-body-sm text-body-sm text-on-surface">
+<!-- Row 1: Selected / Rahul Jadhav -->
+<tr class="bg-surface-container-high/60 hover:bg-surface-container transition-colors cursor-pointer border-l-4 border-l-secondary" onclick="selectTrainee('MK-7892')">
+<td class="py-3 px-space-md">
+<div class="flex items-start gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-primary text-on-primary font-bold flex items-center justify-center text-[11px] shrink-0 mt-0.5">
+                    RJ
+                  </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-primary font-bold truncate">Rahul S. Jadhav</span>
+<span class="font-data-mono text-[11px] text-secondary font-bold">MK-7892</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant">22 yr • M • Pune (Haveli)</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-sm">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-medium truncate">CNC Machine Operator</span>
+<span class="font-label-sm text-[11px] text-on-surface-variant truncate">Tata STRIVE Skill Center</span>
+<span class="font-data-mono text-[10px] text-outline">Batch: 2024-C2-Q1</span>
+</div>
+</td>
+<td class="py-3 px-space-sm">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold truncate">Bharat Forge Ltd</span>
+<span class="font-label-sm text-[11px] text-on-surface-variant">Full-time Regular</span>
+<span class="font-data-mono text-[10px] text-on-tertiary-container flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[12px]">verified</span> ESIC: 310992819
+                  </span>
+</div>
+</td>
+<td class="py-3 px-space-sm">
+<div class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container-high text-tertiary-container font-label-sm text-label-sm font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-on-tertiary-container"></span>
+                  L-2 Verified
+                </div>
+<div class="font-label-sm text-[10px] text-on-surface-variant mt-0.5">By S. Deshmukh</div>
+</td>
+<td class="py-3 px-space-sm text-right font-data-mono font-bold text-primary">
+                ₹21,500<span class="text-[10px] font-normal text-on-surface-variant">/mo</span>
+</td>
+<td class="py-3 px-space-md text-center">
+<button class="p-1.5 rounded hover:bg-surface-container-lowest text-primary transition-colors" title="Audit dossier">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</td>
+</tr>
+<!-- Row 2: Snehal Patil -->
+<tr class="bg-surface-container-lowest hover:bg-surface-container-low transition-colors cursor-pointer" onclick="selectTrainee('MK-7893')">
+<td class="py-3 px-space-md">
+<div class="flex items-start gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest text-primary font-bold flex items-center justify-center text-[11px] shrink-0 mt-0.5">
+                    SP
+                  </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface font-bold truncate">Snehal P. Patil</span>
+<span class="font-data-mono text-[11px] text-outline font-medium">MK-7893</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant">24 yr • F • Nashik</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-sm">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-medium truncate">General Duty Assistant</span>
+<span class="font-label-sm text-[11px] text-on-surface-variant truncate">Apollo MedSkills Nashik</span>
+<span class="font-data-mono text-[10px] text-outline">Batch: 2024-H4-Q2</span>
+</div>
+</td>
+<td class="py-3 px-space-sm">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold truncate">Sahyadri Hospital</span>
+<span class="font-label-sm text-[11px] text-on-surface-variant">Clinical Staff</span>
+<span class="font-data-mono text-[10px] text-secondary flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[12px]">schedule</span> Pending GSTN Scrutiny
+                  </span>
+</div>
+</td>
+<td class="py-3 px-space-sm">
+<div class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container text-secondary font-label-sm text-label-sm font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                  L-1 Review
+                </div>
+<div class="font-label-sm text-[10px] text-on-surface-variant mt-0.5">Salary Slip Under Check</div>
+</td>
+<td class="py-3 px-space-sm text-right font-data-mono font-bold text-on-surface">
+                ₹18,200<span class="text-[10px] font-normal text-on-surface-variant">/mo</span>
+</td>
+<td class="py-3 px-space-md text-center">
+<button class="p-1.5 rounded hover:bg-surface-container-high text-on-surface-variant transition-colors" title="Audit dossier">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</td>
+</tr>
+<!-- Row 3: Ganesh Rathod -->
+<tr class="bg-surface-container-lowest hover:bg-surface-container-low transition-colors cursor-pointer" onclick="selectTrainee('MK-7894')">
+<td class="py-3 px-space-md">
+<div class="flex items-start gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-secondary-fixed text-on-secondary-fixed font-bold flex items-center justify-center text-[11px] shrink-0 mt-0.5">
+                    GR
+                  </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface font-bold truncate">Ganesh M. Rathod</span>
+<span class="font-data-mono text-[11px] text-outline font-medium">MK-7894</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant">21 yr • M • Aurangabad</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-sm">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-medium truncate">Rooftop Solar Tech</span>
+<span class="font-label-sm text-[11px] text-on-surface-variant truncate">MSME Tech Center</span>
+<span class="font-data-mono text-[10px] text-outline">Batch: 2024-SOL-01</span>
+</div>
+</td>
+<td class="py-3 px-space-sm">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold truncate">MahaUrja Enterprises</span>
+<span class="font-label-sm text-[11px] text-on-surface-variant">Field Technician</span>
+<span class="font-data-mono text-[10px] text-error flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[12px]">contact_phone</span> No Employer Answer
+                  </span>
+</div>
+</td>
+<td class="py-3 px-space-sm">
+<div class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-error-container text-on-error-container font-label-sm text-label-sm font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+                  Caseworker Queue
+                </div>
+<div class="font-label-sm text-[10px] text-on-surface-variant mt-0.5">Assigned to: A. Kulkarni</div>
+</td>
+<td class="py-3 px-space-sm text-right font-data-mono font-bold text-on-surface">
+                ₹16,500<span class="text-[10px] font-normal text-on-surface-variant">/mo</span>
+</td>
+<td class="py-3 px-space-md text-center">
+<button class="p-1.5 rounded hover:bg-surface-container-high text-on-surface-variant transition-colors" title="Audit dossier">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</td>
+</tr>
+<!-- Row 4: Pallavi R. More -->
+<tr class="bg-surface-container-lowest hover:bg-surface-container-low transition-colors cursor-pointer">
+<td class="py-3 px-space-md">
+<div class="flex items-start gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest text-primary font-bold flex items-center justify-center text-[11px] shrink-0 mt-0.5">
+                    PM
+                  </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface font-bold truncate">Pallavi R. More</span>
+<span class="font-data-mono text-[11px] text-outline font-medium">MK-7895</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant">23 yr • F • Baramati</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-sm">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-medium truncate">Accounting &amp; Tally Prime</span>
+<span class="font-label-sm text-[11px] text-on-surface-variant truncate">MITCON Skill Center</span>
+<span class="font-data-mono text-[10px] text-outline">Batch: 2024-ACC-9</span>
+</div>
+</td>
+<td class="py-3 px-space-sm">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold truncate">Kalyani Steels Pvt Ltd</span>
+<span class="font-label-sm text-[11px] text-on-surface-variant">Junior Accounts Assistant</span>
+<span class="font-data-mono text-[10px] text-on-tertiary-container flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[12px]">verified</span> EPFO Verified
+                  </span>
+</div>
+</td>
+<td class="py-3 px-space-sm">
+<div class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container-high text-tertiary-container font-label-sm text-label-sm font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-on-tertiary-container"></span>
+                  L-2 Verified
+                </div>
+<div class="font-label-sm text-[10px] text-on-surface-variant mt-0.5">By N. Shinde</div>
+</td>
+<td class="py-3 px-space-sm text-right font-data-mono font-bold text-on-surface">
+                ₹19,000<span class="text-[10px] font-normal text-on-surface-variant">/mo</span>
+</td>
+<td class="py-3 px-space-md text-center">
+<button class="p-1.5 rounded hover:bg-surface-container-high text-on-surface-variant transition-colors">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</td>
+</tr>
+<!-- Row 5: Aniket V. Shinde -->
+<tr class="bg-surface-container-lowest hover:bg-surface-container-low transition-colors cursor-pointer">
+<td class="py-3 px-space-md">
+<div class="flex items-start gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest text-primary font-bold flex items-center justify-center text-[11px] shrink-0 mt-0.5">
+                    AS
+                  </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface font-bold truncate">Aniket V. Shinde</span>
+<span class="font-data-mono text-[11px] text-outline font-medium">MK-7896</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant">20 yr • M • Shirur</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-sm">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-medium truncate">EV Battery Service Tech</span>
+<span class="font-label-sm text-[11px] text-on-surface-variant truncate">Govt ITI Aundh (CoE)</span>
+<span class="font-data-mono text-[10px] text-outline">Batch: 2024-EV-02</span>
+</div>
+</td>
+<td class="py-3 px-space-sm">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold truncate">Bajaj Auto Akurdi</span>
+<span class="font-label-sm text-[11px] text-on-surface-variant">Apprentice (NATS)</span>
+<span class="font-data-mono text-[10px] text-primary flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[12px]">handshake</span> Portal Linked
+                  </span>
+</div>
+</td>
+<td class="py-3 px-space-sm">
+<div class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container-high text-tertiary-container font-label-sm text-label-sm font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-on-tertiary-container"></span>
+                  L-2 Verified
+                </div>
+<div class="font-label-sm text-[10px] text-on-surface-variant mt-0.5">By S. Deshmukh</div>
+</td>
+<td class="py-3 px-space-sm text-right font-data-mono font-bold text-on-surface">
+                ₹15,000<span class="text-[10px] font-normal text-on-surface-variant">/mo</span>
+</td>
+<td class="py-3 px-space-md text-center">
+<button class="p-1.5 rounded hover:bg-surface-container-high text-on-surface-variant transition-colors">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</td>
+</tr>
+<!-- Row 6: Trupti K. Sawant (Discontinued / Flagged) -->
+<tr class="bg-surface-container-lowest hover:bg-surface-container-low transition-colors cursor-pointer">
+<td class="py-3 px-space-md">
+<div class="flex items-start gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-error-container text-on-error-container font-bold flex items-center justify-center text-[11px] shrink-0 mt-0.5">
+                    TS
+                  </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface font-bold truncate">Trupti K. Sawant</span>
+<span class="font-data-mono text-[11px] text-outline font-medium">MK-7897</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant">25 yr • F • Daund</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-sm">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-medium truncate">Data Entry Operator</span>
+<span class="font-label-sm text-[11px] text-on-surface-variant truncate">Naval Skill Academy</span>
+<span class="font-data-mono text-[10px] text-outline">Batch: 2023-DEO-11</span>
+</div>
+</td>
+<td class="py-3 px-space-sm">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold text-error truncate">Unplaced / Drop-out</span>
+<span class="font-label-sm text-[11px] text-on-surface-variant">Exited Month 2</span>
+<span class="font-data-mono text-[10px] text-error flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[12px]">error</span> Reason: Higher Studies
+                  </span>
+</div>
+</td>
+<td class="py-3 px-space-sm">
+<div class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span>
+                  Archived
+                </div>
+<div class="font-label-sm text-[10px] text-on-surface-variant mt-0.5">Audited 12 Jan 2025</div>
+</td>
+<td class="py-3 px-space-sm text-right font-data-mono text-outline">
+                —
+              </td>
+<td class="py-3 px-space-md text-center">
+<button class="p-1.5 rounded hover:bg-surface-container-high text-on-surface-variant transition-colors">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pagination / Ledger Summary Footer -->
+<div class="p-space-md bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-space-sm text-label-sm font-label-sm text-on-surface-variant">
+<span>Rows per page:</span>
+<select class="bg-surface-container-lowest text-on-surface font-semibold px-2 py-1 rounded">
+<option>10</option>
+<option>25</option>
+<option>50</option>
+</select>
+<span class="ml-2 font-data-mono">Page 1 of 18,492</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="px-2 py-1 bg-surface-container-lowest rounded text-on-surface-variant disabled:opacity-40" disabled="">
+<span class="material-symbols-outlined text-[18px]">first_page</span>
+</button>
+<button class="px-2 py-1 bg-surface-container-lowest rounded text-on-surface-variant disabled:opacity-40" disabled="">
+<span class="material-symbols-outlined text-[18px]">chevron_left</span>
+</button>
+<button class="px-3 py-1 bg-primary text-on-primary font-data-mono text-label-sm font-bold rounded">1</button>
+<button class="px-3 py-1 bg-surface-container-lowest text-on-surface font-data-mono text-label-sm rounded hover:bg-surface-container">2</button>
+<button class="px-3 py-1 bg-surface-container-lowest text-on-surface font-data-mono text-label-sm rounded hover:bg-surface-container">3</button>
+<span class="px-1 text-on-surface-variant">...</span>
+<button class="px-2 py-1 bg-surface-container-lowest rounded text-on-surface hover:bg-surface-container">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+<button class="px-2 py-1 bg-surface-container-lowest rounded text-on-surface hover:bg-surface-container">
+<span class="material-symbols-outlined text-[18px]">last_page</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Verification Audit Slide-Over / Pinned Modal Dossier (Takes 5 columns) -->
+<div class="xl:col-span-5 flex flex-col bg-surface-container-lowest rounded shadow-md overflow-hidden sticky top-20">
+<!-- Dossier Header Strip -->
+<div class="bg-primary p-space-md text-on-primary flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[22px]">verified</span>
+<div>
+<span class="font-headline-sm text-headline-sm font-bold block leading-tight">MahaKaushal Audit Dossier</span>
+<span class="font-data-mono text-[10px] text-primary-fixed-dim tracking-wider uppercase">Statutory Verification Record</span>
+</div>
+</div>
+<div class="flex items-center gap-1">
+<span class="px-2 py-0.5 rounded bg-secondary text-on-secondary font-data-mono text-[10px] font-bold">LEVEL 2 OK</span>
+<button class="p-1 rounded text-primary-fixed-dim hover:text-on-primary">
+<span class="material-symbols-outlined text-[18px]">fullscreen</span>
+</button>
+</div>
+</div>
+<!-- Candidate Identity Profile Card -->
+<div class="p-space-md bg-surface-container-low flex gap-space-md items-start">
+<div class="relative shrink-0">
+<img class="w-16 h-20 rounded object-cover shadow-sm bg-surface-container" data-alt="Official biometric passport style identification photograph of a young Indian male candidate wearing formal attire against an institutional slate grey background, high clarity sharp focus state registry portrait" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfY0HnTF0qnojNyrn-iAbfkQFe9CnHp4Gs19ynypnuaGkXCJqz-SGzokQb73piMyJul3USq5UDbyHL9yvBqB5F20335dFGvN2yMC0RPAGU7zOIdJXr1bMNbO0lN_zSjWgVyjNuRh4-SzyfXD9pWj4801vk0kcqmkMUyyHfDc1iYsaTGdQ09rYsTPRTvugRIEy9m3u5kpsQ12ZXjZsdjbmf99nnWAktWUy_WMHqus3pkwUNCESJ6brlBw"/>
+<div class="absolute -bottom-1 -right-1 bg-on-tertiary-container text-white p-0.5 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-[14px]">check</span>
+</div>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-baseline justify-between">
+<h2 class="font-headline-md text-headline-md text-primary font-bold truncate">Rahul Sanjay Jadhav</h2>
+<span class="font-data-mono text-label-sm font-bold text-secondary">MK-7892</span>
+</div>
+<div class="text-on-surface-variant font-label-sm text-label-sm flex items-center gap-2 mt-0.5">
+<span>Aadhaar: •••• •••• 4491</span>
+<span class="w-1 h-1 rounded-full bg-outline"></span>
+<span class="text-on-tertiary-container font-semibold">UIDAI Verified</span>
+</div>
+<!-- Micro Badge Metadata Grid -->
+<div class="grid grid-cols-2 gap-x-2 gap-y-1 mt-space-sm pt-space-xs border-t-0 text-label-sm font-label-sm">
+<div>
+<span class="text-on-surface-variant text-[11px] block">Contact</span>
+<span class="font-data-mono text-on-surface font-semibold">+91 98234-52190</span>
+</div>
+<div>
+<span class="text-on-surface-variant text-[11px] block">District / Taluka</span>
+<span class="text-on-surface font-semibold">Pune • Haveli MIDC</span>
+</div>
+<div>
+<span class="text-on-surface-variant text-[11px] block">Caste / Category</span>
+<span class="text-on-surface font-semibold">OBC (Non-Creamy Layer)</span>
+</div>
+<div>
+<span class="text-on-surface-variant text-[11px] block">EWS / Ration Card</span>
+<span class="text-on-surface font-semibold">Valid (Yellow PHH)</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Training & Certification Details Pill -->
+<div class="px-space-md py-space-sm bg-surface-container flex items-center justify-between text-label-sm font-label-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">school</span>
+<div>
+<span class="text-primary font-bold">Course: CNC Machine Operator</span>
+<span class="text-on-surface-variant block text-[11px]">Tata STRIVE Pune Center • Assessed by Capital Goods SSC</span>
+</div>
+</div>
+<span class="px-2 py-0.5 bg-surface-container-lowest text-primary font-data-mono font-bold rounded">Grade A (88%)</span>
+</div>
+<!-- Chronological Verification Timeline -->
+<div class="p-space-md flex-1 overflow-y-auto">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-lg text-label-lg text-primary font-bold">Outcome Verification Trail</span>
+<span class="font-data-mono text-[11px] text-on-surface-variant">3 of 3 Milestones Cleared</span>
+</div>
+<div class="relative pl-6 space-y-6 before:content-[''] before:absolute before:left-2 before:top-2 before:bottom-2 before:w-0.5 before:bg-surface-container-high">
+<!-- Milestone 1: Training Completion -->
+<div class="relative">
+<span class="absolute -left-6 top-0.5 w-4 h-4 rounded-full bg-primary flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-[10px]">done</span>
+</span>
+<div class="flex flex-col">
+<div class="flex items-baseline justify-between">
+<span class="font-label-md text-label-md text-primary font-bold">Training Assessment &amp; Certification</span>
+<span class="font-data-mono text-[10px] text-on-surface-variant">14 Jul 2024</span>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant mt-0.5">
+                Completed 480 hours curriculum. Practical test score: 92/100. Certified by Directorate of Vocational Education &amp; Training (DVET).
+              </p>
+<div class="flex items-center gap-space-xs mt-1.5">
+<span class="px-2 py-0.5 rounded bg-surface-container text-primary font-data-mono text-[10px]">Cert ID: DVET-CNC-2024-9981</span>
+<button class="text-secondary font-label-sm text-label-sm hover:underline flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[12px]">visibility</span> View Cert
+                </button>
+</div>
+</div>
+</div>
+<!-- Milestone 2: 3-Month Follow-up -->
+<div class="relative">
+<span class="absolute -left-6 top-0.5 w-4 h-4 rounded-full bg-primary flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-[10px]">done</span>
+</span>
+<div class="flex flex-col">
+<div class="flex items-baseline justify-between">
+<span class="font-label-md text-label-md text-primary font-bold">3-Month Employment Validation</span>
+<span class="font-data-mono text-[10px] text-on-surface-variant">22 Oct 2024</span>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant mt-0.5">
+                Telephonic validation completed with candidate. Verified on-site appointment letter issued by <strong>Bharat Forge Ltd, Mundhwa Plant</strong>.
+              </p>
+<div class="bg-surface-container-low p-space-xs rounded mt-1 flex items-center justify-between text-label-sm">
+<span class="text-on-surface-variant font-label-sm text-[11px]">Employer Confirmation Slip:</span>
+<span class="font-data-mono text-on-tertiary-container font-bold text-[11px]">Authenticated (HR/BF/2024/098)</span>
+</div>
+</div>
+</div>
+<!-- Milestone 3: 6-Month Statutory Audit (Current) -->
+<div class="relative">
+<span class="absolute -left-6 top-0.5 w-4 h-4 rounded-full bg-secondary flex items-center justify-center text-on-secondary">
+<span class="material-symbols-outlined text-[10px]">verified</span>
+</span>
+<div class="flex flex-col">
+<div class="flex items-baseline justify-between">
+<span class="font-label-md text-label-md text-secondary font-bold">6-Month Direct Benefit / Wage Audit</span>
+<span class="font-data-mono text-[10px] text-on-surface-variant">18 Jan 2025</span>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant mt-0.5">
+                Statutory wage trail validated via automated EPFO portal integration and ESIC portal UAN registry.
+              </p>
+<!-- EPFO / ESIC Telemetry Box -->
+<div class="bg-surface-container p-space-sm rounded mt-space-xs space-y-1">
+<div class="flex items-center justify-between text-label-sm font-label-sm">
+<span class="text-on-surface-variant">UAN Number:</span>
+<span class="font-data-mono font-bold text-primary">1014-9982-1082</span>
+</div>
+<div class="flex items-center justify-between text-label-sm font-label-sm">
+<span class="text-on-surface-variant">Last Contribution:</span>
+<span class="font-data-mono font-bold text-on-tertiary-container">Dec 2024 (Paid ₹2,580)</span>
+</div>
+<div class="flex items-center justify-between text-label-sm font-label-sm">
+<span class="text-on-surface-variant">Auditing Officer:</span>
+<span class="text-on-surface font-semibold">Rajesh Deshmukh (IAS) / S. Deshmukh</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Verification Seal Box -->
+<div class="mt-space-md p-space-sm rounded bg-surface-container-high/70 flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded bg-primary text-on-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[24px]">gavel</span>
+</div>
+<div class="flex-1 min-w-0">
+<span class="font-label-sm text-[10px] text-secondary font-bold uppercase tracking-wider block">Official Statutory Certification</span>
+<span class="font-label-md text-label-md text-primary font-bold block truncate">Outcome Subsidy Eligible • Tranche 3 Approved</span>
+<span class="font-label-sm text-[11px] text-on-surface-variant">Certified under Govt. Resolution No. SDED-2023/CR-88/SD-1</span>
+</div>
+</div>
+</div>
+<!-- Dossier Action Dock -->
+<div class="p-space-md bg-surface-container-low flex flex-col gap-space-xs">
+<div class="grid grid-cols-2 gap-space-sm">
+<button class="flex items-center justify-center gap-1.5 py-2 px-space-sm bg-primary text-on-primary font-label-md text-label-md rounded hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined text-[16px]">picture_as_pdf</span>
+<span>Download Dossier (PDF)</span>
+</button>
+<button class="flex items-center justify-center gap-1.5 py-2 px-space-sm bg-secondary text-on-secondary font-label-md text-label-md rounded hover:bg-secondary/90 transition-colors">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+<span>Approve Subsidy Tranche</span>
+</button>
+</div>
+<div class="grid grid-cols-2 gap-space-sm mt-0.5">
+<button class="flex items-center justify-center gap-1.5 py-1.5 px-space-sm bg-surface-container-lowest text-on-surface font-label-sm text-label-sm rounded hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[16px]">assignment_ind</span>
+<span>Re-assign Caseworker</span>
+</button>
+<button class="flex items-center justify-center gap-1.5 py-1.5 px-space-sm bg-surface-container-lowest text-error font-label-sm text-label-sm rounded hover:bg-error-container hover:text-on-error-container transition-colors">
+<span class="material-symbols-outlined text-[16px]">flag</span>
+<span>Flag for Inspection</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main></div><script>window.MAHAKAUSHALYA_PORTAL = 'admin';</script><script type="module" src="../../shared/auth.js"></script><script type="module" src="js/audit.js"></script>
+</body></html>

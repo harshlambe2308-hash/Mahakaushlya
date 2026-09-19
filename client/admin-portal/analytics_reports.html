@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Noto+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><link rel="stylesheet" href="css/main_admin.css"/><link rel="stylesheet" href="css/analytics.css"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"tertiary-container":"#003211","on-error":"#ffffff","surface-variant":"#d3e4fe","on-tertiary-fixed":"#002109","on-background":"#0b1c30","outline":"#74777f","surface-bright":"#f8f9ff","background":"#f8f9ff","surface":"#f8f9ff","on-surface-variant":"#44474f","secondary-fixed-dim":"#ffb598","secondary":"#a63b00","surface-container":"#e5eeff","error":"#ba1a1a","on-surface":"#0b1c30","on-secondary":"#ffffff","surface-container-lowest":"#ffffff","on-tertiary-fixed-variant":"#005320","secondary-fixed":"#ffdbce","on-secondary-fixed":"#370e00","on-primary-fixed":"#001a41","outline-variant":"#c4c6d0","on-secondary-fixed-variant":"#7f2b00","surface-container-highest":"#d3e4fe","inverse-surface":"#213145","on-primary-container":"#7b91c0","surface-container-low":"#eff4ff","inverse-on-surface":"#eaf1ff","on-secondary-container":"#561b00","secondary-container":"#fc671e","tertiary-fixed":"#7ffc97","tertiary-fixed-dim":"#62df7d","error-container":"#ffdad6","primary":"#001435","primary-fixed":"#d8e2ff","on-error-container":"#93000a","inverse-primary":"#b0c7f9","tertiary":"#001b06","on-tertiary-container":"#1ea74d","surface-container-high":"#dce9ff","on-primary":"#ffffff","on-primary-fixed-variant":"#304671","primary-container":"#0f2952","surface-dim":"#cbdbf5","surface-tint":"#485e8a","on-tertiary":"#ffffff","primary-fixed-dim":"#b0c7f9"},borderRadius:{DEFAULT:"0.125rem",lg:"0.25rem",xl:"0.5rem",full:"0.75rem"},spacing:{"gutter-lg":"1.5rem",gutter:"1rem","space-xs":"0.25rem","margin-lg":"2rem","margin-md":"1.5rem",margin:"1rem","space-sm":"0.5rem","space-md":"0.75rem","space-lg":"1.25rem","space-xl":"2rem"},fontFamily:{"label-md":["Noto Sans"],"headline-lg-mobile":["Inter"],"headline-xl":["Inter"],"headline-sm":["Inter"],"label-sm":["Noto Sans"],"headline-md":["Inter"],"label-lg":["Noto Sans"],"body-md":["Inter"],"data-mono":["Inter"],"headline-lg":["Inter"],"body-lg":["Inter"],"body-sm":["Inter"]},fontSize:{"label-md":["12px",{lineHeight:"16px",letterSpacing:"0.02em",fontWeight:"600"}],"headline-lg-mobile":["20px",{lineHeight:"28px",fontWeight:"700"}],"headline-xl":["32px",{lineHeight:"40px",letterSpacing:"-0.02em",fontWeight:"700"}],"headline-sm":["16px",{lineHeight:"24px",fontWeight:"600"}],"label-sm":["11px",{lineHeight:"14px",letterSpacing:"0.04em",fontWeight:"500"}],"headline-md":["18px",{lineHeight:"26px",fontWeight:"600"}],"label-lg":["13px",{lineHeight:"18px",fontWeight:"600"}],"body-md":["13px",{lineHeight:"20px",fontWeight:"400"}],"data-mono":["12px",{lineHeight:"16px",fontWeight:"500"}],"headline-lg":["24px",{lineHeight:"32px",letterSpacing:"-0.015em",fontWeight:"700"}],"body-lg":["15px",{lineHeight:"22px",fontWeight:"400"}],"body-sm":["12px",{lineHeight:"18px",fontWeight:"400"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-64 bg-primary-container z-50 flex flex-col shadow-[0_1px_8px_rgba(0,0,0,0.12)]"><div class="h-14 px-margin flex items-center gap-space-sm bg-primary border-b-2 border-secondary"><div class="w-8 h-8 rounded-DEFAULT bg-secondary/20 flex items-center justify-center"><span class="material-symbols-outlined text-secondary text-[22px]">verified</span></div><div class="flex flex-col"><span class="font-label-lg text-label-lg text-on-primary tracking-wide leading-tight">MahaKaushal</span><span class="font-label-sm text-[10px] text-primary-fixed-dim leading-none uppercase tracking-wider">Admin Portal</span></div></div><div class="px-margin py-space-sm bg-primary/40"><div class="flex items-center justify-between text-primary-fixed-dim font-label-sm text-label-sm"><span>JURISDICTION</span><span class="font-data-mono text-[10px] px-space-xs py-0.5 bg-secondary text-on-secondary rounded-DEFAULT font-bold">MH-PUN</span></div><p class="font-label-md text-label-md text-on-primary font-medium mt-0.5 truncate">Pune Divisional Commissionerate</p></div><nav class="flex-1 px-space-xs py-space-sm space-y-1 overflow-y-auto" data-active-classes="bg-primary text-on-primary border-l-4 border-secondary"><a class="block px-space-md py-space-sm text-surface-variant font-label-md text-label-md rounded-DEFAULT hover:bg-primary/50 hover:text-on-primary transition-colors" data-path="overview" href="index.html">Overview</a><a class="block px-space-md py-space-sm text-surface-variant font-label-md text-label-md rounded-DEFAULT hover:bg-primary/50 hover:text-on-primary transition-colors" data-path="trainee-records" href="records_audit.html">Trainee Records</a><a class="block px-space-md py-space-sm text-surface-variant font-label-md text-label-md rounded-DEFAULT hover:bg-primary/50 hover:text-on-primary transition-colors" data-path="non-responder-queue" href="non_responder_queue.html">Non-Responder Queue</a><a class="block px-space-md py-space-sm text-surface-variant font-label-md text-label-md rounded-DEFAULT hover:bg-primary/50 hover:text-on-primary transition-colors" data-path="employer-validation" href="employer_validation.html">Employer Validation</a><a class="block px-space-md py-space-sm text-surface-variant font-label-md text-label-md rounded-DEFAULT hover:bg-primary/50 hover:text-on-primary transition-colors" data-path="analytics-reports" href="analytics_reports.html">Analytics &amp; Reports</a><a class="block px-space-md py-space-sm text-surface-variant font-label-md text-label-md rounded-DEFAULT hover:bg-primary/50 hover:text-on-primary transition-colors" data-path="skill-gap-analysis" href="skill_gap_analysis.html">Skill Gap Analysis</a><a class="block px-space-md py-space-sm text-surface-variant font-label-md text-label-md rounded-DEFAULT hover:bg-primary/50 hover:text-on-primary transition-colors" data-path="provider-performance" href="provider_performance.html">Provider Performance</a><a class="block px-space-md py-space-sm text-surface-variant font-label-md text-label-md rounded-DEFAULT hover:bg-primary/50 hover:text-on-primary transition-colors" data-path="policy-reports" href="#">Policy Reports</a><a class="block px-space-md py-space-sm text-surface-variant font-label-md text-label-md rounded-DEFAULT hover:bg-primary/50 hover:text-on-primary transition-colors" data-path="system-access" href="login.html">System &amp; Access</a></nav><div class="p-space-md bg-primary/60 border-t border-primary-container"><div class="flex items-center gap-space-sm"><div class="w-2 h-2 rounded-full bg-secondary animate-pulse"></div><div class="flex flex-col"><span class="font-label-sm text-[10px] text-surface-variant uppercase tracking-wider">Server Status: Online</span><span class="font-data-mono text-[10px] text-primary-fixed-dim">State Data Center, Mumbai</span></div></div></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-14 bg-surface-container-lowest z-40 shadow-[0_1px_8px_rgba(0,0,0,0.04)] px-margin-lg flex items-center justify-between"><div class="flex items-center gap-margin-md"><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded-DEFAULT bg-primary text-on-primary flex items-center justify-center font-bold text-xs">MH</div><div class="flex flex-col"><span class="font-label-md text-label-md text-primary font-bold leading-tight">महाराष्ट्र शासन</span><span class="font-label-sm text-[10px] text-on-surface-variant leading-none">Govt. of Maharashtra • SDED</span></div></div><div class="h-6 w-px bg-outline-variant"></div><div class="flex items-center bg-surface-container-low px-space-sm py-1 rounded-DEFAULT"><span class="font-label-sm text-label-sm text-on-surface-variant mr-space-xs">Cohort:</span><select class="bg-transparent font-label-md text-label-md text-on-surface font-semibold focus:outline-none cursor-pointer"><option>FY 2024-25 Q3</option><option>FY 2024-25 Q2</option><option>FY 2023-24 Annual</option></select></div><div class="flex items-center bg-surface-container-low px-space-sm py-1 rounded-DEFAULT"><span class="font-label-sm text-label-sm text-on-surface-variant mr-space-xs">District:</span><select class="bg-transparent font-label-md text-label-md text-on-surface font-semibold focus:outline-none cursor-pointer"><option>Pune (All Talukas)</option><option>Haveli</option><option>Baramati</option><option>Khed</option><option>Shirur</option></select></div></div><div class="flex items-center gap-space-md flex-1 max-w-xs mx-margin-md"><div class="relative w-full"><span class="material-symbols-outlined absolute left-2.5 top-1/2 -translate-y-1/2 text-[18px] text-outline">search</span><input class="w-full pl-8 pr-3 py-1 bg-surface-container-low text-on-surface font-body-sm text-body-sm rounded-DEFAULT placeholder:text-outline focus:outline-none focus:bg-surface-container-lowest focus:ring-1 focus:ring-primary" placeholder="Search Aadhaar, UID, Center ID..." type="text"/></div></div><div class="flex items-center gap-space-md"><button class="relative p-1.5 rounded-DEFAULT text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1 right-1 w-2 h-2 bg-secondary rounded-full"></span></button><button class="p-1.5 rounded-DEFAULT text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[20px]">help</span></button><div class="h-6 w-px bg-outline-variant"></div><div class="flex items-center gap-space-sm pl-space-xs"><div class="flex flex-col text-right"><span class="font-label-md text-label-md text-on-surface font-bold leading-tight">Rajesh Deshmukh, IAS</span><div class="flex items-center gap-1 justify-end"><span class="px-1.5 py-0.2 bg-secondary-fixed text-on-secondary-fixed font-label-sm text-[10px] rounded font-bold uppercase">District Skill Officer</span><span class="font-label-sm text-[10px] text-on-surface-variant">Pune</span></div></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-outline-variant" src="https://lh3.googleusercontent.com/aida/AEtjO1XZ5_RGann-JS9-SXlCwMRwGfPfXVcOVklpC5V0eTvQClSjZkunPNoV5M1DG7pVKUlM-w1Ek0_WIFB3LF3preqPJM9Nldd0dpUb6U78uOUf2vXckERfwAiRw05-48oV-hBpHoXbLbiqJLyACVA1ujnTD3gRId3eSN4SLj2tZ_j2UaTSnTOMTGjZRuwcMufJq9GC4jMZjSIIS2c2plWA8DUCu5w8ceF756YeOIrxRm0l6idfYW_EnUZYOFadZztVPjas9Jq8xf-bW3k"/></div></div></header><main class="relative pt-14 bg-surface w-full px-gutter-lg py-margin-md"><div class="flex flex-col w-full space-y-gutter-lg">
+<!-- Executive Control & Breadcrumb Header -->
+<div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-space-md">
+<div>
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm mb-1 uppercase tracking-wider">
+<span>MahaKaushal MIS</span>
+<span class="text-outline">/</span>
+<span>Executive Intelligence</span>
+<span class="text-outline">/</span>
+<span class="text-secondary font-bold">Analytics &amp; Outcome Reports</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<h1 class="font-headline-lg text-headline-lg text-primary font-bold tracking-tight">Analytics &amp; Outcome Reports</h1>
+<span class="px-space-xs py-0.5 bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm rounded font-bold uppercase tracking-wider">Statutory Audit FY24-25</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">
+        Longitudinal placement tracking, retention telemetry, and wage progression analytics across state skilling cohorts.
+      </p>
+</div>
+<!-- Quick Export & Governance Actions -->
+<div class="flex flex-wrap items-center gap-space-sm">
+<button class="flex items-center gap-space-xs px-space-md py-2 bg-surface-container-lowest text-primary hover:bg-surface-container-low rounded font-label-md text-label-md transition-all shadow-sm" id="btn-schedule">
+<span class="material-symbols-outlined text-[18px] text-secondary">event_repeat</span>
+<span>Schedule Recurring Report</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-md py-2 bg-primary text-on-primary hover:bg-primary-container rounded font-label-md text-label-md transition-all shadow-sm" id="btn-export-excel">
+<span class="material-symbols-outlined text-[18px]">file_download</span>
+<span>Export CSV / Excel</span>
+</button>
+<button class="flex items-center justify-center p-2 bg-secondary-container text-on-secondary-container hover:bg-secondary hover:text-on-secondary rounded transition-colors shadow-sm" title="Print Executive Summary">
+<span class="material-symbols-outlined text-[18px]">print</span>
+</button>
+</div>
+</div>
+<!-- Multidimensional Query & Filter Strip -->
+<div class="p-gutter bg-surface-container-lowest rounded-xl shadow-sm">
+<div class="flex items-center justify-between pb-space-sm mb-space-sm">
+<div class="flex items-center gap-space-xs text-primary font-label-md text-label-md font-bold">
+<span class="material-symbols-outlined text-secondary text-[20px]">tune</span>
+<span>Administrative Cohort Selectors</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-data-mono">Active Scope: 284,110 Candidates</span>
+<button class="font-label-sm text-label-sm text-secondary hover:underline font-bold">Reset Filters</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 gap-space-md">
+<!-- Cohort Period -->
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant font-medium">Batch / Cohort Quarter</label>
+<div class="relative">
+<select class="w-full bg-surface-container-low text-on-surface font-label-md text-label-md rounded px-space-sm py-2 appearance-none focus:outline-none focus:ring-1 focus:ring-primary cursor-pointer">
+<option selected="">FY 2024-25 Q3 (Current Oct-Dec)</option>
+<option>FY 2024-25 Q2 (Jul-Sep)</option>
+<option>FY 2024-25 Q1 (Apr-Jun)</option>
+<option>FY 2023-24 Consolidated</option>
+</select>
+<span class="material-symbols-outlined absolute right-2 top-1/2 -translate-y-1/2 pointer-events-none text-outline text-[18px]">arrow_drop_down</span>
+</div>
+</div>
+<!-- Sector / Discipline -->
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant font-medium">Economic Sector</label>
+<div class="relative">
+<select class="w-full bg-surface-container-low text-on-surface font-label-md text-label-md rounded px-space-sm py-2 appearance-none focus:outline-none focus:ring-1 focus:ring-primary cursor-pointer">
+<option selected="">All Priority Sectors (6)</option>
+<option>Automotive &amp; EV Componentry</option>
+<option>IT-ITeS &amp; Cloud Operations</option>
+<option>Healthcare &amp; Allied Paramedical</option>
+<option>Electronics &amp; Solar Tech</option>
+<option>Cold Chain Logistics</option>
+<option>Agro-Processing &amp; Bio-tech</option>
+</select>
+<span class="material-symbols-outlined absolute right-2 top-1/2 -translate-y-1/2 pointer-events-none text-outline text-[18px]">arrow_drop_down</span>
+</div>
+</div>
+<!-- Training Partner Authority -->
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant font-medium">Implementing Agency / PIA</label>
+<div class="relative">
+<select class="w-full bg-surface-container-low text-on-surface font-label-md text-label-md rounded px-space-sm py-2 appearance-none focus:outline-none focus:ring-1 focus:ring-primary cursor-pointer">
+<option selected="">All Accredited VTPs &amp; ITIs (420)</option>
+<option>Govt ITI Network (State-run)</option>
+<option>Tata Community Initiatives Trust</option>
+<option>L&amp;T Skill Trainers Academy</option>
+<option>Mahindra Pride Skilling</option>
+</select>
+<span class="material-symbols-outlined absolute right-2 top-1/2 -translate-y-1/2 pointer-events-none text-outline text-[18px]">arrow_drop_down</span>
+</div>
+</div>
+<!-- Jurisdiction / District -->
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant font-medium">Administrative Jurisdiction</label>
+<div class="relative">
+<select class="w-full bg-surface-container-low text-on-surface font-label-md text-label-md rounded px-space-sm py-2 appearance-none focus:outline-none focus:ring-1 focus:ring-primary cursor-pointer">
+<option selected="">Pune Division (5 Districts)</option>
+<option>Pune Metropolitan (Haveli/PMC)</option>
+<option>Baramati &amp; Daund Cluster</option>
+<option>Satara &amp; Solapur Belt</option>
+<option>All Maharashtra State-wide</option>
+</select>
+<span class="material-symbols-outlined absolute right-2 top-1/2 -translate-y-1/2 pointer-events-none text-outline text-[18px]">arrow_drop_down</span>
+</div>
+</div>
+<!-- Verification Tier -->
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant font-medium">Telemetry Source</label>
+<div class="relative">
+<select class="w-full bg-surface-container-low text-on-surface font-label-md text-label-md rounded px-space-sm py-2 appearance-none focus:outline-none focus:ring-1 focus:ring-primary cursor-pointer">
+<option selected="">EPFO / ESIC API Cross-Verified</option>
+<option>Employer Formal Payroll Slip</option>
+<option>Telephonic Audit Confirmed</option>
+<option>Self-Employment GSTN Tracked</option>
+</select>
+<span class="material-symbols-outlined absolute right-2 top-1/2 -translate-y-1/2 pointer-events-none text-outline text-[18px]">arrow_drop_down</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Longitudinal KPI Summary Cards (5-Card Row) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-space-md">
+<!-- Metric 1 -->
+<div class="relative overflow-hidden bg-surface-container-lowest p-gutter rounded-xl shadow-sm flex flex-col justify-between">
+<div class="absolute top-0 left-0 right-0 h-1 bg-secondary-container"></div>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-bold">Verified Placement</span>
+<span class="p-1 rounded bg-secondary-fixed text-on-secondary-fixed material-symbols-outlined text-[16px]">verified</span>
+</div>
+<div class="my-space-sm">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-headline-xl text-headline-xl text-primary font-bold">72.4%</span>
+<span class="font-label-sm text-label-sm font-bold text-on-tertiary-container bg-surface-container-high px-1.5 py-0.5 rounded">↑ 4.2% YoY</span>
+</div>
+<div class="w-full bg-surface-container-low h-1.5 rounded mt-2 overflow-hidden">
+<div class="bg-secondary-container h-full rounded" style="width: 72.4%"></div>
+</div>
+</div>
+<div class="flex justify-between items-center text-on-surface-variant font-data-mono text-[10px]">
+<span>Target: 70.0%</span>
+<span class="text-secondary font-bold font-label-sm">Above Mandate</span>
+</div>
+</div>
+<!-- Metric 2 -->
+<div class="relative overflow-hidden bg-surface-container-lowest p-gutter rounded-xl shadow-sm flex flex-col justify-between">
+<div class="absolute top-0 left-0 right-0 h-1 bg-primary"></div>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-bold">3-Month Retention</span>
+<span class="p-1 rounded bg-surface-variant text-primary material-symbols-outlined text-[16px]">hourglass_top</span>
+</div>
+<div class="my-space-sm">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-headline-xl text-headline-xl text-primary font-bold">84.1%</span>
+<span class="font-label-sm text-label-sm font-bold text-on-tertiary-container bg-surface-container-high px-1.5 py-0.5 rounded">↑ 1.8%</span>
+</div>
+<div class="w-full bg-surface-container-low h-1.5 rounded mt-2 overflow-hidden">
+<div class="bg-primary h-full rounded" style="width: 84.1%"></div>
+</div>
+</div>
+<div class="flex justify-between items-center text-on-surface-variant font-data-mono text-[10px]">
+<span>Verified N=142,500</span>
+<span class="text-primary font-semibold font-label-sm">High Stickiness</span>
+</div>
+</div>
+<!-- Metric 3 -->
+<div class="relative overflow-hidden bg-surface-container-lowest p-gutter rounded-xl shadow-sm flex flex-col justify-between">
+<div class="absolute top-0 left-0 right-0 h-1 bg-secondary"></div>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-bold">6-Month Retention</span>
+<span class="p-1 rounded bg-secondary-fixed text-on-secondary-fixed material-symbols-outlined text-[16px]">hourglass_bottom</span>
+</div>
+<div class="my-space-sm">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-headline-xl text-headline-xl text-primary font-bold">64.8%</span>
+<span class="font-label-sm text-label-sm font-bold text-secondary bg-surface-container-high px-1.5 py-0.5 rounded">Target 65%</span>
+</div>
+<div class="w-full bg-surface-container-low h-1.5 rounded mt-2 overflow-hidden">
+<div class="bg-secondary h-full rounded" style="width: 64.8%"></div>
+</div>
+</div>
+<div class="flex justify-between items-center text-on-surface-variant font-data-mono text-[10px]">
+<span>Variance: -0.2%</span>
+<span class="text-secondary font-bold font-label-sm">Stable Track</span>
+</div>
+</div>
+<!-- Metric 4 -->
+<div class="relative overflow-hidden bg-surface-container-lowest p-gutter rounded-xl shadow-sm flex flex-col justify-between">
+<div class="absolute top-0 left-0 right-0 h-1 bg-primary-container"></div>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-bold">12-Month Retention</span>
+<span class="p-1 rounded bg-surface-container-high text-primary material-symbols-outlined text-[16px]">history_edu</span>
+</div>
+<div class="my-space-sm">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-headline-xl text-headline-xl text-primary font-bold">51.6%</span>
+<span class="font-label-sm text-label-sm font-bold text-on-tertiary-container bg-surface-container-high px-1.5 py-0.5 rounded">↑ 3.5% YoY</span>
+</div>
+<div class="w-full bg-surface-container-low h-1.5 rounded mt-2 overflow-hidden">
+<div class="bg-primary-container h-full rounded" style="width: 51.6%"></div>
+</div>
+</div>
+<div class="flex justify-between items-center text-on-surface-variant font-data-mono text-[10px]">
+<span>Cohort: FY23-24</span>
+<span class="text-primary font-semibold font-label-sm">Longitudinal</span>
+</div>
+</div>
+<!-- Metric 5 -->
+<div class="relative overflow-hidden bg-surface-container-lowest p-gutter rounded-xl shadow-sm flex flex-col justify-between">
+<div class="absolute top-0 left-0 right-0 h-1 bg-secondary-container"></div>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-bold">Realized Wage Growth</span>
+<span class="p-1 rounded bg-secondary-fixed text-on-secondary-fixed material-symbols-outlined text-[16px]">trending_up</span>
+</div>
+<div class="my-space-sm">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-headline-xl text-headline-xl text-secondary font-bold">+28.4%</span>
+<span class="font-label-sm text-label-sm font-bold text-primary bg-surface-container-high px-1.5 py-0.5 rounded">₹19,450 Mean</span>
+</div>
+<div class="w-full bg-surface-container-low h-1.5 rounded mt-2 overflow-hidden">
+<div class="bg-secondary-container h-full rounded" style="width: 78%"></div>
+</div>
+</div>
+<div class="flex justify-between items-center text-on-surface-variant font-data-mono text-[10px]">
+<span>Baseline: ₹15,150</span>
+<span class="text-secondary font-bold font-label-sm">Above Inflation</span>
+</div>
+</div>
+</div>
+<!-- Primary Analytics Canvas (Split 7 / 5 Grid) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-lg">
+<!-- Sectoral Placement Velocity Chart (7 Cols) -->
+<div class="lg:col-span-7 bg-surface-container-lowest p-gutter rounded-xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-space-xs pb-space-sm">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold">Outcome Performance</span>
+<h2 class="font-headline-md text-headline-md text-primary font-bold">Placement Rate &amp; Volume by Skilling Sector</h2>
+</div>
+<div class="flex items-center gap-space-md text-on-surface-variant font-label-sm text-label-sm">
+<span class="flex items-center gap-1.5"><span class="w-3 h-3 rounded-DEFAULT bg-primary inline-block"></span> Placed %</span>
+<span class="flex items-center gap-1.5"><span class="w-3 h-3 rounded-DEFAULT bg-secondary-container inline-block"></span> Target %</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+          Comparative assessment of certified candidates transitioned into verifiable formal payroll roles within 90 days.
+        </p>
+<!-- Dynamic Bar Chart Visualization -->
+<div class="space-y-space-md">
+<!-- Sector 1: Automotive & EV -->
+<div class="space-y-1">
+<div class="flex justify-between text-label-md font-label-md">
+<span class="font-semibold text-primary">Automotive &amp; EV Componentry</span>
+<div class="flex items-center gap-space-sm">
+<span class="font-data-mono text-on-surface-variant">48,200 Certified</span>
+<span class="font-bold text-primary font-data-mono">82.6%</span>
+<span class="font-data-mono text-on-surface-variant">(Target: 75%)</span>
+</div>
+</div>
+<div class="relative h-6 bg-surface-container-low rounded overflow-hidden">
+<div class="absolute top-0 bottom-0 left-0 bg-primary rounded transition-all" style="width: 82.6%;"></div>
+<div class="absolute top-0 bottom-0 w-0.5 bg-secondary-container z-10" style="left: 75%;"></div>
+</div>
+</div>
+<!-- Sector 2: IT-ITeS -->
+<div class="space-y-1">
+<div class="flex justify-between text-label-md font-label-md">
+<span class="font-semibold text-primary">IT-ITeS &amp; Tech Services</span>
+<div class="flex items-center gap-space-sm">
+<span class="font-data-mono text-on-surface-variant">61,400 Certified</span>
+<span class="font-bold text-primary font-data-mono">78.2%</span>
+<span class="font-data-mono text-on-surface-variant">(Target: 80%)</span>
+</div>
+</div>
+<div class="relative h-6 bg-surface-container-low rounded overflow-hidden">
+<div class="absolute top-0 bottom-0 left-0 bg-primary rounded transition-all" style="width: 78.2%;"></div>
+<div class="absolute top-0 bottom-0 w-0.5 bg-secondary-container z-10" style="left: 80%;"></div>
+</div>
+</div>
+<!-- Sector 3: Healthcare & Paramedical -->
+<div class="space-y-1">
+<div class="flex justify-between text-label-md font-label-md">
+<span class="font-semibold text-primary">Healthcare &amp; Allied Paramedical</span>
+<div class="flex items-center gap-space-sm">
+<span class="font-data-mono text-on-surface-variant">36,150 Certified</span>
+<span class="font-bold text-primary font-data-mono">75.8%</span>
+<span class="font-data-mono text-on-surface-variant">(Target: 70%)</span>
+</div>
+</div>
+<div class="relative h-6 bg-surface-container-low rounded overflow-hidden">
+<div class="absolute top-0 bottom-0 left-0 bg-primary rounded transition-all" style="width: 75.8%;"></div>
+<div class="absolute top-0 bottom-0 w-0.5 bg-secondary-container z-10" style="left: 70%;"></div>
+</div>
+</div>
+<!-- Sector 4: Electronics & Solar -->
+<div class="space-y-1">
+<div class="flex justify-between text-label-md font-label-md">
+<span class="font-semibold text-primary">Electronics, Solar &amp; Renewable Tech</span>
+<div class="flex items-center gap-space-sm">
+<span class="font-data-mono text-on-surface-variant">29,800 Certified</span>
+<span class="font-bold text-primary font-data-mono">68.4%</span>
+<span class="font-data-mono text-on-surface-variant">(Target: 70%)</span>
+</div>
+</div>
+<div class="relative h-6 bg-surface-container-low rounded overflow-hidden">
+<div class="absolute top-0 bottom-0 left-0 bg-primary rounded transition-all" style="width: 68.4%;"></div>
+<div class="absolute top-0 bottom-0 w-0.5 bg-secondary-container z-10" style="left: 70%;"></div>
+</div>
+</div>
+<!-- Sector 5: Logistics -->
+<div class="space-y-1">
+<div class="flex justify-between text-label-md font-label-md">
+<span class="font-semibold text-primary">Supply Chain &amp; Cold Chain Logistics</span>
+<div class="flex items-center gap-space-sm">
+<span class="font-data-mono text-on-surface-variant">34,500 Certified</span>
+<span class="font-bold text-primary font-data-mono">66.2%</span>
+<span class="font-data-mono text-on-surface-variant">(Target: 65%)</span>
+</div>
+</div>
+<div class="relative h-6 bg-surface-container-low rounded overflow-hidden">
+<div class="absolute top-0 bottom-0 left-0 bg-primary rounded transition-all" style="width: 66.2%;"></div>
+<div class="absolute top-0 bottom-0 w-0.5 bg-secondary-container z-10" style="left: 65%;"></div>
+</div>
+</div>
+<!-- Sector 6: Agro-Processing -->
+<div class="space-y-1">
+<div class="flex justify-between text-label-md font-label-md">
+<span class="font-semibold text-primary">Agro-Processing &amp; Rural Entrepreneurship</span>
+<div class="flex items-center gap-space-sm">
+<span class="font-data-mono text-on-surface-variant">22,300 Certified</span>
+<span class="font-bold text-primary font-data-mono">59.8%</span>
+<span class="font-data-mono text-on-surface-variant">(Target: 60%)</span>
+</div>
+</div>
+<div class="relative h-6 bg-surface-container-low rounded overflow-hidden">
+<div class="absolute top-0 bottom-0 left-0 bg-primary rounded transition-all" style="width: 59.8%;"></div>
+<div class="absolute top-0 bottom-0 w-0.5 bg-secondary-container z-10" style="left: 60%;"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm bg-surface-container-low p-space-sm rounded-lg flex items-center justify-between text-on-surface-variant text-label-sm font-label-sm">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-secondary text-[16px]">info</span>
+          Target marker indicates National Skill Development Agency (NSDA) quarterly benchmarks.
+        </span>
+<span class="font-data-mono font-bold text-primary">Total Trained: 232,350</span>
+</div>
+</div>
+<!-- Retention Telemetry & Survival Decay Chart (5 Cols) -->
+<div class="lg:col-span-5 bg-surface-container-lowest p-gutter rounded-xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-space-sm">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold">Telemetry Retention Curve</span>
+<h2 class="font-headline-md text-headline-md text-primary font-bold">3 / 6 / 12-Month Job Survival</h2>
+</div>
+<span class="px-2 py-0.5 bg-surface-container-high text-primary font-label-sm text-label-sm rounded font-bold font-data-mono">EPFO LIVE</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+          Active contribution continuity tracking candidate stay in original or lateral placement roles over four consecutive quarters.
+        </p>
+<!-- SVG Retention Decay Chart -->
+<div class="relative w-full h-48 bg-surface-container-low rounded-lg p-space-sm">
+<svg class="w-full h-full overflow-visible" preserveaspectratio="none" viewbox="0 0 400 180">
+<!-- Grid Lines -->
+<line opacity="0.35" stroke="#c4c6d0" stroke-dasharray="3 3" x1="40" x2="380" y1="20" y2="20"></line>
+<line opacity="0.35" stroke="#c4c6d0" stroke-dasharray="3 3" x1="40" x2="380" y1="60" y2="60"></line>
+<line opacity="0.35" stroke="#c4c6d0" stroke-dasharray="3 3" x1="40" x2="380" y1="100" y2="100"></line>
+<line opacity="0.35" stroke="#c4c6d0" stroke-dasharray="3 3" x1="40" x2="380" y1="140" y2="140"></line>
+<!-- Benchmark Reference Line -->
+<path d="M 50 40 Q 150 70 250 95 T 370 125" fill="none" stroke="#74777f" stroke-dasharray="4 4" stroke-width="2"></path>
+<!-- Actual Cohort Area Gradient -->
+<defs>
+<lineargradient id="retentionGrad" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#0f2952" stop-opacity="0.35"></stop>
+<stop offset="100%" stop-color="#0f2952" stop-opacity="0.02"></stop>
+</lineargradient>
+</defs>
+<path d="M 50 25 Q 150 42 250 78 T 370 108 L 370 150 L 50 150 Z" fill="url(#retentionGrad)"></path>
+<!-- Actual Cohort Main Curve -->
+<path d="M 50 25 Q 150 42 250 78 T 370 108" fill="none" stroke="#0f2952" stroke-width="3.5"></path>
+<!-- Highlight Nodes -->
+<!-- Month 0 / Placed -->
+<circle cx="50" cy="25" fill="#a63b00" r="4.5"></circle>
+<!-- Month 3 (84.1%) -->
+<circle cx="155" cy="45" fill="#001435" r="4.5"></circle>
+<!-- Month 6 (64.8%) -->
+<circle cx="260" cy="80" fill="#001435" r="4.5"></circle>
+<!-- Month 12 (51.6%) -->
+<circle cx="370" cy="108" fill="#fc671e" r="5"></circle>
+<!-- Value Callouts -->
+<text fill="#0b1c30" font-size="10" font-weight="700" text-anchor="middle" x="50" y="16">100%</text>
+<text fill="#001435" font-size="10" font-weight="700" text-anchor="middle" x="155" y="38">84.1%</text>
+<text fill="#001435" font-size="10" font-weight="700" text-anchor="middle" x="260" y="72">64.8%</text>
+<text fill="#a63b00" font-size="10" font-weight="700" text-anchor="middle" x="370" y="100">51.6%</text>
+<!-- X-Axis Labels -->
+<text fill="#44474f" font-size="9" text-anchor="middle" x="50" y="168">Day 0</text>
+<text fill="#44474f" font-size="9" text-anchor="middle" x="155" y="168">Month 3</text>
+<text fill="#44474f" font-size="9" text-anchor="middle" x="260" y="168">Month 6</text>
+<text fill="#44474f" font-size="9" text-anchor="middle" x="370" y="168">Month 12</text>
+</svg>
+</div>
+<div class="flex items-center justify-between mt-space-sm text-label-sm font-label-sm text-on-surface-variant">
+<span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-primary inline-block"></span> Cohort FY24 Actual</span>
+<span class="flex items-center gap-1.5"><span class="w-4 h-0.5 bg-outline inline-block border-t border-dashed"></span> State Norm Benchmark</span>
+</div>
+</div>
+<div class="mt-space-md grid grid-cols-3 gap-space-xs text-center pt-space-xs">
+<div class="p-space-xs bg-surface-container-low rounded">
+<span class="font-data-mono text-label-sm text-on-surface-variant block">M1-M3 Attrition</span>
+<span class="font-bold text-primary font-label-md">15.9%</span>
+</div>
+<div class="p-space-xs bg-surface-container-low rounded">
+<span class="font-data-mono text-label-sm text-on-surface-variant block">M3-M6 Attrition</span>
+<span class="font-bold text-secondary font-label-md">19.3%</span>
+</div>
+<div class="p-space-xs bg-surface-container-low rounded">
+<span class="font-data-mono text-label-sm text-on-surface-variant block">M6-M12 Attrition</span>
+<span class="font-bold text-on-surface-variant font-label-md">13.2%</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Wage Progression & Demographic Equity Section (Split 5 / 7 Grid) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-lg">
+<!-- Wage Distribution & Progression Tiers (5 Cols) -->
+<div class="lg:col-span-5 bg-surface-container-lowest p-gutter rounded-xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-space-sm">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold">Economic Mobility</span>
+<h2 class="font-headline-md text-headline-md text-primary font-bold">Monthly Wage Tier Distribution</h2>
+</div>
+<span class="p-1.5 rounded-full bg-secondary-fixed text-on-secondary-fixed material-symbols-outlined text-[20px]">currency_rupee</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+          Breakdown of placed candidates across monthly salary bands relative to Maharashtra statutory minimum wage thresholds.
+        </p>
+<!-- Wage Tiers Stacked Progress & Metric Bars -->
+<div class="space-y-space-md">
+<!-- Tier 1: Entry Tier -->
+<div>
+<div class="flex justify-between font-label-md text-label-md mb-1">
+<span class="text-on-surface font-semibold">&lt; ₹15,000 / month</span>
+<span class="font-data-mono text-primary font-bold">14.8% <span class="text-on-surface-variant font-normal font-body-sm">(21,090)</span></span>
+</div>
+<div class="w-full bg-surface-container-low h-3 rounded overflow-hidden">
+<div class="bg-surface-variant h-full rounded" style="width: 14.8%;"></div>
+</div>
+<span class="font-label-sm text-[10px] text-error font-medium">Zone II Unskilled Baseline Threshold</span>
+</div>
+<!-- Tier 2: Mid-Basic -->
+<div>
+<div class="flex justify-between font-label-md text-label-md mb-1">
+<span class="text-on-surface font-semibold">₹15,000 - ₹22,000 / month</span>
+<span class="font-data-mono text-primary font-bold">48.2% <span class="text-on-surface-variant font-normal font-body-sm">(68,685)</span></span>
+</div>
+<div class="w-full bg-surface-container-low h-3 rounded overflow-hidden">
+<div class="bg-primary h-full rounded" style="width: 48.2%;"></div>
+</div>
+<span class="font-label-sm text-[10px] text-primary font-bold">Modal Distribution Band (State Target Achieved)</span>
+</div>
+<!-- Tier 3: Skilled Professional -->
+<div>
+<div class="flex justify-between font-label-md text-label-md mb-1">
+<span class="text-on-surface font-semibold">₹22,000 - ₹30,000 / month</span>
+<span class="font-data-mono text-primary font-bold">26.5% <span class="text-on-surface-variant font-normal font-body-sm">(37,762)</span></span>
+</div>
+<div class="w-full bg-surface-container-low h-3 rounded overflow-hidden">
+<div class="bg-secondary h-full rounded" style="width: 26.5%;"></div>
+</div>
+<span class="font-label-sm text-[10px] text-secondary font-medium">High Growth in EV &amp; Medical Technicians</span>
+</div>
+<!-- Tier 4: Senior / Specialist -->
+<div>
+<div class="flex justify-between font-label-md text-label-md mb-1">
+<span class="text-on-surface font-semibold">&gt; ₹30,000 / month</span>
+<span class="font-data-mono text-primary font-bold">10.5% <span class="text-on-surface-variant font-normal font-body-sm">(14,963)</span></span>
+</div>
+<div class="w-full bg-surface-container-low h-3 rounded overflow-hidden">
+<div class="bg-secondary-container h-full rounded" style="width: 10.5%;"></div>
+</div>
+<span class="font-label-sm text-[10px] text-on-secondary-container font-semibold">IT-Software, Mechatronics, CNC Specialists</span>
+</div>
+</div>
+</div>
+<div class="mt-space-md p-space-sm bg-surface-container-low rounded-lg flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">State Statutory Floor (Pune Zone 1)</span>
+<span class="font-label-md text-label-md text-primary font-bold">₹14,280 / mo</span>
+</div>
+<div class="flex flex-col text-right">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Median Placement Wage</span>
+<span class="font-label-md text-label-md text-secondary font-bold font-data-mono">₹18,900 / mo</span>
+</div>
+</div>
+</div>
+<!-- Demographics & Inclusion Matrix (7 Cols) -->
+<div class="lg:col-span-7 bg-surface-container-lowest p-gutter rounded-xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-space-sm">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold">Social Equity Audit</span>
+<h2 class="font-headline-md text-headline-md text-primary font-bold">Demographics &amp; Geographic Inclusion</h2>
+</div>
+<span class="font-label-sm text-label-sm bg-surface-container-high text-primary px-2 py-1 rounded font-bold">
+            Affirmative Action Target: Met (100%)
+          </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+          Distribution of enrolled, placed, and verified 6-month retained candidates classified by gender, category, and regional geography.
+        </p>
+<!-- Structured Comparative Table -->
+<div class="overflow-x-auto">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-2.5 px-space-sm rounded-l">Inclusion Dimension</th>
+<th class="py-2.5 px-space-sm font-data-mono">Enrolled</th>
+<th class="py-2.5 px-space-sm font-data-mono">Placed Count</th>
+<th class="py-2.5 px-space-sm font-data-mono">Placement %</th>
+<th class="py-2.5 px-space-sm font-data-mono">6-Mo Retention</th>
+<th class="py-2.5 px-space-sm rounded-r text-right font-data-mono">Wage Index</th>
+</tr>
+</thead>
+<tbody class="divide-y-0 space-y-1">
+<!-- Gender Rows -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-2 px-space-sm font-semibold text-primary flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-secondary">female</span>
+                  Women Candidates
+                </td>
+<td class="py-2 px-space-sm font-data-mono">125,008 (44%)</td>
+<td class="py-2 px-space-sm font-data-mono">89,255</td>
+<td class="py-2 px-space-sm">
+<span class="px-1.5 py-0.5 bg-surface-container-high text-primary rounded font-bold font-data-mono text-label-sm">71.4%</span>
+</td>
+<td class="py-2 px-space-sm font-data-mono text-primary font-bold">66.2%</td>
+<td class="py-2 px-space-sm text-right font-data-mono text-on-surface-variant">₹18,200</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-2 px-space-sm font-semibold text-primary flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">male</span>
+                  Men Candidates
+                </td>
+<td class="py-2 px-space-sm font-data-mono">159,102 (56%)</td>
+<td class="py-2 px-space-sm font-data-mono">116,460</td>
+<td class="py-2 px-space-sm">
+<span class="px-1.5 py-0.5 bg-surface-container-high text-primary rounded font-bold font-data-mono text-label-sm">73.2%</span>
+</td>
+<td class="py-2 px-space-sm font-data-mono text-primary font-bold">63.7%</td>
+<td class="py-2 px-space-sm text-right font-data-mono text-on-surface-variant">₹20,400</td>
+</tr>
+<!-- Social Categories -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-2 px-space-sm font-semibold text-primary">SC / ST Communities</td>
+<td class="py-2 px-space-sm font-data-mono">68,186 (24%)</td>
+<td class="py-2 px-space-sm font-data-mono">48,412</td>
+<td class="py-2 px-space-sm">
+<span class="px-1.5 py-0.5 bg-surface-container-high text-primary rounded font-bold font-data-mono text-label-sm">71.0%</span>
+</td>
+<td class="py-2 px-space-sm font-data-mono text-primary font-bold">65.4%</td>
+<td class="py-2 px-space-sm text-right font-data-mono text-on-surface-variant">₹18,750</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-2 px-space-sm font-semibold text-primary">OBC / VJNT / SBC</td>
+<td class="py-2 px-space-sm font-data-mono">113,644 (40%)</td>
+<td class="py-2 px-space-sm font-data-mono">82,960</td>
+<td class="py-2 px-space-sm">
+<span class="px-1.5 py-0.5 bg-surface-container-high text-primary rounded font-bold font-data-mono text-label-sm">73.0%</span>
+</td>
+<td class="py-2 px-space-sm font-data-mono text-primary font-bold">64.9%</td>
+<td class="py-2 px-space-sm text-right font-data-mono text-on-surface-variant">₹19,600</td>
+</tr>
+<!-- Rural vs Urban / Tribal -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-2 px-space-sm font-semibold text-primary flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-secondary">nature_people</span>
+                  Rural &amp; Tribal Blocks
+                </td>
+<td class="py-2 px-space-sm font-data-mono">102,279 (36%)</td>
+<td class="py-2 px-space-sm font-data-mono">70,061</td>
+<td class="py-2 px-space-sm">
+<span class="px-1.5 py-0.5 bg-surface-container-high text-primary rounded font-bold font-data-mono text-label-sm">68.5%</span>
+</td>
+<td class="py-2 px-space-sm font-data-mono text-primary font-bold">67.1%</td>
+<td class="py-2 px-space-sm text-right font-data-mono text-on-surface-variant">₹17,400</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-2 px-space-sm font-semibold text-primary flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">apartment</span>
+                  Tier 1 &amp; 2 Urban Hubs
+                </td>
+<td class="py-2 px-space-sm font-data-mono">181,831 (64%)</td>
+<td class="py-2 px-space-sm font-data-mono">135,654</td>
+<td class="py-2 px-space-sm">
+<span class="px-1.5 py-0.5 bg-surface-container-high text-primary rounded font-bold font-data-mono text-label-sm">74.6%</span>
+</td>
+<td class="py-2 px-space-sm font-data-mono text-primary font-bold">63.5%</td>
+<td class="py-2 px-space-sm text-right font-data-mono text-on-surface-variant">₹20,600</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between text-label-sm font-label-sm text-on-surface-variant">
+<span>Statutory Mandate: 30% Women Enrolment (Exceeded by +14.0%)</span>
+<span class="text-secondary font-bold">District Gender Parity Index: 0.94</span>
+</div>
+</div>
+</div>
+<!-- Aggregated Cohort Statistics Ready for Export (Bottom Data Preview Table) -->
+<div class="bg-surface-container-lowest p-gutter rounded-xl shadow-sm flex flex-col space-y-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-space-sm">
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">table_chart</span>
+<h2 class="font-headline-md text-headline-md text-primary font-bold">Aggregated Cohort Register &amp; Telemetry Export</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+          Standardized statutory extract formatted according to SDED Annexure IV guidelines for legislative reporting.
+        </p>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="font-data-mono text-label-sm text-on-surface-variant">Showing 5 of 24 Sub-Cohorts</span>
+<button class="flex items-center gap-1.5 px-space-md py-1.5 bg-secondary text-on-secondary hover:bg-on-secondary-container rounded font-label-md text-label-md transition-colors shadow-sm font-bold" id="btn-quick-download">
+<span class="material-symbols-outlined text-[16px]">download</span>
+<span>Download Current Dataset (.xlsx)</span>
+</button>
+</div>
+</div>
+<!-- Tabular Register -->
+<div class="overflow-x-auto rounded-lg">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-3 px-space-md">Cohort ID &amp; Program</th>
+<th class="py-3 px-space-md">Implementing Partner</th>
+<th class="py-3 px-space-md font-data-mono">Enrolled</th>
+<th class="py-3 px-space-md font-data-mono">Assessed</th>
+<th class="py-3 px-space-md font-data-mono">Verified Placed</th>
+<th class="py-3 px-space-md font-data-mono">Placement %</th>
+<th class="py-3 px-space-md font-data-mono">3-Mo Ret.</th>
+<th class="py-3 px-space-md font-data-mono">6-Mo Ret.</th>
+<th class="py-3 px-space-md font-data-mono">Mean Wage</th>
+<th class="py-3 px-space-md text-center">EPFO Linkage</th>
+<th class="py-3 px-space-md text-right">Dossier</th>
+</tr>
+</thead>
+<tbody class="divide-y-0">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3 px-space-md">
+<div class="font-semibold text-primary">MH-PUN-EV-2024-Q3</div>
+<div class="font-label-sm text-[11px] text-on-surface-variant">EV Battery Assembly &amp; Diagnostics</div>
+</td>
+<td class="py-3 px-space-md">
+<div class="text-on-surface font-medium">Tata Motors Skill Academy</div>
+<div class="font-label-sm text-[11px] text-on-surface-variant font-data-mono">VTP-PUN-084</div>
+</td>
+<td class="py-3 px-space-md font-data-mono">2,450</td>
+<td class="py-3 px-space-md font-data-mono">2,380</td>
+<td class="py-3 px-space-md font-data-mono font-bold text-primary">2,118</td>
+<td class="py-3 px-space-md">
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-primary font-bold font-data-mono text-label-sm">89.0%</span>
+</td>
+<td class="py-3 px-space-md font-data-mono font-semibold text-primary">91.4%</td>
+<td class="py-3 px-space-md font-data-mono font-semibold text-primary">78.2%</td>
+<td class="py-3 px-space-md font-data-mono font-bold text-secondary">₹24,800</td>
+<td class="py-3 px-space-md text-center">
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-tertiary-container font-label-sm text-[11px] font-bold">100% Mapped</span>
+</td>
+<td class="py-3 px-space-md text-right">
+<button class="p-1.5 rounded hover:bg-surface-container-high text-primary transition-colors" title="Download Signed Summary PDF">
+<span class="material-symbols-outlined text-[18px]">picture_as_pdf</span>
+</button>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="bg-surface-container-low/30 hover:bg-surface-container-low transition-colors">
+<td class="py-3 px-space-md">
+<div class="font-semibold text-primary">MH-PUN-IT-2024-Q3</div>
+<div class="font-label-sm text-[11px] text-on-surface-variant">Cloud Infrastructure Support Exec</div>
+</td>
+<td class="py-3 px-space-md">
+<div class="text-on-surface font-medium">L&amp;T Edutech Services</div>
+<div class="font-label-sm text-[11px] text-on-surface-variant font-data-mono">VTP-PUN-019</div>
+</td>
+<td class="py-3 px-space-md font-data-mono">3,800</td>
+<td class="py-3 px-space-md font-data-mono">3,650</td>
+<td class="py-3 px-space-md font-data-mono font-bold text-primary">2,920</td>
+<td class="py-3 px-space-md">
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-primary font-bold font-data-mono text-label-sm">80.0%</span>
+</td>
+<td class="py-3 px-space-md font-data-mono font-semibold text-primary">87.5%</td>
+<td class="py-3 px-space-md font-data-mono font-semibold text-primary">69.4%</td>
+<td class="py-3 px-space-md font-data-mono font-bold text-secondary">₹26,500</td>
+<td class="py-3 px-space-md text-center">
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-tertiary-container font-label-sm text-[11px] font-bold">98.2% Mapped</span>
+</td>
+<td class="py-3 px-space-md text-right">
+<button class="p-1.5 rounded hover:bg-surface-container-high text-primary transition-colors" title="Download Signed Summary PDF">
+<span class="material-symbols-outlined text-[18px]">picture_as_pdf</span>
+</button>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3 px-space-md">
+<div class="font-semibold text-primary">MH-HAV-HLTH-2024-Q3</div>
+<div class="font-label-sm text-[11px] text-on-surface-variant">General Duty Assistant &amp; ICU Care</div>
+</td>
+<td class="py-3 px-space-md">
+<div class="text-on-surface font-medium">Sancheti Healthcare Institute</div>
+<div class="font-label-sm text-[11px] text-on-surface-variant font-data-mono">VTP-PUN-112</div>
+</td>
+<td class="py-3 px-space-md font-data-mono">1,820</td>
+<td class="py-3 px-space-md font-data-mono">1,790</td>
+<td class="py-3 px-space-md font-data-mono font-bold text-primary">1,414</td>
+<td class="py-3 px-space-md">
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-primary font-bold font-data-mono text-label-sm">79.0%</span>
+</td>
+<td class="py-3 px-space-md font-data-mono font-semibold text-primary">85.0%</td>
+<td class="py-3 px-space-md font-data-mono font-semibold text-primary">71.8%</td>
+<td class="py-3 px-space-md font-data-mono font-bold text-secondary">₹19,200</td>
+<td class="py-3 px-space-md text-center">
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-tertiary-container font-label-sm text-[11px] font-bold">96.8% Mapped</span>
+</td>
+<td class="py-3 px-space-md text-right">
+<button class="p-1.5 rounded hover:bg-surface-container-high text-primary transition-colors" title="Download Signed Summary PDF">
+<span class="material-symbols-outlined text-[18px]">picture_as_pdf</span>
+</button>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="bg-surface-container-low/30 hover:bg-surface-container-low transition-colors">
+<td class="py-3 px-space-md">
+<div class="font-semibold text-primary">MH-BAR-SOL-2024-Q3</div>
+<div class="font-label-sm text-[11px] text-on-surface-variant">Solar Micro-Grid Technician</div>
+</td>
+<td class="py-3 px-space-md">
+<div class="text-on-surface font-medium">Mahindra Skill Institute Baramati</div>
+<div class="font-label-sm text-[11px] text-on-surface-variant font-data-mono">VTP-BAR-045</div>
+</td>
+<td class="py-3 px-space-md font-data-mono">1,200</td>
+<td class="py-3 px-space-md font-data-mono">1,150</td>
+<td class="py-3 px-space-md font-data-mono font-bold text-primary">816</td>
+<td class="py-3 px-space-md">
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-primary font-bold font-data-mono text-label-sm">71.0%</span>
+</td>
+<td class="py-3 px-space-md font-data-mono font-semibold text-primary">79.2%</td>
+<td class="py-3 px-space-md font-data-mono font-semibold text-primary">61.5%</td>
+<td class="py-3 px-space-md font-data-mono font-bold text-secondary">₹17,800</td>
+<td class="py-3 px-space-md text-center">
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-tertiary-container font-label-sm text-[11px] font-bold">94.5% Mapped</span>
+</td>
+<td class="py-3 px-space-md text-right">
+<button class="p-1.5 rounded hover:bg-surface-container-high text-primary transition-colors" title="Download Signed Summary PDF">
+<span class="material-symbols-outlined text-[18px]">picture_as_pdf</span>
+</button>
+</td>
+</tr>
+<!-- Row 5 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3 px-space-md">
+<div class="font-semibold text-primary">MH-KHD-LOG-2024-Q3</div>
+<div class="font-label-sm text-[11px] text-on-surface-variant">Automated Warehousing Operations</div>
+</td>
+<td class="py-3 px-space-md">
+<div class="text-on-surface font-medium">Chakan Logistics Consortium</div>
+<div class="font-label-sm text-[11px] text-on-surface-variant font-data-mono">VTP-KHD-028</div>
+</td>
+<td class="py-3 px-space-md font-data-mono">2,100</td>
+<td class="py-3 px-space-md font-data-mono">2,010</td>
+<td class="py-3 px-space-md font-data-mono font-bold text-primary">1,447</td>
+<td class="py-3 px-space-md">
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-primary font-bold font-data-mono text-label-sm">72.0%</span>
+</td>
+<td class="py-3 px-space-md font-data-mono font-semibold text-primary">82.1%</td>
+<td class="py-3 px-space-md font-data-mono font-semibold text-primary">64.0%</td>
+<td class="py-3 px-space-md font-data-mono font-bold text-secondary">₹18,500</td>
+<td class="py-3 px-space-md text-center">
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-tertiary-container font-label-sm text-[11px] font-bold">97.1% Mapped</span>
+</td>
+<td class="py-3 px-space-md text-right">
+<button class="p-1.5 rounded hover:bg-surface-container-high text-primary transition-colors" title="Download Signed Summary PDF">
+<span class="material-symbols-outlined text-[18px]">picture_as_pdf</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Pagination and Statutory Attestation Footer -->
+<div class="flex flex-col sm:flex-row items-center justify-between gap-space-sm pt-space-sm border-t-0 font-label-sm text-label-sm text-on-surface-variant">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span>Cryptographically signed with MahaGov National Informatics Centre (NIC) HSM Key</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="px-2 py-1 bg-surface-container-low hover:bg-surface-container-high rounded text-primary font-semibold disabled:opacity-50" disabled="">Previous</button>
+<span class="px-2 font-data-mono font-bold text-primary">Page 1 of 5</span>
+<button class="px-2 py-1 bg-surface-container-low hover:bg-surface-container-high rounded text-primary font-semibold">Next</button>
+</div>
+</div>
+</div>
+<!-- Modal / Toast Alert Interaction Script -->
+<div class="fixed bottom-6 right-6 hidden bg-primary text-on-primary px-space-lg py-space-md rounded-lg shadow-xl border-l-4 border-secondary flex items-center gap-space-md z-50" id="toast-export">
+<span class="material-symbols-outlined text-secondary text-[24px]">task_alt</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold">Report Pack Scheduled &amp; Queued</span>
+<span class="font-body-sm text-body-sm text-primary-fixed-dim">Longitudinal CSV archive will be dispatched to your registered e-Office email.</span>
+</div>
+<button class="text-surface-variant hover:text-on-primary ml-space-sm" onclick="document.getElementById('toast-export').classList.add('hidden')">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+
+</div></main></div><script>window.MAHAKAUSHALYA_PORTAL = 'admin';</script><script type="module" src="../../shared/auth.js"></script><script type="module" src="js/analytics.js"></script>
+</body></html>

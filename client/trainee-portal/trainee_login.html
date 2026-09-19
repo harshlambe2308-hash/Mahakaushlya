@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><link rel="stylesheet" href="css/base.css"/><script src="https://cdn.tailwindcss.com"></script><script src="js/tailwind-config.js"></script></head><body class="bg-background font-body-md text-body-md text-on-surface"><div class="h-1 bg-gradient-to-r from-[#FF9933] via-white to-[#138808] w-full fixed top-0 left-0 z-50"></div><main class="w-full bg-background min-h-screen flex flex-col justify-center items-center px-margin-sm py-space-xl"><div class="flex flex-col w-full">
+<div class="w-full max-w-7xl mx-auto px-margin-sm md:px-margin py-space-md">
+<!-- Top Utility & Language/Accessibility Strip -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm mb-space-lg bg-surface-container-lowest px-space-md py-space-xs rounded-xl shadow-sm">
+<div class="flex items-center gap-space-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-headline-sm text-primary">account_balance</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm tracking-wide uppercase text-outline">Government of Maharashtra | महाराष्ट्र शासन</span>
+<span class="font-body-sm text-body-sm font-semibold text-primary">Skill, Employment, Entrepreneurship &amp; Innovation Department</span>
+</div>
+</div>
+<div class="flex items-center gap-space-md">
+<div class="flex items-center gap-space-xs bg-surface-container-low px-space-sm py-1 rounded-lg">
+<span class="material-symbols-outlined text-[16px] text-outline">lock</span>
+<span class="font-label-sm text-label-sm text-outline">Secure Gateway : SSL 256-Bit</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="px-space-sm py-1 font-label-md text-label-md bg-primary text-on-primary rounded-lg shadow-sm" type="button">English</button>
+<button class="px-space-sm py-1 font-label-md text-label-md bg-surface-container text-on-surface hover:bg-surface-container-high rounded-lg transition-colors" type="button">मराठी</button>
+</div>
+</div>
+</div>
+<!-- Main Section: 12-Column Balanced Institutional Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+<!-- Primary Authentication Card (7 cols) -->
+<div class="lg:col-span-7 bg-surface-container-lowest p-space-md md:p-space-xl rounded-xl shadow-md relative overflow-hidden">
+<!-- Subtle Ambient State Seal Backdrop -->
+<div class="absolute -right-16 -bottom-16 w-64 h-64 bg-primary/5 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute -left-12 -top-12 w-48 h-48 bg-secondary/5 rounded-full blur-2xl pointer-events-none"></div>
+<!-- Identity & Emblem Header -->
+<div class="flex flex-col items-center text-center pb-space-lg mb-space-lg bg-gradient-to-b from-surface-container-low/60 to-transparent p-space-md rounded-xl">
+<img alt="MahaKaushal Official Seal" class="h-20 w-auto object-contain mb-space-sm transform transition-transform hover:scale-105 duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIt0l1kdk5D9dkKFC_bHHInAowWTVicsCwmNluglgiSEx2GGPLf2yUiwqHLXqEi373IHojVzW8kqiZYD2ZOeqOwniZSZmqGkpusuDX7nEG_3CI5qH7XLNE3X7fVj9Y_6hQ9_IZBxKYwTgJXd46eHQBy6X0YDBarMET4sPGH_UnZso52JRXK2t0tEHD1NLyV8ui8AQeIe1RK-yYMWiLgYkovO88Q9nk3WXoTcMUofwyzb759Oq2fxH6gyGrv_7-2SqsAQ"/>
+<div class="inline-flex items-center gap-space-xs px-space-md py-space-xs bg-surface-container rounded-full mb-space-xs">
+<span class="inline-block w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<span class="font-label-md text-label-md text-primary font-bold tracking-wider uppercase">Trainee Access Portal</span>
+</div>
+<h1 class="font-headline-md text-headline-md text-primary tracking-tight">प्रशिक्षणार्थी लॉगिन / Candidate Portal Authentication</h1>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-md mt-space-xs">
+            Verify credentials to access certified curriculum records, dynamic attendance tracking, and state-monitored placement pipelines.
+          </p>
+</div>
+
+<div id="api-alert-host" class="w-full mb-space-md"></div>
+<!-- Authentication Mode Selector Tabs -->
+<div class="flex p-1 bg-surface-container rounded-lg mb-space-lg" id="authModeTabs">
+<button class="flex-1 py-space-sm px-space-md font-label-lg text-label-lg rounded-lg transition-all text-center flex items-center justify-center gap-space-xs bg-surface-container-lowest text-primary shadow-sm font-semibold" id="tabPasswordBtn" onclick="switchTab('password')" type="button">
+<span class="material-symbols-outlined text-[18px]">password</span>
+            Password Access
+          </button>
+<button class="flex-1 py-space-sm px-space-md font-label-lg text-label-lg rounded-lg transition-all text-center flex items-center justify-center gap-space-xs text-on-surface-variant hover:text-primary" id="tabOtpBtn" onclick="switchTab('otp')" type="button">
+<span class="material-symbols-outlined text-[18px]">sms</span>
+            Quick OTP Access
+          </button>
+</div>
+<!-- Form 1: Standard Password Login -->
+<form class="flex flex-col gap-space-md" id="passwordLoginForm" onsubmit="return false;">
+<!-- Identity Input -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex justify-between items-center">
+<label class="font-label-lg text-label-lg text-on-surface" for="identifierInput">
+                Registered Mobile Number or Trainee ID / Email <span class="text-error">*</span>
+</label>
+<button class="font-label-sm text-label-sm text-secondary hover:underline flex items-center gap-1" onclick="openIdLookupModal()" type="button">
+<span class="material-symbols-outlined text-[14px]">search</span> Find ID?
+              </button>
+</div>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-space-md text-outline pointer-events-none">badge</span>
+<input class="w-full bg-surface-container-lowest text-on-surface pl-12 pr-space-md py-3 rounded-lg font-body-md text-body-md focus:bg-surface-container-low transition-colors shadow-sm outline-none" id="identifierInput" placeholder="e.g. 9876543210 or TRN-2024-MH8941" required="" type="text"/>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-outline">info</span>
+              Enter 10-digit mobile number or unique state enrollment code (TRN-XXXXXX)
+            </p>
+</div>
+<!-- Password Input -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex justify-between items-center">
+<label class="font-label-lg text-label-lg text-on-surface" for="passwordInput">
+                Account Password / पासवर्ड <span class="text-error">*</span>
+</label>
+<button class="font-label-md text-label-md text-secondary hover:underline font-semibold" onclick="openForgotPasswordModal()" type="button">
+                Forgot Password? / पासवर्ड विसरलात?
+              </button>
+</div>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-space-md text-outline pointer-events-none">lock</span>
+<input class="w-full bg-surface-container-lowest text-on-surface pl-12 pr-12 py-3 rounded-lg font-body-md text-body-md focus:bg-surface-container-low transition-colors shadow-sm outline-none" id="passwordInput" placeholder="Enter secure candidate password" required="" type="password"/>
+<button class="absolute right-space-md text-outline hover:text-primary transition-colors flex items-center" onclick="togglePasswordVisibility('passwordInput', 'pwToggleIcon')" type="button">
+<span class="material-symbols-outlined text-[20px]" id="pwToggleIcon">visibility</span>
+</button>
+</div>
+</div>
+<!-- Auxiliary Options -->
+<div class="flex items-center justify-between pt-space-xs">
+<label class="flex items-center gap-space-sm cursor-pointer select-none">
+<input checked="" class="w-4 h-4 rounded text-primary focus:ring-secondary accent-primary cursor-pointer" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface">Remember my device on this official browser</span>
+</label>
+</div>
+<!-- Primary Submit CTA -->
+<button class="w-full mt-space-sm py-3 px-space-lg bg-primary hover:bg-[#092c5e] text-on-primary font-headline-sm text-headline-sm rounded-lg shadow-md transition-all flex items-center justify-center gap-space-sm group active:scale-[0.99]" id="loginSubmitBtn" type="submit">
+<span>Login to Portal / लॉगिन करा</span>
+<span class="material-symbols-outlined text-[20px] transition-transform group-hover:translate-x-1">arrow_forward</span>
+</button>
+</form>
+<!-- Form 2: Mobile Instant OTP Login (Initially Hidden) -->
+<form class="hidden flex-col gap-space-md" id="otpLoginForm" onsubmit="event.preventDefault(); triggerOtpSim();">
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-lg text-label-lg text-on-surface" for="otpMobileInput">
+              Aadhaar-Linked Mobile Number <span class="text-error">*</span>
+</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-space-md text-outline pointer-events-none">phone_android</span>
+<input class="w-full bg-surface-container-lowest text-on-surface pl-12 pr-28 py-3 rounded-lg font-body-md text-body-md focus:bg-surface-container-low transition-colors shadow-sm outline-none" id="otpMobileInput" pattern="[0-9]{10}" placeholder="10-digit registered number" type="tel"/>
+<button class="absolute right-2 px-space-sm py-1.5 bg-surface-container-high text-primary hover:bg-surface-dim font-label-md text-label-md rounded-lg transition-colors" id="getOtpBtn" onclick="sendOtpCounter()" type="button">
+                Send OTP
+              </button>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">An authentication passcode will be dispatched to your MahaKaushal registered SIM.</p>
+</div>
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-lg text-label-lg text-on-surface" for="otpValueInput">
+              Enter 6-Digit One Time Password <span class="text-error">*</span>
+</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-space-md text-outline pointer-events-none">pin</span>
+<input class="w-full tracking-widest text-center bg-surface-container-lowest text-on-surface py-3 rounded-lg font-headline-sm text-headline-sm focus:bg-surface-container-low transition-colors shadow-sm outline-none" id="otpValueInput" maxlength="6" placeholder="• • • • • •" type="text"/>
+</div>
+<div class="flex justify-between items-center text-body-sm">
+<span class="text-outline" id="otpCountdown">Resend code in 45s</span>
+<button class="text-secondary hover:underline font-label-sm text-label-sm font-semibold opacity-50 cursor-not-allowed" disabled="" id="resendLink" onclick="sendOtpCounter()" type="button">Resend Code</button>
+</div>
+</div>
+<button class="w-full mt-space-sm py-3 px-space-lg bg-secondary hover:bg-[#8e3100] text-on-secondary font-headline-sm text-headline-sm rounded-lg shadow-md transition-all flex items-center justify-center gap-space-sm group" type="submit">
+<span>Verify &amp; Enter Portal / पडताळणी करा</span>
+<span class="material-symbols-outlined text-[20px] transition-transform group-hover:translate-x-1">verified_user</span>
+</button>
+</form>
+<!-- Divider with Civic Note -->
+<div class="my-space-lg flex items-center gap-space-sm">
+<div class="h-0.5 flex-1 bg-surface-container"></div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Direct Enrollment Track</span>
+<div class="h-0.5 flex-1 bg-surface-container"></div>
+</div>
+<!-- Registration Notice Action Strip -->
+<div class="bg-surface-container-low p-space-md rounded-xl flex flex-col sm:flex-row items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-sm text-left">
+<div class="p-space-xs bg-secondary/10 rounded-lg text-secondary">
+<span class="material-symbols-outlined text-headline-sm">how_to_reg</span>
+</div>
+<div>
+<p class="font-label-lg text-label-lg text-on-surface">New candidate to MahaKaushal?</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Register now to activate your state tracking and verification profile.</p>
+</div>
+</div>
+<button class="w-full sm:w-auto px-space-md py-2 bg-surface-container-highest hover:bg-surface-container-high text-primary font-label-lg text-label-lg rounded-lg transition-colors whitespace-nowrap text-center" onclick="window.location.href='trainee_registration.html'" type="button">
+            Candidate Registration
+          </button>
+</div>
+<!-- 256-bit SDC Security Seal -->
+<div class="mt-space-lg pt-space-sm text-center flex items-center justify-center gap-space-xs text-outline">
+<span class="material-symbols-outlined text-[16px] text-tertiary">security</span>
+<span class="font-label-sm text-label-sm">Secured with 256-bit SSL encryption | Government of Maharashtra State Data Centre (SDC)</span>
+</div>
+</div>
+<!-- Right Column: Institutional Trust, Support & Telemetry (5 cols) -->
+<div class="lg:col-span-5 flex flex-col gap-space-md">
+<!-- Maharashtra State Trainee Engagement Snapshot Card -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm overflow-hidden relative">
+<div class="flex items-center justify-between pb-space-sm mb-space-sm border-b border-surface-container-low">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary">monitoring</span>
+<span class="font-label-lg text-label-lg text-primary">State Portal Live Telemetry</span>
+</div>
+<span class="px-2 py-0.5 bg-surface-container text-outline font-label-sm text-label-sm rounded">Gov. Verified</span>
+</div>
+<!-- Visual Bar Chart Representation -->
+<div class="mb-space-md">
+<div class="flex justify-between items-baseline mb-1">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Active Candidates Verified (2024–25)</span>
+<span class="font-headline-sm text-headline-sm text-primary font-bold">842,120</span>
+</div>
+<div class="w-full bg-surface-container h-2.5 rounded-full overflow-hidden flex">
+<div class="bg-primary h-full rounded-full" style="width: 78%"></div>
+</div>
+<div class="flex justify-between items-center text-outline font-label-sm text-label-sm mt-1">
+<span>Target: 1,000,000</span>
+<span class="text-tertiary font-semibold">78.2% Placed / Active</span>
+</div>
+</div>
+<!-- Micro Quick Steps Grid -->
+<div class="grid grid-cols-2 gap-space-sm">
+<div class="p-space-sm bg-surface-container-low rounded-lg">
+<span class="font-label-sm text-label-sm text-outline uppercase block">Districts Connected</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">36 / 36</span>
+<span class="font-body-sm text-body-sm text-on-tertiary-container block">100% SDC Coverage</span>
+</div>
+<div class="p-space-sm bg-surface-container-low rounded-lg">
+<span class="font-label-sm text-label-sm text-outline uppercase block">Partner Centers</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">1,840+</span>
+<span class="font-body-sm text-body-sm text-secondary block">MSSDS Accreditations</span>
+</div>
+</div>
+</div>
+<!-- Trainee ID Lookup Guidance Card -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm">
+<div class="flex items-center gap-space-sm mb-space-sm">
+<div class="p-space-xs bg-primary-fixed text-on-primary-fixed rounded-lg">
+<span class="material-symbols-outlined text-headline-sm">contact_support</span>
+</div>
+<div>
+<h2 class="font-label-lg text-label-lg text-primary">Need Help with Trainee ID?</h2>
+<span class="font-body-sm text-body-sm text-on-surface-variant">कौशल्य ओळखपत्र क्रमांक सहाय्यता</span>
+</div>
+</div>
+<div class="space-y-space-sm">
+<div class="flex items-start gap-space-xs text-on-surface">
+<span class="material-symbols-outlined text-[18px] text-secondary mt-0.5">check_circle</span>
+<p class="font-body-sm text-body-sm">Check SMS notifications sent by MahaKaushal after your batch biometric enrollment.</p>
+</div>
+<div class="flex items-start gap-space-xs text-on-surface">
+<span class="material-symbols-outlined text-[18px] text-secondary mt-0.5">check_circle</span>
+<p class="font-body-sm text-body-sm">Your Trainee ID is also stamped on the provisional acknowledgment issued by your Training Center (VTP).</p>
+</div>
+<div class="flex items-start gap-space-xs text-on-surface">
+<span class="material-symbols-outlined text-[18px] text-secondary mt-0.5">check_circle</span>
+<p class="font-body-sm text-body-sm">Alternatively, enter your 10-digit Aadhaar-associated mobile phone number to log in via OTP directly.</p>
+</div>
+</div>
+</div>
+<!-- Official Support Desk Card -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm">
+<h2 class="font-label-lg text-label-lg text-primary mb-space-sm flex items-center justify-between">
+<span>Citizen Helplines &amp; Support</span>
+<span class="material-symbols-outlined text-outline text-[18px]">support_agent</span>
+</h2>
+<div class="flex flex-col gap-space-sm">
+<a class="flex items-center justify-between p-space-sm bg-surface-container-low hover:bg-surface-container rounded-lg transition-colors group" href="tel:18001208040">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary group-hover:scale-110 transition-transform">phone_in_talk</span>
+<div>
+<div class="font-label-md text-label-md text-on-surface">Toll Free Candidate Helpdesk</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Mon-Sat (09:30 AM – 06:00 PM)</div>
+</div>
+</div>
+<span class="font-label-lg text-label-lg text-primary font-bold">1800-120-8040</span>
+</a>
+<a class="flex items-center justify-between p-space-sm bg-surface-container-low hover:bg-surface-container rounded-lg transition-colors group" href="mailto:support.mahakaushal@maharashtra.gov.in">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary group-hover:scale-110 transition-transform">mail</span>
+<div>
+<div class="font-label-md text-label-md text-on-surface">Technical Support Email</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">support.mahakaushal@maharashtra.gov.in</div>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline">chevron_right</span>
+</a>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center justify-between text-outline">
+<span class="font-label-sm text-label-sm">MSSDS Bhavan, Bandra (E), Mumbai 400051</span>
+<span class="font-label-sm text-label-sm font-mono">v4.18-PROD</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Mandatory Footer Citation Strip -->
+<div class="mt-space-xl text-center text-outline font-body-sm text-body-sm flex flex-wrap justify-center items-center gap-x-space-md gap-y-space-xs">
+<span>© 2025 Maharashtra State Skill Development Society (MSSDS). All rights reserved.</span>
+<span>•</span>
+<a class="hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<span>•</span>
+<a class="hover:text-primary transition-colors" href="#">Terms of Usage</a>
+<span>•</span>
+<a class="hover:text-primary transition-colors" href="#">Hyperlinking Policy</a>
+<span>•</span>
+<a class="hover:text-primary transition-colors" href="#">Accessibility Statement</a>
+</div>
+</div>
+<!-- Modal 1: Forgot Password Modal (OTP Recovery) -->
+<div class="fixed inset-0 z-50 bg-[#0b1c30]/60 backdrop-blur-sm hidden items-center justify-center p-space-sm" id="forgotPwModal">
+<div class="bg-surface-container-lowest max-w-md w-full p-space-lg rounded-xl shadow-xl transform transition-all">
+<div class="flex items-center justify-between pb-space-sm mb-space-md border-b border-surface-container">
+<div class="flex items-center gap-space-xs text-primary">
+<span class="material-symbols-outlined">lock_reset</span>
+<h3 class="font-headline-sm text-headline-sm">Password Recovery / पासवर्ड पुनर्प्राप्ती</h3>
+</div>
+<button class="text-outline hover:text-on-surface" onclick="closeForgotPasswordModal()" type="button">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<div class="flex flex-col gap-space-md" id="modalStep1">
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Enter your registered Trainee ID or Aadhaar-linked Mobile number to receive an authorized one-time security OTP.
+        </p>
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md text-on-surface">Identification Code</label>
+<input class="w-full bg-surface-container-low px-space-md py-2.5 rounded-lg font-body-md text-body-md text-on-surface outline-none focus:bg-surface-container-high" id="recoveryIdentifier" placeholder="e.g. 9820012345 or TRN-XXXX" type="text"/>
+</div>
+<button class="w-full py-2.5 bg-primary text-on-primary font-label-lg text-label-lg rounded-lg shadow-sm hover:bg-[#092c5e] transition-colors" onclick="sendRecoveryOtp()" type="button">
+          Send Recovery OTP
+        </button>
+</div>
+<div class="hidden flex-col gap-space-md" id="modalStep2">
+<div class="p-space-sm bg-surface-container-low rounded-lg text-on-surface">
+<span class="font-label-sm text-label-sm text-tertiary block font-bold">OTP Dispatched Successfully</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Sent to the mobile number registered with your candidate dossier.</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md text-on-surface">Enter 6-Digit OTP</label>
+<input class="w-full tracking-widest text-center bg-surface-container-low py-2 rounded-lg font-headline-sm text-headline-sm text-on-surface outline-none" maxlength="6" placeholder="000000" type="text"/>
+</div>
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md text-on-surface">Set New Password</label>
+<input class="w-full bg-surface-container-low px-space-md py-2 rounded-lg font-body-md text-body-md text-on-surface outline-none" placeholder="Min. 8 characters with numbers" type="password"/>
+</div>
+<button class="w-full py-2.5 bg-secondary text-on-secondary font-label-lg text-label-lg rounded-lg shadow-sm hover:bg-[#8e3100] transition-colors" onclick="completePasswordReset()" type="button">
+          Confirm Password Change
+        </button>
+</div>
+</div>
+</div>
+<!-- Modal 2: ID Lookup Modal -->
+<div class="fixed inset-0 z-50 bg-[#0b1c30]/60 backdrop-blur-sm hidden items-center justify-center p-space-sm" id="idLookupModal">
+<div class="bg-surface-container-lowest max-w-md w-full p-space-lg rounded-xl shadow-xl">
+<div class="flex items-center justify-between pb-space-sm mb-space-md border-b border-surface-container">
+<div class="flex items-center gap-space-xs text-primary">
+<span class="material-symbols-outlined">search</span>
+<h3 class="font-headline-sm text-headline-sm">Trainee ID Search</h3>
+</div>
+<button class="text-outline hover:text-on-surface" onclick="closeIdLookupModal()" type="button">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<div class="flex flex-col gap-space-md">
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Lookup your assigned TRN code using your registered 12-digit Aadhaar number and Year of Birth.
+        </p>
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md text-on-surface">Aadhaar Number (12 Digits)</label>
+<input class="w-full bg-surface-container-low px-space-md py-2.5 rounded-lg font-body-md text-body-md text-on-surface outline-none" maxlength="12" placeholder="XXXX-XXXX-XXXX" type="text"/>
+</div>
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md text-on-surface">Year of Birth (YYYY)</label>
+<input class="w-full bg-surface-container-low px-space-md py-2.5 rounded-lg font-body-md text-body-md text-on-surface outline-none" maxlength="4" placeholder="e.g. 2002" type="text"/>
+</div>
+<button class="w-full py-2.5 bg-primary text-on-primary font-label-lg text-label-lg rounded-lg shadow-sm hover:bg-[#092c5e] transition-colors" onclick="alert('Verification SMS with your Trainee ID has been forwarded to your registered mobile device.'); closeIdLookupModal();" type="button">
+          Search &amp; Dispatch via SMS
+        </button>
+</div>
+</div>
+</div>
+</div>
+<script>
+  function switchTab(mode) {
+    const pwForm = document.getElementById('passwordLoginForm');
+    const otpForm = document.getElementById('otpLoginForm');
+    const tabPasswordBtn = document.getElementById('tabPasswordBtn');
+    const tabOtpBtn = document.getElementById('tabOtpBtn');
+
+    if (mode === 'password') {
+      pwForm.classList.remove('hidden');
+      pwForm.classList.add('flex');
+      otpForm.classList.add('hidden');
+      otpForm.classList.remove('flex');
+
+      tabPasswordBtn.className = 'flex-1 py-space-sm px-space-md font-label-lg text-label-lg rounded-lg transition-all text-center flex items-center justify-center gap-space-xs bg-surface-container-lowest text-primary shadow-sm font-semibold';
+      tabOtpBtn.className = 'flex-1 py-space-sm px-space-md font-label-lg text-label-lg rounded-lg transition-all text-center flex items-center justify-center gap-space-xs text-on-surface-variant hover:text-primary';
+    } else {
+      pwForm.classList.add('hidden');
+      pwForm.classList.remove('flex');
+      otpForm.classList.remove('hidden');
+      otpForm.classList.add('flex');
+
+      tabOtpBtn.className = 'flex-1 py-space-sm px-space-md font-label-lg text-label-lg rounded-lg transition-all text-center flex items-center justify-center gap-space-xs bg-surface-container-lowest text-secondary shadow-sm font-semibold';
+      tabPasswordBtn.className = 'flex-1 py-space-sm px-space-md font-label-lg text-label-lg rounded-lg transition-all text-center flex items-center justify-center gap-space-xs text-on-surface-variant hover:text-primary';
+    }
+  }
+
+  function togglePasswordVisibility(fieldId, iconId) {
+    const field = document.getElementById(fieldId);
+    const icon = document.getElementById(iconId);
+    if (!field || !icon) return;
+
+    if (field.type === 'password') {
+      field.type = 'text';
+      icon.innerText = 'visibility_off';
+    } else {
+      field.type = 'password';
+      icon.innerText = 'visibility';
+    }
+  }
+
+  function triggerAuthSim() {
+    const btn = document.getElementById('loginSubmitBtn');
+    btn.disabled = true;
+    btn.innerHTML = `<span class="material-symbols-outlined text-[20px] animate-spin">progress_activity</span> Authenticating...`;
+    setTimeout(() => {
+      alert('Authentication successful. Redirecting to Trainee Unified Dashboard...');
+      btn.disabled = false;
+      btn.innerHTML = `<span>Login to Portal / लॉगिन करा</span><span class="material-symbols-outlined text-[20px]">arrow_forward</span>`;
+    }, 1200);
+  }
+
+  function triggerOtpSim() {
+    alert('Verifying One Time Passcode with MahaKaushal IAM...');
+  }
+
+  let countdownInterval = null;
+  function sendOtpCounter() {
+    const countdownEl = document.getElementById('otpCountdown');
+    const resendBtn = document.getElementById('resendLink');
+    let timeLeft = 45;
+    
+    resendBtn.disabled = true;
+    resendBtn.classList.add('opacity-50', 'cursor-not-allowed');
+
+    if (countdownInterval) clearInterval(countdownInterval);
+
+    countdownInterval = setInterval(() => {
+      timeLeft--;
+      if (timeLeft <= 0) {
+        clearInterval(countdownInterval);
+        countdownEl.innerText = 'You can now request a new OTP';
+        resendBtn.disabled = false;
+        resendBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+      } else {
+        countdownEl.innerText = `Resend code in ${timeLeft}s`;
+      }
+    }, 1000);
+
+    alert('Security OTP transmitted to entered telephone number.');
+  }
+
+  function openForgotPasswordModal() {
+    const m = document.getElementById('forgotPwModal');
+    m.classList.remove('hidden');
+    m.classList.add('flex');
+    document.getElementById('modalStep1').classList.remove('hidden');
+    document.getElementById('modalStep2').classList.add('hidden');
+  }
+
+  function closeForgotPasswordModal() {
+    const m = document.getElementById('forgotPwModal');
+    m.classList.add('hidden');
+    m.classList.remove('flex');
+  }
+
+  function sendRecoveryOtp() {
+    document.getElementById('modalStep1').classList.add('hidden');
+    document.getElementById('modalStep2').classList.remove('hidden');
+    document.getElementById('modalStep2').classList.add('flex');
+  }
+
+  function completePasswordReset() {
+    alert('Your credentials have been securely reset. Please log in with the new password.');
+    closeForgotPasswordModal();
+  }
+
+  function openIdLookupModal() {
+    const m = document.getElementById('idLookupModal');
+    m.classList.remove('hidden');
+    m.classList.add('flex');
+  }
+
+  function closeIdLookupModal() {
+    const m = document.getElementById('idLookupModal');
+    m.classList.add('hidden');
+    m.classList.remove('flex');
+  }
+</script></main><script>window.MAHAKAUSHALYA_PORTAL = 'trainee';</script><script type="module" src="../../shared/auth.js"></script><script type="module" src="./js/auth.js"></script></body></html>

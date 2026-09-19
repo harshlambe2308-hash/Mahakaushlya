@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><link rel="stylesheet" href="css/base.css"/><script src="https://cdn.tailwindcss.com"></script><script src="js/tailwind-config.js"></script></head><body class="bg-background font-body-md text-body-md text-on-surface"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col"><div class="h-1 bg-gradient-to-r from-[#FF9933] via-white to-[#138808] w-full"></div><div class="p-space-md flex flex-col"><span class="font-headline-sm text-headline-sm text-primary tracking-tight">MahaKaushalya</span><span class="font-label-sm text-label-sm text-on-surface-variant">Outcome Tracking</span><span class="mt-space-xs inline-flex items-center px-space-xs py-0.5 rounded font-label-sm text-label-sm bg-surface-container-high text-primary">Govt Portal</span></div><nav class="flex-1 px-space-sm flex flex-col gap-space-xs" data-active-classes="bg-primary-container text-on-primary font-label-md rounded-lg"><a aria-current="page" class="flex items-center px-space-sm py-space-sm transition-colors bg-primary-container text-on-primary font-label-md rounded-lg" data-path="trainee-dashboard" href="trainee_dashboard.html"><span class="material-symbols-outlined mr-space-sm text-lg">dashboard</span>Trainee Dashboard</a><a class="flex items-center px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md" data-path="update-outcome-status" href="update_outcome_status.html"><span class="material-symbols-outlined mr-space-sm text-lg">fact_check</span>Update Outcome Status</a><a class="flex items-center px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md" data-path="follow-up" href="follow_up.html"><span class="material-symbols-outlined mr-space-sm text-lg">mark_chat_read</span>Follow-up (SMS/WA)</a><a class="flex items-center px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md" data-path="profile-and-settings" href="profile_settings.html"><span class="material-symbols-outlined mr-space-sm text-lg">tune</span>Profile &amp; Settings</a><div class="my-space-sm h-px bg-surface-container-high"></div><a class="flex items-center px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md" data-path="register-trainee" href="trainee_registration.html"><span class="material-symbols-outlined mr-space-sm text-lg">person_add</span>Register Trainee</a><a class="flex items-center px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md" data-path="home" href="index.html"><span class="material-symbols-outlined mr-space-sm text-lg">home</span>Public Portal</a></nav><div class="p-space-sm bg-surface-container-low m-space-sm rounded-lg flex flex-col gap-space-xs"><span class="font-label-sm text-label-sm text-on-surface font-semibold">Helpline Desk</span><span class="font-label-sm text-label-sm text-secondary font-bold">1800-120-8040</span></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface-container-lowest/95 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-gutter"><div class="flex items-center gap-space-sm"><span class="font-label-md text-label-md text-on-surface-variant">Maharashtra State Skill Development Society (MSSDS)</span></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm pr-space-md"><span class="cursor-pointer hover:text-on-surface">A-</span><span class="cursor-pointer font-bold hover:text-on-surface">A</span><span class="cursor-pointer hover:text-on-surface">A+</span><span class="text-outline-variant mx-1">|</span><button class="font-label-sm text-label-sm text-primary hover:text-secondary-container transition-colors">मराठी</button></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1XBFPUWpbG1OVD9wUBQsrXsEdQlEWyjSCWPdiYf6NOFrNjJgs7iqao4XMlsEfYRURB7RZCtQYfkAHq9QUoiNTPfrnppJbyzAyxkFAwnqsqgB2qeReLWDTItSR6Nwrf-2jR95F_opeqFI4jykN7qq7bj3GSXq663k7Toyr8wCJe9ndFg2-L3nttUoV24Ak18jQ_Fg2oF671ahl8ageRy41dKkas-IP5QXG-0t5-NuiKw-pC9dcuASy0XFEEWPURBJhJWfTJRH4L18Q"/></div></header><main class="relative pt-16 bg-background w-full px-gutter min-h-screen"><div class="flex flex-col w-full pb-margin">
+
+<div id="api-alert-host" class="w-full mb-space-md"></div>
+<div class="w-full py-space-sm mb-space-md flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="px-2.5 py-1 rounded bg-surface-container-high text-primary font-label-sm text-label-sm font-semibold tracking-wider uppercase">
+        कौशल्यापासून रोजगारापर्यंत
+      </span>
+<span class="text-outline-variant">•</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Trainee Citizen Portal (नागरिक डॅशबोर्ड)</span>
+</div>
+<div class="flex items-center gap-space-sm text-on-surface-variant font-label-sm text-label-sm">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-tertiary-container text-tertiary-fixed font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary-fixed animate-pulse"></span>
+        EPFO Live Sync Active
+      </span>
+<span class="hidden md:inline text-outline-variant">|</span>
+<span class="hidden md:inline">Last authenticated: Today, 09:42 AM IST</span>
+</div>
+</div>
+<section class="w-full rounded-xl bg-surface-container-lowest shadow-sm p-space-lg mb-space-lg relative overflow-hidden">
+<div class="absolute right-0 top-0 w-80 h-full bg-gradient-to-l from-surface-container-high/40 to-transparent pointer-events-none"></div>
+<div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-space-lg relative z-10">
+<div class="flex flex-col sm:flex-row items-start sm:items-center gap-space-md min-w-0">
+<div class="relative">
+<img class="w-20 h-20 sm:w-24 sm:h-24 rounded-xl object-cover shadow-sm" data-alt="Dignified passport-style close up portrait photo of a 23-year-old young Indian Maharashtrian man wearing a clean collared uniform shirt, confident expression, neutral professional civic government studio lighting, crisp high clarity" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGx2GMgIwruAhVvPFfl-5jTG5KDc1TRrM8u4T3yJ1gOjE9bXhBqQNCyvJZSDjpJvFIIK8_1OUuuo19yxRYBEFwGTdVAY72THWlRQwD-Q7_UzCLJDBPsoqZ081XaYupKgdmeiIzLDJg08jzNpZ-jjcFGrCiHm4x9aziOXLSwyIYOwJbcGgxfALEt3UcD25jR5DLIb0ipTUNVdv0j1fBdnvBZoIzGURbxpUs8sAAps1l8Jj3iBJqwfes"/>
+<span class="absolute -bottom-1.5 -right-1.5 p-1 rounded-full bg-tertiary text-tertiary-fixed shadow" title="Identity Aadhaar Verified">
+<span class="material-symbols-outlined text-sm block" style="font-variation-settings: 'FILL' 1;">verified</span>
+</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex flex-wrap items-center gap-space-xs mb-1">
+<h1 class="font-headline-md text-headline-md text-primary font-bold tracking-tight" id="dash-trainee-name">Rahul S. Jadhav</h1>
+<span class="font-label-md text-label-md text-on-surface-variant ml-1">(राहुल संभाजी जाधव)</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-primary font-label-sm text-label-sm ml-2">General Cat</span>
+</div>
+<p class="font-body-md text-body-md text-secondary font-semibold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-base">solar_power</span>
+            <span id="dash-course-name">Solar PV System Installation Specialist - Level 4 (NSQF)</span>
+          </p>
+<div class="flex flex-wrap items-center gap-y-1 gap-x-space-md mt-2 text-on-surface-variant font-label-sm text-label-sm">
+<span class="inline-flex items-center gap-1 font-semibold text-on-surface">
+<span class="material-symbols-outlined text-sm text-outline">badge</span>
+              ID: <span class="font-mono text-primary" id="dash-enrollment-id">MK-2024-MH-08492</span>
+</span>
+<span class="inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-sm text-outline">account_balance</span>
+              Government ITI Aundh, Pune
+            </span>
+<span class="inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-sm text-outline">group</span>
+              Batch: <span class="text-on-surface font-semibold">Q2-2024</span>
+</span>
+</div>
+</div>
+</div>
+<div class="flex flex-row sm:flex-col lg:flex-row items-center gap-space-sm w-full lg:w-auto shrink-0 pt-space-sm lg:pt-0">
+<a class="w-full sm:w-auto px-space-md py-2.5 rounded bg-surface-container-low hover:bg-surface-container text-primary font-label-md text-label-md flex items-center justify-center gap-2 transition-colors" data-path="profile-and-settings" href="profile_settings.html">
+<span class="material-symbols-outlined text-base">badge</span>
+          View e-Card
+        </a>
+<button class="w-full sm:w-auto px-space-md py-2.5 rounded bg-surface-container-high hover:bg-surface-container-highest text-primary font-label-md text-label-md flex items-center justify-center gap-2 transition-colors" onclick="document.getElementById('cert-modal').classList.remove('hidden')">
+<span class="material-symbols-outlined text-base">download</span>
+          Certificate
+        </button>
+</div>
+</div>
+</section>
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-lg mb-space-lg">
+<div class="xl:col-span-7 flex flex-col gap-space-lg">
+<div class="w-full rounded-xl bg-surface-container-lowest shadow-sm p-space-lg relative overflow-hidden flex flex-col justify-between">
+<div class="flex items-start justify-between gap-space-md pb-space-md">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Verified Employment Telemetry</span>
+<span class="font-headline-sm text-headline-sm text-primary mt-0.5">Current Placement Status</span>
+</div>
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-tertiary-container text-tertiary-fixed font-label-sm text-label-sm font-bold shadow-sm">
+<span class="material-symbols-outlined text-base" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+            <span id="dash-placement-status">Employed (Private Sector)</span>
+          </span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-md my-space-sm p-space-md rounded-lg bg-surface-container-low">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant mb-1">Employer / Company</span>
+<span class="font-label-lg text-label-lg text-on-surface font-bold" id="dash-employer-name">Mahindra Susten Solar Ltd.</span>
+<span class="font-body-sm text-body-sm text-outline mt-0.5 flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">location_on</span> Chakan MIDC, Phase II, Pune
+            </span>
+</div>
+<div class="flex flex-col sm:px-space-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant mb-1">Current Monthly Gross</span>
+<div class="flex items-baseline gap-1">
+<span class="font-headline-md text-headline-md text-primary font-bold" id="dash-monthly-wage">₹22,500</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">/ mo</span>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary-fixed-dim font-semibold inline-flex items-center gap-0.5 mt-0.5">
+<span class="material-symbols-outlined text-xs">trending_up</span> +12.5% increase in 6M
+            </span>
+</div>
+<div class="flex flex-col sm:px-space-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant mb-1">Date of Joining</span>
+<span class="font-label-lg text-label-lg text-on-surface font-bold">15 July 2024</span>
+<span class="font-body-sm text-body-sm text-outline mt-0.5 flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">verified_user</span> ESIC &amp; PF Active
+            </span>
+</div>
+</div>
+<div class="flex flex-wrap items-center justify-between gap-space-sm pt-space-md text-on-surface-variant font-label-sm text-label-sm">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-on-tertiary-container"></span>
+<span>UAN Linked: <span class="font-mono text-on-surface font-semibold">101829482910</span></span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm text-secondary">verified</span>
+<span>Third-Party Employer Retainership Sign-off Completed</span>
+</div>
+</div>
+</div>
+<div class="w-full rounded-xl bg-gradient-to-br from-primary via-primary-container to-primary text-on-primary shadow-sm p-space-lg flex flex-col justify-between relative overflow-hidden">
+<div class="absolute -right-10 -bottom-10 w-48 h-48 rounded-full bg-secondary-container/10 pointer-events-none"></div>
+<div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-md mb-space-md relative z-10">
+<div class="flex items-start gap-space-sm">
+<div class="p-2.5 rounded bg-white/10 text-secondary-fixed">
+<span class="material-symbols-outlined text-2xl">notification_important</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded bg-secondary-container text-on-secondary font-label-sm text-label-sm font-bold tracking-wide">
+                  ATTENTION REQUIRED
+                </span>
+<span class="font-label-sm text-label-sm text-primary-fixed">Window Active</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-primary font-bold mt-1">6-Month Milestone Follow-up</h2>
+</div>
+</div>
+<div class="p-space-sm rounded bg-white/10 text-right shrink-0">
+<span class="block font-label-sm text-label-sm text-primary-fixed">Due In</span>
+<span class="font-headline-md text-headline-md font-bold text-secondary-fixed tracking-tight">18 Days</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-primary-fixed mb-space-lg relative z-10" id="dash-alerts">
+          Your 6-month post-training employment milestone verification is now due. Please re-confirm your current compensation, submit your recent November payslip, and authenticate your ongoing employment status.
+        </p>
+<div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-space-md relative z-10">
+<a class="flex-1 py-3 px-space-md rounded bg-secondary-container hover:bg-secondary text-white font-label-lg text-label-lg text-center font-bold shadow transition-all flex items-center justify-center gap-2" data-path="update-outcome-status" href="update_outcome_status.html">
+<span class="material-symbols-outlined text-lg">fact_check</span>
+<span>Update My Outcome Status / स्थिती अद्यतनित करा</span>
+</a>
+<a class="px-space-md py-3 rounded bg-white/10 hover:bg-white/15 text-on-primary font-label-md text-label-md text-center flex items-center justify-center gap-1.5 transition-colors" data-path="follow-up" href="follow_up.html">
+<span class="material-symbols-outlined text-base">chat</span>
+            Respond via WhatsApp
+          </a>
+</div>
+</div>
+</div>
+<div class="xl:col-span-5 flex flex-col gap-space-lg">
+<div class="w-full rounded-xl bg-surface-container-lowest shadow-sm p-space-lg">
+<div class="flex items-center justify-between mb-space-md">
+<h2 class="font-headline-sm text-headline-sm text-primary font-bold">Outcome Metrology</h2>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">FY 2024-25</span>
+</div>
+<div class="grid grid-cols-3 gap-space-sm mb-space-md">
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col items-center text-center">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Continuous Career</span>
+<span class="font-headline-md text-headline-md text-primary font-bold mt-1">6 Mos</span>
+<span class="font-label-sm text-label-sm text-on-tertiary-container mt-0.5">Retained</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col items-center text-center">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Wage Delta</span>
+<span class="font-headline-md text-headline-md text-secondary font-bold mt-1">+12.5%</span>
+<span class="font-label-sm text-label-sm text-outline mt-0.5">From ₹20k</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col items-center text-center">
+<span class="font-label-sm text-label-sm text-on-surface-variant">EPFO Validation</span>
+<div class="mt-1 text-tertiary flex items-center gap-1">
+<span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="font-label-lg text-label-lg font-bold">Active</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline mt-0.5">100% Match</span>
+</div>
+</div>
+<div class="p-space-md rounded-lg bg-surface-container-low">
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-sm text-label-sm font-semibold text-on-surface">MahaKaushalya Outcome Progress</span>
+<span class="font-label-sm text-label-sm font-bold text-primary">50% Completed (2/4 Milestones)</span>
+</div>
+<div class="w-full h-2.5 rounded-full bg-surface-container-high overflow-hidden">
+<div class="h-full bg-secondary-container rounded-full" style="width: 50%;"></div>
+</div>
+<div class="flex justify-between text-outline text-label-sm font-label-sm mt-1.5">
+<span>Certification</span>
+<span>3-Month</span>
+<span class="font-bold text-secondary">6-Month (Current)</span>
+<span>12-Month</span>
+</div>
+</div>
+</div>
+<div class="w-full rounded-xl bg-surface-container-lowest shadow-sm p-space-lg flex flex-col">
+<div class="flex items-center justify-between mb-space-md">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">workspace_premium</span>
+<h2 class="font-label-lg text-label-lg text-primary font-bold">Milestone Certificate Preview</h2>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-primary font-label-sm text-label-sm font-semibold">
+            Govt. Certified
+          </span>
+</div>
+<div class="p-space-md rounded-lg bg-surface-container-low relative overflow-hidden">
+<div class="h-1 bg-gradient-to-r from-secondary-container via-white to-tertiary w-full -mt-space-md mb-space-sm"></div>
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Government of Maharashtra</span>
+<span class="font-label-md text-label-md text-primary font-bold">Outcome &amp; Employment Retention Record</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-1">Certified for: <b class="text-on-surface">Rahul S. Jadhav</b></span>
+<span class="font-label-sm text-label-sm text-outline-variant font-mono mt-0.5">SHA256: 9e3f...82ba (Tamper-proof)</span>
+</div>
+<div class="p-1.5 bg-white rounded shadow-sm shrink-0 flex flex-col items-center">
+<svg class="w-16 h-16 text-on-surface" fill="currentColor" viewbox="0 0 24 24">
+<path d="M2 2h8v8H2V2zm2 2v4h4V4H4zm10-2h8v8h-8V2zm2 2v4h4V4h-4zM2 14h8v8H2v-8zm2 2v4h4v-4H4zm13-2h3v3h-3v-3zm0 5h3v3h-3v-3zm-3-5h2v2h-2v-2zm0 3h2v3h-2v-3zm3 0h2v2h-2v-2z"></path>
+</svg>
+<span class="font-label-sm text-label-sm text-outline mt-0.5 font-mono">MSSDS QR</span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between gap-space-sm mt-space-md">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Format: Signed Digitally (PDF)</span>
+<button class="px-space-md py-2 rounded bg-primary hover:bg-primary-container text-white font-label-md text-label-md font-semibold flex items-center gap-1.5 transition-colors" onclick="document.getElementById('cert-modal').classList.remove('hidden')">
+<span class="material-symbols-outlined text-base">visibility</span>
+            View &amp; Download
+          </button>
+</div>
+</div>
+</div>
+</div>
+<section class="w-full rounded-xl bg-surface-container-lowest shadow-sm p-space-lg mb-space-lg">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm pb-space-md mb-space-md">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-primary font-bold">Outcome Verification Timeline</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Statutory post-placement monitoring ledger under Maharashtra Skill Policy</p>
+</div>
+<div class="flex items-center gap-space-sm font-label-sm text-label-sm">
+<span class="inline-flex items-center gap-1 text-on-surface"><span class="w-2.5 h-2.5 rounded-full bg-on-tertiary-container"></span> Verified</span>
+<span class="inline-flex items-center gap-1 text-on-surface"><span class="w-2.5 h-2.5 rounded-full bg-secondary-container"></span> Active Window</span>
+<span class="inline-flex items-center gap-1 text-outline"><span class="w-2.5 h-2.5 rounded-full bg-outline-variant"></span> Upcoming</span>
+</div>
+</div>
+<div class="relative">
+<div class="hidden lg:block absolute top-1/2 left-8 right-8 h-1 bg-surface-container-high -translate-y-6 z-0"></div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-md relative z-10">
+<div class="flex flex-col p-space-md rounded-lg bg-surface-container-low transition-all hover:bg-surface-container-high/60">
+<div class="flex items-center justify-between mb-3">
+<span class="w-8 h-8 rounded-full bg-tertiary-container text-tertiary-fixed flex items-center justify-center font-label-md text-label-md font-bold">
+<span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">school</span>
+</span>
+<span class="px-2 py-0.5 rounded bg-tertiary-container text-tertiary-fixed font-label-sm text-label-sm font-semibold">Completed</span>
+</div>
+<span class="font-label-lg text-label-lg text-primary font-bold">Course Completion</span>
+<span class="font-label-sm text-label-sm text-outline font-mono mt-0.5">30 May 2024</span>
+<div class="mt-space-sm pt-space-sm text-on-surface-variant font-body-sm text-body-sm">
+            Grade: A+ (88.4%)<br/>
+            Verified by: ITI Aundh Admin
+          </div>
+</div>
+<div class="flex flex-col p-space-md rounded-lg bg-surface-container-low transition-all hover:bg-surface-container-high/60">
+<div class="flex items-center justify-between mb-3">
+<span class="w-8 h-8 rounded-full bg-tertiary-container text-tertiary-fixed flex items-center justify-center font-label-md text-label-md font-bold">
+<span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">task_alt</span>
+</span>
+<span class="px-2 py-0.5 rounded bg-tertiary-container text-tertiary-fixed font-label-sm text-label-sm font-semibold">Verified</span>
+</div>
+<span class="font-label-lg text-label-lg text-primary font-bold">3-Month Milestone</span>
+<span class="font-label-sm text-label-sm text-outline font-mono mt-0.5">Done: 28 Aug 2024</span>
+<div class="mt-space-sm pt-space-sm text-on-surface-variant font-body-sm text-body-sm">
+            Status: Employed (₹20,000/mo)<br/>
+            Retention: Confirmed via HR
+          </div>
+</div>
+<div class="flex flex-col p-space-md rounded-lg bg-surface-container-high shadow-sm relative overflow-hidden">
+<div class="h-1 bg-secondary-container w-full absolute top-0 left-0"></div>
+<div class="flex items-center justify-between mb-3">
+<span class="w-8 h-8 rounded-full bg-secondary-container text-white flex items-center justify-center font-label-md text-label-md font-bold animate-pulse">
+<span class="material-symbols-outlined text-lg">pending_actions</span>
+</span>
+<span class="px-2 py-0.5 rounded bg-secondary text-white font-label-sm text-label-sm font-bold">Action Needed</span>
+</div>
+<span class="font-label-lg text-label-lg text-secondary font-bold">6-Month Milestone</span>
+<span class="font-label-sm text-label-sm text-secondary font-mono mt-0.5">Due: 15 Jan 2025</span>
+<div class="mt-space-sm pt-space-sm text-on-surface font-body-sm text-body-sm font-medium">
+            Status: Window Active<br/>
+            Submit current salary slip
+          </div>
+<a class="mt-space-sm inline-flex items-center justify-center py-1.5 px-space-sm rounded bg-secondary-container text-white font-label-sm text-label-sm font-bold hover:bg-secondary transition-colors" data-path="update-outcome-status" href="update_outcome_status.html">
+            Submit Now →
+          </a>
+</div>
+<div class="flex flex-col p-space-md rounded-lg bg-surface-container-low opacity-75">
+<div class="flex items-center justify-between mb-3">
+<span class="w-8 h-8 rounded-full bg-surface-container-highest text-outline flex items-center justify-center font-label-md text-label-md font-bold">
+<span class="material-symbols-outlined text-lg">schedule</span>
+</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-outline font-label-sm text-label-sm font-medium">Upcoming</span>
+</div>
+<span class="font-label-lg text-label-lg text-on-surface font-bold">12-Month Follow-up</span>
+<span class="font-label-sm text-label-sm text-outline font-mono mt-0.5">Scheduled: May 2025</span>
+<div class="mt-space-sm pt-space-sm text-outline font-body-sm text-body-sm">
+            1-Year Career Progression &amp; Long-term Retention Audit
+          </div>
+</div>
+</div>
+</div>
+</section>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-lg">
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-space-sm mb-space-sm">
+<span class="p-2 rounded bg-surface-container-high text-primary">
+<span class="material-symbols-outlined text-xl">contact_support</span>
+</span>
+<div>
+<h3 class="font-label-lg text-label-lg text-primary font-bold">Need assistance with your outcome update?</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Your District Skill Development Officer (DSDO) is assigned to help.</p>
+</div>
+</div>
+<div class="mt-space-sm p-space-sm rounded bg-surface-container-low text-on-surface font-label-sm text-label-sm flex items-center justify-between">
+<span>Pune District Officer: <b>Shri. A. K. Deshmukh</b></span>
+<span class="font-mono text-primary font-bold">+91 20 2612 8412</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm mt-space-md">
+<a class="px-space-md py-2 rounded bg-surface-container-high hover:bg-surface-container text-primary font-label-sm text-label-sm font-semibold flex items-center gap-1.5 transition-colors" href="tel:18001208040">
+<span class="material-symbols-outlined text-sm">call</span> Call State Helpline (Toll-Free)
+        </a>
+<a class="px-space-md py-2 rounded bg-surface-container-low hover:bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-semibold flex items-center gap-1.5 transition-colors" data-path="follow-up" href="follow_up.html">
+<span class="material-symbols-outlined text-sm">sms</span> SMS Query
+        </a>
+</div>
+</div>
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex items-center gap-space-md">
+<img class="w-28 h-28 rounded-lg object-cover shadow-sm shrink-0 hidden sm:block" data-alt="Modern solar energy rooftop installation training facility in Maharashtra with clean blue photovoltaic panels, trainees wearing safety gear and helmets under bright sunny sky" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTh0VqRLnyL4a74M2YPiZXvnla0tYlM4A2X8DPxYEGHDjN4xasstVVwWu3mTK26qA25XzIRYIzaxk_LK61yO4mZX8qNEAFt0wnqjzPX0Q2XeO96eOiUK9SH_tv2y5I0sL4h2qQ1baN7m1PG5XgC4X657ufAqmHxaMafjY85rilbkdZb_nFMZXSKiFeicpnV6ry8fSjUwVBaJtrvV3jvkgl6hLLdL847hbuLoZOWdvQ097rglBywuWJ"/>
+<div class="flex flex-col justify-between min-w-0">
+<span class="font-label-sm text-label-sm text-secondary font-bold uppercase tracking-wider">Career Upskilling Track</span>
+<h3 class="font-label-lg text-label-lg text-primary font-bold truncate mt-0.5">Grid-Tie Inverter Advanced Diagnostics</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mt-1">
+          As an employed Level-4 installer, you qualify for sponsored weekend evening certification in Chakan Industrial cluster.
+        </p>
+<div class="mt-space-sm">
+<a class="font-label-sm text-label-sm text-secondary font-bold hover:underline inline-flex items-center gap-1" href="#">
+            Explore Free Upskilling Opportunities →
+          </a>
+</div>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 z-50 bg-inverse-surface/60 backdrop-blur-sm hidden flex items-center justify-center p-space-md" id="cert-modal">
+<div class="bg-surface-container-lowest rounded-xl max-w-2xl w-full shadow-2xl overflow-hidden flex flex-col">
+<div class="p-space-md bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">verified</span>
+<span class="font-label-lg text-label-lg text-primary font-bold">e-Verification &amp; Experience Certificate</span>
+</div>
+<button class="p-1 rounded hover:bg-surface-container-high text-on-surface-variant" onclick="document.getElementById('cert-modal').classList.add('hidden')">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<div class="p-space-lg flex flex-col items-center text-center bg-surface-container-lowest">
+<div class="w-full py-space-md px-space-lg rounded-lg bg-surface-container-low mb-space-md relative text-left">
+<div class="text-center font-headline-sm text-headline-sm text-primary font-bold mb-1">
+            Maharashtra State Skill Development Society
+          </div>
+<div class="text-center font-label-sm text-label-sm text-secondary font-semibold uppercase tracking-wider mb-space-md">
+            MahaKaushalya Outcome Certification (प्रमाणपत्र)
+          </div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed mb-space-md">
+            This is to certify that <b>Rahul S. Jadhav</b> (Candidate ID: <code>MK-2024-MH-08492</code>) has successfully completed government vocational training in <b>Solar PV System Installation Specialist</b> and has maintained continuous validated employment at <b>Mahindra Susten Solar Ltd.</b> as documented in the state outcome registry.
+          </p>
+<div class="flex items-end justify-between pt-space-sm font-label-sm text-label-sm text-on-surface-variant">
+<div>
+<span>Issuance Date: <b>28 Aug 2024</b></span><br/>
+<span>Verification Token: <b>MSSDS-PUN-2024-8849</b></span>
+</div>
+<div class="text-right">
+<span class="font-semibold text-primary">Digitally Signed</span><br/>
+<span>CEO, MSSDS Maharashtra</span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-end gap-space-sm w-full">
+<button class="px-space-md py-2 rounded bg-surface-container-high hover:bg-surface-container text-primary font-label-md text-label-md font-semibold" onclick="document.getElementById('cert-modal').classList.add('hidden')">
+            Close
+          </button>
+<button class="px-space-md py-2 rounded bg-primary hover:bg-primary-container text-white font-label-md text-label-md font-bold flex items-center gap-2 shadow" onclick="alert('Downloading signed PDF certificate...'); document.getElementById('cert-modal').classList.add('hidden');">
+<span class="material-symbols-outlined text-sm">file_download</span> Download Official PDF
+          </button>
+</div>
+</div>
+</div>
+</div>
+</div></main></div><script>window.MAHAKAUSHALYA_PORTAL = 'trainee';</script><script type="module" src="../../shared/auth.js"></script><script type="module" src="./js/dashboard.js"></script></body></html>

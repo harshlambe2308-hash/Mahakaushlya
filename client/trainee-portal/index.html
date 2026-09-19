@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><link rel="stylesheet" href="css/base.css"/><script src="https://cdn.tailwindcss.com"></script><script src="js/tailwind-config.js"></script></head><body class="bg-background font-body-md text-body-md text-on-surface"><header class="fixed top-0 left-0 w-full z-50 bg-surface-container-lowest/95 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-1 bg-gradient-to-r from-[#FF9933] via-white to-[#138808] w-full"></div><div class="bg-surface-container-low"><div class="w-full max-w-[1440px] mx-auto px-gutter flex items-center justify-between py-space-xs text-on-surface-variant font-label-sm text-label-sm"><div class="flex items-center gap-space-md"><span>महाराष्ट्र शासन | Government of Maharashtra</span><span class="hidden md:inline bg-surface-container-highest text-primary font-label-sm px-space-xs rounded-lg">कौशल्यापासून रोजगारापर्यंत</span></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs"><span class="cursor-pointer hover:text-on-surface">A-</span><span class="cursor-pointer font-bold hover:text-on-surface">A</span><span class="cursor-pointer hover:text-on-surface">A+</span></div><span class="text-outline-variant">|</span><button class="font-label-sm text-label-sm text-primary hover:text-secondary-container transition-colors">मराठी / English</button></div></div></div><div class="h-20 w-full max-w-[1440px] mx-auto px-gutter flex items-center justify-between"><div class="flex items-center gap-space-md"><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary tracking-tight">MahaKaushalya</span><span class="font-label-sm text-label-sm text-on-surface-variant">Post-Training Outcome Tracking System</span></div><span class="hidden lg:inline-flex items-center px-space-sm py-0.5 rounded-full font-label-sm text-label-sm bg-surface-container-high text-primary">Govt of Maharashtra Skilling Initiative</span></div><div class="flex items-center gap-space-lg"><nav class="hidden xl:flex items-center gap-space-sm" data-active-classes="bg-primary-container text-on-primary font-label-md rounded-lg"><a aria-current="page" class="px-space-sm py-space-xs transition-colors bg-primary-container text-on-primary font-label-md rounded-lg" data-path="home" href="index.html">Home</a><a class="px-space-sm py-space-xs font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="register-trainee" href="trainee_registration.html">Register Trainee</a><a class="px-space-sm py-space-xs font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="trainee-login" href="trainee_login.html">Trainee Login</a><a class="px-space-sm py-space-xs font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="trainee-dashboard" href="trainee_dashboard.html">Trainee Dashboard</a><a class="px-space-sm py-space-xs font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="update-outcome-status" href="update_outcome_status.html">Update Outcome Status</a><a class="px-space-sm py-space-xs font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="follow-up" href="follow_up.html">Follow-up (SMS/WA)</a><a class="px-space-sm py-space-xs font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="profile-and-settings" href="profile_settings.html">Profile &amp; Settings</a></nav><div class="flex items-center gap-space-md"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1XBFPUWpbG1OVD9wUBQsrXsEdQlEWyjSCWPdiYf6NOFrNjJgs7iqao4XMlsEfYRURB7RZCtQYfkAHq9QUoiNTPfrnppJbyzAyxkFAwnqsqgB2qeReLWDTItSR6Nwrf-2jR95F_opeqFI4jykN7qq7bj3GSXq663k7Toyr8wCJe9ndFg2-L3nttUoV24Ak18jQ_Fg2oF671ahl8ageRy41dKkas-IP5QXG-0t5-NuiKw-pC9dcuASy0XFEEWPURBJhJWfTJRH4L18Q"/></div></div></div></header><main class="w-full pt-20 bg-background"><div class="flex flex-col w-full">
+<!-- Top Statutory Live Bulletin Strip -->
+<div class="w-full bg-surface-container-high py-2 px-gutter">
+<div class="max-w-[1440px] mx-auto flex flex-wrap items-center justify-between gap-space-sm text-on-surface-variant font-label-sm text-label-sm">
+<div class="flex items-center gap-space-sm">
+<span class="inline-flex items-center px-2 py-0.5 rounded-lg bg-secondary-container text-on-secondary font-label-md text-label-md">
+<span class="material-symbols-outlined text-[14px] mr-1">campaign</span> अधिसुचना / UPDATE
+        </span>
+<span class="font-body-sm text-body-sm text-on-surface">
+          MSSDS Cycle-IV Placement Verification audit window open for all registered Industrial Training Institutes &amp; PMKVY partners across 36 districts.
+        </span>
+</div>
+<div class="flex items-center gap-space-md">
+<span class="flex items-center gap-1 text-tertiary-container font-label-sm text-label-sm">
+<span class="inline-block w-2 h-2 rounded-full bg-on-tertiary-container animate-ping"></span>
+          State Registry Synchronized (UIDAI &amp; PFMS Enabled)
+        </span>
+<a class="text-primary font-label-sm text-label-sm hover:text-secondary-container transition-colors flex items-center gap-1" href="#helpline">
+<span class="material-symbols-outlined text-[14px]">support_agent</span> Desk 1800-120-8040
+        </a>
+</div>
+</div>
+</div>
+<!-- Hero Section -->
+<section class="w-full bg-surface-container-lowest py-space-xl">
+<div class="max-w-[1440px] mx-auto px-gutter grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+<!-- Left Column: Branding, Mission Statement & CTAs -->
+<div class="lg:col-span-7 flex flex-col gap-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="px-2.5 py-1 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm tracking-wide uppercase">
+            Government of Maharashtra • SDED Statutory Initiative
+          </span>
+<span class="text-outline-variant">|</span>
+<span class="font-label-sm text-label-sm text-secondary-container font-semibold">
+            MSSDS Mandate
+          </span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<h1 class="font-headline-xl text-headline-xl text-primary tracking-tight">
+            कौशल्यापासून रोजगारापर्यंत
+          </h1>
+<p class="font-headline-md text-headline-md text-on-surface-variant font-medium">
+            Tracking Every Trainee's Journey to Sustainable Employment &amp; Career Growth
+          </p>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl leading-relaxed">
+          MahaKaushalya is Maharashtra’s central longitudinal tracking system for state-sponsored skill program graduates. We actively monitor post-certification employment, wage milestones, workplace retention, and self-employment outcomes at rigorous <strong>3, 6, and 12-month intervals</strong>.
+        </p>
+<!-- CTA Action Cluster -->
+<div class="flex flex-wrap items-center gap-space-sm pt-space-xs">
+<a class="inline-flex items-center justify-center gap-space-xs px-6 py-3 rounded-lg bg-secondary-container text-on-secondary font-label-lg text-label-lg shadow-md hover:bg-secondary transition-all" data-path="register-trainee" href="trainee_registration.html">
+<span class="material-symbols-outlined text-[18px]">how_to_reg</span>
+            Register as Trainee (उमेदवार नोंदणी)
+          </a>
+<a class="inline-flex items-center justify-center gap-space-xs px-6 py-3 rounded-lg bg-primary text-on-primary font-label-lg text-label-lg shadow-sm hover:bg-primary-container transition-all" data-path="trainee-login" href="trainee_login.html">
+<span class="material-symbols-outlined text-[18px]">login</span>
+            Trainee Login (लॉगिन)
+          </a>
+<a class="inline-flex items-center justify-center gap-space-xs px-4 py-3 rounded-lg bg-surface-container-high text-primary font-label-md text-label-md hover:bg-surface-container-highest transition-colors" data-path="profile-and-settings" href="profile_settings.html">
+<span class="material-symbols-outlined text-[18px]">admin_panel_settings</span>
+            Official &amp; Officer Desk
+          </a>
+</div>
+<!-- Micro Features Bullet List -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-sm pt-space-sm">
+<div class="flex items-center gap-2 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-on-tertiary-container text-[18px]">verified_user</span>
+<span>Aadhaar &amp; Skill ID Verified</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-secondary-container text-[18px]">schedule</span>
+<span>360-Day Active Monitoring</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-primary text-[18px]">account_balance_wallet</span>
+<span>Direct Benefit / PFMS Ready</span>
+</div>
+</div>
+</div>
+<!-- Right Column: Official Identity & Visual Showcase -->
+<div class="lg:col-span-5 flex flex-col gap-space-md">
+<div class="bg-surface-container-low p-space-lg rounded-xl shadow-sm flex flex-col items-center text-center relative overflow-hidden">
+<div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-secondary-fixed/40 to-transparent rounded-bl-full pointer-events-none"></div>
+<img alt="MahaKaushal Official Government Emblem and Logo" class="max-h-48 w-auto object-contain mx-auto mb-space-sm drop-shadow-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAo_AzMXW27c7uXBIGnpCufdLRzP7VsJOpIR28ha66OLVnR9fqin7_4gL4TXfy6SKXMVI8D0mdxTqklN_ZGx1y6zUc4mwbosk-QGPeOVNyuzI-maRlBPobDsHT0v3tK41iBLiN_TJ54KzbCHRwN50DfL7Pl_iy-0Y0gtBiE9YbiiNsqJ__sCmkF-5HA33K5lnfPg36rPKlsN211jZmh6qgpoqMtEmSsiOEylVmKA2V0bobNEx7jSQWwjqEF_9eYff2mNA"/>
+<div class="w-full bg-surface-container-lowest p-space-sm rounded-lg shadow-sm text-left flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-primary font-bold">MSSDS State Verification Gateway</span>
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm">Active Node</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Every certificate issued through ITI, MSSDS, PMKVY Maharashtra, or DDU-GKY is automatically provisioned with a secure digital outcome tracking passport.
+            </p>
+<div class="flex items-center justify-between pt-1 text-on-surface-variant font-label-sm text-label-sm">
+<span>Next State Audit: <strong>15 April 2025</strong></span>
+<span class="text-primary font-semibold">36 Districts Live</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Live Official Impact Telemetry Strip -->
+<section class="w-full bg-primary text-on-primary py-space-xl">
+<div class="max-w-[1440px] mx-auto px-gutter flex flex-col gap-space-md">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-xs">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-primary-fixed-dim">Statewide Performance Register</span>
+<h2 class="font-headline-lg text-headline-lg text-on-primary">Real-Time Outcome Indicators</h2>
+</div>
+<div class="flex items-center gap-2 font-label-sm text-label-sm text-primary-fixed">
+<span class="material-symbols-outlined text-[16px]">sync</span>
+<span>Last automated reconciliation: Today, 06:00 AM IST</span>
+</div>
+</div>
+<!-- Key Stat Bento Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-space-md">
+<!-- Metric 1 -->
+<div class="bg-primary-container p-space-md rounded-lg shadow-sm flex flex-col justify-between">
+<span class="font-label-md text-label-md text-primary-fixed-dim">Trainees Tracked</span>
+<div class="my-space-xs">
+<span class="font-headline-xl text-headline-xl text-on-primary">128,450+</span>
+</div>
+<span class="font-body-sm text-body-sm text-primary-fixed">36 Districts of Maharashtra</span>
+</div>
+<!-- Metric 2 -->
+<div class="bg-primary-container p-space-md rounded-lg shadow-sm flex flex-col justify-between">
+<span class="font-label-md text-label-md text-primary-fixed-dim">Verified Placement Rate</span>
+<div class="my-space-xs">
+<span class="font-headline-xl text-headline-xl text-tertiary-fixed">78.4%</span>
+</div>
+<span class="font-body-sm text-body-sm text-primary-fixed">Industry Jobs &amp; Self-Enterprise</span>
+</div>
+<!-- Metric 3 -->
+<div class="bg-primary-container p-space-md rounded-lg shadow-sm flex flex-col justify-between">
+<span class="font-label-md text-label-md text-primary-fixed-dim">Avg Starting Salary</span>
+<div class="my-space-xs">
+<span class="font-headline-xl text-headline-xl text-secondary-fixed">₹18,500</span>
+</div>
+<span class="font-body-sm text-body-sm text-primary-fixed">Per Month Baseline Wage</span>
+</div>
+<!-- Metric 4 -->
+<div class="bg-primary-container p-space-md rounded-lg shadow-sm flex flex-col justify-between">
+<span class="font-label-md text-label-md text-primary-fixed-dim">Hiring Partners</span>
+<div class="my-space-xs">
+<span class="font-headline-xl text-headline-xl text-on-primary">3,420+</span>
+</div>
+<span class="font-body-sm text-body-sm text-primary-fixed">MIDC &amp; Corporate Verifiers</span>
+</div>
+<!-- Metric 5 -->
+<div class="bg-primary-container p-space-md rounded-lg shadow-sm flex flex-col justify-between">
+<span class="font-label-md text-label-md text-primary-fixed-dim">Retention at 6 Months</span>
+<div class="my-space-xs">
+<span class="font-headline-xl text-headline-xl text-on-tertiary-container">92.1%</span>
+</div>
+<span class="font-body-sm text-body-sm text-primary-fixed">Statutory PF / ESIC Audit</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Explainer & What MahaKaushalya Does -->
+<section class="w-full bg-background py-space-xl">
+<div class="max-w-[1440px] mx-auto px-gutter flex flex-col gap-space-lg">
+<div class="flex flex-col gap-space-xs max-w-3xl">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold">Why Longitudinal Tracking Matters</span>
+<h2 class="font-headline-lg text-headline-lg text-primary">From Short-Term Certificate to Long-Term Financial Self-Sufficiency</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Conventional skilling portals record mere enrollment and course completion. MahaKaushalya bridges the critical post-training gap by holding training partners, candidates, and industry recruiters mutually accountable over a continuous 1-year timeline.
+        </p>
+</div>
+<!-- 4 Key Outcome Pathway Cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-lg shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div class="flex flex-col gap-space-sm">
+<div class="w-12 h-12 rounded-lg bg-surface-container-high text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[28px]">domain</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Employed in Industry</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Wage employment tracking through employer declarations, offer letter validation, and automated Provident Fund (EPFO) database synchronization.
+            </p>
+</div>
+<div class="pt-space-md flex items-center text-primary font-label-md text-label-md">
+<span>Corporate &amp; MSME Sectors</span>
+<span class="material-symbols-outlined text-[16px] ml-1">arrow_forward</span>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-lg shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div class="flex flex-col gap-space-sm">
+<div class="w-12 h-12 rounded-lg bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-[28px]">storefront</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Self-Employed &amp; Micro-Enterprise</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Validation for self-employed professionals, cottage industry, micro-enterprises with Udyam Registration linkages, and MUDRA credit support.
+            </p>
+</div>
+<div class="pt-space-md flex items-center text-secondary font-label-md text-label-md">
+<span>Udyam &amp; Credit Linked</span>
+<span class="material-symbols-outlined text-[16px] ml-1">arrow_forward</span>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-lg shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div class="flex flex-col gap-space-sm">
+<div class="w-12 h-12 rounded-lg bg-surface-container text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[28px]">engineering</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Apprenticeship Training (NAPS/MAPS)</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Direct verification of National and Maharashtra Apprenticeship Promotion Scheme contracts, stipend disbarments, and shop-floor placements.
+            </p>
+</div>
+<div class="pt-space-md flex items-center text-primary font-label-md text-label-md">
+<span>Stipend &amp; Shop-Floor Audits</span>
+<span class="material-symbols-outlined text-[16px] ml-1">arrow_forward</span>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-lg shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div class="flex flex-col gap-space-sm">
+<div class="w-12 h-12 rounded-lg bg-surface-container-high text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[28px]">trending_up</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Career Counseling &amp; Upward Mobility</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              For candidates seeking higher vocational education or better wage opportunities, district counseling cells offer targeted job fairs and re-skilling.
+            </p>
+</div>
+<div class="pt-space-md flex items-center text-primary font-label-md text-label-md">
+<span>District Skill Facilitation</span>
+<span class="material-symbols-outlined text-[16px] ml-1">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Visual Workflow: How the Follow-up Cycle Works -->
+<section class="w-full bg-surface-container-low py-space-xl">
+<div class="max-w-[1440px] mx-auto px-gutter flex flex-col gap-space-lg">
+<div class="text-center max-w-2xl mx-auto flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold">Audited Verification Engine</span>
+<h2 class="font-headline-lg text-headline-lg text-primary">How the Follow-up Cycle Operates</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          A transparent 3-stage statutory continuum ensuring no trained candidate is left unaccounted for.
+        </p>
+</div>
+<!-- Milestone Pathway Container -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg relative">
+<!-- Step 1 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-lg shadow-sm flex flex-col gap-space-md relative">
+<div class="flex items-center justify-between">
+<span class="w-8 h-8 rounded-full bg-primary text-on-primary font-bold flex items-center justify-center font-label-md text-label-md">01</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm">Day 0 to 30</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Certification &amp; Onboarding</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Candidate completes training course under MSSDS or approved partner institute. MahaKaushalya automatically assigns an encrypted digital outcome card and registers the trainee's primary mobile and WhatsApp handle.
+            </p>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded-lg flex items-center gap-2 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-primary text-[18px]">badge</span>
+<span>Generates Unique MahaKaushal Candidate ID</span>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-lg shadow-sm flex flex-col gap-space-md relative">
+<div class="flex items-center justify-between">
+<span class="w-8 h-8 rounded-full bg-secondary-container text-on-secondary font-bold flex items-center justify-center font-label-md text-label-md">02</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm">Month 3 • Month 6 • Month 12</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Automated Multi-Channel Check-ins</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Automated SMS, interactive WhatsApp bots, and District Skill Committee IVR outreach prompt the candidate to submit salary slips, offer updates, or current occupational status in Marathi or English with one-tap verification.
+            </p>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded-lg flex items-center gap-2 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-secondary-container text-[18px]">mark_chat_read</span>
+<span>WhatsApp / SMS / IVR Triangulation</span>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-lg shadow-sm flex flex-col gap-space-md relative">
+<div class="flex items-center justify-between">
+<span class="w-8 h-8 rounded-full bg-tertiary-container text-on-tertiary-container font-bold flex items-center justify-center font-label-md text-label-md">03</span>
+<span class="px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm">Year 1 Completion</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Wage Verification &amp; Certification</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              District verification officer cross-checks company HR proof or self-employment proofs. Candidate receives a formal Maharashtra State Outcome Completion Certificate, validating 1-year wage stability and career security.
+            </p>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded-lg flex items-center gap-2 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-on-tertiary-container text-[18px]">verified</span>
+<span>State Official Employment Badge</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- District Field Success & Trainee Voice Section -->
+<section class="w-full bg-background py-space-xl">
+<div class="max-w-[1440px] mx-auto px-gutter grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+<div class="lg:col-span-5 flex flex-col gap-space-md">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold">Grassroots Impact</span>
+<h2 class="font-headline-lg text-headline-lg text-primary">Voices from Maharashtra's Skilled Workforce</h2>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+          From CNC machinists in Chakan to solar technicians in Solapur and healthcare assistants in Nagpur, MahaKaushalya records tangible socio-economic mobility.
+        </p>
+<!-- Trainee Testimonial Card -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<img class="w-12 h-12 rounded-full object-cover" data-alt="Portrait of a young smiling Maharashtrian technician woman wearing safety glasses and an industrial mechanic uniform in a modern manufacturing workshop in Pune, Maharashtra. Soft natural workshop lighting, high resolution documentary style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPbPBeL0yt0gd4OgQIJxqtU_8VF4YhyhyatXvMwXMI82CipBVEhnXZq8SBIAfSyYZ2e7456eioV71DRN1QlrZd82XQXx4iE76CUj9HrZclYur3SZWfLRtfQ3ONib6o7g_F-ynJFiniTZz8fro2ezyLoPsRxqB3ObAzD-mMRAj7oGyRPwIvSBYW8tOORJ3BJaGtHdBJHNlPZ7lKQ9S5jM6l94sp8E8j4Lgf8aiix5B5ZsCIGCI8QvB1"/>
+<div>
+<span class="font-headline-sm text-headline-sm text-on-surface block">Pooja Jadhav</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">CNC Operator, Pune MIDC • ITI Aundh Alumna</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant italic">
+            "The 6-month check-in via WhatsApp helped me register my wage increment when I moved to permanent staff. The state verified outcome credential gave my family immense confidence in the training initiative."
+          </p>
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm pt-1">
+<span class="text-tertiary-container font-semibold">Current Wage: ₹24,200/mo</span>
+<span>12-Month Milestone Completed</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<img class="w-12 h-12 rounded-full object-cover" data-alt="Close up portrait of an Indian male artisan entrepreneur in Kolhapur, Maharashtra, holding a leather craft ledger in his small modern leather craft and footwear workshop. Warm daylight, authentic corporate civic aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFusrjztFu-6o_zdDpCY21NMAVaXBziHPqblqWVTeJH6GsbPW83u52A6ltb5ejWvySJ2392KKX3n-n-DbwM2M5D8ihTOlo-t08UJyfSWd_Vh79mOaVGDscgI0_sABDpzhgjvn0m25agjZE9BXOZPAR71gVj5_L1dyyqoW2WuSO6EscetL_7VTrJXfZFQdqtT4QQIMmKNGn8HCeppJba1jOgo0aLalznZXVTMgHyOl817uTYHD12was"/>
+<div>
+<span class="font-headline-sm text-headline-sm text-on-surface block">Sachin Shinde</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Self-Employed • Kolhapur Leather Cluster</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant italic">
+            "Through MahaKaushalya's 3-month follow-up, my local district officer linked me to the PMEGP loan scheme. My footwear micro-workshop now employs two junior apprentices from my batch."
+          </p>
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm pt-1">
+<span class="text-secondary-container font-semibold">Udyam Certified Enterprise</span>
+<span>6-Month Milestone Verified</span>
+</div>
+</div>
+</div>
+<!-- Right Column: Interactive Quick Status Checker / Mock Interface -->
+<div class="lg:col-span-7 bg-surface-container-lowest p-space-lg rounded-xl shadow-md flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[24px]">quick_reference</span>
+<h3 class="font-headline-sm text-headline-sm text-primary">Quick Trainee Status Check</h3>
+</div>
+<span class="font-label-sm text-label-sm bg-surface-container px-2 py-0.5 rounded-full text-primary">Live Public Query</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Enter your 12-digit Aadhaar Number or State Candidate Skill ID to inspect your post-training milestone status and verify if your 3, 6, or 12-month update is due.
+        </p>
+<form class="flex flex-col gap-space-sm" onsubmit="event.preventDefault(); document.getElementById('demo-result').classList.remove('hidden');">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm">
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface font-semibold">Skill ID / Trainee Registration No. <span class="text-error">*</span></label>
+<input class="w-full px-3 py-2 bg-surface-container-lowest rounded-lg font-body-sm text-body-sm text-on-surface focus:outline-none focus:ring-2 focus:ring-primary shadow-sm" placeholder="e.g., MH-2024-SD-88219" required="" type="text" value="MH-2024-PUN-40912"/>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface font-semibold">Registered Mobile Number (OTP Target) <span class="text-error">*</span></label>
+<input class="w-full px-3 py-2 bg-surface-container-lowest rounded-lg font-body-sm text-body-sm text-on-surface focus:outline-none focus:ring-2 focus:ring-primary shadow-sm" placeholder="10-digit mobile number" required="" type="tel" value="98234XXXXX"/>
+</div>
+</div>
+<div class="flex items-center justify-between pt-2">
+<div class="flex items-center gap-2 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-on-tertiary-container">lock</span>
+<span>Encrypted via MahaGov Identity Vault</span>
+</div>
+<button class="px-6 py-2 rounded-lg bg-primary text-on-primary font-label-md text-label-md hover:bg-primary-container transition-colors shadow-sm flex items-center gap-1" type="submit">
+<span>Inspect Tracking Status</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</form>
+<!-- Mock Feedback Container (Visible by default for prototype clarity) -->
+<div class="bg-surface-container-low p-space-md rounded-lg flex flex-col gap-space-sm transition-all" id="demo-result">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-on-tertiary-container"></span>
+<span class="font-label-md text-label-md text-primary font-bold">Candidate: Swapnil Deshmukh (Solar PV Installer)</span>
+</div>
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-semibold">Active • Milestone 2 In Process</span>
+</div>
+<!-- Progress Visualizer inside Card -->
+<div class="w-full bg-surface-container-high rounded-full h-2 overflow-hidden">
+<div class="bg-secondary-container h-2 rounded-full w-[65%]"></div>
+</div>
+<div class="grid grid-cols-3 gap-2 text-center pt-1 font-label-sm text-label-sm">
+<div class="flex flex-col items-center">
+<span class="text-on-tertiary-container font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check_circle</span> 3-Month
+              </span>
+<span class="text-on-surface-variant text-[10px]">Verified: ₹17,500</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="text-secondary font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">pending</span> 6-Month
+              </span>
+<span class="text-on-surface-variant text-[10px]">Audit Slip Uploaded</span>
+</div>
+<div class="flex flex-col items-center opacity-50">
+<span class="text-on-surface-variant font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">radio_button_unchecked</span> 12-Month
+              </span>
+<span class="text-on-surface-variant text-[10px]">Due Oct 2025</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<span>District Office: Aurangabad (Chhatrapati Sambhajinagar)</span>
+<a class="text-secondary hover:underline font-semibold" data-path="update-outcome-status" href="update_outcome_status.html">Upload Next Salary Slip →</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Support & Helpline Information Strip -->
+<section class="w-full bg-surface-container py-space-lg" id="helpline">
+<div class="max-w-[1440px] mx-auto px-gutter grid grid-cols-1 md:grid-cols-3 gap-space-md items-center">
+<div class="flex items-center gap-space-sm">
+<div class="w-12 h-12 rounded-lg bg-surface-container-lowest text-secondary flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[28px]">phone_in_talk</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Candidate Grievance &amp; Verification Desk</span>
+<span class="font-headline-sm text-headline-sm text-primary font-bold">1800-120-8040</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant block">Toll-Free (Mon-Sat, 9:30 AM to 6:00 PM)</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm">
+<div class="w-12 h-12 rounded-lg bg-surface-container-lowest text-on-tertiary-container flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[28px]">chat</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant block">MahaKaushal WhatsApp Helpline</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">+91 7030-99-4400</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant block">Send 'HI' to check survey status</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm">
+<div class="w-12 h-12 rounded-lg bg-surface-container-lowest text-primary flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[28px]">mark_email_read</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Institutional &amp; Employer Desk</span>
+<span class="font-body-md text-body-md text-primary font-bold">outcomes.mahakaushalya@maharashtra.gov.in</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant block">For Bulk PFMS / HR verification rosters</span>
+</div>
+</div>
+</div>
+</section>
+</div></main><footer class="w-full bg-surface-container-lowest shadow-[0_-1px_8px_rgba(0,0,0,0.03)] mt-space-xl"><div class="w-full max-w-[1440px] mx-auto px-gutter py-space-xl grid grid-cols-1 md:grid-cols-4 gap-gutter"><div class="flex flex-col gap-space-sm"><span class="font-headline-sm text-headline-sm text-primary">MahaKaushalya</span><p class="font-body-sm text-body-sm text-on-surface-variant">Government of Maharashtra Skills, Employment, Entrepreneurship &amp; Innovation Department. Monitoring candidate progression from certification to verified employment.</p><span class="font-label-sm text-label-sm text-outline">System Version 2.4.0 (Statutory Build)</span></div><div class="flex flex-col gap-space-xs"><span class="font-label-lg text-label-lg text-on-surface">Helpline &amp; Support</span><p class="font-body-sm text-body-sm text-on-surface-variant">Candidate Assistance Desk</p><span class="font-headline-sm text-headline-sm text-secondary">1800-120-8040</span><span class="font-body-sm text-body-sm text-on-surface-variant">Toll-Free (09:30 AM to 06:00 PM IST)</span><span class="font-body-sm text-body-sm text-on-surface-variant">Email: support.mahakaushalya@maharashtra.gov.in</span></div><div class="flex flex-col gap-space-xs"><span class="font-label-lg text-label-lg text-on-surface">Quick Access</span><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="home" href="index.html">State Skill Mission Portal</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="trainee-dashboard" href="trainee_dashboard.html">Placement Verification Board</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="update-outcome-status" href="update_outcome_status.html">Employer Declaration Desk</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="follow-up" href="follow_up.html">District Facilitator Console</a></div><div class="flex flex-col gap-space-xs"><span class="font-label-lg text-label-lg text-on-surface">Compliance &amp; Legal</span><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Candidate Consent Terms</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Privacy Policy &amp; Data Security</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Statutory Audit Guidelines</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Hyperlinking Policy</a></div></div><div class="bg-surface-container-low py-space-sm"><div class="w-full max-w-[1440px] mx-auto px-gutter flex flex-col md:flex-row items-center justify-between gap-space-sm font-label-sm text-label-sm text-on-surface-variant"><span>Content Owned, Maintained &amp; Updated by Maharashtra State Skill Development Society (MSSDS).</span><span>© 2025 Government of Maharashtra. All rights reserved.</span></div></div></footer></body></html>

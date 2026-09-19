@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Noto+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><link rel="stylesheet" href="css/main_admin.css"/><link rel="stylesheet" href="css/validation.css"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"tertiary-container":"#003211","on-error":"#ffffff","surface-variant":"#d3e4fe","on-tertiary-fixed":"#002109","on-background":"#0b1c30","outline":"#74777f","surface-bright":"#f8f9ff","background":"#f8f9ff","surface":"#f8f9ff","on-surface-variant":"#44474f","secondary-fixed-dim":"#ffb598","secondary":"#a63b00","surface-container":"#e5eeff","error":"#ba1a1a","on-surface":"#0b1c30","on-secondary":"#ffffff","surface-container-lowest":"#ffffff","on-tertiary-fixed-variant":"#005320","secondary-fixed":"#ffdbce","on-secondary-fixed":"#370e00","on-primary-fixed":"#001a41","outline-variant":"#c4c6d0","on-secondary-fixed-variant":"#7f2b00","surface-container-highest":"#d3e4fe","inverse-surface":"#213145","on-primary-container":"#7b91c0","surface-container-low":"#eff4ff","inverse-on-surface":"#eaf1ff","on-secondary-container":"#561b00","secondary-container":"#fc671e","tertiary-fixed":"#7ffc97","tertiary-fixed-dim":"#62df7d","error-container":"#ffdad6","primary":"#001435","primary-fixed":"#d8e2ff","on-error-container":"#93000a","inverse-primary":"#b0c7f9","tertiary":"#001b06","on-tertiary-container":"#1ea74d","surface-container-high":"#dce9ff","on-primary":"#ffffff","on-primary-fixed-variant":"#304671","primary-container":"#0f2952","surface-dim":"#cbdbf5","surface-tint":"#485e8a","on-tertiary":"#ffffff","primary-fixed-dim":"#b0c7f9"},borderRadius:{DEFAULT:"0.125rem",lg:"0.25rem",xl:"0.5rem",full:"0.75rem"},spacing:{"gutter-lg":"1.5rem",gutter:"1rem","space-xs":"0.25rem","margin-lg":"2rem","margin-md":"1.5rem",margin:"1rem","space-sm":"0.5rem","space-md":"0.75rem","space-lg":"1.25rem","space-xl":"2rem"},fontFamily:{"label-md":["Noto Sans"],"headline-lg-mobile":["Inter"],"headline-xl":["Inter"],"headline-sm":["Inter"],"label-sm":["Noto Sans"],"headline-md":["Inter"],"label-lg":["Noto Sans"],"body-md":["Inter"],"data-mono":["Inter"],"headline-lg":["Inter"],"body-lg":["Inter"],"body-sm":["Inter"]},fontSize:{"label-md":["12px",{lineHeight:"16px",letterSpacing:"0.02em",fontWeight:"600"}],"headline-lg-mobile":["20px",{lineHeight:"28px",fontWeight:"700"}],"headline-xl":["32px",{lineHeight:"40px",letterSpacing:"-0.02em",fontWeight:"700"}],"headline-sm":["16px",{lineHeight:"24px",fontWeight:"600"}],"label-sm":["11px",{lineHeight:"14px",letterSpacing:"0.04em",fontWeight:"500"}],"headline-md":["18px",{lineHeight:"26px",fontWeight:"600"}],"label-lg":["13px",{lineHeight:"18px",fontWeight:"600"}],"body-md":["13px",{lineHeight:"20px",fontWeight:"400"}],"data-mono":["12px",{lineHeight:"16px",fontWeight:"500"}],"headline-lg":["24px",{lineHeight:"32px",letterSpacing:"-0.015em",fontWeight:"700"}],"body-lg":["15px",{lineHeight:"22px",fontWeight:"400"}],"body-sm":["12px",{lineHeight:"18px",fontWeight:"400"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-64 bg-primary-container z-50 flex flex-col shadow-[0_1px_8px_rgba(0,0,0,0.12)]"><div class="h-14 px-margin flex items-center gap-space-sm bg-primary border-b-2 border-secondary"><span class="material-symbols-outlined text-secondary text-[24px]">verified</span><div class="flex flex-col"><span class="font-label-lg text-label-lg text-on-primary tracking-wide leading-tight">MahaKaushal</span><span class="font-label-sm text-[10px] text-primary-fixed-dim leading-none uppercase tracking-wider">Admin Portal</span></div></div><div class="px-margin py-space-sm bg-primary/40"><div class="flex items-center justify-between text-primary-fixed-dim font-label-sm text-label-sm"><span>JURISDICTION</span><span class="font-data-mono text-[10px] px-space-xs py-0.5 bg-secondary text-on-secondary rounded-DEFAULT font-bold">MH-PUN</span></div><p class="font-label-md text-label-md text-on-primary font-medium mt-0.5 truncate">Pune Divisional Commissionerate</p></div><nav class="flex-1 px-space-xs py-space-sm space-y-1 overflow-y-auto" data-active-classes="bg-primary text-on-primary border-l-4 border-secondary"><a class="flex items-center px-space-md py-space-sm text-surface-variant font-label-md text-label-md rounded-DEFAULT hover:bg-primary/50 hover:text-on-primary transition-colors" data-path="overview" href="index.html"><span class="material-symbols-outlined mr-space-md text-[18px]">dashboard</span>Overview</a><a class="flex items-center px-space-md py-space-sm text-surface-variant font-label-md text-label-md rounded-DEFAULT hover:bg-primary/50 hover:text-on-primary transition-colors" data-path="trainee-records" href="records_audit.html"><span class="material-symbols-outlined mr-space-md text-[18px]">badge</span>Trainee Records</a><a class="flex items-center px-space-md py-space-sm text-surface-variant font-label-md text-label-md rounded-DEFAULT hover:bg-primary/50 hover:text-on-primary transition-colors" data-path="non-responder-queue" href="non_responder_queue.html"><span class="material-symbols-outlined mr-space-md text-[18px]">notification_important</span>Non-Responder Queue</a><a aria-current="page" class="flex items-center px-space-md py-space-sm font-label-md rounded-DEFAULT transition-colors bg-primary text-on-primary border-l-4 border-secondary" data-path="employer-validation" href="employer_validation.html"><span class="material-symbols-outlined mr-space-md text-[18px]">apartment</span>Employer Validation</a><a class="flex items-center px-space-md py-space-sm text-surface-variant font-label-md text-label-md rounded-DEFAULT hover:bg-primary/50 hover:text-on-primary transition-colors" data-path="analytics-reports" href="analytics_reports.html"><span class="material-symbols-outlined mr-space-md text-[18px]">insights</span>Analytics &amp; Reports</a><a class="flex items-center px-space-md py-space-sm text-surface-variant font-label-md text-label-md rounded-DEFAULT hover:bg-primary/50 hover:text-on-primary transition-colors" data-path="skill-gap-analysis" href="skill_gap_analysis.html"><span class="material-symbols-outlined mr-space-md text-[18px]">troubleshoot</span>Skill Gap Analysis</a><a class="flex items-center px-space-md py-space-sm text-surface-variant font-label-md text-label-md rounded-DEFAULT hover:bg-primary/50 hover:text-on-primary transition-colors" data-path="provider-performance" href="provider_performance.html"><span class="material-symbols-outlined mr-space-md text-[18px]">military_tech</span>Provider Performance</a><a class="flex items-center px-space-md py-space-sm text-surface-variant font-label-md text-label-md rounded-DEFAULT hover:bg-primary/50 hover:text-on-primary transition-colors" data-path="policy-reports" href="#"><span class="material-symbols-outlined mr-space-md text-[18px]">policy</span>Policy Reports</a><a class="flex items-center px-space-md py-space-sm text-surface-variant font-label-md text-label-md rounded-DEFAULT hover:bg-primary/50 hover:text-on-primary transition-colors" data-path="system-access" href="login.html"><span class="material-symbols-outlined mr-space-md text-[18px]">admin_panel_settings</span>System &amp; Access</a></nav><div class="p-space-md bg-primary/60 border-t border-primary-container"><div class="flex items-center gap-space-sm"><div class="w-2 h-2 rounded-full bg-secondary animate-pulse"></div><div class="flex flex-col"><span class="font-label-sm text-[10px] text-surface-variant uppercase tracking-wider">Server Status: Online</span><span class="font-data-mono text-[10px] text-primary-fixed-dim">State Data Center, Mumbai</span></div></div></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-14 bg-surface-container-lowest z-40 shadow-[0_1px_8px_rgba(0,0,0,0.04)] px-margin-lg flex items-center justify-between"><div class="flex items-center gap-margin-md"><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded-DEFAULT bg-primary text-on-primary flex items-center justify-center font-bold text-xs">MH</div><div class="flex flex-col"><span class="font-label-md text-label-md text-primary font-bold leading-tight">महाराष्ट्र शासन</span><span class="font-label-sm text-[10px] text-on-surface-variant leading-none">Govt. of Maharashtra • SDED</span></div></div><div class="h-6 w-px bg-outline-variant"></div><div class="flex items-center bg-surface-container-low px-space-sm py-1 rounded-DEFAULT"><span class="font-label-sm text-label-sm text-on-surface-variant mr-space-xs">Cohort:</span><select class="bg-transparent font-label-md text-label-md text-on-surface font-semibold focus:outline-none cursor-pointer"><option>FY 2024-25 Q3</option><option>FY 2024-25 Q2</option><option>FY 2023-24 Annual</option></select></div><div class="flex items-center bg-surface-container-low px-space-sm py-1 rounded-DEFAULT"><span class="font-label-sm text-label-sm text-on-surface-variant mr-space-xs">District:</span><select class="bg-transparent font-label-md text-label-md text-on-surface font-semibold focus:outline-none cursor-pointer"><option>Pune (All Talukas)</option><option>Haveli</option><option>Baramati</option><option>Khed</option><option>Shirur</option></select></div></div><div class="flex items-center gap-space-md flex-1 max-w-xs mx-margin-md"><div class="relative w-full"><span class="material-symbols-outlined absolute left-2.5 top-1/2 -translate-y-1/2 text-[18px] text-outline">search</span><input class="w-full pl-8 pr-3 py-1 bg-surface-container-low text-on-surface font-body-sm text-body-sm rounded-DEFAULT placeholder:text-outline focus:outline-none focus:bg-surface-container-lowest focus:ring-1 focus:ring-primary" placeholder="Search Aadhaar, UID, Center ID..." type="text"/></div></div><div class="flex items-center gap-space-md"><button class="relative p-1.5 rounded-DEFAULT text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1 right-1 w-2 h-2 bg-secondary rounded-full"></span></button><button class="p-1.5 rounded-DEFAULT text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[20px]">help</span></button><div class="h-6 w-px bg-outline-variant"></div><div class="flex items-center gap-space-sm pl-space-xs"><div class="flex flex-col text-right"><span class="font-label-md text-label-md text-on-surface font-bold leading-tight">Rajesh Deshmukh, IAS</span><div class="flex items-center gap-1 justify-end"><span class="px-1.5 py-0.2 bg-secondary-fixed text-on-secondary-fixed font-label-sm text-[10px] rounded font-bold uppercase">District Skill Officer</span><span class="font-label-sm text-[10px] text-on-surface-variant">Pune</span></div></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-outline-variant" src="https://lh3.googleusercontent.com/aida/AEtjO1XZ5_RGann-JS9-SXlCwMRwGfPfXVcOVklpC5V0eTvQClSjZkunPNoV5M1DG7pVKUlM-w1Ek0_WIFB3LF3preqPJM9Nldd0dpUb6U78uOUf2vXckERfwAiRw05-48oV-hBpHoXbLbiqJLyACVA1ujnTD3gRId3eSN4SLj2tZ_j2UaTSnTOMTGjZRuwcMufJq9GC4jMZjSIIS2c2plWA8DUCu5w8ceF756YeOIrxRm0l6idfYW_EnUZYOFadZztVPjas9Jq8xf-bW3k"/></div></div></header><main class="relative pt-14 bg-surface w-full px-gutter-lg py-margin-md"><div class="flex flex-col w-full gap-margin-lg">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md bg-surface-container-lowest p-margin-md rounded-lg shadow-sm">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="font-data-mono text-label-sm text-secondary tracking-widest uppercase font-bold">SDED-MH-VAL-MOD-2025</span>
+<span class="w-1.5 h-1.5 rounded-full bg-outline-variant"></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Statutory Employment Due Diligence</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-primary tracking-tight font-bold">
+        Employer Verification &amp; Corporate Validation
+      </h1>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        Cross-validating trainee reported corporate placements against Goods and Services Tax Network (GSTN) &amp; Ministry of Corporate Affairs (MCA-21) registries.
+      </p>
+</div>
+<div class="flex items-center gap-space-md self-start md:self-auto bg-surface-container-low px-space-md py-space-sm rounded-lg">
+<div class="w-3 h-3 rounded-full bg-tertiary-fixed-dim animate-ping"></div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-on-tertiary-container font-bold">domain_verification</span>
+<span class="font-label-md text-label-md text-primary font-bold">API Gateway Active</span>
+</div>
+<span class="font-data-mono text-[10px] text-on-surface-variant">Dir. of Industries MH • Latency 42ms</span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-gutter">
+<div class="relative bg-surface-container-lowest p-space-lg rounded-lg shadow-sm overflow-hidden flex flex-col justify-between">
+<div class="absolute top-0 left-0 right-0 h-1 bg-secondary"></div>
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Pending Scrutiny</span>
+<span class="material-symbols-outlined text-[20px] text-secondary">pending_actions</span>
+</div>
+<div class="mt-space-md">
+<span class="font-headline-xl text-headline-xl text-primary font-bold">86</span>
+<span class="font-label-sm text-label-sm text-secondary ml-space-xs font-semibold">+14 today</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs">Requires District Officer sign-off</span>
+</div>
+<div class="relative bg-surface-container-lowest p-space-lg rounded-lg shadow-sm overflow-hidden flex flex-col justify-between">
+<div class="absolute top-0 left-0 right-0 h-1 bg-on-tertiary-container"></div>
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">GSTN Auto-Verified</span>
+<span class="material-symbols-outlined text-[20px] text-on-tertiary-container">verified</span>
+</div>
+<div class="mt-space-md">
+<span class="font-headline-xl text-headline-xl text-primary font-bold">342</span>
+<span class="font-label-sm text-label-sm text-on-tertiary-container ml-space-xs font-semibold">96.8% integrity</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs">Live return match on GST portal</span>
+</div>
+<div class="relative bg-surface-container-lowest p-space-lg rounded-lg shadow-sm overflow-hidden flex flex-col justify-between">
+<div class="absolute top-0 left-0 right-0 h-1 bg-error"></div>
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Flagged for Audit</span>
+<span class="material-symbols-outlined text-[20px] text-error">warning</span>
+</div>
+<div class="mt-space-md">
+<span class="font-headline-xl text-headline-xl text-error font-bold">19</span>
+<span class="font-label-sm text-label-sm text-error ml-space-xs font-semibold">High risk</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs">Discrepancy in wage bank receipts</span>
+</div>
+<div class="relative bg-surface-container-lowest p-space-lg rounded-lg shadow-sm overflow-hidden flex flex-col justify-between">
+<div class="absolute top-0 left-0 right-0 h-1 bg-primary"></div>
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Blacklisted / Ghost</span>
+<span class="material-symbols-outlined text-[20px] text-primary">block</span>
+</div>
+<div class="mt-space-md">
+<span class="font-headline-xl text-headline-xl text-primary font-bold">07</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant ml-space-xs font-semibold">FIR registered</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs">De-registered shell entities</span>
+</div>
+</div>
+<div class="flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-space-md bg-surface-container-lowest p-space-md rounded-lg shadow-sm">
+<div class="flex items-center gap-space-xs overflow-x-auto pb-space-xs lg:pb-0">
+<button class="px-space-md py-space-sm rounded-lg bg-primary text-on-primary font-label-md text-label-md flex items-center gap-space-xs shrink-0 shadow-sm">
+<span>Pending Review</span>
+<span class="px-1.5 py-0.5 rounded bg-secondary text-on-secondary text-[10px] font-bold">86</span>
+</button>
+<button class="px-space-md py-space-sm rounded-lg bg-surface-container-low text-on-surface-variant hover:text-on-surface font-label-md text-label-md flex items-center gap-space-xs shrink-0 transition-colors">
+<span>Auto-Verified by GSTN</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant text-[10px] font-bold">342</span>
+</button>
+<button class="px-space-md py-space-sm rounded-lg bg-surface-container-low text-on-surface-variant hover:text-on-surface font-label-md text-label-md flex items-center gap-space-xs shrink-0 transition-colors">
+<span>Flagged for Review</span>
+<span class="px-1.5 py-0.5 rounded bg-error-container text-on-error-container text-[10px] font-bold">19</span>
+</button>
+<button class="px-space-md py-space-sm rounded-lg bg-surface-container-low text-on-surface-variant hover:text-on-surface font-label-md text-label-md flex items-center gap-space-xs shrink-0 transition-colors">
+<span>Blacklisted Entities</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-highest text-on-surface text-[10px] font-bold">7</span>
+</button>
+</div>
+<div class="flex items-center gap-space-sm">
+<div class="relative flex-1 sm:w-80">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[18px]">search</span>
+<input class="w-full pl-9 pr-3 py-1.5 bg-surface-container-low text-on-surface font-body-sm text-body-sm rounded-lg focus:outline-none focus:bg-surface-container-lowest ring-1 ring-outline-variant focus:ring-2 focus:ring-primary" placeholder="Search GSTIN, CIN, Company or Trainee..." type="text"/>
+</div>
+<button class="p-1.5 rounded-lg bg-surface-container-low text-on-surface-variant hover:bg-surface-container hover:text-primary transition-colors flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">tune</span>
+</button>
+<button class="px-space-md py-1.5 rounded-lg bg-primary-container text-on-primary font-label-md text-label-md flex items-center gap-space-xs shadow-sm hover:bg-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">download</span>
+<span>Export Log</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-lg items-start">
+<div class="lg:col-span-8 flex flex-col gap-space-md">
+<div class="bg-surface-container-lowest rounded-lg shadow-sm overflow-hidden">
+<div class="p-space-md bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="font-label-lg text-label-lg text-primary font-bold">Verification Scrutiny Queue</span>
+<span class="font-data-mono text-label-sm text-on-surface-variant">Batch #MH-2025-PUN-091</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Showing 4 of 86 queued</span>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead>
+<tr class="bg-surface-container text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider font-bold">
+<th class="py-space-sm px-space-md">Enterprise &amp; GSTIN</th>
+<th class="py-space-sm px-space-md">Reported Placement</th>
+<th class="py-space-sm px-space-md">Sector &amp; Location</th>
+<th class="py-space-sm px-space-md">GSTN Validation</th>
+<th class="py-space-sm px-space-md text-right">Scrutiny Action</th>
+</tr>
+</thead>
+<tbody class="divide-y-0">
+<tr class="bg-surface-container-low transition-colors cursor-pointer group">
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-primary font-bold">Kalyani Technoforge Ltd</span>
+<div class="flex items-center gap-1 mt-0.5">
+<span class="font-data-mono text-[11px] text-on-surface-variant">27AABCK1234F1Z5</span>
+<button class="p-0.5 text-outline hover:text-secondary" onclick="navigator.clipboard.writeText('27AABCK1234F1Z5')" title="Copy GSTIN">
+<span class="material-symbols-outlined text-[14px]">content_copy</span>
+</button>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Ganesh Patil</span>
+<span class="font-data-mono text-[11px] text-on-surface-variant">UID: MH-PUN-88412</span>
+<span class="font-label-sm text-[11px] text-secondary font-bold">₹22,500 / mo • CNC Operator</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Auto Components</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">MIDC Chakan, Pune</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1 px-space-xs py-0.5 bg-surface-container-highest text-on-tertiary-container font-label-sm text-[11px] rounded font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-on-tertiary-container"></span>
+                    Active • Tier 1
+                  </span>
+</td>
+<td class="py-space-md px-space-md text-right">
+<span class="px-space-sm py-1 bg-secondary text-on-secondary font-label-sm text-label-sm rounded font-bold uppercase inline-flex items-center gap-1 shadow-sm">
+<span>Inspect</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</span>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors cursor-pointer">
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-primary font-bold">Precision Spares &amp; Toolings</span>
+<div class="flex items-center gap-1 mt-0.5">
+<span class="font-data-mono text-[11px] text-on-surface-variant">27AAACP9902M1ZA</span>
+<button class="p-0.5 text-outline hover:text-secondary" onclick="navigator.clipboard.writeText('27AAACP9902M1ZA')" title="Copy GSTIN">
+<span class="material-symbols-outlined text-[14px]">content_copy</span>
+</button>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Pooja Bhosale</span>
+<span class="font-data-mono text-[11px] text-on-surface-variant">UID: MH-PUN-77192</span>
+<span class="font-label-sm text-[11px] text-secondary font-bold">₹18,000 / mo • QC Inspector</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Heavy Engineering</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Bhosari, Pune</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1 px-space-xs py-0.5 bg-surface-container-highest text-on-tertiary-container font-label-sm text-[11px] rounded font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-on-tertiary-container"></span>
+                    Active • Tier 2
+                  </span>
+</td>
+<td class="py-space-md px-space-md text-right">
+<button class="px-space-sm py-1 bg-surface-container text-primary font-label-sm text-label-sm rounded font-bold hover:bg-surface-container-high transition-colors">
+                    Review
+                  </button>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors cursor-pointer">
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-primary font-bold">Apex Infowave Solutions</span>
+<div class="flex items-center gap-1 mt-0.5">
+<span class="font-data-mono text-[11px] text-error font-semibold">27AADCA4411C1ZX</span>
+<button class="p-0.5 text-outline hover:text-secondary" onclick="navigator.clipboard.writeText('27AADCA4411C1ZX')" title="Copy GSTIN">
+<span class="material-symbols-outlined text-[14px]">content_copy</span>
+</button>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Nikhil Shinde</span>
+<span class="font-data-mono text-[11px] text-on-surface-variant">UID: MH-PUN-64010</span>
+<span class="font-label-sm text-[11px] text-secondary font-bold">₹28,000 / mo • Jr. Developer</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">IT &amp; ITeS Services</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Hinjawadi Ph 2, Pune</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1 px-space-xs py-0.5 bg-error-container text-on-error-container font-label-sm text-[11px] rounded font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+                    Return Default (6 Mo)
+                  </span>
+</td>
+<td class="py-space-md px-space-md text-right">
+<button class="px-space-sm py-1 bg-surface-container text-primary font-label-sm text-label-sm rounded font-bold hover:bg-surface-container-high transition-colors">
+                    Review
+                  </button>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors cursor-pointer">
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-primary font-bold">Sahyadri Agro Processing Hub</span>
+<div class="flex items-center gap-1 mt-0.5">
+<span class="font-data-mono text-[11px] text-on-surface-variant">27ABGFS8812L1Z9</span>
+<button class="p-0.5 text-outline hover:text-secondary" onclick="navigator.clipboard.writeText('27ABGFS8812L1Z9')" title="Copy GSTIN">
+<span class="material-symbols-outlined text-[14px]">content_copy</span>
+</button>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Sneha Jadhav</span>
+<span class="font-data-mono text-[11px] text-on-surface-variant">UID: MH-PUN-99231</span>
+<span class="font-label-sm text-[11px] text-secondary font-bold">₹16,500 / mo • Food Tech Asst</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Agri-Processing</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Baramati MIDC, Pune</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1 px-space-xs py-0.5 bg-surface-container-highest text-on-tertiary-container font-label-sm text-[11px] rounded font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-on-tertiary-container"></span>
+                    Active • Tier 3
+                  </span>
+</td>
+<td class="py-space-md px-space-md text-right">
+<button class="px-space-sm py-1 bg-surface-container text-primary font-label-sm text-label-sm rounded font-bold hover:bg-surface-container-high transition-colors">
+                    Review
+                  </button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="p-space-md bg-surface-container-lowest flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Page 1 of 22 (86 records awaiting DSO approval)</span>
+<div class="flex items-center gap-space-xs">
+<button class="p-1 rounded bg-surface-container-low text-on-surface-variant hover:text-on-surface disabled:opacity-40" disabled="">
+<span class="material-symbols-outlined text-[18px]">chevron_left</span>
+</button>
+<span class="font-data-mono text-label-sm px-2 py-1 bg-primary text-on-primary rounded font-bold">1</span>
+<button class="font-data-mono text-label-sm px-2 py-1 bg-surface-container-low text-on-surface rounded hover:bg-surface-container">2</button>
+<button class="font-data-mono text-label-sm px-2 py-1 bg-surface-container-low text-on-surface rounded hover:bg-surface-container">3</button>
+<button class="p-1 rounded bg-surface-container-low text-on-surface-variant hover:text-on-surface">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm flex flex-col md:flex-row items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[24px]">corporate_fare</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-primary font-bold">Bulk Direct API Re-Scrutiny Engine</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Push 86 queued candidates to GSTN GSTR-3B tax validation batch sync</span>
+</div>
+</div>
+<button class="w-full md:w-auto px-space-lg py-2 rounded-lg bg-primary-container text-on-primary font-label-md text-label-md font-semibold hover:bg-primary transition-colors flex items-center justify-center gap-space-xs shadow-sm">
+<span class="material-symbols-outlined text-[18px]">sync</span>
+<span>Execute Auto Batch Sync</span>
+</button>
+</div>
+</div>
+<div class="lg:col-span-4 flex flex-col gap-space-md">
+<div class="bg-surface-container-lowest rounded-lg shadow-md overflow-hidden relative">
+<div class="h-1.5 bg-secondary w-full"></div>
+<div class="p-space-lg flex flex-col gap-space-md">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-data-mono text-[10px] uppercase font-bold text-secondary tracking-wider">Active Scrutiny Dossier</span>
+<h2 class="font-headline-md text-headline-md text-primary font-bold mt-0.5">Kalyani Technoforge Ltd</h2>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Sector: Automotive &amp; Precision Engineering</span>
+</div>
+<span class="inline-flex items-center gap-1 px-space-xs py-1 bg-surface-container-high text-on-tertiary-container font-label-sm text-[11px] rounded font-bold">
+<span class="material-symbols-outlined text-[14px]">verified</span>
+              GST Verified
+            </span>
+</div>
+<div class="p-space-md bg-surface-container-low rounded-lg flex flex-col gap-space-xs">
+<div class="flex justify-between items-center text-label-sm">
+<span class="font-label-sm text-on-surface-variant">GSTIN Registered:</span>
+<span class="font-data-mono font-bold text-primary">27AABCK1234F1Z5</span>
+</div>
+<div class="flex justify-between items-center text-label-sm">
+<span class="font-label-sm text-on-surface-variant">MCA CIN / Reg No:</span>
+<span class="font-data-mono font-bold text-primary">L27100MH1979PLC021</span>
+</div>
+<div class="flex justify-between items-center text-label-sm">
+<span class="font-label-sm text-on-surface-variant">Turnover Bracket:</span>
+<span class="font-label-md font-semibold text-primary">₹250 Cr – ₹500 Cr</span>
+</div>
+<div class="flex justify-between items-center text-label-sm">
+<span class="font-label-sm text-on-surface-variant">Historical Placements:</span>
+<span class="font-label-md font-bold text-on-tertiary-container">14 Trainees verified (90 days)</span>
+</div>
+<div class="flex justify-between items-center text-label-sm">
+<span class="font-label-sm text-on-surface-variant">Registered Plant:</span>
+<span class="font-body-sm text-on-surface">Plot No. 42, MIDC Phase II, Chakan</span>
+</div>
+</div>
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-md text-label-md text-primary font-bold uppercase tracking-wider">Placement Proof Submissions</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Candidate: Ganesh Patil (Pune District Scheme ID: SDED-4819)</span>
+<div class="grid grid-cols-3 gap-space-xs mt-space-xs">
+<div class="flex flex-col gap-1">
+<div class="h-20 bg-surface-container-low rounded-lg p-2 flex flex-col justify-between group hover:bg-surface-container transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-secondary text-[20px]">description</span>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-[10px] font-bold text-primary truncate">Offer Letter</span>
+<span class="material-symbols-outlined text-[14px] text-outline">visibility</span>
+</div>
+</div>
+<span class="font-data-mono text-[9px] text-on-surface-variant text-center">PDF • 1.2 MB</span>
+</div>
+<div class="flex flex-col gap-1">
+<div class="h-20 bg-surface-container-low rounded-lg p-2 flex flex-col justify-between group hover:bg-surface-container transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-secondary text-[20px]">receipt_long</span>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-[10px] font-bold text-primary truncate">Salary Bank Slip</span>
+<span class="material-symbols-outlined text-[14px] text-outline">visibility</span>
+</div>
+</div>
+<span class="font-data-mono text-[9px] text-on-surface-variant text-center">PNG • 480 KB</span>
+</div>
+<div class="flex flex-col gap-1">
+<div class="h-20 bg-surface-container-low rounded-lg p-2 flex flex-col justify-between group hover:bg-surface-container transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-on-tertiary-container text-[20px]">verified_user</span>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-[10px] font-bold text-primary truncate">EPFO Receipt</span>
+<span class="material-symbols-outlined text-[14px] text-outline">visibility</span>
+</div>
+</div>
+<span class="font-data-mono text-[9px] text-on-surface-variant text-center">EPFO Matched</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md text-primary font-bold">Officer Scrutiny Justification <span class="text-secondary">*</span></label>
+<div class="flex flex-wrap gap-1 mb-1">
+<button class="px-2 py-0.5 rounded bg-surface-container-high text-primary font-label-sm text-[10px] font-semibold hover:bg-secondary hover:text-on-secondary transition-colors">Legitimate Manufacturing Unit</button>
+<button class="px-2 py-0.5 rounded bg-surface-container-high text-primary font-label-sm text-[10px] font-semibold hover:bg-secondary hover:text-on-secondary transition-colors">PF &amp; ESIC Verified</button>
+<button class="px-2 py-0.5 rounded bg-surface-container-high text-primary font-label-sm text-[10px] font-semibold hover:bg-secondary hover:text-on-secondary transition-colors">Physical Visit Confirmed</button>
+</div>
+<textarea class="w-full p-2 bg-surface-container-low text-on-surface font-body-sm text-body-sm rounded-lg focus:outline-none focus:bg-surface-container-lowest ring-1 ring-outline-variant focus:ring-2 focus:ring-primary" placeholder="Enter administrative remarks or regulatory dispatch reference..." rows="3">Candidate confirmed working on Shop Floor CNC Machine #4. Bank statement credits align with reported ₹22,500 monthly stipend rate. Entity is bona fide.</textarea>
+</div>
+<div class="flex flex-col gap-space-xs pt-space-xs">
+<button class="w-full py-2.5 rounded-lg bg-tertiary-container text-on-tertiary font-label-md text-label-md font-bold flex items-center justify-center gap-space-xs hover:opacity-90 shadow-md transition-all">
+<span class="material-symbols-outlined text-[20px] text-tertiary-fixed">check_circle</span>
+<span>Approve Placement &amp; Mark Verified</span>
+</button>
+<div class="grid grid-cols-2 gap-space-xs">
+<button class="py-2 px-space-xs rounded-lg bg-surface-container-high text-primary font-label-md text-label-md font-semibold hover:bg-surface-container transition-colors flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-secondary">contact_support</span>
+<span>Ask Clarification</span>
+</button>
+<button class="py-2 px-space-xs rounded-lg bg-error-container text-on-error-container font-label-md text-label-md font-semibold hover:opacity-90 transition-colors flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-[16px]">report</span>
+<span>Flag Suspicious</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-primary font-bold">Industrial Jurisdiction Reference</span>
+<span class="material-symbols-outlined text-[18px] text-outline">info</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Under Government Resolution (GR) No. SDED-2024/CR-119, all private sector placement validation claims above ₹15,000/mo must be validated via GST return cross-reference within 14 working days of trainee submission.
+        </p>
+</div>
+</div>
+</div>
+</div></main></div><script>window.MAHAKAUSHALYA_PORTAL = 'admin';</script><script type="module" src="../../shared/auth.js"></script><script type="module" src="js/validation.js"></script>
+</body></html>

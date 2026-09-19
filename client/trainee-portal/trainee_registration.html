@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><link rel="stylesheet" href="css/base.css"/><script src="https://cdn.tailwindcss.com"></script><script src="js/tailwind-config.js"></script></head><body class="bg-background font-body-md text-body-md text-on-surface"><header class="fixed top-0 left-0 w-full z-50 bg-surface-container-lowest/95 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-1 bg-gradient-to-r from-[#FF9933] via-white to-[#138808] w-full"></div><div class="bg-surface-container-low"><div class="w-full max-w-[1440px] mx-auto px-gutter flex items-center justify-between py-space-xs text-on-surface-variant font-label-sm text-label-sm"><div class="flex items-center gap-space-md"><span>महाराष्ट्र शासन | Government of Maharashtra</span><span class="hidden md:inline bg-surface-container-highest text-primary font-label-sm px-space-xs rounded-lg">कौशल्यापासून रोजगारापर्यंत</span></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs"><span class="cursor-pointer hover:text-on-surface">A-</span><span class="cursor-pointer font-bold hover:text-on-surface">A</span><span class="cursor-pointer hover:text-on-surface">A+</span></div><span class="text-outline-variant">|</span><button class="font-label-sm text-label-sm text-primary hover:text-secondary-container transition-colors">मराठी / English</button></div></div></div><div class="h-20 w-full max-w-[1440px] mx-auto px-gutter flex items-center justify-between"><div class="flex items-center gap-space-md"><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary tracking-tight">MahaKaushalya</span><span class="font-label-sm text-label-sm text-on-surface-variant">Post-Training Outcome Tracking System</span></div><span class="hidden lg:inline-flex items-center px-space-sm py-0.5 rounded-full font-label-sm text-label-sm bg-surface-container-high text-primary">Govt of Maharashtra Skilling Initiative</span></div><div class="flex items-center gap-space-lg"><nav class="hidden xl:flex items-center gap-space-sm" data-active-classes="bg-primary-container text-on-primary font-label-md rounded-lg"><a class="px-space-sm py-space-xs font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="home" href="#">Home</a><a aria-current="page" class="px-space-sm py-space-xs transition-colors bg-primary-container text-on-primary font-label-md rounded-lg" data-path="register-trainee" href="#">Register Trainee</a><a class="px-space-sm py-space-xs font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="trainee-login" href="trainee_login.html">Trainee Login</a><a class="px-space-sm py-space-xs font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="trainee-dashboard" href="trainee_dashboard.html">Trainee Dashboard</a><a class="px-space-sm py-space-xs font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="update-outcome-status" href="#">Update Outcome Status</a><a class="px-space-sm py-space-xs font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="follow-up" href="#">Follow-up (SMS/WA)</a><a class="px-space-sm py-space-xs font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="profile-and-settings" href="#">Profile &amp; Settings</a></nav><div class="flex items-center gap-space-md"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1XBFPUWpbG1OVD9wUBQsrXsEdQlEWyjSCWPdiYf6NOFrNjJgs7iqao4XMlsEfYRURB7RZCtQYfkAHq9QUoiNTPfrnppJbyzAyxkFAwnqsqgB2qeReLWDTItSR6Nwrf-2jR95F_opeqFI4jykN7qq7bj3GSXq663k7Toyr8wCJe9ndFg2-L3nttUoV24Ak18jQ_Fg2oF671ahl8ageRy41dKkas-IP5QXG-0t5-NuiKw-pC9dcuASy0XFEEWPURBJhJWfTJRH4L18Q"/></div></div></div></header><main class="w-full pt-20 bg-background"><div class="flex flex-col w-full">
+<div class="w-full bg-surface-container-low py-space-md">
+<div class="w-full max-w-[1440px] mx-auto px-gutter flex flex-col md:flex-row md:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs font-label-md text-label-md text-on-surface-variant">
+<a class="hover:text-primary transition-colors flex items-center gap-1" data-path="home" href="#">
+<span class="material-symbols-outlined text-[16px]">home</span>
+          Home
+        </a>
+<span class="text-outline-variant">/</span>
+<span class="text-on-surface font-semibold">Trainee Registration</span>
+<span class="text-outline-variant">/</span>
+<span class="text-secondary font-semibold">प्रशिक्षणार्थी नोंदणी</span>
+</div>
+<div class="inline-flex items-center gap-space-xs px-space-sm py-1 bg-surface-container-lowest rounded-full shadow-sm text-primary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-tertiary-fixed-variant" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+<span>MSSDS Official Statutory Portal • Portal Ref: MH-SKILL-2025/REG</span>
+</div>
+</div>
+</div>
+<div class="w-full max-w-[1440px] mx-auto px-gutter py-space-lg">
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm mb-space-lg">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div class="flex items-start gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-primary flex items-center justify-center text-on-primary shrink-0 shadow-md">
+<span class="material-symbols-outlined text-[28px]">how_to_reg</span>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex flex-wrap items-center gap-space-sm">
+<h1 class="font-headline-lg text-headline-lg text-primary tracking-tight">Trainee Registration</h1>
+<span class="font-headline-md text-headline-md text-secondary">/ प्रशिक्षणार्थी नोंदणी</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-3xl">
+              Register to record your post-training employment outcome, verify certification credentials, and unlock eligibility for Government of Maharashtra skilling allowances and placement retention incentives.
+            </p>
+</div>
+</div>
+<div class="flex items-center gap-space-sm self-start lg:self-center bg-surface-container-high px-space-md py-space-sm rounded-lg">
+<div class="flex flex-col text-right">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Current Stage</span>
+<span class="font-label-lg text-label-lg text-primary">Pre-Placement Registry</span>
+</div>
+<div class="w-10 h-10 rounded-full bg-primary-container text-on-primary flex items-center justify-center font-bold">
+            1/3
+          </div>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+<div class="lg:col-span-8 flex flex-col gap-space-lg">
+
+<div id="api-alert-host" class="w-full mb-space-md"></div>
+<form class="flex flex-col gap-space-lg" id="registrationForm" onsubmit="return false;">
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden">
+<div class="bg-surface-container-high px-space-lg py-space-md flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="w-7 h-7 rounded-full bg-primary text-on-primary flex items-center justify-center font-label-md text-label-md">1</span>
+<span class="font-headline-sm text-headline-sm text-primary">Personal Information</span>
+<span class="font-label-md text-label-md text-on-surface-variant font-normal">/ वैयक्तिक माहिती</span>
+</div>
+<span class="font-label-sm text-label-sm bg-surface-container-lowest text-on-surface-variant px-space-sm py-0.5 rounded">Aadhaar Linked Section</span>
+</div>
+<div class="p-space-lg flex flex-col gap-space-md">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div class="flex flex-col gap-1.5 md:col-span-2">
+<label class="font-label-md text-label-md text-on-surface flex items-center justify-between" for="fullName">
+<span>Full Name (as per Aadhaar / Certificate) <span class="text-error font-bold">*</span></span>
+<span class="font-label-sm text-label-sm text-outline">पूर्ण नाव (आधार प्रमाणे)</span>
+</label>
+<input class="w-full px-space-sm py-2.5 bg-surface-container-low rounded-lg font-body-md text-body-md text-on-surface focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary shadow-inner" id="fullName" placeholder="e.g. Anand Ramesh Shinde" required="" type="text"/>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Must match exactly with your SSC / Vocational Training Completion Certificate</span>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface flex items-center justify-between" for="mobileNumber">
+<span>Mobile Number <span class="text-error font-bold">*</span></span>
+<span class="font-label-sm text-label-sm text-outline">मोबाईल क्रमांक</span>
+</label>
+<div class="flex gap-space-xs">
+<span class="inline-flex items-center px-space-sm bg-surface-container-high text-on-surface font-label-md text-label-md rounded-lg">+91</span>
+<input class="w-full px-space-sm py-2.5 bg-surface-container-low rounded-lg font-body-md text-body-md text-on-surface focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary shadow-inner" id="mobileNumber" maxlength="10" pattern="[0-9]{10}" placeholder="9876543210" required="" type="tel"/>
+<button class="px-space-sm bg-primary text-on-primary font-label-md text-label-md rounded-lg hover:bg-primary-container whitespace-nowrap transition-colors flex items-center gap-1" onclick="sendOtpNotification()" type="button">
+<span class="material-symbols-outlined text-[16px]">send</span>
+                      Verify
+                    </button>
+</div>
+<div class="font-label-sm text-label-sm text-on-tertiary-fixed-variant flex items-center gap-1" id="otpStatus">
+<span class="material-symbols-outlined text-[14px]">info</span>
+                    OTP verification consent active. Follow-up SMS will be routed here.
+                  </div>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface flex items-center justify-between" for="emailAddress">
+<span>Email Address</span>
+<span class="font-label-sm text-label-sm text-outline">ईमेल पत्ता</span>
+</label>
+<input class="w-full px-space-sm py-2.5 bg-surface-container-low rounded-lg font-body-md text-body-md text-on-surface focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary shadow-inner" id="emailAddress" placeholder="trainee.name@gmail.com" type="email"/>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Recommended for digital placement offer receipt</span>
+</div>
+
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface flex items-center justify-between" for="accountPassword">
+<span>Create Password <span class="text-error font-bold">*</span></span>
+<span class="font-label-sm text-label-sm text-outline">पासवर्ड तयार करा</span>
+</label>
+<input class="w-full px-space-sm py-2.5 bg-surface-container-low rounded-lg font-body-md text-body-md text-on-surface focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary shadow-inner" id="accountPassword" minlength="8" placeholder="Min. 8 characters" required="" type="password"/>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface flex items-center justify-between" for="confirmPassword">
+<span>Confirm Password <span class="text-error font-bold">*</span></span>
+<span class="font-label-sm text-label-sm text-outline">पासवर्ड पुष्टी</span>
+</label>
+<input class="w-full px-space-sm py-2.5 bg-surface-container-low rounded-lg font-body-md text-body-md text-on-surface focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary shadow-inner" id="confirmPassword" minlength="8" placeholder="Re-enter password" required="" type="password"/>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface flex items-center justify-between" for="ageBand">
+<span>Age Band <span class="text-error font-bold">*</span></span>
+<span class="font-label-sm text-label-sm text-outline">वय गट</span>
+</label>
+<select class="w-full px-space-sm py-2.5 bg-surface-container-low rounded-lg font-body-md text-body-md text-on-surface focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary shadow-inner" id="ageBand" required="">
+<option disabled="" selected="" value="">Select age category</option>
+<option value="18-21">18 - 21 years (Entry Cohort)</option>
+<option value="22-25">22 - 25 years (Skilled Apprentice)</option>
+<option value="26-30">26 - 30 years (Experienced Craftsperson)</option>
+<option value="31+">31+ years (Adult Reskilling / Upskilling)</option>
+</select>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface flex items-center justify-between" for="socialCategory">
+<span>Social Category <span class="text-error font-bold">*</span></span>
+<span class="font-label-sm text-label-sm text-outline">सामाजिक प्रवर्ग</span>
+</label>
+<select class="w-full px-space-sm py-2.5 bg-surface-container-low rounded-lg font-body-md text-body-md text-on-surface focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary shadow-inner" id="socialCategory" required="">
+<option disabled="" selected="" value="">Select category as per certificate</option>
+<option value="GENERAL">General / Open</option>
+<option value="OBC">Other Backward Class (OBC)</option>
+<option value="SC">Scheduled Caste (SC)</option>
+<option value="ST">Scheduled Tribe (ST)</option>
+<option value="EWS">Economically Weaker Section (EWS)</option>
+<option value="VJNT">VJNT / NT (Nomadic Tribes)</option>
+<option value="SEBC">Socially and Educationally Backward Class (SEBC)</option>
+</select>
+</div>
+<div class="flex flex-col gap-1.5 md:col-span-2">
+<label class="font-label-md text-label-md text-on-surface flex items-center justify-between">
+<span>Gender Identity <span class="text-error font-bold">*</span></span>
+<span class="font-label-sm text-label-sm text-outline">लिंग</span>
+</label>
+<div class="grid grid-cols-3 gap-space-sm">
+<label class="flex items-center gap-space-xs p-space-sm bg-surface-container-low rounded-lg cursor-pointer hover:bg-surface-container-high transition-colors">
+<input class="accent-primary w-4 h-4" name="gender" required="" type="radio" value="male"/>
+<span class="font-label-md text-label-md text-on-surface">Male / पुरुष</span>
+</label>
+<label class="flex items-center gap-space-xs p-space-sm bg-surface-container-low rounded-lg cursor-pointer hover:bg-surface-container-high transition-colors">
+<input class="accent-primary w-4 h-4" name="gender" type="radio" value="female"/>
+<span class="font-label-md text-label-md text-on-surface">Female / स्त्री</span>
+</label>
+<label class="flex items-center gap-space-xs p-space-sm bg-surface-container-low rounded-lg cursor-pointer hover:bg-surface-container-high transition-colors">
+<input class="accent-primary w-4 h-4" name="gender" type="radio" value="other"/>
+<span class="font-label-md text-label-md text-on-surface">Transgender / इतर</span>
+</label>
+</div>
+</div>
+<div class="flex flex-col gap-1.5 md:col-span-2">
+<label class="font-label-md text-label-md text-on-surface flex items-center justify-between" for="district">
+<span>Maharashtra Domicile / District <span class="text-error font-bold">*</span></span>
+<span class="font-label-sm text-label-sm text-outline">महाराष्ट्र अधिवास / जिल्हा</span>
+</label>
+<select class="w-full px-space-sm py-2.5 bg-surface-container-low rounded-lg font-body-md text-body-md text-on-surface focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary shadow-inner" id="district" required="">
+<option disabled="" selected="" value="">Select District of Maharashtra</option>
+<option value="Pune">Pune (पुणे)</option>
+<option value="Mumbai Suburban">Mumbai Suburban (मुंबई उपनगर)</option>
+<option value="Mumbai City">Mumbai City (मुंबई शहर)</option>
+<option value="Nagpur">Nagpur (नागपूर)</option>
+<option value="Nashik">Nashik (नाशिक)</option>
+<option value="Chhatrapati Sambhajinagar">Chhatrapati Sambhajinagar / Aurangabad (छत्रपती संभाजीनगर)</option>
+<option value="Thane">Thane (ठाणे)</option>
+<option value="Solapur">Solapur (सोलापूर)</option>
+<option value="Kolhapur">Kolhapur (कोल्हापूर)</option>
+<option value="Amravati">Amravati (अमरावती)</option>
+<option value="Nanded">Nanded (नांदेड)</option>
+<option value="Jalgaon">Jalgaon (जळगाव)</option>
+<option value="Satara">Satara (सातारा)</option>
+<option value="Chandrapur">Chandrapur (चंद्रपूर)</option>
+<option value="Latur">Latur (लातूर)</option>
+<option value="Dhule">Dhule (धुळे)</option>
+<option value="Ahmednagar">Ahilyanagar / Ahmednagar (अहिल्यानगर)</option>
+<option value="Ratnagiri">Ratnagiri (रत्नागिरी)</option>
+<option value="Other">Other Maharashtra District</option>
+</select>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden">
+<div class="bg-surface-container-high px-space-lg py-space-md flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="w-7 h-7 rounded-full bg-primary text-on-primary flex items-center justify-center font-label-md text-label-md">2</span>
+<span class="font-headline-sm text-headline-sm text-primary">Training &amp; Skilling Course Details</span>
+<span class="font-label-md text-label-md text-on-surface-variant font-normal">/ प्रशिक्षण तपशील</span>
+</div>
+<span class="font-label-sm text-label-sm bg-surface-container-lowest text-on-surface-variant px-space-sm py-0.5 rounded">MSSDS / NCVT Tracked</span>
+</div>
+<div class="p-space-lg flex flex-col gap-space-md">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface flex items-center justify-between" for="trainingScheme">
+<span>Training Scheme / Agency <span class="text-error font-bold">*</span></span>
+<span class="font-label-sm text-label-sm text-outline">प्रशिक्षण योजना</span>
+</label>
+<select class="w-full px-space-sm py-2.5 bg-surface-container-low rounded-lg font-body-md text-body-md text-on-surface focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary shadow-inner" id="trainingScheme" required="">
+<option disabled="" selected="" value="">Select affiliated skilling program</option>
+<option value="MSSDS">Maharashtra State Skill Development Society (MSSDS)</option>
+<option value="PMKVK">Pramod Mahajan Kaushalya Vikas Kendra (PMKVK)</option>
+<option value="ITI">Government / Private ITI (DVET Maharashtra)</option>
+<option value="PMKVY">PMKVY State Component (Maharashtra)</option>
+<option value="CSR">Govt.-Partnered CSR Apprenticeship</option>
+</select>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface flex items-center justify-between" for="courseName">
+<span>Course / Job Role Name <span class="text-error font-bold">*</span></span>
+<span class="font-label-sm text-label-sm text-outline">अभ्यासक्रमाचे नाव</span>
+</label>
+<select class="w-full px-space-sm py-2.5 bg-surface-container-low rounded-lg font-body-md text-body-md text-on-surface focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary shadow-inner" id="courseName" required="">
+<option disabled="" selected="" value="">Select certified job role</option>
+<option value="CNC">CNC Machinist &amp; Tool Operator (Production Sector)</option>
+<option value="GDA">General Duty Assistant / Healthcare Assistant</option>
+<option value="SOLAR">Solar PV Project Installation Technician</option>
+<option value="ELEC">Domestic Electrician &amp; Wireman</option>
+<option value="DATA">Data Entry Operator &amp; IT Office Executive</option>
+<option value="RETAIL">Retail Sales Associate &amp; Point of Sale Officer</option>
+<option value="CULINARY">Hospitality, Food Service &amp; Culinary Arts</option>
+<option value="AUTO">Automotive Assembly Technician (EV Track)</option>
+</select>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface flex items-center justify-between" for="batchId">
+<span>Batch / Cohort ID <span class="text-error font-bold">*</span></span>
+<span class="font-label-sm text-label-sm text-outline">बॅच संकेतांक</span>
+</label>
+<div class="relative">
+<input class="w-full px-space-sm py-2.5 bg-surface-container-low rounded-lg font-body-md text-body-md text-on-surface uppercase focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary shadow-inner" id="batchId" placeholder="e.g. BATCH-2024-Q3-PUN" required="" type="text"/>
+<span class="absolute right-3 top-2.5 material-symbols-outlined text-outline text-[20px]">badge</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Found on top-right of your batch enrollment card</span>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface flex items-center justify-between" for="completionDate">
+<span>Completion Month &amp; Year <span class="text-error font-bold">*</span></span>
+<span class="font-label-sm text-label-sm text-outline">प्रशिक्षण पूर्ण झाल्याचा महिना/वर्ष</span>
+</label>
+<div class="grid grid-cols-2 gap-space-xs">
+<select class="px-space-sm py-2.5 bg-surface-container-low rounded-lg font-body-md text-body-md text-on-surface focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary shadow-inner" id="completionMonth" required="">
+<option disabled="" selected="" value="">Month</option>
+<option value="01">January</option>
+<option value="02">February</option>
+<option value="03">March</option>
+<option value="04">April</option>
+<option value="05">May</option>
+<option value="06">June</option>
+<option value="07">July</option>
+<option value="08">August</option>
+<option value="09">September</option>
+<option value="10">October</option>
+<option value="11">November</option>
+<option value="12">December</option>
+</select>
+<select class="px-space-sm py-2.5 bg-surface-container-low rounded-lg font-body-md text-body-md text-on-surface focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary shadow-inner" id="completionYear" required="">
+<option disabled="" selected="" value="">Year</option>
+<option value="2025">2025</option>
+<option value="2024">2024</option>
+<option value="2023">2023</option>
+<option value="2022">2022</option>
+</select>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden">
+<div class="bg-primary-container text-on-primary px-space-lg py-space-md flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="w-7 h-7 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-label-md text-label-md">3</span>
+<span class="font-headline-sm text-headline-sm">Official Consent &amp; Statutory Declaration</span>
+</div>
+<span class="font-label-sm text-label-sm bg-surface-container-lowest text-primary font-semibold px-space-sm py-0.5 rounded">DPDP Act 2023 Compliant</span>
+</div>
+<div class="p-space-lg flex flex-col gap-space-md">
+<div class="bg-surface-container-low p-space-md rounded-lg flex flex-col gap-space-xs text-on-surface-variant font-body-sm text-body-sm">
+<div class="flex items-center gap-space-xs text-primary font-label-md text-label-md">
+<span class="material-symbols-outlined text-[18px]">gavel</span>
+<span>Legal Affirmation under Maharashtra Skill Mission Framework</span>
+</div>
+<p>
+                  As per the mandates of MSSDS and the Department of Skills, Employment, Entrepreneurship &amp; Innovation, placement verification data is routinely audited against EPFO, ESIC, and designated Direct Benefit Transfer (DBT) clearing houses to combat fraudulent records and disburse candidate milestone benefits.
+                </p>
+</div>
+<div class="flex items-start gap-space-sm pt-space-xs">
+<input class="accent-secondary-container w-5 h-5 mt-1 shrink-0 rounded cursor-pointer" id="statutoryConsent" required="" type="checkbox"/>
+<label class="font-body-md text-body-md text-on-surface cursor-pointer select-none" for="statutoryConsent">
+<strong class="text-primary font-label-lg text-label-lg block mb-1">
+                    I hereby provide explicit consent under the Digital Personal Data Protection Act and Maharashtra Skilling Program Guidelines
+                  </strong>
+                  to track my post-training employment outcome, authorize nodal officers to cross-verify salary credits via EPFO/Bank settlement protocols, and acknowledge receipt of scheduled 3-month, 6-month, and 12-month automated follow-up communications via SMS, WhatsApp, and interactive telephonic verification.
+                </label>
+</div>
+<div class="bg-surface-container-high rounded-lg p-space-md flex flex-col md:flex-row md:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm font-label-sm text-label-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-[18px]">fingerprint</span>
+<span>Digital Audit Trail:</span>
+<span class="bg-surface-container-lowest px-space-xs py-0.5 rounded font-mono text-primary" id="liveTimestamp">Capturing Time...</span>
+<span class="bg-surface-container-lowest px-space-xs py-0.5 rounded font-mono text-primary">IP: 103.248.xxx.xxx (Govt CIDR)</span>
+</div>
+<div class="flex items-center gap-1 text-on-tertiary-fixed-variant font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[16px]">lock</span>
+<span>Encrypted 256-Bit SHA Log</span>
+</div>
+</div>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row items-center justify-between gap-space-md pt-space-xs">
+<a class="font-label-lg text-label-lg text-primary hover:text-secondary flex items-center gap-1 transition-colors" data-path="trainee-login" href="trainee_login.html">
+<span class="material-symbols-outlined text-[18px]">arrow_back</span>
+              Already Registered? Login here (नोंदणीकृत आहात? लॉग इन करा)
+            </a>
+<div class="flex items-center gap-space-sm w-full sm:w-auto">
+<button class="px-space-md py-3 rounded-lg bg-surface-container-high text-on-surface font-label-lg text-label-lg hover:bg-surface-container transition-colors" type="reset">
+                Reset Form
+              </button>
+<button class="w-full sm:w-auto px-space-lg py-3 rounded-lg bg-secondary-container text-on-primary font-label-lg text-label-lg shadow-md hover:bg-secondary transition-all flex items-center justify-center gap-space-xs" type="submit">
+<span>Complete Trainee Registration</span>
+<span class="material-symbols-outlined text-[20px]">how_to_reg</span>
+</button>
+</div>
+</div>
+</form>
+</div>
+<div class="lg:col-span-4 flex flex-col gap-space-md">
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-secondary-container text-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[24px]">workspace_premium</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-primary">Why Register?</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">नोंदणी करण्याचे फायदे</span>
+</div>
+</div>
+<div class="flex flex-col gap-space-sm">
+<div class="bg-surface-container-low p-space-sm rounded-lg flex items-start gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[18px]">currency_rupee</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Statutory Post-Placement St取得 Allowance</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                  Direct transfer of post-placement retention allowances (₹1,000 to ₹1,500/month for up to 3 months) straight to verified Aadhaar-seeded accounts.
+                </p>
+</div>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded-lg flex items-start gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Official State Employment Certification</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                  Get certified outcome verification credentials on DigiLocker, backed directly by the Directorate of Vocational Education &amp; Training (DVET).
+                </p>
+</div>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded-lg flex items-start gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[18px]">trending_up</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Fast-Track Reskilling Subsidies</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                  Priority enrollment in Level-5 advanced automation, CNC robotics, and solar micro-grid technician courses after 6 months of logged employment.
+                </p>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-high rounded-lg p-space-sm flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[24px]">support_agent</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Registration Grievance Helpline</span>
+<span class="font-label-md text-label-md text-primary font-bold">1800-120-8040 (Ext: 2)</span>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="font-label-lg text-label-lg text-primary">State skilling Cohort Telemetry</span>
+<span class="font-label-sm text-label-sm bg-surface-container text-on-surface-variant px-space-xs py-0.5 rounded">Live MSSDS Feed</span>
+</div>
+<div class="relative w-full h-32 flex items-center justify-center bg-surface-container-low rounded-lg p-space-sm">
+<svg class="w-full h-full text-primary" viewbox="0 0 300 100">
+<path d="M 10 80 Q 70 30 140 60 T 290 20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="3"></path>
+<circle cx="10" cy="80" fill="#fd651e" r="4"></circle>
+<circle cx="140" cy="60" fill="#002353" r="4"></circle>
+<circle cx="290" cy="20" fill="#fd651e" r="5"></circle>
+<text class="font-label-sm" fill="#434750" font-size="10" x="15" y="95">Oct</text>
+<text class="font-label-sm" fill="#434750" font-size="10" x="140" y="80">Dec</text>
+<text class="font-label-sm font-bold" fill="#002353" font-size="11" x="260" y="38">94.2% Tracked</text>
+</svg>
+</div>
+<div class="grid grid-cols-2 gap-space-xs text-center">
+<div class="bg-surface-container-low p-space-xs rounded">
+<span class="font-headline-sm text-headline-sm text-primary block">142,890</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Trainees Verified</span>
+</div>
+<div class="bg-surface-container-low p-space-xs rounded">
+<span class="font-headline-sm text-headline-sm text-secondary-container block">88.4%</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">EPFO Matched</span>
+</div>
+</div>
+</div>
+<div class="rounded-xl overflow-hidden shadow-sm bg-surface-container-lowest">
+<img class="w-full h-44 object-cover" data-alt="A focused young Indian technician wearing protective safety equipment and glasses inspecting an industrial robotic machinery in an advanced vocational technical training laboratory in Maharashtra with ambient blue and warm orange workshop lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCl4tHvVvRj3ug9teqZYfIdET-DSjJIdCKFUjyasKRKbaAotamLFI9vG4DyYgQjgpRYC6cGNxv78-u-Mlwd7rYPgJfCpW7KviXLyorFttY0tTaLPSFDrnmlHlSBnKM-TnPTtJU6-kpSDZ9bgoJwDm7yugVORbsJ1njOzDp8GpidYS9L9G9UwRJY1pUU7hocIPEV1ImBUL_ggimgy0ojFTtN1fbmiITkcnNBlRckdFut0KLgzWpw311p"/>
+<div class="p-space-md flex flex-col gap-1 bg-surface-container-low">
+<span class="font-label-md text-label-md text-primary font-bold">Industry 4.0 Center of Excellence - Pune</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Trainees verified under Maharashtra skill missions are pre-approved for state industrial corridor campus hiring drives.
+            </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 z-50 flex items-center justify-center bg-inverse-surface/50 backdrop-blur-sm hidden p-margin-sm" id="successModal">
+<div class="bg-surface-container-lowest rounded-xl max-w-lg w-full p-space-xl shadow-xl flex flex-col gap-space-md transform transition-all">
+<div class="w-14 h-14 rounded-full bg-surface-container-highest text-on-tertiary-fixed-variant flex items-center justify-center mx-auto">
+<span class="material-symbols-outlined text-[36px]">check_circle</span>
+</div>
+<div class="text-center flex flex-col gap-1">
+<h3 class="font-headline-md text-headline-md text-primary">Registration Record Initiated</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Your profile has been provisionally recorded on the Maharashtra State Skill Tracker. An official confirmation with your Trainee Tracking ID (TTID) has been dispatched via SMS.
+        </p>
+</div>
+<div class="bg-surface-container-low p-space-md rounded-lg flex flex-col gap-space-xs font-label-md text-label-md">
+<div class="flex justify-between text-on-surface">
+<span>Provisional TTID:</span>
+<span class="font-mono font-bold text-primary" id="displayTTID">MH-2025-XXXXX</span>
+</div>
+<div class="flex justify-between text-on-surface">
+<span>Audit Consent:</span>
+<span class="text-on-tertiary-fixed-variant font-semibold">Active &amp; Certified</span>
+</div>
+</div>
+<div class="flex gap-space-sm mt-space-sm">
+<a class="w-full py-2.5 rounded-lg bg-primary text-on-primary text-center font-label-lg text-label-lg hover:bg-primary-container transition-colors" data-path="trainee-dashboard" href="trainee_dashboard.html">
+          Proceed to Trainee Dashboard
+        </a>
+</div>
+</div>
+</div>
+</div>
+<script>
+  function updateTimestamp() {
+    const now = new Date();
+    const dateStr = now.toLocaleString('en-IN', {
+      timeZone: 'Asia/Kolkata',
+      dateStyle: 'medium',
+      timeStyle: 'medium'
+    });
+    const el = document.getElementById('liveTimestamp');
+    if (el) {
+      el.textContent = dateStr + ' IST';
+    }
+  }
+  updateTimestamp();
+  setInterval(updateTimestamp, 1000);
+
+  function sendOtpNotification() {
+    const mobileInput = document.getElementById('mobileNumber');
+    if (mobileInput && mobileInput.value.length === 10) {
+      const otpStatus = document.getElementById('otpStatus');
+      otpStatus.innerHTML = '<span class="material-symbols-outlined text-[14px] text-tertiary-fixed-variant">check_circle</span> 6-Digit OTP sent to +91 ' + mobileInput.value;
+      otpStatus.classList.add('text-tertiary-fixed-variant');
+    } else {
+      alert('Please enter a valid 10-digit mobile number first.');
+    }
+  }
+
+  function handleRegistrationSubmit() {
+    const randomNum = Math.floor(10000 + Math.random() * 90000);
+    const displayTTID = document.getElementById('displayTTID');
+    if (displayTTID) {
+      displayTTID.textContent = 'MH-2025-' + randomNum;
+    }
+    const modal = document.getElementById('successModal');
+    if (modal) {
+      modal.classList.remove('hidden');
+    }
+  }
+</script></main><footer class="w-full bg-surface-container-lowest shadow-[0_-1px_8px_rgba(0,0,0,0.03)] mt-space-xl"><div class="w-full max-w-[1440px] mx-auto px-gutter py-space-xl grid grid-cols-1 md:grid-cols-4 gap-gutter"><div class="flex flex-col gap-space-sm"><span class="font-headline-sm text-headline-sm text-primary">MahaKaushalya</span><p class="font-body-sm text-body-sm text-on-surface-variant">Government of Maharashtra Skills, Employment, Entrepreneurship &amp; Innovation Department. Monitoring candidate progression from certification to verified employment.</p><span class="font-label-sm text-label-sm text-outline">System Version 2.4.0 (Statutory Build)</span></div><div class="flex flex-col gap-space-xs"><span class="font-label-lg text-label-lg text-on-surface">Helpline &amp; Support</span><p class="font-body-sm text-body-sm text-on-surface-variant">Candidate Assistance Desk</p><span class="font-headline-sm text-headline-sm text-secondary">1800-120-8040</span><span class="font-body-sm text-body-sm text-on-surface-variant">Toll-Free (09:30 AM to 06:00 PM IST)</span><span class="font-body-sm text-body-sm text-on-surface-variant">Email: support.mahakaushalya@maharashtra.gov.in</span></div><div class="flex flex-col gap-space-xs"><span class="font-label-lg text-label-lg text-on-surface">Quick Access</span><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="home" href="#">State Skill Mission Portal</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="trainee-dashboard" href="trainee_dashboard.html">Placement Verification Board</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="update-outcome-status" href="#">Employer Declaration Desk</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="follow-up" href="#">District Facilitator Console</a></div><div class="flex flex-col gap-space-xs"><span class="font-label-lg text-label-lg text-on-surface">Compliance &amp; Legal</span><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Candidate Consent Terms</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Privacy Policy &amp; Data Security</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Statutory Audit Guidelines</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Hyperlinking Policy</a></div></div><div class="bg-surface-container-low py-space-sm"><div class="w-full max-w-[1440px] mx-auto px-gutter flex flex-col md:flex-row items-center justify-between gap-space-sm font-label-sm text-label-sm text-on-surface-variant"><span>Content Owned, Maintained &amp; Updated by Maharashtra State Skill Development Society (MSSDS).</span><span>© 2025 Government of Maharashtra. All rights reserved.</span></div></div></footer><script>window.MAHAKAUSHALYA_PORTAL = 'trainee';</script><script type="module" src="../../shared/auth.js"></script><script type="module" src="./js/auth.js"></script></body></html>
