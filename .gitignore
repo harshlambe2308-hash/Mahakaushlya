@@ -1,0 +1,24 @@
+# --- Dependencies ---
+node_modules/
+
+# --- Environment & secrets (never commit the real .env) ---
+.env
+.env.local
+.env.*.local
+
+# --- Logs ---
+*.log
+npm-debug.log*
+
+# --- OS files ---
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- Editor / IDE ---
+.vscode/
+.idea/
+*.swp
+
+# --- Tooling workspace metadata (not part of the app) ---
+.freebuff/
