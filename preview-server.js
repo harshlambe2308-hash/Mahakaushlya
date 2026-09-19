@@ -25,6 +25,11 @@ const http = require('http');
 const fs = require('fs');
 const path = require('path');
 
+// Local-dev API target for shared/auth.js (deployed builds are same-origin and
+// need no override). Served as a virtual module so it exists before the
+// portals' own ES-module imports run.
+const API_BASE = process.env.API_BASE_URL || 'http://localhost:5000';
+
 const ROOT = __dirname;
 const PORT = parseInt(process.argv[2], 10) || 5500;
 
@@ -101,12 +106,25 @@ const server = http.createServer((req, res) => {
       <p>Overview, trainee records, non-responder queue, analytics &amp; verification. Calls <code>/api/admin/*</code>.</p>
     </a>
   </div>
-  <p class="api">Backend API: <code>http://localhost:5000/health</code> &mdash; merged Express server must be running.</p>
+  <p class="api">Backend API: <code>${API_BASE}/health</code> &mdash; merged Express server must be running.</p>
 </div>
 </body>
 </html>`,
       { 'Content-Type': 'text/html; charset=utf-8' }
     );
+  }
+
+  // Virtual module: injects the dev API base into shared/auth.js before it loads.
+  // shared/auth.js reads window.MAHAKAUSHALYA_API_BASE_URL at module top level,
+  // so prepending one JS line is the simplest reliable override.
+  if (urlPath === '/shared/auth.js') {
+    const authPath = path.join(ROOT, 'shared', 'auth.js');
+    fs.readFile(authPath, (err, data) => {
+      if (err) return send(res, 404, 'Not found: ' + urlPath);
+      const body = `window.MAHAKAUSHALYA_API_BASE_URL = ${JSON.stringify(API_BASE)};\n` + data.toString('utf8');
+      send(res, 200, body, { 'Content-Type': MIME['.js'], 'Cache-Control': 'no-store' });
+    });
+    return;
   }
 
   // Prevent path traversal

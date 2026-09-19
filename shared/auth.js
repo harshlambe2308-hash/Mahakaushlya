@@ -13,7 +13,13 @@
  */
 
 // ---- Single API base URL — referenced everywhere, never hardcoded ----
-const API_BASE_URL = 'http://localhost:5000';
+// Deployed behind the same Express server (Railway, Render, ...): served from
+// the SAME origin as the API, so we default to "" (relative URLs like
+// /api/trainee/... hit the same host). For local development set
+// window.MAHAKAUSHALYA_API_BASE_URL = 'http://localhost:5000' (the preview
+// launcher already does this — see preview-server.js) before the portals load.
+const API_BASE_URL =
+  (typeof window !== 'undefined' && window.MAHAKAUSHALYA_API_BASE_URL) || '';
 
 // ---- Single localStorage token key for BOTH portals ----
 const TOKEN_STORAGE_KEY = 'mahakaushalya_token';

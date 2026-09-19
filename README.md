@@ -117,13 +117,17 @@ Honest list — the project is a working, E2E-tested core wrapped in a partially
 - **In-memory data provider is the default.** With `DATA_PROVIDER=memory`, all data resets on every server restart. Persistence requires Supabase credentials + `schema.sql`.
 - **Some pages are UI-only, pending backend routes:** Employer Validation (`/api/public/employers/*` routes don't exist), Skill Gap Analysis (static benchmark matrix — no live `sectors` endpoint), report Export/Schedule buttons (toasts only), "Trigger Campaign" and "Batch Verify" (no routes), and the trainee profile-settings save/OTP buttons and OTP login tab (local simulations).
 - **No notifications:** the follow-up `sms`/`whatsapp` channel field exists in the schema, but no SMS/WhatsApp gateway or scheduler is integrated — prompts are created via the dev seed endpoint.
-- **Frontend API base is hardcoded** to `http://localhost:5000` in `shared/auth.js`; deploying elsewhere requires a code edit.
+- **API base is configurable:** the frontend calls the API same-origin by default (empty base in `shared/auth.js`); local dev overrides it to `http://localhost:5000` via the preview server. When the API is hosted at a *different* origin than the static frontend, set `window.MAHAKAUSHALYA_API_BASE_URL` before the portals load.
 - **Security is functional but basic:** JWT with a dev-default secret fallback (warns in production), tokens in localStorage (XSS-exposed), no refresh tokens, no logout invalidation, no password reset, no Supabase RLS policies (auth rests entirely on the Express middleware).
 - **Retention analytics return `null`** (the 3/6/12-month cohort windows on some screens are not backed by computation).
 - **List endpoints are not paginated** — `page`/`limit` params are ignored; everything matching the filter is returned.
 - **No AI:** all analytics are deterministic aggregates (counts, percentages, medians).
 
 See [docs/PROJECT_REPORT.md](docs/PROJECT_REPORT.md) for the full verified feature inventory, data flow, security analysis, and roadmap.
+
+## Deployment
+
+The merged Express app **serves the static frontend too** (same origin — no CORS issues). Deploy `server/` as one Node service and the portals ship with it. See **[docs/DEPLOY_RAILWAY.md](docs/DEPLOY_RAILWAY.md)** for a step-by-step Railway guide.
 
 ## License
 

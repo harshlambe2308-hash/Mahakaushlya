@@ -54,6 +54,43 @@ app.use('/api/trainee', apiLimiter, traineeRoutes);
 app.use('/api/admin', apiLimiter, adminRoutes);
 
 // ---------------------------------------------------------------------------
+// Static frontend (production / hosting): serve both portals + shared module
+// from ../client and ../shared so ONE Railway service hosts API + UI.
+// Locally you can still use `npm run preview` (preview-server.js, port 5500).
+// ---------------------------------------------------------------------------
+const path = require('path');
+const fs = require('fs');
+
+const CLIENT_DIR = path.join(__dirname, '..', 'client');
+const SHARED_DIR = path.join(__dirname, '..', 'shared');
+
+if (fs.existsSync(CLIENT_DIR)) {
+  app.use(
+    express.static(CLIENT_DIR, {
+      index: false,
+      setHeaders(res) {
+        res.setHeader('Cache-Control', 'no-store');
+      },
+    })
+  );
+  // Portals' ES modules resolve ../../shared/auth.js -> /shared/auth.js when
+  // served at /trainee-portal/* or /admin-portal/* (no /client prefix).
+  app.use('/shared', express.static(SHARED_DIR));
+  // Legacy /client/* prefix (matches local preview URLs): expose shared there
+  // too so ../../shared/auth.js still resolves under that layout.
+  app.use('/client/shared', express.static(SHARED_DIR));
+
+  // Launcher page for the site root (kept in client/index.html so it also
+  // works on any static host of the client folder).
+  app.get('/', (req, res) => {
+    res.sendFile(path.join(CLIENT_DIR, 'index.html'));
+  });
+
+  // /client/* prefix (matches local preview URLs) -> same static files
+  app.use('/client', express.static(CLIENT_DIR, { index: false }));
+}
+
+// ---------------------------------------------------------------------------
 // 404 + centralized error handling (must be registered last)
 // ---------------------------------------------------------------------------
 app.use(notFoundHandler);

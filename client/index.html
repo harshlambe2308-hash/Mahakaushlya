@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MahaKaushalya — Portal Launcher</title>
+<style>
+  body{font-family:'Noto Sans','Segoe UI',sans-serif;background:#f8f9ff;margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center}
+  .wrap{max-width:760px;padding:40px;width:100%}
+  h1{color:#001435;margin:0 0 6px}
+  p.sub{color:#5a6572;margin:0 0 28px}
+  .flag{height:6px;background:linear-gradient(90deg,#FF9933,#fff,#138808);border-radius:3px;margin-bottom:28px}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+  a.card{display:block;background:#fff;border-radius:14px;padding:26px;text-decoration:none;color:inherit;box-shadow:0 4px 18px rgba(0,0,0,.07);transition:transform .15s,box-shadow .15s}
+  a.card:hover{transform:translateY(-3px);box-shadow:0 10px 28px rgba(0,0,0,.12)}
+  .card h2{margin:0 0 8px;font-size:18px;color:#001435}
+  .card p{margin:0;font-size:13px;color:#5a6572;line-height:1.5}
+  .badge{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.05em;padding:3px 8px;border-radius:999px;margin-bottom:12px}
+  .b-trainee{background:#dce9ff;color:#0f3876}
+  .b-admin{background:#ffdbce;color:#7f2b00}
+  .api{margin-top:30px;font-size:12px;color:#8a93a0;text-align:center}
+  .api code{background:#eef1f6;padding:2px 6px;border-radius:4px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="flag"></div>
+  <h1>MahaKaushalya</h1>
+  <p class="sub">Post-Training Outcome Tracking System &middot; Govt. of Maharashtra (MSSDS)</p>
+  <div class="grid">
+    <a class="card" href="/client/trainee-portal/index.html">
+      <span class="badge b-trainee">TRAINEE PORTAL</span>
+      <h2>Trainee Dashboard</h2>
+      <p>Register, log in, submit placement outcomes, and respond to follow-ups.</p>
+    </a>
+    <a class="card" href="/client/admin-portal/login.html">
+      <span class="badge b-admin">ADMIN PORTAL</span>
+      <h2>Government / Admin</h2>
+      <p>Overview, trainee records, non-responder queue, analytics &amp; verification.</p>
+    </a>
+  </div>
+  <p class="api">API health: <code>/health</code></p>
+</div>
+</body>
+</html>
