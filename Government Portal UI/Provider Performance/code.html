@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Noto+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"tertiary-container":"#003211","on-error":"#ffffff","surface-variant":"#d3e4fe","on-tertiary-fixed":"#002109","on-background":"#0b1c30","outline":"#74777f","surface-bright":"#f8f9ff","background":"#f8f9ff","surface":"#f8f9ff","on-surface-variant":"#44474f","secondary-fixed-dim":"#ffb598","secondary":"#a63b00","surface-container":"#e5eeff","error":"#ba1a1a","on-surface":"#0b1c30","on-secondary":"#ffffff","surface-container-lowest":"#ffffff","on-tertiary-fixed-variant":"#005320","secondary-fixed":"#ffdbce","on-secondary-fixed":"#370e00","on-primary-fixed":"#001a41","outline-variant":"#c4c6d0","on-secondary-fixed-variant":"#7f2b00","surface-container-highest":"#d3e4fe","inverse-surface":"#213145","on-primary-container":"#7b91c0","surface-container-low":"#eff4ff","inverse-on-surface":"#eaf1ff","on-secondary-container":"#561b00","secondary-container":"#fc671e","tertiary-fixed":"#7ffc97","tertiary-fixed-dim":"#62df7d","error-container":"#ffdad6","primary":"#001435","primary-fixed":"#d8e2ff","on-error-container":"#93000a","inverse-primary":"#b0c7f9","tertiary":"#001b06","on-tertiary-container":"#1ea74d","surface-container-high":"#dce9ff","on-primary":"#ffffff","on-primary-fixed-variant":"#304671","primary-container":"#0f2952","surface-dim":"#cbdbf5","surface-tint":"#485e8a","on-tertiary":"#ffffff","primary-fixed-dim":"#b0c7f9"},borderRadius:{DEFAULT:"0.125rem",lg:"0.25rem",xl:"0.5rem",full:"0.75rem"},spacing:{"gutter-lg":"1.5rem",gutter:"1rem","space-xs":"0.25rem","margin-lg":"2rem","margin-md":"1.5rem",margin:"1rem","space-sm":"0.5rem","space-md":"0.75rem","space-lg":"1.25rem","space-xl":"2rem"},fontFamily:{"label-md":["Noto Sans"],"headline-lg-mobile":["Inter"],"headline-xl":["Inter"],"headline-sm":["Inter"],"label-sm":["Noto Sans"],"headline-md":["Inter"],"label-lg":["Noto Sans"],"body-md":["Inter"],"data-mono":["Inter"],"headline-lg":["Inter"],"body-lg":["Inter"],"body-sm":["Inter"]},fontSize:{"label-md":["12px",{lineHeight:"16px",letterSpacing:"0.02em",fontWeight:"600"}],"headline-lg-mobile":["20px",{lineHeight:"28px",fontWeight:"700"}],"headline-xl":["32px",{lineHeight:"40px",letterSpacing:"-0.02em",fontWeight:"700"}],"headline-sm":["16px",{lineHeight:"24px",fontWeight:"600"}],"label-sm":["11px",{lineHeight:"14px",letterSpacing:"0.04em",fontWeight:"500"}],"headline-md":["18px",{lineHeight:"26px",fontWeight:"600"}],"label-lg":["13px",{lineHeight:"18px",fontWeight:"600"}],"body-md":["13px",{lineHeight:"20px",fontWeight:"400"}],"data-mono":["12px",{lineHeight:"16px",fontWeight:"500"}],"headline-lg":["24px",{lineHeight:"32px",letterSpacing:"-0.015em",fontWeight:"700"}],"body-lg":["15px",{lineHeight:"22px",fontWeight:"400"}],"body-sm":["12px",{lineHeight:"18px",fontWeight:"400"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-64 bg-primary-container z-50 flex flex-col shadow-[0_1px_8px_rgba(0,0,0,0.12)]"><div class="h-14 px-margin flex items-center gap-space-sm bg-primary border-b-2 border-secondary"><div class="w-8 h-8 rounded-DEFAULT bg-secondary/20 flex items-center justify-center"><span class="material-symbols-outlined text-secondary text-[22px]">verified</span></div><div class="flex flex-col"><span class="font-label-lg text-label-lg text-on-primary tracking-wide leading-tight">MahaKaushal</span><span class="font-label-sm text-[10px] text-primary-fixed-dim leading-none uppercase tracking-wider">Admin Portal</span></div></div><div class="px-margin py-space-sm bg-primary/40"><div class="flex items-center justify-between text-primary-fixed-dim font-label-sm text-label-sm"><span>JURISDICTION</span><span class="font-data-mono text-[10px] px-space-xs py-0.5 bg-secondary text-on-secondary rounded-DEFAULT font-bold">MH-PUN</span></div><p class="font-label-md text-label-md text-on-primary font-medium mt-0.5 truncate">Pune Divisional Commissionerate</p></div><nav class="flex-1 px-space-xs py-space-sm space-y-1 overflow-y-auto" data-active-classes="bg-primary text-on-primary border-l-4 border-secondary"><a class="block px-space-md py-space-sm text-surface-variant font-label-md text-label-md rounded-DEFAULT hover:bg-primary/50 hover:text-on-primary transition-colors" data-path="overview" href="#">Overview</a><a class="block px-space-md py-space-sm text-surface-variant font-label-md text-label-md rounded-DEFAULT hover:bg-primary/50 hover:text-on-primary transition-colors" data-path="trainee-records" href="#">Trainee Records</a><a class="block px-space-md py-space-sm text-surface-variant font-label-md text-label-md rounded-DEFAULT hover:bg-primary/50 hover:text-on-primary transition-colors" data-path="non-responder-queue" href="#">Non-Responder Queue</a><a class="block px-space-md py-space-sm text-surface-variant font-label-md text-label-md rounded-DEFAULT hover:bg-primary/50 hover:text-on-primary transition-colors" data-path="employer-validation" href="#">Employer Validation</a><a class="block px-space-md py-space-sm text-surface-variant font-label-md text-label-md rounded-DEFAULT hover:bg-primary/50 hover:text-on-primary transition-colors" data-path="analytics-reports" href="#">Analytics &amp; Reports</a><a class="block px-space-md py-space-sm text-surface-variant font-label-md text-label-md rounded-DEFAULT hover:bg-primary/50 hover:text-on-primary transition-colors" data-path="skill-gap-analysis" href="#">Skill Gap Analysis</a><a aria-current="page" class="block px-space-md py-space-sm font-label-md rounded-DEFAULT transition-colors bg-primary text-on-primary border-l-4 border-secondary" data-path="provider-performance" href="#">Provider Performance</a><a class="block px-space-md py-space-sm text-surface-variant font-label-md text-label-md rounded-DEFAULT hover:bg-primary/50 hover:text-on-primary transition-colors" data-path="policy-reports" href="#">Policy Reports</a><a class="block px-space-md py-space-sm text-surface-variant font-label-md text-label-md rounded-DEFAULT hover:bg-primary/50 hover:text-on-primary transition-colors" data-path="system-access" href="#">System &amp; Access</a></nav><div class="p-space-md bg-primary/60 border-t border-primary-container"><div class="flex items-center gap-space-sm"><div class="w-2 h-2 rounded-full bg-secondary animate-pulse"></div><div class="flex flex-col"><span class="font-label-sm text-[10px] text-surface-variant uppercase tracking-wider">Server Status: Online</span><span class="font-data-mono text-[10px] text-primary-fixed-dim">State Data Center, Mumbai</span></div></div></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-14 bg-surface-container-lowest z-40 shadow-[0_1px_8px_rgba(0,0,0,0.04)] px-margin-lg flex items-center justify-between"><div class="flex items-center gap-margin-md"><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded-DEFAULT bg-primary text-on-primary flex items-center justify-center font-bold text-xs">MH</div><div class="flex flex-col"><span class="font-label-md text-label-md text-primary font-bold leading-tight">महाराष्ट्र शासन</span><span class="font-label-sm text-[10px] text-on-surface-variant leading-none">Govt. of Maharashtra • SDED</span></div></div><div class="h-6 w-px bg-outline-variant"></div><div class="flex items-center bg-surface-container-low px-space-sm py-1 rounded-DEFAULT"><span class="font-label-sm text-label-sm text-on-surface-variant mr-space-xs">Cohort:</span><select class="bg-transparent font-label-md text-label-md text-on-surface font-semibold focus:outline-none cursor-pointer"><option>FY 2024-25 Q3</option><option>FY 2024-25 Q2</option><option>FY 2023-24 Annual</option></select></div><div class="flex items-center bg-surface-container-low px-space-sm py-1 rounded-DEFAULT"><span class="font-label-sm text-label-sm text-on-surface-variant mr-space-xs">District:</span><select class="bg-transparent font-label-md text-label-md text-on-surface font-semibold focus:outline-none cursor-pointer"><option>Pune (All Talukas)</option><option>Haveli</option><option>Baramati</option><option>Khed</option><option>Shirur</option></select></div></div><div class="flex items-center gap-space-md flex-1 max-w-xs mx-margin-md"><div class="relative w-full"><span class="material-symbols-outlined absolute left-2.5 top-1/2 -translate-y-1/2 text-[18px] text-outline">search</span><input class="w-full pl-8 pr-3 py-1 bg-surface-container-low text-on-surface font-body-sm text-body-sm rounded-DEFAULT placeholder:text-outline focus:outline-none focus:bg-surface-container-lowest focus:ring-1 focus:ring-primary" placeholder="Search Aadhaar, UID, Center ID..." type="text"/></div></div><div class="flex items-center gap-space-md"><button class="relative p-1.5 rounded-DEFAULT text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1 right-1 w-2 h-2 bg-secondary rounded-full"></span></button><button class="p-1.5 rounded-DEFAULT text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[20px]">help</span></button><div class="h-6 w-px bg-outline-variant"></div><div class="flex items-center gap-space-sm pl-space-xs"><div class="flex flex-col text-right"><span class="font-label-md text-label-md text-on-surface font-bold leading-tight">Rajesh Deshmukh, IAS</span><div class="flex items-center gap-1 justify-end"><span class="px-1.5 py-0.2 bg-secondary-fixed text-on-secondary-fixed font-label-sm text-[10px] rounded font-bold uppercase">District Skill Officer</span><span class="font-label-sm text-[10px] text-on-surface-variant">Pune</span></div></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-outline-variant" src="https://lh3.googleusercontent.com/aida/AEtjO1XZ5_RGann-JS9-SXlCwMRwGfPfXVcOVklpC5V0eTvQClSjZkunPNoV5M1DG7pVKUlM-w1Ek0_WIFB3LF3preqPJM9Nldd0dpUb6U78uOUf2vXckERfwAiRw05-48oV-hBpHoXbLbiqJLyACVA1ujnTD3gRId3eSN4SLj2tZ_j2UaTSnTOMTGjZRuwcMufJq9GC4jMZjSIIS2c2plWA8DUCu5w8ceF756YeOIrxRm0l6idfYW_EnUZYOFadZztVPjas9Jq8xf-bW3k"/></div></div></header><main class="relative pt-14 bg-surface w-full px-gutter-lg py-margin-md"><div class="flex flex-col w-full gap-space-lg">
+<!-- Page Header & Institutional Identity -->
+<section class="flex flex-col md:flex-row md:items-center justify-between gap-space-md bg-surface-container-lowest p-margin rounded-xl shadow-sm relative overflow-hidden">
+<div class="absolute right-0 top-0 bottom-0 w-96 bg-gradient-to-l from-surface-container-high/40 via-surface-container-low/20 to-transparent pointer-events-none"></div>
+<div class="flex flex-col gap-space-xs z-10">
+<div class="flex items-center gap-space-sm">
+<span class="font-data-mono text-label-sm uppercase tracking-wider text-secondary px-space-xs py-0.5 bg-secondary-fixed rounded-DEFAULT font-bold">SDED Performance Audit Ledger</span>
+<span class="w-1.5 h-1.5 rounded-full bg-outline-variant"></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Q3 Statutory Benchmarks</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-primary tracking-tight">Vocational Training Provider (VTP) Scorecard</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-3xl">Comprehensive institutional performance rating, outcome accreditation, subsidy compliance, and placement integrity ledger under SDED Framework v3.4.</p>
+</div>
+<div class="flex items-center gap-space-sm z-10 shrink-0">
+<button class="flex items-center gap-space-xs px-space-md py-space-sm bg-surface-container-low hover:bg-surface-container text-primary font-label-md text-label-md rounded-DEFAULT shadow-sm transition-colors">
+<span class="material-symbols-outlined text-[18px]">file_download</span>
+        Export Full Ledger
+      </button>
+<button class="flex items-center gap-space-xs px-space-md py-space-sm bg-secondary hover:bg-on-secondary-container text-on-secondary font-label-md text-label-md rounded-DEFAULT shadow-sm transition-colors">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+        Recalculate Grades
+      </button>
+</div>
+</section>
+<!-- Top Aggregate VTP Health Overview (KPI Bento Grid) -->
+<section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Total VTPs -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm relative overflow-hidden flex flex-col justify-between group">
+<div class="absolute top-0 left-0 right-0 h-1 bg-primary"></div>
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-md text-label-md tracking-wider uppercase">Accredited VTPs</span>
+<span class="material-symbols-outlined text-[20px] text-primary">account_balance</span>
+</div>
+<div class="mt-space-md mb-space-xs flex items-baseline justify-between">
+<span class="font-headline-xl text-headline-xl text-primary font-bold">148</span>
+<span class="flex items-center text-on-tertiary-container font-label-sm text-label-sm font-semibold bg-tertiary-fixed/30 px-1.5 py-0.5 rounded-DEFAULT">
+<span class="material-symbols-outlined text-[14px]">arrow_upward</span> +6 centers
+        </span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+<span>Active centers across 36 districts</span>
+<span class="font-data-mono text-[11px] text-primary">94.2% active</span>
+</div>
+</div>
+<!-- Placement Efficiency -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm relative overflow-hidden flex flex-col justify-between group">
+<div class="absolute top-0 left-0 right-0 h-1 bg-tertiary-fixed-dim"></div>
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-md text-label-md tracking-wider uppercase">Placement Efficiency</span>
+<span class="material-symbols-outlined text-[20px] text-on-tertiary-container">work_history</span>
+</div>
+<div class="mt-space-md mb-space-xs flex items-baseline justify-between">
+<span class="font-headline-xl text-headline-xl text-on-surface font-bold">72.4%</span>
+<span class="flex items-center text-on-tertiary-container font-label-sm text-label-sm font-semibold bg-tertiary-fixed/30 px-1.5 py-0.5 rounded-DEFAULT">
+<span class="material-symbols-outlined text-[14px]">trending_up</span> +3.8%
+        </span>
+</div>
+<div class="w-full bg-surface-container rounded-full h-1.5 overflow-hidden">
+<div class="bg-on-tertiary-container h-full rounded-full" style="width: 72.4%"></div>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm mt-1">
+<span>Benchmark: 70.0% min</span>
+<span class="font-data-mono text-[11px] text-on-tertiary-container">+2.4% buffer</span>
+</div>
+</div>
+<!-- Show Cause Notices -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm relative overflow-hidden flex flex-col justify-between group">
+<div class="absolute top-0 left-0 right-0 h-1 bg-error"></div>
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-md text-label-md tracking-wider uppercase">Show-Cause Notices</span>
+<span class="material-symbols-outlined text-[20px] text-error">gavel</span>
+</div>
+<div class="mt-space-md mb-space-xs flex items-baseline justify-between">
+<span class="font-headline-xl text-headline-xl text-error font-bold">14</span>
+<span class="flex items-center text-error font-label-sm text-label-sm font-semibold bg-error-container px-1.5 py-0.5 rounded-DEFAULT">
+          Critical Scrutiny
+        </span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+<span>Non-reporting &amp; phantom batches</span>
+<span class="font-data-mono text-[11px] text-error">9.4% audit rate</span>
+</div>
+</div>
+<!-- Tranche Withheld -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm relative overflow-hidden flex flex-col justify-between group">
+<div class="absolute top-0 left-0 right-0 h-1 bg-secondary-container"></div>
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-md text-label-md tracking-wider uppercase">Disbursements Withheld</span>
+<span class="material-symbols-outlined text-[20px] text-secondary">payments</span>
+</div>
+<div class="mt-space-md mb-space-xs flex items-baseline justify-between">
+<span class="font-headline-xl text-headline-xl text-primary font-bold">₹4.82 <span class="text-headline-md font-medium text-on-surface-variant">Cr</span></span>
+<span class="flex items-center text-secondary font-label-sm text-label-sm font-semibold bg-secondary-fixed px-1.5 py-0.5 rounded-DEFAULT">
+          Escrow Locked
+        </span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+<span>Low 6-mo retention penalty</span>
+<span class="font-data-mono text-[11px] text-secondary">18 Tranche-3 holds</span>
+</div>
+</div>
+</section>
+<!-- Split View Workspace: Main Table (Left 8 Cols) + Detailed Dossier Inspector (Right 4 Cols) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- Main Table Container -->
+<section class="lg:col-span-8 flex flex-col gap-space-md bg-surface-container-lowest rounded-xl shadow-sm p-space-md">
+<!-- Filter Bar & Search Tools -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex flex-wrap items-center gap-1.5 bg-surface-container-low p-1 rounded-lg">
+<button class="px-space-sm py-1 bg-primary text-on-primary font-label-sm text-label-sm rounded-DEFAULT transition-all">All Providers (148)</button>
+<button class="px-space-sm py-1 hover:bg-surface-container text-on-surface font-label-sm text-label-sm rounded-DEFAULT transition-all">Grade A+ Tier (24)</button>
+<button class="px-space-sm py-1 hover:bg-surface-container text-on-surface font-label-sm text-label-sm rounded-DEFAULT transition-all">Standard Tier (82)</button>
+<button class="px-space-sm py-1 hover:bg-surface-container text-error font-label-sm text-label-sm rounded-DEFAULT transition-all">Under Notice (14)</button>
+<button class="px-space-sm py-1 hover:bg-surface-container text-on-surface-variant font-label-sm text-label-sm rounded-DEFAULT transition-all">Suspended (6)</button>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface-variant font-body-sm text-body-sm">
+<span>Showing 6 of 148 institutions</span>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-12 gap-space-sm pt-space-xs">
+<div class="sm:col-span-6 relative">
+<span class="material-symbols-outlined absolute left-2.5 top-1/2 -translate-y-1/2 text-[18px] text-outline">search</span>
+<input class="w-full pl-8 pr-3 py-1.5 bg-surface-container-low text-on-surface font-body-sm text-body-sm rounded-DEFAULT focus:outline-none focus:bg-surface-container-lowest focus:ring-1 focus:ring-primary placeholder:text-outline" placeholder="Filter by VTP Name, Registration ID (e.g., MH-PUN-091)..." type="text"/>
+</div>
+<div class="sm:col-span-3">
+<select class="w-full py-1.5 px-space-sm bg-surface-container-low text-on-surface font-label-md text-label-md rounded-DEFAULT focus:outline-none focus:ring-1 focus:ring-primary cursor-pointer">
+<option>All Divisions (All)</option>
+<option>Pune Division</option>
+<option>Chhatrapati Sambhajinagar</option>
+<option>Nagpur Division</option>
+<option>Konkan Division</option>
+</select>
+</div>
+<div class="sm:col-span-3">
+<select class="w-full py-1.5 px-space-sm bg-surface-container-low text-on-surface font-label-md text-label-md rounded-DEFAULT focus:outline-none focus:ring-1 focus:ring-primary cursor-pointer">
+<option>Sort: Placement Rate (High)</option>
+<option>Sort: Retention Rate (High)</option>
+<option>Sort: Wage Growth (High)</option>
+<option>Sort: Audit Violations (Desc)</option>
+</select>
+</div>
+</div>
+</div>
+<!-- High Density Scorecard Table -->
+<div class="overflow-x-auto rounded-lg -mx-space-md sm:mx-0">
+<table class="w-full text-left text-body-sm border-collapse min-w-[760px]">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-2.5 px-space-sm font-bold">VTP Name &amp; ID</th>
+<th class="py-2.5 px-space-xs font-bold text-center">Grade</th>
+<th class="py-2.5 px-space-xs font-bold text-right">Trained</th>
+<th class="py-2.5 px-space-xs font-bold text-right">Placement</th>
+<th class="py-2.5 px-space-xs font-bold text-right">6M Retention</th>
+<th class="py-2.5 px-space-xs font-bold text-right">Wage Growth</th>
+<th class="py-2.5 px-space-xs font-bold text-center">Compliance</th>
+<th class="py-2.5 px-space-sm font-bold text-right">Ledger Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container font-body-sm text-on-surface" id="vtp-table-body">
+<!-- Row 1: Tata STRIVE (Active Selected) -->
+<tr class="hover:bg-surface-container-low/60 transition-colors bg-surface-container-low/30 cursor-pointer" onclick="selectVTP(0)">
+<td class="py-3 px-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-7 h-7 rounded bg-primary text-on-primary flex items-center justify-center font-bold text-xs shrink-0">TS</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-primary font-bold truncate">Tata STRIVE Skill Center</span>
+<span class="font-data-mono text-[11px] text-on-surface-variant">MH-PUN-042 • Pune (Hadapsar)</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-xs text-center">
+<span class="px-2 py-0.5 bg-tertiary-fixed text-on-tertiary-fixed font-bold font-data-mono text-[11px] rounded-DEFAULT">A+</span>
+</td>
+<td class="py-3 px-space-xs text-right font-data-mono font-medium">4,210</td>
+<td class="py-3 px-space-xs text-right">
+<span class="font-data-mono font-bold text-primary">91.2%</span>
+<div class="w-14 bg-surface-container rounded-full h-1 inline-block ml-1 align-middle">
+<div class="bg-primary h-full rounded-full" style="width: 91.2%"></div>
+</div>
+</td>
+<td class="py-3 px-space-xs text-right font-data-mono text-on-tertiary-container font-semibold">84.0%</td>
+<td class="py-3 px-space-xs text-right font-data-mono font-medium text-on-surface">+28.4%</td>
+<td class="py-3 px-space-xs text-center">
+<span class="inline-flex items-center gap-1 px-1.5 py-0.5 bg-tertiary-fixed/30 text-on-tertiary-container text-[11px] font-semibold rounded">
+<span class="w-1.5 h-1.5 rounded-full bg-on-tertiary-container"></span> Clean
+                </span>
+</td>
+<td class="py-3 px-space-sm text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1 hover:bg-surface-container text-primary rounded transition-colors" onclick="event.stopPropagation(); alert('Filtering Trainee Records for Tata STRIVE (4,210 trainees)');" title="View Trainees">
+<span class="material-symbols-outlined text-[18px]">group</span>
+</button>
+<button class="p-1 hover:bg-surface-container text-on-surface-variant rounded transition-colors" title="Audit Dossier">
+<span class="material-symbols-outlined text-[18px]">description</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2: Symbiosis Kiwale -->
+<tr class="hover:bg-surface-container-low/60 transition-colors cursor-pointer" onclick="selectVTP(1)">
+<td class="py-3 px-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-7 h-7 rounded bg-primary-container text-on-primary flex items-center justify-center font-bold text-xs shrink-0">SP</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-primary font-bold truncate">Symbiosis Skills &amp; Prof. Univ.</span>
+<span class="font-data-mono text-[11px] text-on-surface-variant">MH-PUN-088 • Kiwale, Pune</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-xs text-center">
+<span class="px-2 py-0.5 bg-tertiary-fixed text-on-tertiary-fixed font-bold font-data-mono text-[11px] rounded-DEFAULT">A+</span>
+</td>
+<td class="py-3 px-space-xs text-right font-data-mono font-medium">3,140</td>
+<td class="py-3 px-space-xs text-right">
+<span class="font-data-mono font-bold text-primary">88.5%</span>
+<div class="w-14 bg-surface-container rounded-full h-1 inline-block ml-1 align-middle">
+<div class="bg-primary h-full rounded-full" style="width: 88.5%"></div>
+</div>
+</td>
+<td class="py-3 px-space-xs text-right font-data-mono text-on-tertiary-container font-semibold">81.2%</td>
+<td class="py-3 px-space-xs text-right font-data-mono font-medium text-on-surface">+32.0%</td>
+<td class="py-3 px-space-xs text-center">
+<span class="inline-flex items-center gap-1 px-1.5 py-0.5 bg-tertiary-fixed/30 text-on-tertiary-container text-[11px] font-semibold rounded">
+<span class="w-1.5 h-1.5 rounded-full bg-on-tertiary-container"></span> Clean
+                </span>
+</td>
+<td class="py-3 px-space-sm text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1 hover:bg-surface-container text-primary rounded transition-colors" onclick="event.stopPropagation();" title="View Trainees">
+<span class="material-symbols-outlined text-[18px]">group</span>
+</button>
+<button class="p-1 hover:bg-surface-container text-on-surface-variant rounded transition-colors" title="Audit Dossier">
+<span class="material-symbols-outlined text-[18px]">description</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3: MITCON Shivajinagar -->
+<tr class="hover:bg-surface-container-low/60 transition-colors cursor-pointer" onclick="selectVTP(2)">
+<td class="py-3 px-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-7 h-7 rounded bg-surface-container-high text-primary font-bold text-xs flex items-center justify-center shrink-0">MT</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-primary font-bold truncate">MITCON Skill Dev Center</span>
+<span class="font-data-mono text-[11px] text-on-surface-variant">MH-PUN-019 • Shivajinagar</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-xs text-center">
+<span class="px-2 py-0.5 bg-surface-container-highest text-primary font-bold font-data-mono text-[11px] rounded-DEFAULT">A</span>
+</td>
+<td class="py-3 px-space-xs text-right font-data-mono font-medium">2,850</td>
+<td class="py-3 px-space-xs text-right">
+<span class="font-data-mono font-bold text-primary">76.4%</span>
+<div class="w-14 bg-surface-container rounded-full h-1 inline-block ml-1 align-middle">
+<div class="bg-primary h-full rounded-full" style="width: 76.4%"></div>
+</div>
+</td>
+<td class="py-3 px-space-xs text-right font-data-mono text-on-surface-variant font-semibold">69.0%</td>
+<td class="py-3 px-space-xs text-right font-data-mono font-medium text-on-surface">+19.5%</td>
+<td class="py-3 px-space-xs text-center">
+<span class="inline-flex items-center gap-1 px-1.5 py-0.5 bg-secondary-fixed text-on-secondary-fixed text-[11px] font-semibold rounded">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Review
+                </span>
+</td>
+<td class="py-3 px-space-sm text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1 hover:bg-surface-container text-primary rounded transition-colors" onclick="event.stopPropagation();" title="View Trainees">
+<span class="material-symbols-outlined text-[18px]">group</span>
+</button>
+<button class="p-1 hover:bg-surface-container text-on-surface-variant rounded transition-colors" title="Audit Dossier">
+<span class="material-symbols-outlined text-[18px]">description</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4: Apollo MedSkills -->
+<tr class="hover:bg-surface-container-low/60 transition-colors cursor-pointer" onclick="selectVTP(3)">
+<td class="py-3 px-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-7 h-7 rounded bg-secondary/15 text-secondary flex items-center justify-center font-bold text-xs shrink-0">AM</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-primary font-bold truncate">Apollo MedSkills Academy</span>
+<span class="font-data-mono text-[11px] text-on-surface-variant">MH-PUN-104 • Hadapsar, Pune</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-xs text-center">
+<span class="px-2 py-0.5 bg-surface-container-highest text-primary font-bold font-data-mono text-[11px] rounded-DEFAULT">A</span>
+</td>
+<td class="py-3 px-space-xs text-right font-data-mono font-medium">1,920</td>
+<td class="py-3 px-space-xs text-right">
+<span class="font-data-mono font-bold text-primary">82.0%</span>
+<div class="w-14 bg-surface-container rounded-full h-1 inline-block ml-1 align-middle">
+<div class="bg-primary h-full rounded-full" style="width: 82.0%"></div>
+</div>
+</td>
+<td class="py-3 px-space-xs text-right font-data-mono text-on-tertiary-container font-semibold">77.1%</td>
+<td class="py-3 px-space-xs text-right font-data-mono font-medium text-on-surface">+24.0%</td>
+<td class="py-3 px-space-xs text-center">
+<span class="inline-flex items-center gap-1 px-1.5 py-0.5 bg-tertiary-fixed/30 text-on-tertiary-container text-[11px] font-semibold rounded">
+<span class="w-1.5 h-1.5 rounded-full bg-on-tertiary-container"></span> Clean
+                </span>
+</td>
+<td class="py-3 px-space-sm text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1 hover:bg-surface-container text-primary rounded transition-colors" onclick="event.stopPropagation();" title="View Trainees">
+<span class="material-symbols-outlined text-[18px]">group</span>
+</button>
+<button class="p-1 hover:bg-surface-container text-on-surface-variant rounded transition-colors" title="Audit Dossier">
+<span class="material-symbols-outlined text-[18px]">description</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 5: Marathwada Rural Tech Trust (Beed - Flagged) -->
+<tr class="hover:bg-error-container/20 transition-colors bg-error-container/10 cursor-pointer" onclick="selectVTP(4)">
+<td class="py-3 px-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-7 h-7 rounded bg-error text-on-error flex items-center justify-center font-bold text-xs shrink-0">MR</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-error font-bold truncate">Marathwada Rural Tech Trust</span>
+<span class="font-data-mono text-[11px] text-on-surface-variant">MH-BEE-012 • Majalgaon, Beed</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-xs text-center">
+<span class="px-2 py-0.5 bg-error-container text-error font-bold font-data-mono text-[11px] rounded-DEFAULT">C / Flag</span>
+</td>
+<td class="py-3 px-space-xs text-right font-data-mono font-medium">840</td>
+<td class="py-3 px-space-xs text-right">
+<span class="font-data-mono font-bold text-error">38.2%</span>
+<div class="w-14 bg-surface-container rounded-full h-1 inline-block ml-1 align-middle">
+<div class="bg-error h-full rounded-full" style="width: 38.2%"></div>
+</div>
+</td>
+<td class="py-3 px-space-xs text-right font-data-mono text-error font-bold">29.0%</td>
+<td class="py-3 px-space-xs text-right font-data-mono font-medium text-error">-4.2%</td>
+<td class="py-3 px-space-xs text-center">
+<span class="inline-flex items-center gap-1 px-1.5 py-0.5 bg-error-container text-error text-[11px] font-semibold rounded">
+<span class="material-symbols-outlined text-[13px]">warning</span> Show-Cause
+                </span>
+</td>
+<td class="py-3 px-space-sm text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="px-2 py-1 bg-error hover:bg-on-error-container text-on-error text-label-sm font-semibold rounded transition-colors" onclick="event.stopPropagation(); alert('Tranche 3 Withheld for MH-BEE-012');" title="Withhold Subsidies">
+                    Withhold
+                  </button>
+</div>
+</td>
+</tr>
+<!-- Row 6: Vidarbha Vocational Institute -->
+<tr class="hover:bg-surface-container-low/60 transition-colors cursor-pointer" onclick="selectVTP(5)">
+<td class="py-3 px-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-7 h-7 rounded bg-surface-container-high text-primary font-bold text-xs flex items-center justify-center shrink-0">VV</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-primary font-bold truncate">Vidarbha Vocational Institute</span>
+<span class="font-data-mono text-[11px] text-on-surface-variant">MH-NAG-051 • Hingna, Nagpur</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-xs text-center">
+<span class="px-2 py-0.5 bg-surface-container-highest text-primary font-bold font-data-mono text-[11px] rounded-DEFAULT">B</span>
+</td>
+<td class="py-3 px-space-xs text-right font-data-mono font-medium">1,450</td>
+<td class="py-3 px-space-xs text-right">
+<span class="font-data-mono font-bold text-primary">68.5%</span>
+<div class="w-14 bg-surface-container rounded-full h-1 inline-block ml-1 align-middle">
+<div class="bg-primary h-full rounded-full" style="width: 68.5%"></div>
+</div>
+</td>
+<td class="py-3 px-space-xs text-right font-data-mono text-on-surface-variant font-semibold">59.2%</td>
+<td class="py-3 px-space-xs text-right font-data-mono font-medium text-on-surface">+12.1%</td>
+<td class="py-3 px-space-xs text-center">
+<span class="inline-flex items-center gap-1 px-1.5 py-0.5 bg-secondary-fixed text-on-secondary-fixed text-[11px] font-semibold rounded">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Biometric Lag
+                </span>
+</td>
+<td class="py-3 px-space-sm text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1 hover:bg-surface-container text-primary rounded transition-colors" onclick="event.stopPropagation();" title="View Trainees">
+<span class="material-symbols-outlined text-[18px]">group</span>
+</button>
+<button class="p-1 hover:bg-surface-container text-on-surface-variant rounded transition-colors" title="Audit Dossier">
+<span class="material-symbols-outlined text-[18px]">description</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Footer / Pagination Metadata -->
+<div class="flex flex-col sm:flex-row items-center justify-between gap-space-sm pt-space-xs text-on-surface-variant text-body-sm">
+<div class="flex items-center gap-space-sm">
+<span>Rows per ledger view:</span>
+<select class="bg-surface-container-low px-2 py-1 rounded text-primary font-semibold text-label-sm">
+<option>10</option>
+<option>25</option>
+<option>50</option>
+</select>
+<span class="text-label-sm font-data-mono">Showing 1 - 6 of 148 VTP records</span>
+</div>
+<div class="flex items-center gap-1">
+<button class="p-1 rounded bg-surface-container-low text-on-surface-variant opacity-50 cursor-not-allowed">
+<span class="material-symbols-outlined text-[18px]">chevron_left</span>
+</button>
+<button class="px-2.5 py-1 bg-primary text-on-primary font-data-mono text-label-sm rounded-DEFAULT">1</button>
+<button class="px-2.5 py-1 hover:bg-surface-container text-on-surface font-data-mono text-label-sm rounded-DEFAULT">2</button>
+<button class="px-2.5 py-1 hover:bg-surface-container text-on-surface font-data-mono text-label-sm rounded-DEFAULT">3</button>
+<span class="px-1 text-outline">...</span>
+<button class="px-2.5 py-1 hover:bg-surface-container text-on-surface font-data-mono text-label-sm rounded-DEFAULT">15</button>
+<button class="p-1 rounded bg-surface-container-low text-on-surface-variant hover:bg-surface-container">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Right Column: Institutional Inspector Dossier Card -->
+<aside class="lg:col-span-4 flex flex-col gap-space-md" id="vtp-inspector-card">
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-md flex flex-col gap-space-md border-t-4 border-secondary">
+<!-- Institution Header -->
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="px-2 py-0.5 bg-tertiary-fixed text-on-tertiary-fixed font-data-mono font-bold text-label-sm rounded-DEFAULT">GRADE A+</span>
+<span class="font-data-mono text-[10px] text-on-surface-variant uppercase tracking-wider">MH-PUN-042</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary font-bold mt-1" id="inspector-name">Tata STRIVE Skill Dev Center</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant" id="inspector-loc">Hadapsar Industrial Estate, Pune, Maharashtra 411013</p>
+</div>
+<span class="material-symbols-outlined text-secondary text-[26px]">verified</span>
+</div>
+<!-- Official Center Context -->
+<div class="grid grid-cols-2 gap-space-xs p-space-sm bg-surface-container-low rounded-lg text-body-sm">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant block uppercase">Center In-Charge</span>
+<span class="font-label-md text-label-md text-primary font-bold">Col. Vinod Patil (Retd)</span>
+<span class="font-data-mono text-[11px] text-on-surface-variant block">+91 98230 XXXXX</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant block uppercase">Accreditation Validity</span>
+<span class="font-label-md text-label-md text-on-tertiary-container font-bold">31-Mar-2026</span>
+<span class="font-data-mono text-[11px] text-on-surface-variant block">NSDC Compliant</span>
+</div>
+</div>
+<!-- Sector Skill Council (SSC) Affiliations -->
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-bold tracking-wider">Affiliated SSC Councils</span>
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2 py-1 bg-surface-container text-primary font-data-mono text-[11px] rounded font-medium">Automotive (ASDC)</span>
+<span class="px-2 py-1 bg-surface-container text-primary font-data-mono text-[11px] rounded font-medium">IT-ITeS (NASSCOM)</span>
+<span class="px-2 py-1 bg-surface-container text-primary font-data-mono text-[11px] rounded font-medium">Electronics (ESSCI)</span>
+<span class="px-2 py-1 bg-surface-container text-primary font-data-mono text-[11px] rounded font-medium">Healthcare (HSSC)</span>
+</div>
+</div>
+<!-- Tranche Subsidy Clearance Waterfall -->
+<div class="flex flex-col gap-space-xs pt-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-bold tracking-wider">Subsidy Tranche Clearance (FY 24-25)</span>
+<span class="font-data-mono text-[11px] text-on-tertiary-container font-bold">100% Cleared</span>
+</div>
+<div class="space-y-2 pt-1">
+<!-- Tranche 1 -->
+<div class="p-2 bg-surface-container-low rounded flex items-center justify-between text-body-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-on-tertiary-container">check_circle</span>
+<span class="font-label-md text-label-md text-primary">Tranche 1: Mobilization &amp; Commencing</span>
+</div>
+<span class="font-data-mono font-bold text-primary">₹1.20 Cr</span>
+</div>
+<!-- Tranche 2 -->
+<div class="p-2 bg-surface-container-low rounded flex items-center justify-between text-body-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-on-tertiary-container">check_circle</span>
+<span class="font-label-md text-label-md text-primary">Tranche 2: Curriculum &amp; Biometric 80%</span>
+</div>
+<span class="font-data-mono font-bold text-primary">₹2.40 Cr</span>
+</div>
+<!-- Tranche 3 -->
+<div class="p-2 bg-tertiary-fixed/20 rounded flex items-center justify-between text-body-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-on-tertiary-container">verified</span>
+<span class="font-label-md text-label-md text-on-tertiary-container font-bold">Tranche 3: 6-Month Placement Proof</span>
+</div>
+<span class="font-data-mono font-bold text-on-tertiary-container">₹1.45 Cr</span>
+</div>
+</div>
+</div>
+<!-- Inline Visual: Placement & Wage Trajectory Mini SVG Graph -->
+<div class="p-space-sm bg-surface-container-low rounded-lg flex flex-col gap-space-xs">
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span>Historical Placement Velocity (Past 5 Cohorts)</span>
+<span class="font-data-mono text-primary font-bold">91.2% Current</span>
+</div>
+<svg class="w-full h-14 overflow-visible" fill="none" viewbox="0 0 300 60" xmlns="http://www.w3.org/2000/svg">
+<path d="M 10 48 Q 75 42 140 32 T 290 12" fill="none" stroke="#001435" stroke-linecap="round" stroke-width="2.5"></path>
+<path d="M 10 48 Q 75 42 140 32 T 290 12 L 290 60 L 10 60 Z" fill="url(#gradient-chart)" opacity="0.15"></path>
+<defs>
+<lineargradient id="gradient-chart" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#001435"></stop>
+<stop offset="100%" stop-color="#ffffff" stop-opacity="0"></stop>
+</lineargradient>
+</defs>
+<circle cx="10" cy="48" fill="#001435" r="3"></circle>
+<circle cx="80" cy="41" fill="#001435" r="3"></circle>
+<circle cx="150" cy="30" fill="#001435" r="3"></circle>
+<circle cx="220" cy="22" fill="#001435" r="3"></circle>
+<circle cx="290" cy="12" fill="#a63b00" r="4"></circle>
+</svg>
+<div class="flex justify-between text-[10px] font-data-mono text-on-surface-variant">
+<span>Batch 2023-A (78%)</span>
+<span>Batch 2023-B (81%)</span>
+<span>Batch 2024-A (85%)</span>
+<span>Current (91.2%)</span>
+</div>
+</div>
+<!-- Action Drill-down Buttons -->
+<div class="flex flex-col gap-space-xs pt-space-xs">
+<a class="w-full flex items-center justify-center gap-space-xs py-2 bg-secondary hover:bg-on-secondary-container text-on-secondary font-label-md text-label-md rounded-DEFAULT shadow transition-colors text-center font-bold" data-path="trainee-records" href="#">
+<span class="material-symbols-outlined text-[18px]">search_insights</span>
+            Inspect 4,210 Enrolled Trainees
+          </a>
+<button class="w-full flex items-center justify-center gap-space-xs py-1.5 bg-surface-container-low hover:bg-surface-container text-primary font-label-md text-label-md rounded-DEFAULT transition-colors">
+<span class="material-symbols-outlined text-[18px]">assignment_turned_in</span>
+            Schedule Routine Physical Inspection
+          </button>
+</div>
+</div>
+<!-- Quick Regulatory Advisory Card -->
+<div class="bg-surface-container-low p-space-md rounded-xl flex items-start gap-space-sm text-body-sm">
+<span class="material-symbols-outlined text-secondary text-[22px] shrink-0 mt-0.5">policy</span>
+<div class="flex flex-col gap-0.5">
+<span class="font-label-md text-label-md text-primary font-bold">MahaKaushal GR 2024-C3 Directive</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">VTPs maintaining &gt;85% retention for 3 consecutive terms are eligible for accelerated auto-clearance of Tranche 3 subsidy without pre-audit physical spot checks.</p>
+</div>
+</div>
+</aside>
+</div>
+</div>
+<script>
+  // Simple interactive script to switch selected VTP inspector details
+  const vtpData = [
+    {
+      name: "Tata STRIVE Skill Dev Center",
+      code: "MH-PUN-042",
+      loc: "Hadapsar Industrial Estate, Pune, Maharashtra 411013",
+      head: "Col. Vinod Patil (Retd)",
+      grade: "GRADE A+",
+      count: "4,210",
+      t3: "₹1.45 Cr",
+      status: "Clean"
+    },
+    {
+      name: "Symbiosis Skills & Prof. Univ.",
+      code: "MH-PUN-088",
+      loc: "Village Kiwale, Adjoining Expressway, Pune 412101",
+      head: "Dr. Arvind Shinde",
+      grade: "GRADE A+",
+      count: "3,140",
+      t3: "₹1.10 Cr",
+      status: "Clean"
+    },
+    {
+      name: "MITCON Skill Dev Center",
+      code: "MH-PUN-019",
+      loc: "Kubera Chambers, Shivajinagar, Pune 411005",
+      head: "Suresh Deshpande",
+      grade: "GRADE A",
+      count: "2,850",
+      t3: "₹88.50 Lakh",
+      status: "Review"
+    },
+    {
+      name: "Apollo MedSkills Academy",
+      code: "MH-PUN-104",
+      loc: "Mega Center, Magarpatta Road, Hadapsar, Pune 411028",
+      head: "Sister Teresa Mathew",
+      grade: "GRADE A",
+      count: "1,920",
+      t3: "₹65.20 Lakh",
+      status: "Clean"
+    },
+    {
+      name: "Marathwada Rural Tech Trust",
+      code: "MH-BEE-012",
+      loc: "Old Mondha Market, Majalgaon, Beed 431131",
+      head: "Baburao Kulkarni",
+      grade: "GRADE C / Flagged",
+      count: "840",
+      t3: "Withheld (₹42 Lakh)",
+      status: "Show-Cause"
+    },
+    {
+      name: "Vidarbha Vocational Institute",
+      code: "MH-NAG-051",
+      loc: "MIDC Hingna Industrial Area, Nagpur 440016",
+      head: "Gajanan Borkar",
+      grade: "GRADE B",
+      count: "1,450",
+      t3: "₹38.40 Lakh",
+      status: "Biometric Lag"
+    }
+  ];
+
+  function selectVTP(index) {
+    const item = vtpData[index];
+    if (!item) return;
+
+    const nameEl = document.getElementById('inspector-name');
+    const locEl = document.getElementById('inspector-loc');
+    if (nameEl) nameEl.textContent = item.name;
+    if (locEl) locEl.textContent = item.loc;
+
+    // Highlight row visually
+    const rows = document.querySelectorAll('#vtp-table-body tr');
+    rows.forEach((r, idx) => {
+      if (idx === index) {
+        r.classList.add('bg-surface-container-low/60');
+      } else {
+        r.classList.remove('bg-surface-container-low/60');
+      }
+    });
+  }
+</script></main></div></body></html>

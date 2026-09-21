@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"outline":"#747781","on-tertiary-container":"#56b76d","inverse-on-surface":"#eaf1ff","surface-tint":"#3c5d9d","error-container":"#ffdad6","on-tertiary-fixed-variant":"#005323","on-surface":"#0b1c30","inverse-surface":"#213145","secondary":"#a73a00","background":"#f8f9ff","on-surface-variant":"#434750","on-tertiary":"#ffffff","surface-container":"#e5eeff","outline-variant":"#c4c6d2","surface-dim":"#cbdbf5","primary-fixed":"#d8e2ff","secondary-fixed":"#ffdbce","primary-fixed-dim":"#aec6ff","surface-bright":"#f8f9ff","on-primary":"#ffffff","on-error-container":"#93000a","tertiary-container":"#00441b","surface-container-highest":"#d3e4fe","on-secondary-fixed":"#370e00","inverse-primary":"#aec6ff","primary":"#002353","secondary-container":"#fd651e","on-background":"#0b1c30","surface-container-low":"#eff4ff","tertiary":"#002b0f","surface":"#f8f9ff","on-secondary":"#ffffff","on-primary-fixed":"#001a42","error":"#ba1a1a","on-secondary-fixed-variant":"#7f2b00","secondary-fixed-dim":"#ffb599","tertiary-fixed-dim":"#79db8d","on-secondary-container":"#571a00","surface-container-high":"#dce9ff","surface-container-lowest":"#ffffff","tertiary-fixed":"#95f8a7","surface-variant":"#d3e4fe","on-primary-fixed-variant":"#214583","on-primary-container":"#84a4e8","on-error":"#ffffff","primary-container":"#0f3876","on-tertiary-fixed":"#00210a"},borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},spacing:{"gutter-sm":"1rem","space-xs":"0.25rem","space-md":"1rem","space-sm":"0.5rem","margin":"2rem","margin-sm":"1rem","space-xl":"2.5rem","gutter":"1.5rem","space-lg":"1.5rem"},fontFamily:{"label-sm":["Noto Sans"],"label-lg":["Noto Sans"],"headline-lg":["Noto Sans"],"label-md":["Noto Sans"],"body-sm":["Noto Sans"],"body-md":["Noto Sans"],"headline-sm":["Noto Sans"],"body-lg":["Noto Sans"],"headline-xl-mobile":["Noto Sans"],"headline-md":["Noto Sans"],"headline-lg-mobile":["Noto Sans"],"headline-xl":["Noto Sans"]},fontSize:{"label-sm":["11px",{"lineHeight":"14px","fontWeight":"500"}],"label-lg":["14px",{"lineHeight":"20px","fontWeight":"600"}],"headline-lg":["28px",{"lineHeight":"36px","fontWeight":"700"}],"label-md":["12px",{"lineHeight":"16px","fontWeight":"600"}],"body-sm":["12px",{"lineHeight":"16px","fontWeight":"400"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}],"headline-sm":["18px",{"lineHeight":"24px","fontWeight":"600"}],"body-lg":["16px",{"lineHeight":"24px","fontWeight":"400"}],"headline-xl-mobile":["28px",{"lineHeight":"36px","fontWeight":"700"}],"headline-md":["22px",{"lineHeight":"28px","fontWeight":"600"}],"headline-lg-mobile":["24px",{"lineHeight":"32px","fontWeight":"700"}],"headline-xl":["36px",{"lineHeight":"44px","fontWeight":"700"}]}}}}</script></head><body class="bg-background font-body-md text-body-md text-on-surface"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col"><div class="h-1 bg-gradient-to-r from-[#FF9933] via-white to-[#138808] w-full"></div><div class="p-space-md flex flex-col"><span class="font-headline-sm text-headline-sm text-primary tracking-tight">MahaKaushalya</span><span class="font-label-sm text-label-sm text-on-surface-variant">Outcome Tracking</span><span class="mt-space-xs inline-flex items-center px-space-xs py-0.5 rounded font-label-sm text-label-sm bg-surface-container-high text-primary">Govt Portal</span></div><nav class="flex-1 px-space-sm flex flex-col gap-space-xs" data-active-classes="bg-primary-container text-on-primary font-label-md rounded-lg"><a class="flex items-center px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md" data-path="trainee-dashboard" href="#"><span class="material-symbols-outlined mr-space-sm text-lg">dashboard</span>Trainee Dashboard</a><a class="flex items-center px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md" data-path="update-outcome-status" href="#"><span class="material-symbols-outlined mr-space-sm text-lg">fact_check</span>Update Outcome Status</a><a class="flex items-center px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md" data-path="follow-up" href="#"><span class="material-symbols-outlined mr-space-sm text-lg">mark_chat_read</span>Follow-up (SMS/WA)</a><a aria-current="page" class="flex items-center px-space-sm py-space-sm transition-colors bg-primary-container text-on-primary font-label-md rounded-lg" data-path="profile-and-settings" href="#"><span class="material-symbols-outlined mr-space-sm text-lg">tune</span>Profile &amp; Settings</a><div class="my-space-sm h-px bg-surface-container-high"></div><a class="flex items-center px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md" data-path="register-trainee" href="#"><span class="material-symbols-outlined mr-space-sm text-lg">person_add</span>Register Trainee</a><a class="flex items-center px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md" data-path="home" href="#"><span class="material-symbols-outlined mr-space-sm text-lg">home</span>Public Portal</a></nav><div class="p-space-sm bg-surface-container-low m-space-sm rounded-lg flex flex-col gap-space-xs"><span class="font-label-sm text-label-sm text-on-surface font-semibold">Helpline Desk</span><span class="font-label-sm text-label-sm text-secondary font-bold">1800-120-8040</span></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface-container-lowest/95 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-gutter"><div class="flex items-center gap-space-sm"><span class="font-label-md text-label-md text-on-surface-variant">Maharashtra State Skill Development Society (MSSDS)</span></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm pr-space-md"><span class="cursor-pointer hover:text-on-surface">A-</span><span class="cursor-pointer font-bold hover:text-on-surface">A</span><span class="cursor-pointer hover:text-on-surface">A+</span><span class="text-outline-variant mx-1">|</span><button class="font-label-sm text-label-sm text-primary hover:text-secondary-container transition-colors">मराठी</button></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1XBFPUWpbG1OVD9wUBQsrXsEdQlEWyjSCWPdiYf6NOFrNjJgs7iqao4XMlsEfYRURB7RZCtQYfkAHq9QUoiNTPfrnppJbyzAyxkFAwnqsqgB2qeReLWDTItSR6Nwrf-2jR95F_opeqFI4jykN7qq7bj3GSXq663k7Toyr8wCJe9ndFg2-L3nttUoV24Ak18jQ_Fg2oF671ahl8ageRy41dKkas-IP5QXG-0t5-NuiKw-pC9dcuASy0XFEEWPURBJhJWfTJRH4L18Q"/></div></header><main class="relative pt-16 bg-background w-full px-gutter min-h-screen"><div class="flex flex-col w-full">
+<div class="py-space-md mb-space-lg flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="inline-flex items-center px-space-xs py-0.5 rounded font-label-sm text-label-sm bg-primary-container text-on-primary">
+<span class="material-symbols-outlined text-xs mr-1" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+          Official Registry Record
+        </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Doc Ref: MSSDS/REG/2024/09A</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-primary tracking-tight">
+        Trainee Profile &amp; Settings
+        <span class="font-headline-md text-headline-md text-on-surface-variant font-normal block md:inline md:ml-2">/ प्रशिक्षणार्थी प्रोफाइल आणि प्राधान्ये</span>
+</h1>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-3xl">
+        Manage statutory contact credentials, verify biometric-linked consent telemetry, and configure automated milestone reporting vectors in accordance with the Maharashtra Skill Development Policy.
+      </p>
+</div>
+<div class="flex items-center gap-space-sm self-start md:self-auto bg-surface-container-lowest p-space-xs rounded-xl shadow-sm">
+<div class="flex items-center gap-space-xs px-space-sm py-1.5 rounded-lg bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm" id="saveStateIndicator">
+<span class="w-2 h-2 rounded-full bg-on-tertiary-container animate-pulse"></span>
+<span id="saveStateText">All changes saved to CIDR</span>
+</div>
+<button class="flex items-center gap-1.5 px-space-md py-2 rounded-lg bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md transition-all shadow-sm active:scale-95" onclick="saveAllChanges()">
+<span class="material-symbols-outlined text-sm">cloud_done</span>
+        Save Profile Changes
+      </button>
+</div>
+</div>
+<div class="grid grid-cols-12 gap-gutter mb-space-xl">
+<div class="col-span-12 lg:col-span-4 flex flex-col gap-gutter">
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col items-center text-center relative overflow-hidden">
+<div class="absolute -top-12 -right-12 w-32 h-32 bg-primary/5 rounded-full blur-xl pointer-events-none"></div>
+<div class="relative mb-space-md">
+<img class="w-28 h-28 rounded-full object-cover shadow-md ring-4 ring-surface-container-high" data-alt="Official portrait photograph of Rahul Sambhaji Jadhav, a young Indian trainee from Maharashtra, wearing a formal crisp white collared shirt against a clean neutral civic office background, sharp professional lighting, soft shadow, institutional ID style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAy9B5F2M6by7eIT3Z4z4YZA1iOAgdp8Guus8NkRcticwYB74sV4jJdk_2zZ-HRoM9g6s6KaAtIof_8hl-2o_LlQo0SxJtmq4fc0F-snwClGqbRL7kVXMkWsuAScW4M1ijJ7W_eJsnLUO-8CLbasoSkdyKF4a2XQ1fvuzDf7VlyKfNd4-E9EAGy0Nj-wUjBD-uND0V1CUaLIhWfY4F33SBTfoBOfkFjHUnkl6Ml-lI9vrRi6c_icQ4q"/>
+<button class="absolute bottom-0 right-0 p-1.5 rounded-full bg-secondary text-on-secondary shadow-md hover:bg-secondary-container transition-transform hover:scale-105" title="Update Profile Photo">
+<span class="material-symbols-outlined text-sm">photo_camera</span>
+</button>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Rahul Sambhaji Jadhav</h2>
+<p class="font-label-md text-label-md text-on-surface-variant font-medium mt-0.5">राहुल संभाजी जाधव</p>
+<div class="mt-space-sm inline-flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">school</span>
+          Electrician &amp; Solar Technician (Level 4)
+        </div>
+<div class="w-full mt-space-lg pt-space-md bg-surface-container-low rounded-lg p-space-sm flex flex-col gap-space-xs text-left">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Statutory Identifier</span>
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-primary font-bold">
+<span class="material-symbols-outlined text-xs">lock</span>
+              Locked
+            </span>
+</div>
+<div class="font-headline-sm text-headline-sm tracking-wider font-mono text-primary select-all">
+            MK-2024-MH-08492
+          </div>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-xs">
+            Permanent MSSDS registration key. Unalterable post-biometric enrollment.
+          </span>
+</div>
+<div class="w-full mt-space-md flex flex-col gap-space-xs text-left">
+<div class="flex justify-between items-center text-label-sm font-label-sm">
+<span class="text-on-surface-variant">Profile Completion</span>
+<span class="text-primary font-bold">92%</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container-high overflow-hidden">
+<div class="h-full bg-secondary rounded-full" style="width: 92%"></div>
+</div>
+<span class="text-body-sm font-body-sm text-outline text-xs mt-1">Pending: DigiLocker e-Sign ratification</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-xl">workspace_premium</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Skilling Credentials</h3>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm font-bold">NCVT / MSSDS</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">NCVT Level 4 Certificate</span>
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-tertiary-container bg-tertiary-fixed px-2 py-0.5 rounded font-bold">
+<span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+              Issued to DigiLocker
+            </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant text-xs">
+            Credential URI: <code class="font-mono text-primary">in.gov.digitallocker.mssds.cert.2024.94819</code>
+</p>
+<div class="flex items-center gap-2 mt-2 pt-2 bg-surface-container-lowest p-space-xs rounded">
+<img class="w-8 h-8 rounded object-cover" data-alt="Official micro hologram seal representing the Government of Maharashtra and National Council for Vocational Training verification insignia, gold and navy blue metallic sheen with high relief detail." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhQCbvRlY8Qw37CA1IfMCNpO_176oVKmPAr92bd5b0EVdek_hTXlIqukg0a3rsxKSZ0PUerp53nFHU-YLxPPRSnXzDJ3UHjJIy5jKOy96U-KOyFPvvdGL8RipFYSX9qx0do3tSAzH3jdkizJLDbDNzqjaROSjYKO6-PC4E9eqa0HVGJCy-2SIdkVSyHwaUD1WlsO3T2IafX6PM5lMU4sZbDxCLSXMbaaSqfInxaMr-1ktHHvfDHXdJ"/>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface font-bold">Issued on: 10 July 2024</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-xs">Valid for lifetime nationwide placement</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-space-xs">
+<button class="w-full flex items-center justify-center gap-space-xs py-2.5 px-space-md rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-primary font-label-md text-label-md transition-colors" onclick="triggerDownload()">
+<span class="material-symbols-outlined text-lg">download</span>
+            Download DigiLocker Certificate (PDF)
+          </button>
+<button class="w-full flex items-center justify-center gap-space-xs py-2 px-space-md rounded-lg text-secondary hover:bg-secondary-fixed/30 font-label-md text-label-md transition-colors">
+<span class="material-symbols-outlined text-base">share</span>
+            Share Verification Hash
+          </button>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-xl">headset_mic</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">District Verification Cell</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Designated District Skill Development Officer (DSDO) Pune Division. For credential disputes, contact with your Trainee ID.
+        </p>
+<div class="flex items-center justify-between p-space-sm rounded bg-surface-container-low mt-1">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface font-bold">Shri. V. K. Deshmukh</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-xs">DSDO Pune Office</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-bold">020-26123490</span>
+</div>
+</div>
+</div>
+<div class="col-span-12 lg:col-span-8 flex flex-col gap-gutter">
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col">
+<div class="p-space-lg bg-surface-container-low flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-2xl">badge</span>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Personal &amp; Contact Credentials</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Manage contact endpoints for employment calls and verification audits.</p>
+</div>
+</div>
+<span class="self-start sm:self-auto px-2.5 py-1 rounded bg-surface-container-highest text-primary font-label-sm text-label-sm font-semibold">Section 01</span>
+</div>
+<div class="p-space-lg grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div class="flex flex-col gap-1.5 md:col-span-2">
+<label class="font-label-sm text-label-sm text-on-surface font-semibold flex items-center justify-between">
+<span>Full Name (As per Aadhaar / SSC) <span class="text-error">*</span></span>
+<span class="text-xs text-on-surface-variant font-normal">Re-verification required if modified</span>
+</label>
+<div class="relative">
+<input class="w-full bg-surface-container-low rounded-lg px-space-md py-2 font-body-md text-body-md text-on-surface focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary focus:outline-none transition-all" id="fullName" type="text" value="Rahul Sambhaji Jadhav"/>
+<span class="absolute right-3 top-2.5 material-symbols-outlined text-on-tertiary-container text-base" title="Aadhaar Name Match Confirmed">verified</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-xs">
+              देवनागरी: <span class="font-semibold text-on-surface">राहुल संभाजी जाधव</span> (ऑटो-मॅप केलेले)
+            </span>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm text-on-surface font-semibold flex items-center justify-between">
+<span>Primary Phone (Aadhaar Seeded) <span class="text-error">*</span></span>
+<span class="inline-flex items-center gap-0.5 px-1.5 py-0.5 rounded bg-tertiary-fixed text-tertiary-container text-xs font-bold">
+<span class="material-symbols-outlined text-xs">check</span> Verified
+              </span>
+</label>
+<div class="flex items-center gap-2">
+<input class="flex-1 bg-surface-container-high/60 cursor-not-allowed rounded-lg px-space-md py-2 font-mono text-body-md text-on-surface font-medium" readonly="" type="text" value="+91 98765 43210"/>
+<button class="px-3 py-2 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-primary font-label-sm text-label-sm whitespace-nowrap transition-colors" onclick="openOtpModal()" type="button">
+                Change via OTP
+              </button>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-xs">Primary vector for mandatory 3-month statutory outcome audit.</span>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm text-on-surface font-semibold">
+              Secondary / WhatsApp Contact Number
+            </label>
+<input class="w-full bg-surface-container-low rounded-lg px-space-md py-2 font-mono text-body-md text-on-surface focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary focus:outline-none transition-all" id="secondaryPhone" placeholder="+91 xxxxx xxxxx" type="text" value="+91 91234 56789"/>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-xs">Utilized for quick follow-ups if primary line is unresponsive.</span>
+</div>
+<div class="flex flex-col gap-1.5 md:col-span-2">
+<label class="font-label-sm text-label-sm text-on-surface font-semibold">
+              Registered Email Address <span class="text-error">*</span>
+</label>
+<div class="relative">
+<input class="w-full bg-surface-container-low rounded-lg pl-10 pr-space-md py-2 font-body-md text-body-md text-on-surface focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary focus:outline-none transition-all" id="emailAddr" type="email" value="rahul.jadhav@gmail.com"/>
+<span class="absolute left-3 top-2.5 material-symbols-outlined text-outline text-lg">mail</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-xs">Placement offer letters and formal interview call slips are routed here.</span>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm text-on-surface font-semibold">Current District &amp; Division</label>
+<select class="w-full bg-surface-container-low rounded-lg px-space-md py-2 font-body-md text-body-md text-on-surface focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary focus:outline-none transition-all">
+<option selected="">Pune (पुणे) - Pune Division</option>
+<option>Mumbai City (मुंबई शहर)</option>
+<option>Mumbai Suburban (मुंबई उपनगर)</option>
+<option>Nagpur (नागपूर)</option>
+<option>Nashik (नाशिक)</option>
+<option>Chhatrapati Sambhajinagar (छत्रपती संभाजीनगर)</option>
+</select>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm text-on-surface font-semibold">Taluka &amp; Pincode</label>
+<div class="grid grid-cols-2 gap-2">
+<input class="bg-surface-container-low rounded-lg px-3 py-2 font-body-md text-body-md text-on-surface focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary focus:outline-none transition-all" type="text" value="Haveli"/>
+<input class="bg-surface-container-low rounded-lg px-3 py-2 font-mono text-body-md text-body-md text-on-surface focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary focus:outline-none transition-all" type="text" value="411028"/>
+</div>
+</div>
+<div class="flex flex-col gap-1.5 md:col-span-2">
+<label class="font-label-sm text-label-sm text-on-surface font-semibold">Current Residential Address</label>
+<textarea class="w-full bg-surface-container-low rounded-lg px-space-md py-2 font-body-md text-body-md text-on-surface focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary focus:outline-none transition-all" rows="2">Plot No. 42, Vitthal Nagar, Hadapsar, Pune, Maharashtra - 411028</textarea>
+</div>
+<div class="flex flex-col gap-1.5 md:col-span-2 pt-space-xs">
+<span class="font-label-sm text-label-sm text-primary font-bold uppercase tracking-wider">Guardian / Emergency Contact (आपत्कालीन संपर्क)</span>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-2 mt-1">
+<input class="bg-surface-container-low rounded-lg px-3 py-2 font-body-md text-body-md text-on-surface" placeholder="Guardian Name" type="text" value="Sambhaji Jadhav (Father)"/>
+<input class="bg-surface-container-low rounded-lg px-3 py-2 font-body-md text-body-md text-on-surface" placeholder="Relationship" type="text" value="Father / वडील"/>
+<input class="bg-surface-container-low rounded-lg px-3 py-2 font-mono text-body-md text-body-md text-on-surface" placeholder="Emergency Phone" type="text" value="+91 94220 11223"/>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col">
+<div class="p-space-lg bg-surface-container-low flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-2xl">campaign</span>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Follow-up &amp; Notification Preferences</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Select through which government channels you submit periodic outcome tracking data.</p>
+</div>
+</div>
+<span class="self-start sm:self-auto px-2.5 py-1 rounded bg-surface-container-highest text-primary font-label-sm text-label-sm font-semibold">Section 02</span>
+</div>
+<div class="p-space-lg flex flex-col gap-space-lg">
+<div class="flex flex-col gap-space-sm">
+<span class="font-label-md text-label-md text-on-surface">Milestone Follow-up Delivery Vectors</span>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm">
+<label class="flex items-start gap-space-sm p-space-sm rounded-lg bg-surface-container-low cursor-pointer hover:bg-surface-container-high transition-colors">
+<input checked="" class="mt-1 w-4 h-4 rounded text-secondary focus:ring-secondary accent-secondary" type="checkbox"/>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-label-sm text-on-surface font-bold">WhatsApp Messaging</span>
+<span class="px-1.5 py-0.2 rounded bg-tertiary-fixed text-tertiary-container font-label-sm text-label-sm text-xs font-semibold">Recommended</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-xs">
+                    Receive 1-tap WhatsApp buttons to report placement, offer letters, or higher studies status instantly.
+                  </span>
+</div>
+</label>
+<label class="flex items-start gap-space-sm p-space-sm rounded-lg bg-surface-container-low cursor-pointer hover:bg-surface-container-high transition-colors">
+<input checked="" class="mt-1 w-4 h-4 rounded text-secondary focus:ring-secondary accent-secondary" type="checkbox"/>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-label-sm text-on-surface font-bold">Statutory SMS Alerts</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container-highest text-primary font-label-sm text-label-sm text-xs font-semibold">Standard</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-xs">
+                    Official NIC gateway SMS containing secured tokenized shortlinks for monthly wage submissions.
+                  </span>
+</div>
+</label>
+<label class="flex items-start gap-space-sm p-space-sm rounded-lg bg-surface-container-low cursor-pointer hover:bg-surface-container-high transition-colors">
+<input class="mt-1 w-4 h-4 rounded text-secondary focus:ring-secondary accent-secondary" type="checkbox"/>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface font-bold">Automated IVR Calls (मराठी)</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-xs">
+                    Automated voice recognition in Marathi to confirm current employer and monthly stipend via keypress.
+                  </span>
+</div>
+</label>
+<label class="flex items-start gap-space-sm p-space-sm rounded-lg bg-surface-container-low cursor-pointer hover:bg-surface-container-high transition-colors">
+<input checked="" class="mt-1 w-4 h-4 rounded text-secondary focus:ring-secondary accent-secondary" type="checkbox"/>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface font-bold">Email Digest &amp; E-Certificates</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-xs">
+                    Formal quarterly placement telemetry summaries and job expo bulletins delivered to inbox.
+                  </span>
+</div>
+</label>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md pt-space-xs">
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm text-on-surface font-semibold">Primary Communication Language</label>
+<select class="w-full bg-surface-container-low rounded-lg px-space-md py-2 font-body-md text-body-md text-on-surface focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary focus:outline-none transition-all">
+<option selected="">Marathi (मराठी) - Default Official Script</option>
+<option>English (इंग्रजी)</option>
+</select>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-xs">All outcome queries will be dispatched in this selected medium.</span>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm text-on-surface font-semibold">Follow-up Contact Window</label>
+<select class="w-full bg-surface-container-low rounded-lg px-space-md py-2 font-body-md text-body-md text-on-surface focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary focus:outline-none transition-all">
+<option>Morning (09:00 AM - 01:00 PM IST)</option>
+<option selected="">Afternoon &amp; Evening (02:00 PM - 07:00 PM IST)</option>
+<option>Weekend Only (Saturday 10:00 AM - 04:00 PM)</option>
+</select>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-xs">Guarantees non-intrusive survey prompts while at worksite.</span>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col">
+<div class="p-space-lg bg-surface-container-low flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-tertiary-container text-2xl">policy</span>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Statutory Consent &amp; Data Protection Audit Record</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Immutable legal compliance registry under the Digital Personal Data Protection (DPDP) Act.</p>
+</div>
+</div>
+<span class="self-start sm:self-auto px-2.5 py-1 rounded bg-tertiary-fixed text-tertiary-container font-label-sm text-label-sm font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">lock</span> Audit Locked
+          </span>
+</div>
+<div class="p-space-lg flex flex-col gap-space-md">
+<div class="p-space-md rounded-lg bg-surface-container-low flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-full bg-surface-container-lowest flex items-center justify-center text-on-tertiary-container shadow-sm">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">gavel</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Legal Consent Status</span>
+<span class="font-headline-sm text-headline-sm text-primary">Explicit Consent Granted</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-xs">
+                  Maharashtra Skilling Ecosystem Outcome Monitoring Mandate (Rule 14-B)
+                </span>
+</div>
+</div>
+<div class="flex flex-col items-end text-right">
+<span class="font-label-sm text-label-sm text-outline font-mono">HASH: SHA256-8F0E4D29BA110C</span>
+<span class="inline-flex items-center gap-1 text-on-tertiary-container font-label-sm text-label-sm font-bold mt-1">
+<span class="material-symbols-outlined text-xs">check_circle</span> Legal Validity Active
+              </span>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-sm">
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Consent Recorded Timestamp</span>
+<span class="font-mono text-label-md text-label-md text-on-surface font-bold">14 Aug 2024, 11:24:32 AM IST</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-xs">NTP Synced Civic Clock</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Authentication Protocol</span>
+<span class="font-label-md text-label-md text-primary font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">fingerprint</span> Aadhaar-OTP Verified
+              </span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-xs">UIDAI Transaction Ref: 80927-B</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Recorded Origin / IP</span>
+<span class="font-mono text-label-md text-label-md text-on-surface font-bold">103.24.188.12 (Govt MahaNet)</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-xs">Hadapsar ITI Enrollment Terminal</span>
+</div>
+</div>
+<div class="pt-space-xs flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-sm">
+<p class="font-body-sm text-body-sm text-on-surface-variant text-xs max-w-xl">
+              Under DPDP 2023, you reserve the right to inspect institutional data routing logs or request outcome anonymization upon statutory course completion tenure expiry.
+            </p>
+<button class="inline-flex items-center gap-1.5 px-space-md py-2 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-primary font-label-sm text-label-sm transition-colors whitespace-nowrap shadow-sm" onclick="triggerAuditDownload()">
+<span class="material-symbols-outlined text-base">receipt_long</span>
+              Download Transparency Statement
+            </button>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col sm:flex-row items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-outline text-xl">sync</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">
+            Unsaved parameter changes are cached locally in your browser session.
+          </span>
+</div>
+<div class="flex items-center gap-space-sm w-full sm:w-auto justify-end">
+<button class="px-space-md py-2.5 rounded-lg text-secondary hover:bg-secondary-fixed/40 font-label-md text-label-md transition-colors" onclick="discardChanges()">
+            Discard Changes
+          </button>
+<button class="px-space-lg py-2.5 rounded-lg bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md transition-all shadow-md active:scale-95" onclick="saveAllChanges()">
+            Save Profile Changes
+          </button>
+</div>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 z-50 flex items-center justify-center bg-inverse-surface/50 backdrop-blur-sm hidden" id="otpModal">
+<div class="bg-surface-container-lowest rounded-xl p-space-lg max-w-md w-full mx-4 shadow-xl flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-2xl">phonelink_lock</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Update Primary Contact</h4>
+</div>
+<button class="text-on-surface-variant hover:text-on-surface" onclick="closeOtpModal()">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+        As per UIDAI and MSSDS compliance, changing your primary contact requires an Aadhaar-linked OTP authentication.
+      </p>
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-sm text-label-sm text-on-surface font-semibold">New 10-Digit Mobile Number</label>
+<input class="w-full bg-surface-container-low rounded-lg px-space-md py-2 font-mono text-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-primary" placeholder="+91 00000 00000" type="tel"/>
+</div>
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-sm text-label-sm text-on-surface font-semibold">Enter OTP sent to Aadhaar seeded device</label>
+<div class="flex gap-2 justify-between">
+<input class="w-12 h-12 text-center text-headline-sm font-bold bg-surface-container-low rounded-lg focus:outline-none focus:ring-2 focus:ring-primary" maxlength="1" type="text" value="4"/>
+<input class="w-12 h-12 text-center text-headline-sm font-bold bg-surface-container-low rounded-lg focus:outline-none focus:ring-2 focus:ring-primary" maxlength="1" type="text" value="8"/>
+<input class="w-12 h-12 text-center text-headline-sm font-bold bg-surface-container-low rounded-lg focus:outline-none focus:ring-2 focus:ring-primary" maxlength="1" type="text" value="2"/>
+<input class="w-12 h-12 text-center text-headline-sm font-bold bg-surface-container-low rounded-lg focus:outline-none focus:ring-2 focus:ring-primary" maxlength="1" type="text" value="9"/>
+<input class="w-12 h-12 text-center text-headline-sm font-bold bg-surface-container-low rounded-lg focus:outline-none focus:ring-2 focus:ring-primary" maxlength="1" type="text"/>
+<input class="w-12 h-12 text-center text-headline-sm font-bold bg-surface-container-low rounded-lg focus:outline-none focus:ring-2 focus:ring-primary" maxlength="1" type="text"/>
+</div>
+</div>
+<div class="flex items-center justify-between text-label-sm font-label-sm text-on-surface-variant">
+<span>Resend OTP in 00:44</span>
+<button class="text-primary hover:underline">Change Number</button>
+</div>
+<div class="flex items-center justify-end gap-space-sm pt-space-xs">
+<button class="px-space-md py-2 rounded-lg text-secondary hover:bg-secondary-fixed/40 font-label-md text-label-md" onclick="closeOtpModal()">
+          Cancel
+        </button>
+<button class="px-space-md py-2 rounded-lg bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md" onclick="confirmOtpUpdate()">
+          Verify &amp; Update
+        </button>
+</div>
+</div>
+</div>
+<div class="fixed bottom-6 right-6 z-50 transform translate-y-24 opacity-0 transition-all duration-300 pointer-events-none" id="toastNotification">
+<div class="bg-primary text-on-primary px-space-md py-space-sm rounded-lg shadow-xl flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-on-tertiary-container" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-label-md text-label-md" id="toastMessage">Changes successfully committed to MSSDS server.</span>
+</div>
+</div>
+<script>
+    function showToast(msg) {
+      const toast = document.getElementById('toastNotification');
+      const toastMsg = document.getElementById('toastMessage');
+      if (toast && toastMsg) {
+        toastMsg.textContent = msg;
+        toast.classList.remove('translate-y-24', 'opacity-0', 'pointer-events-none');
+        setTimeout(() => {
+          toast.classList.add('translate-y-24', 'opacity-0', 'pointer-events-none');
+        }, 3200);
+      }
+    }
+
+    function saveAllChanges() {
+      const indicator = document.getElementById('saveStateText');
+      if (indicator) {
+        indicator.textContent = 'Saving parameters...';
+        setTimeout(() => {
+          indicator.textContent = 'All changes saved to CIDR';
+          showToast('Profile and notification preferences updated successfully.');
+        }, 600);
+      }
+    }
+
+    function discardChanges() {
+      showToast('Form reset to last committed state.');
+    }
+
+    function triggerDownload() {
+      showToast('Fetching DigiLocker Signed Credential (PDF)...');
+    }
+
+    function triggerAuditDownload() {
+      showToast('Compiling Statutory DPDP Audit Package...');
+    }
+
+    function openOtpModal() {
+      const modal = document.getElementById('otpModal');
+      if (modal) modal.classList.remove('hidden');
+    }
+
+    function closeOtpModal() {
+      const modal = document.getElementById('otpModal');
+      if (modal) modal.classList.add('hidden');
+    }
+
+    function confirmOtpUpdate() {
+      closeOtpModal();
+      showToast('OTP verified. Primary phone number updated.');
+    }
+  </script>
+</div></main></div></body></html>

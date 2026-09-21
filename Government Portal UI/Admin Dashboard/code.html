@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Noto+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"tertiary-container":"#003211","on-error":"#ffffff","surface-variant":"#d3e4fe","on-tertiary-fixed":"#002109","on-background":"#0b1c30","outline":"#74777f","surface-bright":"#f8f9ff","background":"#f8f9ff","surface":"#f8f9ff","on-surface-variant":"#44474f","secondary-fixed-dim":"#ffb598","secondary":"#a63b00","surface-container":"#e5eeff","error":"#ba1a1a","on-surface":"#0b1c30","on-secondary":"#ffffff","surface-container-lowest":"#ffffff","on-tertiary-fixed-variant":"#005320","secondary-fixed":"#ffdbce","on-secondary-fixed":"#370e00","on-primary-fixed":"#001a41","outline-variant":"#c4c6d0","on-secondary-fixed-variant":"#7f2b00","surface-container-highest":"#d3e4fe","inverse-surface":"#213145","on-primary-container":"#7b91c0","surface-container-low":"#eff4ff","inverse-on-surface":"#eaf1ff","on-secondary-container":"#561b00","secondary-container":"#fc671e","tertiary-fixed":"#7ffc97","tertiary-fixed-dim":"#62df7d","error-container":"#ffdad6","primary":"#001435","primary-fixed":"#d8e2ff","on-error-container":"#93000a","inverse-primary":"#b0c7f9","tertiary":"#001b06","on-tertiary-container":"#1ea74d","surface-container-high":"#dce9ff","on-primary":"#ffffff","on-primary-fixed-variant":"#304671","primary-container":"#0f2952","surface-dim":"#cbdbf5","surface-tint":"#485e8a","on-tertiary":"#ffffff","primary-fixed-dim":"#b0c7f9"},borderRadius:{DEFAULT:"0.125rem",lg:"0.25rem",xl:"0.5rem",full:"0.75rem"},spacing:{"gutter-lg":"1.5rem",gutter:"1rem","space-xs":"0.25rem","margin-lg":"2rem","margin-md":"1.5rem",margin:"1rem","space-sm":"0.5rem","space-md":"0.75rem","space-lg":"1.25rem","space-xl":"2rem"},fontFamily:{"label-md":["Noto Sans"],"headline-lg-mobile":["Inter"],"headline-xl":["Inter"],"headline-sm":["Inter"],"label-sm":["Noto Sans"],"headline-md":["Inter"],"label-lg":["Noto Sans"],"body-md":["Inter"],"data-mono":["Inter"],"headline-lg":["Inter"],"body-lg":["Inter"],"body-sm":["Inter"]},fontSize:{"label-md":["12px",{lineHeight:"16px",letterSpacing:"0.02em",fontWeight:"600"}],"headline-lg-mobile":["20px",{lineHeight:"28px",fontWeight:"700"}],"headline-xl":["32px",{lineHeight:"40px",letterSpacing:"-0.02em",fontWeight:"700"}],"headline-sm":["16px",{lineHeight:"24px",fontWeight:"600"}],"label-sm":["11px",{lineHeight:"14px",letterSpacing:"0.04em",fontWeight:"500"}],"headline-md":["18px",{lineHeight:"26px",fontWeight:"600"}],"label-lg":["13px",{lineHeight:"18px",fontWeight:"600"}],"body-md":["13px",{lineHeight:"20px",fontWeight:"400"}],"data-mono":["12px",{lineHeight:"16px",fontWeight:"500"}],"headline-lg":["24px",{lineHeight:"32px",letterSpacing:"-0.015em",fontWeight:"700"}],"body-lg":["15px",{lineHeight:"22px",fontWeight:"400"}],"body-sm":["12px",{lineHeight:"18px",fontWeight:"400"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-64 bg-primary-container z-50 flex flex-col shadow-[0_1px_8px_rgba(0,0,0,0.12)]"><div class="h-14 px-margin flex items-center gap-space-sm bg-primary border-b-2 border-secondary"><span class="material-symbols-outlined text-secondary text-[24px]">verified</span><div class="flex flex-col"><span class="font-label-lg text-label-lg text-on-primary tracking-wide leading-tight">MahaKaushal</span><span class="font-label-sm text-[10px] text-primary-fixed-dim leading-none uppercase tracking-wider">Admin Portal</span></div></div><div class="px-margin py-space-sm bg-primary/40"><div class="flex items-center justify-between text-primary-fixed-dim font-label-sm text-label-sm"><span>JURISDICTION</span><span class="font-data-mono text-[10px] px-space-xs py-0.5 bg-secondary text-on-secondary rounded-DEFAULT font-bold">MH-PUN</span></div><p class="font-label-md text-label-md text-on-primary font-medium mt-0.5 truncate">Pune Divisional Commissionerate</p></div><nav class="flex-1 px-space-xs py-space-sm space-y-1 overflow-y-auto" data-active-classes="bg-primary text-on-primary border-l-4 border-secondary"><a aria-current="page" class="flex items-center px-space-md py-space-sm font-label-md rounded-DEFAULT transition-colors bg-primary text-on-primary border-l-4 border-secondary" data-path="overview" href="#"><span class="material-symbols-outlined mr-space-md text-[18px]">dashboard</span>Overview</a><a class="flex items-center px-space-md py-space-sm text-surface-variant font-label-md text-label-md rounded-DEFAULT hover:bg-primary/50 hover:text-on-primary transition-colors" data-path="trainee-records" href="#"><span class="material-symbols-outlined mr-space-md text-[18px]">badge</span>Trainee Records</a><a class="flex items-center px-space-md py-space-sm text-surface-variant font-label-md text-label-md rounded-DEFAULT hover:bg-primary/50 hover:text-on-primary transition-colors" data-path="non-responder-queue" href="#"><span class="material-symbols-outlined mr-space-md text-[18px]">notification_important</span>Non-Responder Queue</a><a class="flex items-center px-space-md py-space-sm text-surface-variant font-label-md text-label-md rounded-DEFAULT hover:bg-primary/50 hover:text-on-primary transition-colors" data-path="employer-validation" href="#"><span class="material-symbols-outlined mr-space-md text-[18px]">apartment</span>Employer Validation</a><a class="flex items-center px-space-md py-space-sm text-surface-variant font-label-md text-label-md rounded-DEFAULT hover:bg-primary/50 hover:text-on-primary transition-colors" data-path="analytics-reports" href="#"><span class="material-symbols-outlined mr-space-md text-[18px]">insights</span>Analytics &amp; Reports</a><a class="flex items-center px-space-md py-space-sm text-surface-variant font-label-md text-label-md rounded-DEFAULT hover:bg-primary/50 hover:text-on-primary transition-colors" data-path="skill-gap-analysis" href="#"><span class="material-symbols-outlined mr-space-md text-[18px]">troubleshoot</span>Skill Gap Analysis</a><a class="flex items-center px-space-md py-space-sm text-surface-variant font-label-md text-label-md rounded-DEFAULT hover:bg-primary/50 hover:text-on-primary transition-colors" data-path="provider-performance" href="#"><span class="material-symbols-outlined mr-space-md text-[18px]">military_tech</span>Provider Performance</a><a class="flex items-center px-space-md py-space-sm text-surface-variant font-label-md text-label-md rounded-DEFAULT hover:bg-primary/50 hover:text-on-primary transition-colors" data-path="policy-reports" href="#"><span class="material-symbols-outlined mr-space-md text-[18px]">policy</span>Policy Reports</a><a class="flex items-center px-space-md py-space-sm text-surface-variant font-label-md text-label-md rounded-DEFAULT hover:bg-primary/50 hover:text-on-primary transition-colors" data-path="system-access" href="#"><span class="material-symbols-outlined mr-space-md text-[18px]">admin_panel_settings</span>System &amp; Access</a></nav><div class="p-space-md bg-primary/60 border-t border-primary-container"><div class="flex items-center gap-space-sm"><div class="w-2 h-2 rounded-full bg-secondary animate-pulse"></div><div class="flex flex-col"><span class="font-label-sm text-[10px] text-surface-variant uppercase tracking-wider">Server Status: Online</span><span class="font-data-mono text-[10px] text-primary-fixed-dim">State Data Center, Mumbai</span></div></div></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-14 bg-surface-container-lowest z-40 shadow-[0_1px_8px_rgba(0,0,0,0.04)] px-margin-lg flex items-center justify-between"><div class="flex items-center gap-margin-md"><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded-DEFAULT bg-primary text-on-primary flex items-center justify-center font-bold text-xs">MH</div><div class="flex flex-col"><span class="font-label-md text-label-md text-primary font-bold leading-tight">महाराष्ट्र शासन</span><span class="font-label-sm text-[10px] text-on-surface-variant leading-none">Govt. of Maharashtra • SDED</span></div></div><div class="h-6 w-px bg-outline-variant"></div><div class="flex items-center bg-surface-container-low px-space-sm py-1 rounded-DEFAULT"><span class="font-label-sm text-label-sm text-on-surface-variant mr-space-xs">Cohort:</span><select class="bg-transparent font-label-md text-label-md text-on-surface font-semibold focus:outline-none cursor-pointer"><option>FY 2024-25 Q3</option><option>FY 2024-25 Q2</option><option>FY 2023-24 Annual</option></select></div><div class="flex items-center bg-surface-container-low px-space-sm py-1 rounded-DEFAULT"><span class="font-label-sm text-label-sm text-on-surface-variant mr-space-xs">District:</span><select class="bg-transparent font-label-md text-label-md text-on-surface font-semibold focus:outline-none cursor-pointer"><option>Pune (All Talukas)</option><option>Haveli</option><option>Baramati</option><option>Khed</option><option>Shirur</option></select></div></div><div class="flex items-center gap-space-md flex-1 max-w-xs mx-margin-md"><div class="relative w-full"><span class="material-symbols-outlined absolute left-2.5 top-1/2 -translate-y-1/2 text-[18px] text-outline">search</span><input class="w-full pl-8 pr-3 py-1 bg-surface-container-low text-on-surface font-body-sm text-body-sm rounded-DEFAULT placeholder:text-outline focus:outline-none focus:bg-surface-container-lowest focus:ring-1 focus:ring-primary" placeholder="Search Aadhaar, UID, Center ID..." type="text"/></div></div><div class="flex items-center gap-space-md"><button class="relative p-1.5 rounded-DEFAULT text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1 right-1 w-2 h-2 bg-secondary rounded-full"></span></button><button class="p-1.5 rounded-DEFAULT text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[20px]">help</span></button><div class="h-6 w-px bg-outline-variant"></div><div class="flex items-center gap-space-sm pl-space-xs"><div class="flex flex-col text-right"><span class="font-label-md text-label-md text-on-surface font-bold leading-tight">Rajesh Deshmukh, IAS</span><div class="flex items-center gap-1 justify-end"><span class="px-1.5 py-0.2 bg-secondary-fixed text-on-secondary-fixed font-label-sm text-[10px] rounded font-bold uppercase">District Skill Officer</span><span class="font-label-sm text-[10px] text-on-surface-variant">Pune</span></div></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-outline-variant" src="https://lh3.googleusercontent.com/aida/AEtjO1XZ5_RGann-JS9-SXlCwMRwGfPfXVcOVklpC5V0eTvQClSjZkunPNoV5M1DG7pVKUlM-w1Ek0_WIFB3LF3preqPJM9Nldd0dpUb6U78uOUf2vXckERfwAiRw05-48oV-hBpHoXbLbiqJLyACVA1ujnTD3gRId3eSN4SLj2tZ_j2UaTSnTOMTGjZRuwcMufJq9GC4jMZjSIIS2c2plWA8DUCu5w8ceF756YeOIrxRm0l6idfYW_EnUZYOFadZztVPjas9Jq8xf-bW3k"/></div></div></header><main class="relative pt-14 bg-surface w-full px-gutter-lg py-margin-md"><div class="flex flex-col w-full space-y-space-lg">
+<!-- Executive Title & Sub-header Bar -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md bg-surface-container-lowest p-space-lg rounded-DEFAULT shadow-sm">
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 bg-primary rounded-DEFAULT flex items-center justify-center text-secondary shadow-sm">
+<span class="material-symbols-outlined text-[28px]">speed</span>
+</div>
+<div>
+<div class="flex items-center gap-space-sm">
+<h1 class="font-headline-lg text-headline-lg text-primary tracking-tight">Executive Operations Cockpit</h1>
+<span class="px-space-sm py-0.5 bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm rounded-DEFAULT font-bold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-on-tertiary-container animate-pulse"></span>
+            LIVE CYCLE
+          </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+          Maharashtra Skill Development Mission (MSSDS) • State Employment &amp; Wage Verification Matrix
+        </p>
+</div>
+</div>
+<div class="flex items-center gap-space-sm self-start lg:self-auto">
+<button class="px-space-md py-2 bg-surface-container text-primary font-label-md text-label-md rounded-DEFAULT flex items-center gap-space-xs hover:bg-surface-container-high transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[18px]">cloud_download</span>
+        Export Divisional Report (PDF)
+      </button>
+<button class="px-space-md py-2 bg-secondary text-on-secondary font-label-md text-label-md rounded-DEFAULT flex items-center gap-space-xs hover:bg-secondary/90 transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+        Batch Authorize Placements
+      </button>
+</div>
+</div>
+<!-- Multi-parameter Control Strip -->
+<div class="bg-surface-container-low p-space-md rounded-DEFAULT shadow-sm flex flex-col xl:flex-row xl:items-center justify-between gap-space-md">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-space-md flex-1">
+<!-- Cohort Selector -->
+<div class="flex flex-col">
+<label class="font-label-sm text-label-sm text-on-surface-variant mb-1 uppercase tracking-wider font-semibold">Cohort Period</label>
+<div class="relative">
+<select class="w-full bg-surface-container-lowest text-on-surface font-label-md text-label-md py-2 pl-space-md pr-8 rounded-DEFAULT appearance-none shadow-sm focus:outline-none focus:ring-1 focus:ring-primary cursor-pointer">
+<option>FY 2025-26 Q3 (Current)</option>
+<option>FY 2025-26 Q2</option>
+<option>FY 2024-25 Q4</option>
+<option>FY 2024-25 Q3</option>
+</select>
+<span class="material-symbols-outlined absolute right-2 top-1/2 -translate-y-1/2 text-outline pointer-events-none text-[18px]">expand_more</span>
+</div>
+</div>
+<!-- Course Stream -->
+<div class="flex flex-col">
+<label class="font-label-sm text-label-sm text-on-surface-variant mb-1 uppercase tracking-wider font-semibold">Course Stream</label>
+<div class="relative">
+<select class="w-full bg-surface-container-lowest text-on-surface font-label-md text-label-md py-2 pl-space-md pr-8 rounded-DEFAULT appearance-none shadow-sm focus:outline-none focus:ring-1 focus:ring-primary cursor-pointer">
+<option>All 42 Course Streams</option>
+<option>Automotive &amp; EV Mechanics</option>
+<option>IT / Software Engineering</option>
+<option>Healthcare &amp; Nursing</option>
+<option>Precision CNC Tooling</option>
+<option>Green Hydrogen &amp; Solar Tech</option>
+</select>
+<span class="material-symbols-outlined absolute right-2 top-1/2 -translate-y-1/2 text-outline pointer-events-none text-[18px]">expand_more</span>
+</div>
+</div>
+<!-- Training Provider -->
+<div class="flex flex-col">
+<label class="font-label-sm text-label-sm text-on-surface-variant mb-1 uppercase tracking-wider font-semibold">Training Provider (VTP)</label>
+<div class="relative">
+<select class="w-full bg-surface-container-lowest text-on-surface font-label-md text-label-md py-2 pl-space-md pr-8 rounded-DEFAULT appearance-none shadow-sm focus:outline-none focus:ring-1 focus:ring-primary cursor-pointer">
+<option>All Accredited VTPs (148)</option>
+<option>Tata Community Initiatives Trust</option>
+<option>Symbiosis Skills &amp; Professional Univ</option>
+<option>Government ITI Aundh, Pune</option>
+<option>Marathwada Skill Hub Network</option>
+</select>
+<span class="material-symbols-outlined absolute right-2 top-1/2 -translate-y-1/2 text-outline pointer-events-none text-[18px]">expand_more</span>
+</div>
+</div>
+<!-- Maharashtra Districts -->
+<div class="flex flex-col">
+<label class="font-label-sm text-label-sm text-on-surface-variant mb-1 uppercase tracking-wider font-semibold">State District (36 MH)</label>
+<div class="relative">
+<select class="w-full bg-surface-container-lowest text-on-surface font-label-md text-label-md py-2 pl-space-md pr-8 rounded-DEFAULT appearance-none shadow-sm focus:outline-none focus:ring-1 focus:ring-primary cursor-pointer">
+<option>All 36 Districts of MH</option>
+<option>Pune (Haveli, Baramati, Khed)</option>
+<option>Mumbai Suburban</option>
+<option>Thane</option>
+<option>Nagpur</option>
+<option>Chhatrapati Sambhajinagar</option>
+<option>Nashik</option>
+<option>Kolhapur</option>
+</select>
+<span class="material-symbols-outlined absolute right-2 top-1/2 -translate-y-1/2 text-outline pointer-events-none text-[18px]">expand_more</span>
+</div>
+</div>
+</div>
+<!-- Date Range & Execution CTA -->
+<div class="flex items-end gap-space-sm pt-2 xl:pt-0">
+<div class="flex flex-col w-full sm:w-auto">
+<label class="font-label-sm text-label-sm text-on-surface-variant mb-1 uppercase tracking-wider font-semibold">Audit Window</label>
+<div class="flex items-center bg-surface-container-lowest px-space-md py-2 rounded-DEFAULT shadow-sm text-on-surface font-label-md text-label-md gap-space-sm">
+<span class="material-symbols-outlined text-[16px] text-outline">calendar_today</span>
+<span>01 Oct 2024 - 31 Dec 2024</span>
+</div>
+</div>
+<button class="h-10 px-space-lg bg-primary text-on-primary font-label-md text-label-md rounded-DEFAULT flex items-center justify-center gap-space-xs hover:bg-primary-container transition-colors shadow-sm whitespace-nowrap">
+<span class="material-symbols-outlined text-[18px]">filter_alt</span>
+        Apply Filters
+      </button>
+<button class="h-10 w-10 bg-surface-container text-on-surface font-label-md rounded-DEFAULT flex items-center justify-center hover:bg-surface-container-high transition-colors shadow-sm" title="Reset Filters">
+<span class="material-symbols-outlined text-[18px]">restart_alt</span>
+</button>
+</div>
+</div>
+<!-- 4 Primary Metric/KPI Cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- KPI 1: Enrolled & Certified -->
+<div class="bg-surface-container-lowest rounded-DEFAULT p-space-lg shadow-sm relative overflow-hidden flex flex-col justify-between">
+<div class="absolute top-0 left-0 right-0 h-1 bg-secondary"></div>
+<div>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Trainees Certified</span>
+<span class="material-symbols-outlined text-secondary text-[22px]">workspace_premium</span>
+</div>
+<div class="mt-space-sm flex items-baseline gap-space-sm">
+<span class="font-headline-xl text-headline-xl text-primary font-bold">184,920</span>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 bg-tertiary-fixed text-on-tertiary-fixed rounded font-bold">+14.2% YoY</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">FY25 Target: 210,000 trainees</p>
+</div>
+<div class="mt-space-md">
+<div class="flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant mb-1">
+<span>Target Realization</span>
+<span class="font-bold text-primary">88.0%</span>
+</div>
+<div class="w-full h-2 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-secondary transition-all duration-500" style="width: 88%"></div>
+</div>
+</div>
+</div>
+<!-- KPI 2: Verified Placement Rate -->
+<div class="bg-surface-container-lowest rounded-DEFAULT p-space-lg shadow-sm relative overflow-hidden flex flex-col justify-between">
+<div class="absolute top-0 left-0 right-0 h-1 bg-on-tertiary-container"></div>
+<div>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Verified Placement Rate</span>
+<span class="material-symbols-outlined text-on-tertiary-container text-[22px]">check_circle</span>
+</div>
+<div class="mt-space-sm flex items-baseline gap-space-sm">
+<span class="font-headline-xl text-headline-xl text-primary font-bold">72.4%</span>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 bg-tertiary-fixed text-on-tertiary-fixed rounded font-bold">+4.1% vs Goal</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">State Benchmark: 68.0% mandate</p>
+</div>
+<div class="mt-space-md">
+<div class="flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant mb-1">
+<span>PF/ESIC Linked Record</span>
+<span class="font-bold text-on-tertiary-container">133,882 Placed</span>
+</div>
+<div class="w-full h-2 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-on-tertiary-container transition-all duration-500" style="width: 72.4%"></div>
+</div>
+</div>
+</div>
+<!-- KPI 3: 6-Month Retention Rate -->
+<div class="bg-surface-container-lowest rounded-DEFAULT p-space-lg shadow-sm relative overflow-hidden flex flex-col justify-between">
+<div class="absolute top-0 left-0 right-0 h-1 bg-primary"></div>
+<div>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">6-Month Job Retention</span>
+<span class="material-symbols-outlined text-primary text-[22px]">published_with_changes</span>
+</div>
+<div class="mt-space-sm flex items-baseline gap-space-sm">
+<span class="font-headline-xl text-headline-xl text-primary font-bold">64.8%</span>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 bg-surface-container text-on-surface-variant rounded font-bold">Stable</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Post-placement wage survey audited</p>
+</div>
+<div class="mt-space-md">
+<div class="flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant mb-1">
+<span>Attrition Margin</span>
+<span class="font-bold text-outline font-data-mono">11.2% Low Risk</span>
+</div>
+<div class="w-full h-2 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-primary transition-all duration-500" style="width: 64.8%"></div>
+</div>
+</div>
+</div>
+<!-- KPI 4: Salary Growth Post-Training -->
+<div class="bg-surface-container-lowest rounded-DEFAULT p-space-lg shadow-sm relative overflow-hidden flex flex-col justify-between">
+<div class="absolute top-0 left-0 right-0 h-1 bg-secondary-container"></div>
+<div>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Avg. Certified Wage</span>
+<span class="material-symbols-outlined text-secondary-container text-[22px]">payments</span>
+</div>
+<div class="mt-space-sm flex items-baseline gap-space-sm">
+<span class="font-headline-xl text-headline-xl text-primary font-bold">₹18,450<span class="font-body-sm text-[14px] text-on-surface-variant">/mo</span></span>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 bg-secondary-fixed text-on-secondary-fixed rounded font-bold">+34% vs Base</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Baseline statutory minimum: ₹13,750</p>
+</div>
+<div class="mt-space-md">
+<div class="flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant mb-1">
+<span>High-Earning Cohort (&gt;₹25k)</span>
+<span class="font-bold text-secondary font-data-mono">22.4% Trainees</span>
+</div>
+<div class="w-full h-2 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-secondary-container transition-all duration-500" style="width: 58%"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Operational Alerts & High Priority Scrutiny Queue -->
+<div class="bg-surface-container-lowest rounded-DEFAULT p-space-lg shadow-sm space-y-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-error text-[24px]">notification_important</span>
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface">Urgent Scrutiny &amp; Regulatory Action Flags</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Pending compliance interventions requiring District Magistrate &amp; SDED clearance</p>
+</div>
+</div>
+<span class="font-label-sm text-label-sm px-space-sm py-1 bg-error-container text-on-error-container font-bold rounded-DEFAULT">
+        3 CRITICAL ACTIONS
+      </span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md pt-space-xs">
+<!-- Flag 1 -->
+<div class="bg-error-container/20 p-space-md rounded-DEFAULT flex flex-col justify-between hover:bg-error-container/30 transition-colors">
+<div>
+<div class="flex items-center justify-between mb-space-xs">
+<span class="px-2 py-0.5 bg-error text-on-error font-label-sm text-[10px] font-bold uppercase rounded-DEFAULT tracking-wider">Audit Notice</span>
+<span class="font-data-mono text-label-sm text-error font-semibold">Code: VTP-MR-09</span>
+</div>
+<p class="font-label-md text-label-md text-on-surface font-bold">3 VTPs Under Observation</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+            Low verified placement rate (&lt;40%) in Marathwada division centers across Nanded and Beed districts.
+          </p>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center justify-between">
+<span class="font-label-sm text-[11px] text-error font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">gavel</span>
+            Show-cause Pending
+          </span>
+<button class="px-space-sm py-1 bg-error text-on-error font-label-sm text-label-sm rounded-DEFAULT hover:bg-error/90 transition-colors">
+            Issue Notice
+          </button>
+</div>
+</div>
+<!-- Flag 2 -->
+<div class="bg-secondary-fixed/40 p-space-md rounded-DEFAULT flex flex-col justify-between hover:bg-secondary-fixed/50 transition-colors">
+<div>
+<div class="flex items-center justify-between mb-space-xs">
+<span class="px-2 py-0.5 bg-secondary text-on-secondary font-label-sm text-[10px] font-bold uppercase rounded-DEFAULT tracking-wider">Survey Expiring</span>
+<span class="font-data-mono text-label-sm text-secondary font-semibold">T-48 Hours</span>
+</div>
+<p class="font-label-md text-label-md text-on-surface font-bold">High Non-Response Outlier</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+            1,420 trainees due for 6-month survey verification window. Automated SMS &amp; IVR triggers queued.
+          </p>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center justify-between">
+<span class="font-label-sm text-[11px] text-secondary font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">phone_in_talk</span>
+            Field Telecaller Escalation
+          </span>
+<button class="px-space-sm py-1 bg-primary text-on-primary font-label-md text-label-sm rounded-DEFAULT hover:bg-primary-container transition-colors">
+            Trigger Batch IVR
+          </button>
+</div>
+</div>
+<!-- Flag 3 -->
+<div class="bg-surface-container-high p-space-md rounded-DEFAULT flex flex-col justify-between hover:bg-surface-container-highest transition-colors">
+<div>
+<div class="flex items-center justify-between mb-space-xs">
+<span class="px-2 py-0.5 bg-primary text-on-primary font-label-sm text-[10px] font-bold uppercase rounded-DEFAULT tracking-wider">GSTN Scrutiny</span>
+<span class="font-data-mono text-label-sm text-primary font-semibold">86 New Entities</span>
+</div>
+<p class="font-label-md text-label-md text-on-surface font-bold">Pending Employer Validation</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+            86 newly registered hiring MSMEs require real-time GSTN return validation and MCA CIN scrutiny before subsidy sanction.
+          </p>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center justify-between">
+<span class="font-label-sm text-[11px] text-on-surface-variant font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">sync_alt</span>
+            MCA Portal Live Sync
+          </span>
+<button class="px-space-sm py-1 bg-surface-container-lowest text-primary font-label-md text-label-sm rounded-DEFAULT hover:bg-surface-container transition-colors shadow-sm">
+            Review Queue
+          </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Interactive Visual Insights Grid: Chart + District Rankings + Sector Distribution -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md">
+<!-- Placement vs Target Bar Pacing Chart (7 Columns) -->
+<div class="lg:col-span-7 bg-surface-container-lowest rounded-DEFAULT p-space-lg shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-space-sm">
+<div>
+<h3 class="font-headline-md text-headline-md text-primary">Monthly Placement vs State Targets</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Comparative pacing of verified employment records (FY 2024-25)</p>
+</div>
+<div class="flex items-center gap-space-md font-label-sm text-label-sm">
+<div class="flex items-center gap-1.5">
+<span class="w-3 h-3 bg-primary rounded-DEFAULT"></span>
+<span class="text-on-surface">Target</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-3 h-3 bg-secondary rounded-DEFAULT"></span>
+<span class="text-on-surface">Achieved</span>
+</div>
+</div>
+</div>
+<!-- Inline Visual Bar Chart Representation -->
+<div class="mt-space-lg space-y-space-md">
+<!-- Month 1 -->
+<div>
+<div class="flex items-center justify-between font-label-sm text-label-sm mb-1">
+<span class="font-bold text-on-surface w-16">JUL 2024</span>
+<span class="font-data-mono text-on-surface-variant">14,200 / 15,000 Verified (94%)</span>
+</div>
+<div class="h-6 w-full bg-surface-container rounded-DEFAULT flex overflow-hidden">
+<div class="h-full bg-primary" style="width: 75%;"></div>
+<div class="h-full bg-secondary" style="width: 19%;"></div>
+</div>
+</div>
+<!-- Month 2 -->
+<div>
+<div class="flex items-center justify-between font-label-sm text-label-sm mb-1">
+<span class="font-bold text-on-surface w-16">AUG 2024</span>
+<span class="font-data-mono text-on-surface-variant">18,500 / 16,500 Verified (112%)</span>
+</div>
+<div class="h-6 w-full bg-surface-container rounded-DEFAULT flex overflow-hidden">
+<div class="h-full bg-secondary" style="width: 92%;"></div>
+</div>
+</div>
+<!-- Month 3 -->
+<div>
+<div class="flex items-center justify-between font-label-sm text-label-sm mb-1">
+<span class="font-bold text-on-surface w-16">SEP 2024</span>
+<span class="font-data-mono text-on-surface-variant">21,400 / 20,000 Verified (107%)</span>
+</div>
+<div class="h-6 w-full bg-surface-container rounded-DEFAULT flex overflow-hidden">
+<div class="h-full bg-secondary" style="width: 96%;"></div>
+</div>
+</div>
+<!-- Month 4 -->
+<div>
+<div class="flex items-center justify-between font-label-sm text-label-sm mb-1">
+<span class="font-bold text-on-surface w-16">OCT 2024</span>
+<span class="font-data-mono text-on-surface-variant">19,800 / 22,000 Verified (90%)</span>
+</div>
+<div class="h-6 w-full bg-surface-container rounded-DEFAULT flex overflow-hidden">
+<div class="h-full bg-secondary" style="width: 82%;"></div>
+</div>
+</div>
+<!-- Month 5 -->
+<div>
+<div class="flex items-center justify-between font-label-sm text-label-sm mb-1">
+<span class="font-bold text-on-surface w-16">NOV 2024</span>
+<span class="font-data-mono text-on-surface-variant">24,300 / 22,500 Verified (108%)</span>
+</div>
+<div class="h-6 w-full bg-surface-container rounded-DEFAULT flex overflow-hidden">
+<div class="h-full bg-secondary" style="width: 98%;"></div>
+</div>
+</div>
+<!-- Month 6 (Current) -->
+<div>
+<div class="flex items-center justify-between font-label-sm text-label-sm mb-1">
+<span class="font-bold text-secondary w-16">DEC 2024*</span>
+<span class="font-data-mono text-secondary font-bold">28,150 / 25,000 Verified (112%)</span>
+</div>
+<div class="h-6 w-full bg-surface-container rounded-DEFAULT flex overflow-hidden">
+<div class="h-full bg-secondary-container" style="width: 100%;"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-space-lg pt-space-md flex flex-wrap items-center justify-between gap-space-sm bg-surface-container-low p-space-sm rounded-DEFAULT">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-tertiary-fixed-dim">verified</span>
+<span>Verified via EPFO UAN direct API interface</span>
+</div>
+<span class="font-data-mono text-[11px] text-on-surface-variant">Next Refresh: Today, 18:00 IST</span>
+</div>
+</div>
+<!-- Top 5 Placement Districts (5 Columns) -->
+<div class="lg:col-span-5 bg-surface-container-lowest rounded-DEFAULT p-space-lg shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<div>
+<h3 class="font-headline-md text-headline-md text-primary">District Performance League</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Top placement hubs across Maharashtra</p>
+</div>
+<span class="font-label-sm text-[11px] text-secondary font-bold uppercase tracking-wider">Active Cycle</span>
+</div>
+<div class="space-y-space-sm">
+<!-- Pune -->
+<div class="p-space-sm bg-surface-container-low rounded-DEFAULT flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="w-6 h-6 rounded-DEFAULT bg-primary text-on-primary font-bold text-xs flex items-center justify-center font-data-mono">01</span>
+<div>
+<p class="font-label-md text-label-md text-on-surface font-bold">Pune Metropolitan</p>
+<p class="font-body-sm text-[11px] text-on-surface-variant">Auto &amp; IT Clusters (Chakan, Hinjawadi)</p>
+</div>
+</div>
+<div class="text-right">
+<span class="font-label-md text-label-md font-bold text-primary">42,180</span>
+<span class="block font-label-sm text-[10px] text-on-tertiary-container font-semibold">82.1% Placement</span>
+</div>
+</div>
+<!-- Thane -->
+<div class="p-space-sm bg-surface-container-low rounded-DEFAULT flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="w-6 h-6 rounded-DEFAULT bg-primary text-on-primary font-bold text-xs flex items-center justify-center font-data-mono">02</span>
+<div>
+<p class="font-label-md text-label-md text-on-surface font-bold">Thane &amp; Navi Mumbai</p>
+<p class="font-body-sm text-[11px] text-on-surface-variant">Logistics, Retail, Chemicals (MIDC)</p>
+</div>
+</div>
+<div class="text-right">
+<span class="font-label-md text-label-md font-bold text-primary">31,450</span>
+<span class="block font-label-sm text-[10px] text-on-tertiary-container font-semibold">78.4% Placement</span>
+</div>
+</div>
+<!-- Nagpur -->
+<div class="p-space-sm bg-surface-container-low rounded-DEFAULT flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="w-6 h-6 rounded-DEFAULT bg-primary text-on-primary font-bold text-xs flex items-center justify-center font-data-mono">03</span>
+<div>
+<p class="font-label-md text-label-md text-on-surface font-bold">Nagpur (MIHAN Hub)</p>
+<p class="font-body-sm text-[11px] text-on-surface-variant">Aviation MRO &amp; Agro Processing</p>
+</div>
+</div>
+<div class="text-right">
+<span class="font-label-md text-label-md font-bold text-primary">24,890</span>
+<span class="block font-label-sm text-[10px] text-on-tertiary-container font-semibold">74.9% Placement</span>
+</div>
+</div>
+<!-- Chhatrapati Sambhajinagar -->
+<div class="p-space-sm bg-surface-container-low rounded-DEFAULT flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="w-6 h-6 rounded-DEFAULT bg-surface-container-high text-on-surface font-bold text-xs flex items-center justify-center font-data-mono">04</span>
+<div>
+<p class="font-label-md text-label-md text-on-surface font-bold">Chhatrapati Sambhajinagar</p>
+<p class="font-body-sm text-[11px] text-on-surface-variant">Auto Ancillary, Pharma Hub (Shendra)</p>
+</div>
+</div>
+<div class="text-right">
+<span class="font-label-md text-label-md font-bold text-primary">18,200</span>
+<span class="block font-label-sm text-[10px] text-secondary font-semibold">69.2% Placement</span>
+</div>
+</div>
+<!-- Kolhapur -->
+<div class="p-space-sm bg-surface-container-low rounded-DEFAULT flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="w-6 h-6 rounded-DEFAULT bg-surface-container-high text-on-surface font-bold text-xs flex items-center justify-center font-data-mono">05</span>
+<div>
+<p class="font-label-md text-label-md text-on-surface font-bold">Kolhapur</p>
+<p class="font-body-sm text-[11px] text-on-surface-variant">Foundry, Textiles, Heavy Machinery</p>
+</div>
+</div>
+<div class="text-right">
+<span class="font-label-md text-label-md font-bold text-primary">14,920</span>
+<span class="block font-label-sm text-[10px] text-on-tertiary-container font-semibold">71.0% Placement</span>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm">
+<a class="font-label-md text-label-md text-secondary hover:text-secondary/80 flex items-center gap-1 font-bold" href="#">
+          View Detailed GIS Maharashtra Heatmap
+          <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Sector-Wise Distribution Pills & Caseworker Audit Stream -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md">
+<!-- Sector Distribution Cards (7 Columns) -->
+<div class="lg:col-span-7 bg-surface-container-lowest rounded-DEFAULT p-space-lg shadow-sm space-y-space-md">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="font-headline-md text-headline-md text-primary">Sector-Wise Employment Breakdown</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Skill council distribution with average certified starter package</p>
+</div>
+<span class="material-symbols-outlined text-outline text-[22px]">category</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-space-sm pt-space-xs">
+<!-- Sector 1: Automotive -->
+<div class="p-space-md bg-surface-container-low rounded-DEFAULT flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="w-8 h-8 rounded-DEFAULT bg-primary text-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">directions_car</span>
+</span>
+<span class="font-label-sm text-label-sm font-bold text-secondary">32% Share</span>
+</div>
+<div>
+<h4 class="font-label-lg text-label-lg text-primary font-bold">Automotive &amp; EV</h4>
+<p class="font-body-sm text-[11px] text-on-surface-variant mt-0.5">59,174 Placements</p>
+</div>
+<div class="mt-space-sm pt-space-xs font-data-mono text-label-sm text-on-surface font-semibold">
+            Avg: ₹19,800/mo
+          </div>
+</div>
+<!-- Sector 2: IT-ITeS -->
+<div class="p-space-md bg-surface-container-low rounded-DEFAULT flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="w-8 h-8 rounded-DEFAULT bg-primary text-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">terminal</span>
+</span>
+<span class="font-label-sm text-label-sm font-bold text-secondary">24% Share</span>
+</div>
+<div>
+<h4 class="font-label-lg text-label-lg text-primary font-bold">IT &amp; Electronic Services</h4>
+<p class="font-body-sm text-[11px] text-on-surface-variant mt-0.5">44,380 Placements</p>
+</div>
+<div class="mt-space-sm pt-space-xs font-data-mono text-label-sm text-on-surface font-semibold">
+            Avg: ₹24,500/mo
+          </div>
+</div>
+<!-- Sector 3: Healthcare -->
+<div class="p-space-md bg-surface-container-low rounded-DEFAULT flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="w-8 h-8 rounded-DEFAULT bg-primary text-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">local_hospital</span>
+</span>
+<span class="font-label-sm text-label-sm font-bold text-secondary">18% Share</span>
+</div>
+<div>
+<h4 class="font-label-lg text-label-lg text-primary font-bold">Healthcare &amp; Allied</h4>
+<p class="font-body-sm text-[11px] text-on-surface-variant mt-0.5">33,285 Placements</p>
+</div>
+<div class="mt-space-sm pt-space-xs font-data-mono text-label-sm text-on-surface font-semibold">
+            Avg: ₹17,900/mo
+          </div>
+</div>
+<!-- Sector 4: Precision Engineering -->
+<div class="p-space-md bg-surface-container-low rounded-DEFAULT flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="w-8 h-8 rounded-DEFAULT bg-primary text-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">precision_manufacturing</span>
+</span>
+<span class="font-label-sm text-label-sm font-bold text-secondary">15% Share</span>
+</div>
+<div>
+<h4 class="font-label-lg text-label-lg text-primary font-bold">Precision Tooling</h4>
+<p class="font-body-sm text-[11px] text-on-surface-variant mt-0.5">27,738 Placements</p>
+</div>
+<div class="mt-space-sm pt-space-xs font-data-mono text-label-sm text-on-surface font-semibold">
+            Avg: ₹21,200/mo
+          </div>
+</div>
+<!-- Sector 5: Logistics & Warehousing -->
+<div class="p-space-md bg-surface-container-low rounded-DEFAULT flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="w-8 h-8 rounded-DEFAULT bg-primary text-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">local_shipping</span>
+</span>
+<span class="font-label-sm text-label-sm font-bold text-secondary">11% Share</span>
+</div>
+<div>
+<h4 class="font-label-lg text-label-lg text-primary font-bold">Supply &amp; Logistics</h4>
+<p class="font-body-sm text-[11px] text-on-surface-variant mt-0.5">20,343 Placements</p>
+</div>
+<div class="mt-space-sm pt-space-xs font-data-mono text-label-sm text-on-surface font-semibold">
+            Avg: ₹16,250/mo
+          </div>
+</div>
+<!-- Quick Summary Badge -->
+<div class="p-space-md bg-primary text-on-primary rounded-DEFAULT flex flex-col justify-between shadow-sm">
+<div>
+<span class="font-label-sm text-[10px] uppercase font-bold text-secondary-fixed tracking-wider">Industrial Alignment</span>
+<h4 class="font-label-lg text-label-lg font-bold text-on-primary mt-1">PM Vishwakarma &amp; CM Scheme Sync</h4>
+</div>
+<p class="font-body-sm text-[11px] text-primary-fixed-dim">
+            94.8% of certified courses are aligned with National Skill Qualification Framework (NSQF Level 4-6).
+          </p>
+</div>
+</div>
+</div>
+<!-- Caseworker Activity & System Audit Trail (5 Columns) -->
+<div class="lg:col-span-5 bg-surface-container-lowest rounded-DEFAULT p-space-lg shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<div>
+<h3 class="font-headline-md text-headline-md text-primary">Caseworker Audit Stream</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Real-time actions logged by District Skill Officers</p>
+</div>
+<span class="material-symbols-outlined text-outline text-[20px]">history</span>
+</div>
+<div class="space-y-space-md">
+<!-- Event 1 -->
+<div class="flex gap-space-sm items-start">
+<div class="w-8 h-8 rounded-full bg-surface-container flex-shrink-0 flex items-center justify-center text-primary mt-0.5">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+</div>
+<div class="flex-1">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md font-bold text-on-surface">Pune DSO (Haveli Zone)</span>
+<span class="font-data-mono text-[10px] text-on-surface-variant">4m ago</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Approved 142 batch candidate dossiers for <span class="font-semibold text-primary">Bajaj Auto Ltd (Akurdi)</span>.
+              </p>
+</div>
+</div>
+<!-- Event 2 -->
+<div class="flex gap-space-sm items-start">
+<div class="w-8 h-8 rounded-full bg-error-container text-on-error-container flex-shrink-0 flex items-center justify-center mt-0.5">
+<span class="material-symbols-outlined text-[16px]">block</span>
+</div>
+<div class="flex-1">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md font-bold text-on-surface">Audit Inspector Deshpande</span>
+<span class="font-data-mono text-[10px] text-on-surface-variant">18m ago</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Flagged center <span class="font-data-mono font-semibold text-primary">VTP-MH-8812</span> for biometric attendance mismatch.
+              </p>
+</div>
+</div>
+<!-- Event 3 -->
+<div class="flex gap-space-sm items-start">
+<div class="w-8 h-8 rounded-full bg-secondary-fixed text-on-secondary-fixed flex-shrink-0 flex items-center justify-center mt-0.5">
+<span class="material-symbols-outlined text-[16px]">assignment_turned_in</span>
+</div>
+<div class="flex-1">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md font-bold text-on-surface">Nagpur Divisional Office</span>
+<span class="font-data-mono text-[10px] text-on-surface-variant">42m ago</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Sanctioned post-placement stipend disbursement for 312 certified tribal women trainees.
+              </p>
+</div>
+</div>
+<!-- Event 4 -->
+<div class="flex gap-space-sm items-start">
+<div class="w-8 h-8 rounded-full bg-surface-container flex-shrink-0 flex items-center justify-center text-primary mt-0.5">
+<span class="material-symbols-outlined text-[16px]">domain_verification</span>
+</div>
+<div class="flex-1">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md font-bold text-on-surface">Auto-System Gateway</span>
+<span class="font-data-mono text-[10px] text-on-surface-variant">1h ago</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Reconciled 1,890 Aadhaar-linked bank accounts with Public Financial Management System (PFMS).
+              </p>
+</div>
+</div>
+</div>
+</div>
+<div class="pt-space-md mt-space-sm">
+<button class="w-full py-2 bg-surface-container text-primary font-label-md text-label-md rounded-DEFAULT hover:bg-surface-container-high transition-colors flex items-center justify-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px]">receipt_long</span>
+          View Full State Audit Log (NIC S3 Bucket)
+        </button>
+</div>
+</div>
+</div>
+<!-- Operational Footer Context -->
+<div class="bg-surface-container-low p-space-md rounded-DEFAULT flex flex-col md:flex-row items-center justify-between gap-space-sm font-label-sm text-label-sm text-on-surface-variant">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[18px]">shield</span>
+<span>Skill Development, Employment and Entrepreneurship Department (SDED), Mantralaya, Mumbai 400032</span>
+</div>
+<div class="flex items-center gap-space-md">
+<span>Portal Version: v4.2.8-prod</span>
+<span>Server: MH-SDC-BLD02</span>
+</div>
+</div>
+</div></main></div></body></html>
