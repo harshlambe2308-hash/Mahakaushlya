@@ -14,6 +14,7 @@ const { verifyToken } = require('../utils/jwt');
 const ApiError = require('../utils/ApiError');
 const asyncHandler = require('../utils/asyncHandler');
 const userRepository = require('../data/userRepository');
+const traineeRepository = require('../data/traineeRepository');
 
 const authenticate = asyncHandler(async (req, res, next) => {
   const header = req.headers.authorization || '';
@@ -35,11 +36,19 @@ const authenticate = asyncHandler(async (req, res, next) => {
     throw ApiError.unauthorized('User associated with this token no longer exists.');
   }
 
+  // Resolve the trainee profile id from the one-to-one trainees.user_id link
+  // (the users table itself does not store trainee_id in schema.sql).
+  let traineeId = user.trainee_id || user.traineeId || null;
+  if (!traineeId && user.role === 'trainee') {
+    const profile = await traineeRepository.findByUserId(user.id);
+    traineeId = profile ? profile.id : null;
+  }
+
   req.user = {
     userId: user.id,
     email: user.email,
     role: user.role,
-    traineeId: user.trainee_id || user.traineeId || null,
+    traineeId,
   };
 
   next();

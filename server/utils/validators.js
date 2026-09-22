@@ -37,4 +37,5 @@ module.exports = {
   OUTCOME_STATUSES,
   FOLLOWUP_CHANNELS,
   OUTCOME_TYPES,
+  VERIFICATION_STATUSES: ['verified', 'rejected'],
 };

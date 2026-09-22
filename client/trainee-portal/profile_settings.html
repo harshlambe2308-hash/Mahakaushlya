@@ -187,7 +187,7 @@
 </div>
 <div class="flex flex-col gap-1.5">
 <label class="font-label-sm text-label-sm text-on-surface font-semibold">Current District &amp; Division</label>
-<select class="w-full bg-surface-container-low rounded-lg px-space-md py-2 font-body-md text-body-md text-on-surface focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary focus:outline-none transition-all">
+<select class="w-full bg-surface-container-low rounded-lg px-space-md py-2 font-body-md text-body-md text-on-surface focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary focus:outline-none transition-all" id="districtSelect">
 <option selected="">Pune (पुणे) - Pune Division</option>
 <option>Mumbai City (मुंबई शहर)</option>
 <option>Mumbai Suburban (मुंबई उपनगर)</option>
@@ -205,7 +205,7 @@
 </div>
 <div class="flex flex-col gap-1.5 md:col-span-2">
 <label class="font-label-sm text-label-sm text-on-surface font-semibold">Current Residential Address</label>
-<textarea class="w-full bg-surface-container-low rounded-lg px-space-md py-2 font-body-md text-body-md text-on-surface focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary focus:outline-none transition-all" rows="2">Plot No. 42, Vitthal Nagar, Hadapsar, Pune, Maharashtra - 411028</textarea>
+<textarea class="w-full bg-surface-container-low rounded-lg px-space-md py-2 font-body-md text-body-md text-on-surface focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary focus:outline-none transition-all" id="addressInput" rows="2">Plot No. 42, Vitthal Nagar, Hadapsar, Pune, Maharashtra - 411028</textarea>
 </div>
 <div class="flex flex-col gap-1.5 md:col-span-2 pt-space-xs">
 <span class="font-label-sm text-label-sm text-primary font-bold uppercase tracking-wider">Guardian / Emergency Contact (आपत्कालीन संपर्क)</span>
@@ -428,55 +428,5 @@
 <span class="font-label-md text-label-md" id="toastMessage">Changes successfully committed to MSSDS server.</span>
 </div>
 </div>
-<script>
-    function showToast(msg) {
-      const toast = document.getElementById('toastNotification');
-      const toastMsg = document.getElementById('toastMessage');
-      if (toast && toastMsg) {
-        toastMsg.textContent = msg;
-        toast.classList.remove('translate-y-24', 'opacity-0', 'pointer-events-none');
-        setTimeout(() => {
-          toast.classList.add('translate-y-24', 'opacity-0', 'pointer-events-none');
-        }, 3200);
-      }
-    }
-
-    function saveAllChanges() {
-      const indicator = document.getElementById('saveStateText');
-      if (indicator) {
-        indicator.textContent = 'Saving parameters...';
-        setTimeout(() => {
-          indicator.textContent = 'All changes saved to CIDR';
-          showToast('Profile and notification preferences updated successfully.');
-        }, 600);
-      }
-    }
-
-    function discardChanges() {
-      showToast('Form reset to last committed state.');
-    }
-
-    function triggerDownload() {
-      showToast('Fetching DigiLocker Signed Credential (PDF)...');
-    }
-
-    function triggerAuditDownload() {
-      showToast('Compiling Statutory DPDP Audit Package...');
-    }
-
-    function openOtpModal() {
-      const modal = document.getElementById('otpModal');
-      if (modal) modal.classList.remove('hidden');
-    }
-
-    function closeOtpModal() {
-      const modal = document.getElementById('otpModal');
-      if (modal) modal.classList.add('hidden');
-    }
-
-    function confirmOtpUpdate() {
-      closeOtpModal();
-      showToast('OTP verified. Primary phone number updated.');
-    }
-  </script>
+<script>window.MAHAKAUSHALYA_PORTAL = 'trainee';</script><script type="module" src="../../shared/auth.js"></script><script type="module" src="./js/profile.js"></script>
 </div></main></div></body></html>

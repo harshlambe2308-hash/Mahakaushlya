@@ -6,6 +6,19 @@ const { generateId } = require('../utils/idGenerator');
 const TABLE = 'followups';
 
 /**
+ * Shared server-side pagination (NFR-003). `page` is 1-based; `limit` defaults
+ * to 50 (max 200). Returns the sliced page plus the total pre-pagination count.
+ */
+function paginate(results, filters) {
+  const total = results.length;
+  const limit = Math.min(Math.max(parseInt(filters.limit, 10) || 50, 1), 200);
+  const page = Math.max(parseInt(filters.page, 10) || 1, 1);
+  const start = (page - 1) * limit;
+  const items = results.slice(start, start + limit);
+  return { items, total, page, limit, totalPages: Math.max(Math.ceil(total / limit), 1) };
+}
+
+/**
  * Find pending follow-ups for a trainee (those awaiting a response).
  */
 async function findPendingByTraineeId(traineeId) {
@@ -110,16 +123,22 @@ async function findAll(filters = {}) {
     if (filters.status) query = query.eq('status', filters.status);
     if (filters.traineeId) query = query.eq('trainee_id', filters.traineeId);
     if (filters.channel) query = query.eq('channel', filters.channel);
-    const { data, error } = await query;
+
+    // Server-side pagination (NFR-003)
+    const limit = Math.min(Math.max(parseInt(filters.limit, 10) || 50, 1), 200);
+    const page = Math.max(parseInt(filters.page, 10) || 1, 1);
+    query = query.range((page - 1) * limit, page * limit - 1);
+    const { data, error, count } = await query;
     if (error) throw error;
-    return data;
+    return { items: data, total: count, page, limit };
   }
 
   let results = [...store.followups];
   if (filters.status) results = results.filter((f) => f.status === filters.status);
   if (filters.traineeId) results = results.filter((f) => f.traineeId === filters.traineeId);
   if (filters.channel) results = results.filter((f) => f.channel === filters.channel);
-  return results.sort((a, b) => new Date(b.sentAt) - new Date(a.sentAt));
+  results.sort((a, b) => new Date(b.sentAt) - new Date(a.sentAt));
+  return paginate(results, filters);
 }
 
 module.exports = { findPendingByTraineeId, findById, create, recordResponse, findAll };

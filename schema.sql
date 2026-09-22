@@ -154,6 +154,32 @@ create index if not exists trainees_district_idx on public.trainees using btree 
 create index if not exists trainees_batch_id_idx on public.trainees using btree (batch_id);
 create index if not exists trainees_user_id_idx on public.trainees using btree (user_id);
 
+-- ---------------------------------------------------------------------------
+-- TRD §7 TRAINEES columns missing from the first merged cut. Added idempotently
+-- so existing deployments converge on the TRD data model without a destructive
+-- migration: dob, gender, completion_month, completion_year.
+-- ---------------------------------------------------------------------------
+do $$ begin
+  alter table public.trainees add column dob date null;
+exception when duplicate_column then null; end $$;
+do $$ begin
+  alter table public.trainees add column gender text null;
+exception when duplicate_column then null; end $$;
+do $$ begin
+  alter table public.trainees add constraint trainees_gender_check
+    check ((gender is null) or (gender in ('male','female','other')));
+exception when duplicate_object then null; end $$;
+do $$ begin
+  alter table public.trainees add column completion_month text null;
+exception when duplicate_column then null; end $$;
+do $$ begin
+  alter table public.trainees add column completion_year integer null;
+exception when duplicate_column then null; end $$;
+
+create index if not exists trainees_trade_idx on public.trainees using btree (trade);
+create index if not exists trainees_training_center_idx on public.trainees using btree (training_center);
+create index if not exists trainees_training_partner_idx on public.trainees using btree (training_partner);
+
 
 -- ============================================================================
 -- OUTCOMES (merged)
@@ -212,6 +238,31 @@ create index if not exists outcomes_trainee_id_idx on public.outcomes using btre
 create index if not exists outcomes_verification_status_idx on public.outcomes using btree (verification_status);
 create index if not exists outcomes_verified_by_idx on public.outcomes using btree (verified_by);
 
+-- Aliases used by the API repository layer for the statutory outcome category
+-- and the employer/business name variants (TRD §7 OUTCOMES). Idempotent.
+do $$ begin
+  alter table public.outcomes add column outcome_type public.outcome_type null;
+exception when duplicate_column then null; end $$;
+do $$ begin
+  alter table public.outcomes add column employer_business_name text null;
+exception when duplicate_column then null; end $$;
+do $$ begin
+  alter table public.outcomes add column monthly_income numeric(12, 2) null;
+exception when duplicate_column then null; end $$;
+do $$ begin
+  alter table public.outcomes add column designation text null;
+exception when duplicate_column then null; end $$;
+do $$ begin
+  alter table public.outcomes add column industry text null;
+exception when duplicate_column then null; end $$;
+
+do $$ begin
+  alter table public.outcomes add column submitted_at timestamp with time zone not null default now();
+exception when duplicate_column then null; end $$;
+
+create index if not exists outcomes_submitted_at_idx on public.outcomes using btree (submitted_at desc);
+create index if not exists outcomes_status_idx on public.outcomes using btree (status);
+
 -- ============================================================================
 -- FOLLOWUPS (merged)
 -- ============================================================================
@@ -244,5 +295,6 @@ create table if not exists public.followups (
 
 create index if not exists followups_trainee_id_idx on public.followups using btree (trainee_id);
 create index if not exists followups_status_idx on public.followups using btree (status);
+create index if not exists followups_channel_idx on public.followups using btree (channel);
 
 commit;

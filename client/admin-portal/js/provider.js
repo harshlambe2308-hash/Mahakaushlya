@@ -2,9 +2,12 @@
  * ============================================================
  * MahaKaushal Training Provider Performance Rankings (provider.js)
  * ============================================================
- * - Calls GET /admin/analytics/provider-performance
- * - Populates ranking tables with Training Center Name, District,
- *   Certified Count, Placement %, and Star Ratings
+ * - Calls GET /admin/analytics and builds the ranking table from LIVE
+ *   placementByCenter data only. The former hardcoded six-provider demo
+ *   dataset was replaced: demo values (retention, wage growth, head of
+ *   training, grades) are not tracked by any MahaKaushalya entity, so those
+ *   columns render an honest "—" and grades/status are derived from the
+ *   live placement percentage as designed.
  * - Adds client-side table column sorting (by Placement % or Rating)
  * - Global window.vtpData and window.selectVTP(index) for inline
  *   onclick inspector selection
@@ -13,96 +16,20 @@
 
 import { adminRequest, showAdminBanner } from './adminApi.js';
 
-// Global data store with static fallback dataset
-window.vtpData = [
-  {
-    name: "Tata STRIVE Skill Dev Center",
-    code: "MH-PUN-042",
-    loc: "Hadapsar Industrial Estate, Pune, Maharashtra 411013",
-    head: "Col. Vinod Patil (Retd)",
-    grade: "GRADE A+",
-    count: 4210,
-    placement: 91.2,
-    retention: "84.0%",
-    wageGrowth: "+28.4%",
-    status: "Clean",
-    stars: 5,
-    initials: "TS"
-  },
-  {
-    name: "Symbiosis Skills & Prof. Univ.",
-    code: "MH-PUN-088",
-    loc: "Village Kiwale, Adjoining Expressway, Pune 412101",
-    head: "Dr. Arvind Shinde",
-    grade: "GRADE A+",
-    count: 3140,
-    placement: 88.5,
-    retention: "81.2%",
-    wageGrowth: "+32.0%",
-    status: "Clean",
-    stars: 5,
-    initials: "SP"
-  },
-  {
-    name: "MITCON Skill Dev Center",
-    code: "MH-PUN-019",
-    loc: "Kubera Chambers, Shivajinagar, Pune 411005",
-    head: "Suresh Deshpande",
-    grade: "GRADE A",
-    count: 2850,
-    placement: 76.4,
-    retention: "69.0%",
-    wageGrowth: "+19.5%",
-    status: "Review",
-    stars: 4,
-    initials: "MT"
-  },
-  {
-    name: "Apollo MedSkills Academy",
-    code: "MH-PUN-104",
-    loc: "Mega Center, Magarpatta Road, Hadapsar, Pune 411028",
-    head: "Sister Teresa Mathew",
-    grade: "GRADE A",
-    count: 1920,
-    placement: 82.0,
-    retention: "77.1%",
-    wageGrowth: "+24.0%",
-    status: "Clean",
-    stars: 4,
-    initials: "AM"
-  },
-  {
-    name: "Marathwada Rural Tech Trust",
-    code: "MH-BEE-012",
-    loc: "Old Mondha Market, Majalgaon, Beed 431131",
-    head: "Baburao Kulkarni",
-    grade: "GRADE C / Flagged",
-    count: 840,
-    placement: 38.2,
-    retention: "29.0%",
-    wageGrowth: "-4.2%",
-    status: "Show-Cause",
-    stars: 2,
-    initials: "MR"
-  },
-  {
-    name: "Vidarbha Vocational Institute",
-    code: "MH-NAG-051",
-    loc: "MIDC Hingna Industrial Area, Nagpur 440016",
-    head: "Gajanan Borkar",
-    grade: "GRADE B",
-    count: 1450,
-    placement: 68.5,
-    retention: "59.2%",
-    wageGrowth: "+12.1%",
-    status: "Biometric Lag",
-    stars: 3,
-    initials: "VV"
-  }
-];
+function esc(value) {
+  return String(value == null ? '' : value)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+
+// Global data store — populated from the live analytics endpoint
+window.vtpData = [];
 
 // Global row selection for inspector card called by inline onclick="selectVTP(n)"
-window.selectVTP = function(index) {
+window.selectVTP = function (index) {
   const item = window.vtpData[index];
   if (!item) return;
 
@@ -125,6 +52,14 @@ function renderTable() {
   const tbody = document.getElementById('vtp-table-body');
   if (!tbody) return;
 
+  if (!window.vtpData.length) {
+    tbody.innerHTML = `<tr><td colspan="8" class="py-10 text-center">
+      <span class="material-symbols-outlined text-3xl text-outline block mb-1">military_tech</span>
+      <span class="font-label-md text-label-md text-on-surface-variant">No training-center outcome data yet. Rankings appear here once trainees submit outcome reports.</span>
+    </td></tr>`;
+    return;
+  }
+
   tbody.innerHTML = '';
 
   window.vtpData.forEach((vtp, i) => {
@@ -145,7 +80,7 @@ function renderTable() {
     } else if (vtp.status === 'Show-Cause') {
       statusBadge = '<span class="inline-flex items-center gap-1 px-1.5 py-0.5 bg-error-container text-error text-[11px] font-semibold rounded"><span class="material-symbols-outlined text-[13px]">warning</span> Show-Cause</span>';
     } else {
-      statusBadge = `<span class="inline-flex items-center gap-1 px-1.5 py-0.5 bg-secondary-fixed text-on-secondary-fixed text-[11px] font-semibold rounded"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> ${vtp.status}</span>`;
+      statusBadge = `<span class="inline-flex items-center gap-1 px-1.5 py-0.5 bg-secondary-fixed text-on-secondary-fixed text-[11px] font-semibold rounded"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> ${esc(vtp.status)}</span>`;
     }
 
     const isLow = vtp.placement < 50;
@@ -159,11 +94,11 @@ function renderTable() {
       starsHtml += `<span class="material-symbols-outlined text-[13px] ${s < starCount ? 'text-secondary' : 'text-outline-variant'}">star</span>`;
     }
 
-    const rowClass = vtp.grade.includes('C')
+    const rowClass = vtp.placement < 40
       ? 'hover:bg-error-container/20 transition-colors bg-error-container/10 cursor-pointer'
       : 'hover:bg-surface-container-low/60 transition-colors cursor-pointer';
 
-    const countDisplay = Number(vtp.count || 0).toLocaleString();
+    const countDisplay = Number(vtp.count || 0).toLocaleString('en-IN');
     const initials = vtp.initials || (vtp.name ? vtp.name.substring(0, 2).toUpperCase() : 'TP');
 
     const tr = document.createElement('tr');
@@ -173,10 +108,10 @@ function renderTable() {
     tr.innerHTML = `
       <td class="py-3 px-space-sm">
         <div class="flex items-center gap-space-sm">
-          <div class="w-7 h-7 rounded bg-primary text-on-primary flex items-center justify-center font-bold text-xs shrink-0">${initials}</div>
+          <div class="w-7 h-7 rounded bg-primary text-on-primary flex items-center justify-center font-bold text-xs shrink-0">${esc(initials)}</div>
           <div class="flex flex-col min-w-0">
-            <span class="font-label-md text-label-md text-primary font-bold truncate">${vtp.name}</span>
-            <span class="font-data-mono text-[11px] text-on-surface-variant">${vtp.code} • ${vtp.loc}</span>
+            <span class="font-label-md text-label-md text-primary font-bold truncate">${esc(vtp.name)}</span>
+            <span class="font-data-mono text-[11px] text-on-surface-variant">${esc(vtp.code)} • ${esc(vtp.loc)}</span>
           </div>
         </div>
       </td>
@@ -191,7 +126,7 @@ function renderTable() {
       <td class="py-3 px-space-xs text-center">
         <div class="flex items-center justify-center">${starsHtml}</div>
       </td>
-      <td class="py-3 px-space-xs text-right font-data-mono font-semibold" style="font-variant-numeric: tabular-nums;">${vtp.retention || '75%'}</td>
+      <td class="py-3 px-space-xs text-right font-data-mono font-semibold text-outline" style="font-variant-numeric: tabular-nums;" title="Retention tracking is not implemented (TRD)">—</td>
       <td class="py-3 px-space-xs text-center">${statusBadge}</td>
       <td class="py-3 px-space-sm text-right" onclick="event.stopPropagation();">
         <button class="p-1 hover:bg-surface-container text-primary rounded transition-colors" title="Audit Dossier" onclick="window.selectVTP(${i});">
@@ -210,7 +145,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 1. Setup client-side column header sorting
   const ths = document.querySelectorAll('th');
-  ths.forEach((th, idx) => {
+  ths.forEach((th) => {
     th.style.cursor = 'pointer';
     th.title = 'Click to sort';
 
@@ -218,9 +153,9 @@ document.addEventListener('DOMContentLoaded', () => {
       const headerText = th.textContent.toLowerCase();
       let key = null;
 
-      if (headerText.includes('placement') || headerText.includes('%')) key = 'placement';
+      if (headerText.includes('placement')) key = 'placement';
       else if (headerText.includes('rating') || headerText.includes('star') || headerText.includes('grade')) key = 'stars';
-      else if (headerText.includes('certified') || headerText.includes('trainee') || headerText.includes('count')) key = 'count';
+      else if (headerText.includes('trained') || headerText.includes('count')) key = 'count';
 
       if (!key) return;
 
@@ -243,36 +178,38 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // 2. Fetch live provider rankings
+  // 2. Fetch live provider rankings (LIVE data only — no static fallback dataset)
+  renderTable();
   adminRequest('/api/admin/analytics')
-    .then(res => {
-      const byCenter = res?.data?.placementByCenter || [];
-      const rows = byCenter.map((c, idx) => ({
-        name: c.center,
-        code: `MH-PUN-${String(idx + 1).padStart(3, '0')}`,
-        loc: c.center || 'Maharashtra',
-        head: '—',
-        grade: Number.parseFloat(c.placementRate) >= 85 ? 'GRADE A+' : Number.parseFloat(c.placementRate) >= 60 ? 'GRADE B' : 'GRADE C',
-        count: c.totalTrainees,
-        placement: Number.parseFloat(c.placementRate) || 0,
-        retention: '—',
-        wageGrowth: '—',
-        status: Number.parseFloat(c.placementRate) >= 40 ? 'Clean' : 'Review',
-        stars: Math.max(1, Math.min(5, Math.round((Number.parseFloat(c.placementRate) || 0) / 20))),
-        initials: (c.center || 'TP').substring(0, 2).toUpperCase(),
-      }));
-      if (res && res.success && rows.length > 0) {
+    .then((res) => {
+      if (!res || !res.success || !res.data) return;
+      const byCenter = res.data.placementByCenter || [];
+      const rows = byCenter.map((c, idx) => {
+        const pct = Number.parseFloat(c.placementRate) || 0;
+        return {
+          name: c.center,
+          code: `MH-CENTER-${String(idx + 1).padStart(3, '0')}`,
+          loc: c.center || 'Maharashtra',
+          head: '—',
+          grade: pct >= 85 ? 'GRADE A+' : pct >= 60 ? 'GRADE B' : 'GRADE C',
+          count: c.totalOutcomes,
+          placement: pct,
+          retention: null,
+          wageGrowth: null,
+          status: pct >= 40 ? 'Clean' : 'Review',
+          stars: Math.max(1, Math.min(5, Math.round(pct / 20))),
+          initials: (c.center || 'TP').substring(0, 2).toUpperCase(),
+        };
+      });
+      if (rows.length > 0) {
         window.vtpData = rows;
         renderTable();
         window.selectVTP(0);
-        showAdminBanner('Live training partner rankings loaded from state registry.', 'success');
+        showAdminBanner('Live training-center rankings loaded from the outcome registry.', 'success');
       }
     })
-    .catch(err => {
-      console.warn('[Provider] Offline benchmark mode active:', err);
+    .catch((err) => {
+      console.warn('[Provider] analytics unavailable:', err);
+      showAdminBanner('Unable to reach the MahaKaushalya API — rankings unavailable.', 'error');
     });
-
-  // Initial render
-  renderTable();
-  window.selectVTP(0);
 });

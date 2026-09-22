@@ -55,7 +55,7 @@ const seedAdmin = asyncHandler(async (req, res) => {
     throw ApiError.badRequest('Password must be at least 6 characters long.');
   }
 
-  const validRoles = ['admin', 'government'];
+  const validRoles = ['admin', 'government', 'officer', 'analyst'];
   const finalRole = validRoles.includes(role) ? role : 'admin';
 
   const existing = await userRepository.findByEmail(email);

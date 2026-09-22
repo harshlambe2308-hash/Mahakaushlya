@@ -1,5 +1,5 @@
 import { api } from './api.js';
-import { getToken } from '../../shared/auth.js';
+import { getToken, hasOfficerRole } from '../../shared/auth.js';
 import {
   hideBanner,
   setButtonLoading,
@@ -131,6 +131,12 @@ async function handleSubmit(event) {
   if (!getToken()) {
     showBanner('error', 'Please log in before submitting an outcome report.', 'Session required');
     window.location.href = 'trainee_login.html';
+    return;
+  }
+
+  if (hasOfficerRole()) {
+    showBanner('error', 'You are signed in with a Government officer account. Please sign in with your trainee credentials.', 'Wrong portal');
+    window.setTimeout(() => { window.location.href = 'trainee_login.html'; }, 1200);
     return;
   }
 

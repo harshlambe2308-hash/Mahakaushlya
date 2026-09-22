@@ -31,7 +31,11 @@ function wireLogin() {
       const res = await adminLogin(email, password);
 
       if (!res.success) {
-        showAdminBanner(res.message || 'Login failed.', 'error');
+        const hint =
+          res.status === 401
+            ? ' Invalid credentials. (No officer account exists yet? In development, create one via POST /api/admin/dev/seed-admin.)'
+            : '';
+        showAdminBanner((res.message || 'Login failed.') + hint, 'error');
         if (submitBtn) {
           submitBtn.disabled = false;
           submitBtn.innerHTML = originalHtml;

@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>MahaKaushalya — Official Sign In | Govt. of Maharashtra</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet"/>
+<!-- Shared design tokens: same load order as the portals — CDN runtime first,
+     then the config script assigns tailwind.config (Play CDN picks it up
+     reactively). Classes like bg-background, text-primary, font-label-md,
+     surface-container-* and the spacing scale then resolve identically. -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="trainee-portal/js/tailwind-config.js"></script>
+<link rel="stylesheet" href="trainee-portal/css/base.css"/>
+<style>
+  body{font-family:'Noto Sans','Segoe UI',sans-serif}
+  .material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24}
+</style>
+</head>
+<body class="bg-background min-h-screen flex flex-col">
+
+  <!-- Tricolour strip -->
+  <div class="h-1 bg-gradient-to-r from-[#FF9933] via-white to-[#138808] w-full"></div>
+
+  <!-- Govt header strip -->
+  <div class="bg-surface-container-low border-b border-outline-variant/20">
+    <div class="w-full max-w-[1440px] mx-auto px-4 md:px-6 py-2 flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+      <div class="flex items-center gap-3">
+        <span>महाराष्ट्र शासन | Government of Maharashtra</span>
+        <span class="hidden md:inline bg-surface-container-highest text-primary font-label-sm px-2 py-0.5 rounded-lg">कौशल्यापासून रोजगारापर्यंत</span>
+      </div>
+      <div class="flex items-center gap-2 text-on-surface-variant">
+        <span class="material-symbols-outlined text-[16px]">lock</span>
+        <span>Secure Gateway : SSL 256-Bit</span>
+      </div>
+    </div>
+  </div>
+
+  <main class="flex-1 w-full max-w-[1440px] mx-auto px-4 md:px-6 py-8 grid lg:grid-cols-[1fr_minmax(0,520px)] gap-8 items-start">
+
+    <!-- Left: brand + helplines -->
+    <section class="hidden lg:flex flex-col gap-6 pt-4">
+      <div class="flex items-center gap-3">
+        <span class="material-symbols-outlined text-[44px] text-primary">workspace_premium</span>
+        <div>
+          <h1 class="font-headline-md text-headline-md text-primary tracking-tight m-0">MahaKaushalya</h1>
+          <p class="font-label-md text-label-md text-on-surface-variant m-0">Post-Training Outcome Tracking System · MSSDS</p>
+        </div>
+      </div>
+
+      <div class="bg-surface-container-low rounded-xl p-5 shadow-sm max-w-md">
+        <h2 class="font-title-md text-title-md text-on-surface m-0 mb-2 flex items-center gap-2">
+          <span class="material-symbols-outlined text-[20px] text-secondary">support_agent</span>
+          Citizen Helplines &amp; Support
+        </h2>
+        <ul class="space-y-2 m-0 p-0 list-none font-body-md text-body-md text-on-surface-variant">
+          <li class="flex gap-2"><span class="material-symbols-outlined text-[18px] text-primary">call</span> Toll Free Helpdesk (Mon–Sat, 09:30–18:00): <b>1800-120-8040</b></li>
+          <li class="flex gap-2"><span class="material-symbols-outlined text-[18px] text-primary">mail</span> support.mahakaushal@maharashtra.gov.in</li>
+          <li class="flex gap-2"><span class="material-symbols-outlined text-[18px] text-primary">location_on</span> MSSDS Bhavan, Bandra (E), Mumbai 400051</li>
+        </ul>
+      </div>
+
+      <div class="bg-error-container/40 rounded-xl p-4 max-w-md flex gap-3 items-start">
+        <span class="material-symbols-outlined text-[20px] text-on-error-container">gpp_maybe</span>
+        <p class="font-body-sm text-body-sm text-on-error-container m-0">
+          Access is logged and audited under the State Data Security Policy. Unauthorized access attempts are punishable under the Information Technology Act, 2000.
+        </p>
+      </div>
+    </section>
+
+    <!-- Right: unified sign-in card -->
+    <section class="bg-surface-container-lowest rounded-2xl shadow-lg border border-outline-variant/10 p-6 md:p-8 w-full">
+      <div class="flex items-center gap-3 mb-5">
+        <span class="material-symbols-outlined text-[32px] text-primary">account_balance</span>
+        <div>
+          <h2 class="font-headline-sm text-headline-sm text-on-surface m-0">Official Sign In</h2>
+          <p class="font-label-sm text-label-sm text-on-surface-variant m-0">One gateway for Trainees &amp; Government Officers</p>
+        </div>
+      </div>
+
+      <!-- Banners -->
+      <div id="uni-banner" class="hidden mb-4 p-3 rounded-lg font-body-sm text-body-sm" role="alert"></div>
+
+      <!-- Portal tabs -->
+      <div class="grid grid-cols-2 gap-2 p-1 bg-surface-container rounded-lg mb-5" role="tablist">
+        <button id="tab-trainee" type="button" role="tab"
+          class="flex items-center justify-center gap-1.5 py-2 rounded-md font-label-md text-label-md transition-all bg-surface-container-lowest text-primary shadow-sm font-semibold">
+          <span class="material-symbols-outlined text-[18px]">person</span> Trainee
+        </button>
+        <button id="tab-officer" type="button" role="tab"
+          class="flex items-center justify-center gap-1.5 py-2 rounded-md font-label-md text-label-md transition-all text-on-surface-variant hover:text-primary">
+          <span class="material-symbols-outlined text-[18px]">verified_user</span> Govt Officer
+        </button>
+      </div>
+
+      <!-- Shared email + password form -->
+      <form id="uni-login-form" novalidate>
+        <label class="block font-label-sm text-label-sm text-on-surface-variant font-semibold uppercase tracking-wider mb-1" for="uni-email">Registered Email</label>
+        <div class="relative mb-4">
+          <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[20px]">mail</span>
+          <input id="uni-email" type="email" required autocomplete="username" placeholder="you@example.com"
+            class="w-full bg-surface-container-lowest text-on-surface font-body-md text-body-md py-2.5 pl-10 pr-3 rounded-lg border border-outline-variant/30 shadow-sm focus:outline-none focus:ring-2 focus:ring-primary/40"/>
+        </div>
+
+        <div class="flex items-center justify-between mb-1">
+          <label class="font-label-sm text-label-sm text-on-surface-variant font-semibold uppercase tracking-wider" for="uni-password">Password</label>
+          <a href="#" id="uni-forgot" class="font-label-sm text-label-sm text-primary hover:text-secondary transition-colors">Forgot password?</a>
+        </div>
+        <div class="relative mb-5">
+          <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[20px]">lock</span>
+          <input id="uni-password" type="password" required autocomplete="current-password" placeholder="••••••••"
+            class="w-full bg-surface-container-lowest text-on-surface font-body-md text-body-md py-2.5 pl-10 pr-10 rounded-lg border border-outline-variant/30 shadow-sm focus:outline-none focus:ring-2 focus:ring-primary/40"/>
+          <button type="button" id="uni-toggle-pw" aria-label="Show password"
+            class="absolute right-2 top-1/2 -translate-y-1/2 text-outline hover:text-primary">
+            <span class="material-symbols-outlined text-[20px]">visibility</span>
+          </button>
+        </div>
+
+        <button id="uni-submit" type="submit"
+          class="w-full flex items-center justify-center gap-2 bg-primary text-on-primary font-label-lg text-label-lg py-3 rounded-lg shadow-sm hover:bg-primary-container transition-colors">
+          <span class="material-symbols-outlined text-[20px]">login</span>
+          <span id="uni-submit-label">Sign In Securely</span>
+        </button>
+      </form>
+
+      <!-- Trainee registration (only on trainee tab) -->
+      <div id="uni-register-box" class="mt-5 pt-4 border-t border-outline-variant/20">
+        <p class="font-body-sm text-body-sm text-on-surface-variant m-0 mb-2">New candidate to MahaKaushal?</p>
+        <a href="trainee-portal/trainee_registration.html"
+          class="inline-flex items-center gap-1.5 font-label-md text-label-md text-primary hover:text-secondary font-semibold transition-colors">
+          <span class="material-symbols-outlined text-[18px]">how_to_reg</span> Register as a Trainee
+        </a>
+      </div>
+
+      <p class="font-label-xs text-label-xs text-on-surface-variant/70 mt-6 mb-0 text-center">
+        © 2026 Maharashtra State Skill Development Society (MSSDS). All rights reserved.
+      </p>
+    </section>
+  </main>
+
+  <script type="module">
+    import { API_BASE_URL, apiFetch, saveToken, getTokenRole, OFFICER_ROLES } from '/client/shared/auth.js';
+
+    // ---------- tab switching ----------
+    const tabTrainee = document.getElementById('tab-trainee');
+    const tabOfficer = document.getElementById('tab-officer');
+    const registerBox = document.getElementById('uni-register-box');
+    const ACTIVE = 'bg-surface-container-lowest text-primary shadow-sm font-semibold';
+    const IDLE = 'text-on-surface-variant hover:text-primary';
+
+    function setTab(which) {
+      const trainee = which === 'trainee';
+      tabTrainee.className = `flex items-center justify-center gap-1.5 py-2 rounded-md font-label-md text-label-md transition-all ${trainee ? ACTIVE : IDLE}`;
+      tabOfficer.className = `flex items-center justify-center gap-1.5 py-2 rounded-md font-label-md text-label-md transition-all ${trainee ? IDLE : ACTIVE}`;
+      // Registration is a trainee-only affordance
+      registerBox.classList.toggle('invisible', !trainee);
+      document.getElementById('uni-submit-label').textContent =
+        trainee ? 'Sign In Securely' : 'Sign In as Government Officer';
+    }
+    tabTrainee.addEventListener('click', () => setTab('trainee'));
+    tabOfficer.addEventListener('click', () => setTab('officer'));
+
+    // ---------- banner ----------
+    const banner = document.getElementById('uni-banner');
+    function showBanner(kind, title, message) {
+      const styles = {
+        error: 'bg-error-container text-on-error-container',
+        info: 'bg-surface-container-high text-on-surface',
+        success: 'bg-secondary-container text-on-secondary-container',
+      };
+      banner.className = `mb-4 p-3 rounded-lg font-body-sm text-body-sm flex gap-2 items-start ${styles[kind] || styles.info}`;
+      banner.innerHTML = `<span class="material-symbols-outlined text-[18px]">${kind === 'error' ? 'error' : kind === 'success' ? 'check_circle' : 'info'}</span><div><b>${title}</b>${message ? `<br/>${message}` : ''}</div>`;
+    }
+    function hideBanner() { banner.classList.add('hidden'); }
+
+    // ---------- login ----------
+    // Redirect targets are portal-relative to /client/ (this page lives at
+    // /client/unified_login.html, the portals under /client/<portal>/).
+    const OFFICER_HOME = 'admin-portal/index.html';               // government cockpit
+    const TRAINEE_HOME = 'trainee-portal/trainee_dashboard.html'; // citizen dashboard
+
+    // apiFetch returns a normalized envelope { ok, status, data, message }.
+    // For the pre-auth whoami probe we pass auth:false so a stored (possibly
+    // wrong-portal) token is never attached.
+    async function detectPortal(email) {
+      try {
+        const res = await apiFetch(`${API_BASE_URL}/api/admin/auth/whoami`, {
+          method: 'POST',
+          auth: false,
+          body: { email },
+        });
+        return res?.data?.portal || 'unknown';
+      } catch {
+        return 'unknown';
+      }
+    }
+
+    function redirectFor(role) {
+      return OFFICER_ROLES.includes(role) ? OFFICER_HOME : TRAINEE_HOME;
+    }
+
+    document.getElementById('uni-login-form').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      hideBanner();
+
+      const email = document.getElementById('uni-email').value.trim();
+      const password = document.getElementById('uni-password').value;
+      const submitBtn = document.getElementById('uni-submit');
+      const original = submitBtn.innerHTML;
+
+      if (!email || !password) {
+        showBanner('error', 'Please enter both email and password.');
+        return;
+      }
+
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = '<span class="material-symbols-outlined text-[20px] animate-spin">progress_activity</span> Verifying credentials…';
+
+      try {
+        const res = await apiFetch(`${API_BASE_URL}/api/admin/auth/login`, {
+          method: 'POST',
+          auth: false,
+          body: { email, password },
+        });
+
+        if (!res.ok || !res.data) {
+          showBanner('error', res.message || `Login failed (${res.status}).`);
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = original;
+          return;
+        }
+
+        const role = res.data?.user?.role || '';
+        saveToken(res.data.token);
+        showBanner('success', 'Login successful.', 'Loading your portal…');
+
+        setTimeout(() => { window.location.href = redirectFor(role); }, 600);
+      } catch (err) {
+        showBanner('error', 'Unable to reach the MahaKaushalya API.', 'Is the backend running on port 5000?');
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = original;
+      }
+    });
+
+    // Auto-detect portal as the email loses focus (no password needed)
+    document.getElementById('uni-email').addEventListener('blur', async () => {
+      const email = document.getElementById('uni-email').value.trim();
+      if (!email || !email.includes('@')) return;
+      const portal = await detectPortal(email);
+      if (portal === 'officer') setTab('officer');
+      else if (portal === 'trainee') setTab('trainee');
+    });
+
+    // ---------- forgot password: honest state ----------
+    document.getElementById('uni-forgot').addEventListener('click', (e) => {
+      e.preventDefault();
+      showBanner('info', 'Password reset is not available in this release.',
+        'No SMS/email gateway is integrated yet. Please contact the MSSDS helpdesk at 1800-120-8040 for manual verification.');
+    });
+
+    // ---------- password visibility ----------
+    document.getElementById('uni-toggle-pw').addEventListener('click', () => {
+      const field = document.getElementById('uni-password');
+      const icon = document.querySelector('#uni-toggle-pw .material-symbols-outlined');
+      const show = field.type === 'password';
+      field.type = show ? 'text' : 'password';
+      icon.textContent = show ? 'visibility_off' : 'visibility';
+    });
+
+    // ---------- already signed in? route by role ----------
+    const existingRole = getTokenRole();
+    if (existingRole) {
+      window.location.replace(redirectFor(existingRole));
+    }
+
+    setTab('trainee');
+  </script>
+</body>
+</html>

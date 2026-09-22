@@ -29,32 +29,32 @@
 <div class="flex items-center gap-space-xs overflow-x-auto pb-1 border-b-0">
 <button class="flex items-center gap-space-sm px-space-md py-2 rounded-t bg-surface-container-lowest text-primary font-label-md text-label-md shadow-sm">
 <span>All Trainees</span>
-<span class="px-1.5 py-0.5 rounded bg-surface-container-high text-primary font-data-mono text-label-sm">184,920</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high text-primary font-data-mono text-label-sm" id="kpi-all-trainees">—</span>
 </button>
 <button class="flex items-center gap-space-sm px-space-md py-2 rounded-t bg-surface-container-low text-on-surface-variant hover:text-primary hover:bg-surface-container font-label-md text-label-md transition-colors">
 <span class="flex items-center gap-1">
 <span class="w-2 h-2 rounded-full bg-on-tertiary-container"></span>
           Fully Verified
         </span>
-<span class="px-1.5 py-0.5 rounded bg-surface-container-highest text-on-surface-variant font-data-mono text-label-sm">128,450</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-highest text-on-surface-variant font-data-mono text-label-sm" id="kpi-verified">—</span>
 </button>
 <button class="flex items-center gap-space-sm px-space-md py-2 rounded-t bg-surface-container-low text-on-surface-variant hover:text-primary hover:bg-surface-container font-label-md text-label-md transition-colors">
 <span class="flex items-center gap-1">
 <span class="w-2 h-2 rounded-full bg-secondary"></span>
           Pending Follow-up
         </span>
-<span class="px-1.5 py-0.5 rounded bg-surface-container-highest text-on-surface-variant font-data-mono text-label-sm">34,120</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-highest text-on-surface-variant font-data-mono text-label-sm" id="kpi-pending">—</span>
 </button>
 <button class="flex items-center gap-space-sm px-space-md py-2 rounded-t bg-surface-container-low text-on-surface-variant hover:text-primary hover:bg-surface-container font-label-md text-label-md transition-colors">
 <span class="flex items-center gap-1">
 <span class="w-2 h-2 rounded-full bg-error"></span>
           Flagged / Audit
         </span>
-<span class="px-1.5 py-0.5 rounded bg-error-container text-on-error-container font-data-mono text-label-sm">2,840</span>
+<span class="px-1.5 py-0.5 rounded bg-error-container text-on-error-container font-data-mono text-label-sm" id="kpi-flagged">—</span>
 </button>
 <button class="flex items-center gap-space-sm px-space-md py-2 rounded-t bg-surface-container-low text-on-surface-variant hover:text-primary hover:bg-surface-container font-label-md text-label-md transition-colors">
 <span>Discontinued / Inactive</span>
-<span class="px-1.5 py-0.5 rounded bg-surface-container-highest text-on-surface-variant font-data-mono text-label-sm">19,510</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-highest text-on-surface-variant font-data-mono text-label-sm" id="kpi-inactive">—</span>
 </button>
 </div>
 <!-- Multi-Filter Interactive Query Bar -->
@@ -63,12 +63,12 @@
 <!-- Primary Universal Search -->
 <div class="md:col-span-4 relative">
 <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[20px]">search</span>
-<input class="w-full h-9 pl-10 pr-3 bg-surface-container-low text-on-surface font-body-sm text-body-sm rounded focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary placeholder:text-outline" id="traineeSearchInput" placeholder="Search Trainee ID, Aadhaar Hash, Candidate Name, Mobile..." type="text" value="MK-7892"/>
+<input class="w-full h-9 pl-10 pr-3 bg-surface-container-low text-on-surface font-body-sm text-body-sm rounded focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary placeholder:text-outline" id="traineeSearchInput" placeholder="Search Trainee ID, Aadhaar Hash, Candidate Name, Mobile..." type="text"/>
 </div>
 <!-- Course / Qualification Dropdown -->
 <div class="md:col-span-2">
 <select class="w-full h-9 px-2 bg-surface-container-low text-on-surface font-label-md text-label-md rounded focus:outline-none focus:ring-2 focus:ring-primary">
-<option selected="">All Sectors &amp; Courses</option>
+<option value="" selected="">All Sectors &amp; Courses</option>
 <option>Automotive • CNC Operator</option>
 <option>Healthcare • GDA &amp; Home Health</option>
 <option>Renewable Energy • Solar Technician</option>
@@ -78,7 +78,7 @@
 <!-- Training Partner (VTP) -->
 <div class="md:col-span-2">
 <select class="w-full h-9 px-2 bg-surface-container-low text-on-surface font-label-md text-label-md rounded focus:outline-none focus:ring-2 focus:ring-primary">
-<option selected="">Training Provider (All VTPs)</option>
+<option value="" selected="">Training Provider (All VTPs)</option>
 <option>Tata STRIVE Pune Center</option>
 <option>Apollo MedSkills Nashik</option>
 <option>MSME Technology Center Aurangabad</option>
@@ -88,7 +88,7 @@
 <!-- District / Taluka Filter -->
 <div class="md:col-span-2">
 <select class="w-full h-9 px-2 bg-surface-container-low text-on-surface font-label-md text-label-md rounded focus:outline-none focus:ring-2 focus:ring-primary">
-<option selected="">District: Pune (All Talukas)</option>
+<option value="" selected="">District: Pune (All Talukas)</option>
 <option>Haveli / Pune Urban</option>
 <option>Baramati &amp; Daund</option>
 <option>Khed (Chakan Auto Belt)</option>
@@ -99,7 +99,7 @@
 <!-- Status Filter & Quick Action -->
 <div class="md:col-span-2 flex items-center gap-space-xs">
 <select class="w-full h-9 px-2 bg-surface-container-low text-on-surface font-label-md text-label-md rounded focus:outline-none focus:ring-2 focus:ring-primary">
-<option selected="">Status: All Records</option>
+<option value="" selected="">Status: All Records</option>
 <option>Employed (Verified)</option>
 <option>Pending ESIC/PF</option>
 <option>Caseworker Assigned</option>
@@ -125,7 +125,7 @@
 <button class="text-secondary hover:underline ml-1">Clear all parameters</button>
 </div>
 <div class="flex items-center gap-space-sm font-data-mono">
-<span>Showing records 1 - 6 of 184,920</span>
+<span id="showing-label">Showing records —</span>
 <span class="w-1 h-1 rounded-full bg-outline"></span>
 <span>Indexed: 4 mins ago</span>
 </div>
@@ -504,7 +504,7 @@
 <span class="font-data-mono text-label-sm font-bold text-secondary">MK-7892</span>
 </div>
 <div class="text-on-surface-variant font-label-sm text-label-sm flex items-center gap-2 mt-0.5">
-<span>Aadhaar: •••• •••• 4491</span>
+<span id="dossier-identity-line">Identity: PRN-linked registry record</span>
 <span class="w-1 h-1 rounded-full bg-outline"></span>
 <span class="text-on-tertiary-container font-semibold">UIDAI Verified</span>
 </div>
@@ -512,19 +512,19 @@
 <div class="grid grid-cols-2 gap-x-2 gap-y-1 mt-space-sm pt-space-xs border-t-0 text-label-sm font-label-sm">
 <div>
 <span class="text-on-surface-variant text-[11px] block">Contact</span>
-<span class="font-data-mono text-on-surface font-semibold">+91 98234-52190</span>
+<span class="font-data-mono text-on-surface font-semibold" id="dossier-contact">—</span>
 </div>
 <div>
 <span class="text-on-surface-variant text-[11px] block">District / Taluka</span>
-<span class="text-on-surface font-semibold">Pune • Haveli MIDC</span>
+<span class="text-on-surface font-semibold" id="dossier-district">—</span>
 </div>
 <div>
-<span class="text-on-surface-variant text-[11px] block">Caste / Category</span>
-<span class="text-on-surface font-semibold">OBC (Non-Creamy Layer)</span>
+<span class="text-on-surface-variant text-[11px] block">Trade</span>
+<span class="text-on-surface font-semibold" id="dossier-trade">—</span>
 </div>
 <div>
-<span class="text-on-surface-variant text-[11px] block">EWS / Ration Card</span>
-<span class="text-on-surface font-semibold">Valid (Yellow PHH)</span>
+<span class="text-on-surface-variant text-[11px] block">Batch</span>
+<span class="text-on-surface font-semibold" id="dossier-batch">—</span>
 </div>
 </div>
 </div>
@@ -535,10 +535,10 @@
 <span class="material-symbols-outlined text-primary text-[18px]">school</span>
 <div>
 <span class="text-primary font-bold">Course: CNC Machine Operator</span>
-<span class="text-on-surface-variant block text-[11px]">Tata STRIVE Pune Center • Assessed by Capital Goods SSC</span>
+<span class="text-on-surface-variant block text-[11px]" id="dossier-course-meta">—</span>
 </div>
 </div>
-<span class="px-2 py-0.5 bg-surface-container-lowest text-primary font-data-mono font-bold rounded">Grade A (88%)</span>
+<span class="px-2 py-0.5 bg-surface-container-lowest text-primary font-data-mono font-bold rounded" id="dossier-outcome-count">—</span>
 </div>
 <!-- Chronological Verification Timeline -->
 <div class="p-space-md flex-1 overflow-y-auto">

@@ -195,3 +195,25 @@ export {
   extractToken,
   apiFetch,
 };
+
+/**
+ * Read the role claim from the stored JWT (null if absent/unparseable).
+ * Roles mirror schema.sql's user_role enum: admin | government | officer |
+ * analyst (officer side) and trainee (public side).
+ */
+export function getTokenRole() {
+  try {
+    const token = getToken() || '';
+    const payload = JSON.parse(atob(token.split('.')[1] || 'e30='));
+    return payload.role || null;
+  } catch {
+    return null;
+  }
+}
+
+export const OFFICER_ROLES = ['admin', 'government', 'officer', 'analyst'];
+
+/** True when the stored token belongs to a Government/officer account. */
+export function hasOfficerRole() {
+  return OFFICER_ROLES.includes(getTokenRole());
+}

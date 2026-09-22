@@ -5,6 +5,19 @@ const { generateId, generatePRN } = require('../utils/idGenerator');
 
 const TABLE = 'trainees';
 
+/**
+ * Shared server-side pagination (NFR-003). `page` is 1-based; `limit` defaults
+ * to 50 (max 200). Returns the sliced page plus the total pre-pagination count.
+ */
+function paginate(results, filters) {
+  const total = results.length;
+  const limit = Math.min(Math.max(parseInt(filters.limit, 10) || 50, 1), 200);
+  const page = Math.max(parseInt(filters.page, 10) || 1, 1);
+  const start = (page - 1) * limit;
+  const items = results.slice(start, start + limit);
+  return { items, total, page, limit, totalPages: Math.max(Math.ceil(total / limit), 1) };
+}
+
 async function findByUserId(userId) {
   if (env.DATA_PROVIDER === 'supabase') {
     const { data, error } = await supabase.from(TABLE).select('*').eq('user_id', userId).maybeSingle();
@@ -37,7 +50,7 @@ async function create(payload) {
     phone: payload.phone,
     dob: payload.dob || null,
     gender: payload.gender || null,
-    address: payload.address || null,
+    address_line: payload.address || null,
     district: payload.district || null,
     batch_name: payload.batchName || null,
     trade: payload.trade || null,
@@ -45,6 +58,8 @@ async function create(payload) {
     training_center: payload.trainingCenter || null,
     training_partner: payload.trainingPartner || null,
     profile_photo_url: payload.profilePhotoUrl || null,
+    completion_month: payload.completionMonth || null,
+    completion_year: payload.completionYear || null,
     completion_status: payload.completionStatus || 'completed',
     created_at: now,
     updated_at: now,
@@ -65,7 +80,7 @@ async function create(payload) {
     phone: record.phone,
     dob: record.dob,
     gender: record.gender,
-    address: record.address,
+    address: record.address_line,
     district: record.district,
     batchName: record.batch_name,
     trade: record.trade,
@@ -73,6 +88,8 @@ async function create(payload) {
     trainingCenter: record.training_center,
     trainingPartner: record.training_partner,
     profilePhotoUrl: record.profile_photo_url,
+    completionMonth: record.completion_month,
+    completionYear: record.completion_year,
     completionStatus: record.completion_status,
     createdAt: record.created_at,
     updatedAt: record.updated_at,
@@ -86,7 +103,7 @@ const CAMEL_TO_SNAKE = {
   phone: 'phone',
   dob: 'dob',
   gender: 'gender',
-  address: 'address',
+  address: 'address_line',
   district: 'district',
   batchName: 'batch_name',
   trade: 'trade',
@@ -132,9 +149,14 @@ async function findAll(filters = {}) {
     if (filters.batchName) query = query.ilike('batch_name', `%${filters.batchName}%`);
     if (filters.district) query = query.ilike('district', `%${filters.district}%`);
     if (filters.search) query = query.or(`full_name.ilike.%${filters.search}%,prn.ilike.%${filters.search}%`);
-    const { data, error } = await query;
+
+    // Server-side pagination (NFR-003)
+    const limit = Math.min(Math.max(parseInt(filters.limit, 10) || 50, 1), 200);
+    const page = Math.max(parseInt(filters.page, 10) || 1, 1);
+    query = query.range((page - 1) * limit, page * limit - 1);
+    const { data, error, count } = await query;
     if (error) throw error;
-    return data;
+    return { items: data, total: count, page, limit };
   }
 
   let results = [...store.trainees];
@@ -162,7 +184,8 @@ async function findAll(filters = {}) {
         (t.prn || '').toLowerCase().includes(f)
     );
   }
-  return results.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+  results.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+  return paginate(results, filters);
 }
 
 module.exports = { findByUserId, findById, create, updateById, findAll };

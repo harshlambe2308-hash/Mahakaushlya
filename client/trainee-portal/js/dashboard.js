@@ -1,6 +1,15 @@
 import { api } from './api.js';
-import { getToken } from '../../shared/auth.js';
+import { getToken, clearToken, hasOfficerRole } from '../../shared/auth.js';
 import { showApiError, showBanner, showPageSpinner, wireInternalLinks } from './ui.js';
+
+/**
+ * A token minted for the admin portal (officer-side role) must never be reused
+ * on the trainee portal — otherwise pages render their static demo shell with
+ * a 403, which looks like live data. Detect the role mismatch up front.
+ */
+function hasWrongRoleToken() {
+  return hasOfficerRole();
+}
 
 function pick(obj, paths, fallback = '—') {
   for (const path of paths) {
@@ -69,6 +78,15 @@ document.addEventListener('DOMContentLoaded', async () => {
     window.setTimeout(() => {
       window.location.href = 'trainee_login.html';
     }, 800);
+    return;
+  }
+
+  if (hasWrongRoleToken()) {
+    clearToken();
+    showBanner('error', 'You are signed in with a Government officer account. Please sign in with your trainee credentials.', 'Wrong portal');
+    window.setTimeout(() => {
+      window.location.href = 'trainee_login.html';
+    }, 1200);
     return;
   }
 

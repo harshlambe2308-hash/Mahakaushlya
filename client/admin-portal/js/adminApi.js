@@ -19,6 +19,9 @@ import {
   extractToken,
 } from '../../shared/auth.js';
 
+// Re-exported for pages that import session helpers from this module.
+export { isLoggedIn };
+
 export const LOGIN_URL = 'index.html';
 
 // Re-export shared token helpers under the admin names so existing page code
@@ -51,7 +54,7 @@ export function showAdminBanner(message, type = 'info') {
   banner.className = `admin-banner banner-${type}`;
   banner.setAttribute('role', 'alert');
   banner.style.cssText =
-    'display:flex;align-items:center;gap:8px;padding:10px 14px;border-radius:8px;font-size:13px;font-weight:600;box-shadow:0 4px 12px rgba(0,0,0,.15);background:#1c2f52;color:#fff;opacity:0;transition:opacity .3s;';
+    'display:flex;align-items:center;gap:8px;padding:10px 14px;border-radius:8px;font-size:13px;font-weight:600;box-shadow:0 4px 12px rgba(0,0,0,.15);background:#1c2f52;color:#fff;opacity:0;transition:opacity .3s;max-width:380px;';
   if (type === 'error') banner.style.background = '#b3261e';
   if (type === 'success') banner.style.background = '#146c2e';
 
@@ -62,7 +65,7 @@ export function showAdminBanner(message, type = 'info') {
   setTimeout(() => {
     banner.style.opacity = '0';
     setTimeout(() => banner.remove(), 300);
-  }, 4000);
+  }, 5000);
 }
 
 /**
@@ -70,7 +73,7 @@ export function showAdminBanner(message, type = 'info') {
  *
  * @param {string} endpoint — path after the API base, e.g. '/api/admin/trainees'
  * @param {Object} [options] — { method, body, headers, params }
- * @returns {Promise<{success: boolean, data: any, message: string}>}
+ * @returns {Promise<{success: boolean, status?: number, data: any, message: string}>}
  */
 export async function adminRequest(endpoint, options = {}) {
   const params = options.params || null;
@@ -101,6 +104,7 @@ export async function adminRequest(endpoint, options = {}) {
 
   return {
     success: res.ok,
+    status: res.status,
     data: res.data,
     message: res.message,
   };
@@ -108,6 +112,8 @@ export async function adminRequest(endpoint, options = {}) {
 
 /**
  * Admin login — calls POST /api/admin/auth/login and persists the token.
+ * Backend accepts roles: admin | government | officer | analyst (schema.sql
+ * user_role enum); the middleware authorizes all four on /api/admin/*.
  */
 export async function adminLogin(email, password) {
   const res = await apiFetch('/api/admin/auth/login', {
@@ -128,7 +134,7 @@ export async function adminLogin(email, password) {
     return { success: true, data: res.data, message: res.message };
   }
 
-  return { success: false, message: res.message };
+  return { success: false, status: res.status, message: res.message };
 }
 
 // Global bindings for inline handlers / non-module scripts

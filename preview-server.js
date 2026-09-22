@@ -94,16 +94,21 @@ const server = http.createServer((req, res) => {
   <div class="flag"></div>
   <h1>MahaKaushalya</h1>
   <p class="sub">Post-Training Outcome Tracking System &middot; Govt. of Maharashtra (MSSDS)</p>
+  <a class="card unified" href="/client/unified_login.html" style="margin-bottom:20px;display:block;background:#001435;color:#fff;border-radius:14px;padding:26px;text-decoration:none;box-shadow:0 4px 18px rgba(0,20,53,.25);transition:transform .15s">
+    <span class="badge" style="background:#ffd9c9;color:#7f2b00">ONE LOGIN FOR EVERYONE</span>
+    <h2 style="margin:8px 0;font-size:20px;color:#fff">Official Sign In &mdash; Trainees &amp; Officers</h2>
+    <p style="margin:0;font-size:13px;opacity:.85">One URL detects your account type and routes you to the right portal automatically.</p>
+  </a>
   <div class="grid">
     <a class="card" href="/client/trainee-portal/index.html">
       <span class="badge b-trainee">TRAINEE PORTAL</span>
       <h2>Trainee Dashboard</h2>
-      <p>Register, log in, submit placement outcomes, and respond to follow-ups. Calls <code>/api/trainee/*</code>.</p>
+      <p>Public landing page. Register, log in, submit placement outcomes, and respond to follow-ups.</p>
     </a>
-    <a class="card" href="/client/admin-portal/login.html">
+    <a class="card" href="/client/admin-portal/index.html">
       <span class="badge b-admin">ADMIN PORTAL</span>
       <h2>Government / Admin</h2>
-      <p>Overview, trainee records, non-responder queue, analytics &amp; verification. Calls <code>/api/admin/*</code>.</p>
+      <p>Overview, trainee records, non-responder queue, analytics &amp; verification. (Session required.)</p>
     </a>
   </div>
   <p class="api">Backend API: <code>${API_BASE}/health</code> &mdash; merged Express server must be running.</p>
@@ -117,7 +122,11 @@ const server = http.createServer((req, res) => {
   // Virtual module: injects the dev API base into shared/auth.js before it loads.
   // shared/auth.js reads window.MAHAKAUSHALYA_API_BASE_URL at module top level,
   // so prepending one JS line is the simplest reliable override.
-  if (urlPath === '/shared/auth.js') {
+  // The portals' own JS modules live at /client/<portal>/js/*.js and import
+  // '../../shared/auth.js', which resolves to /client/shared/auth.js (mirrors
+  // the /client/shared static mapping in server/server.js). Serve the same
+  // virtual module there so the import works under the /client/ prefix too.
+  if (urlPath === '/shared/auth.js' || urlPath === '/client/shared/auth.js') {
     const authPath = path.join(ROOT, 'shared', 'auth.js');
     fs.readFile(authPath, (err, data) => {
       if (err) return send(res, 404, 'Not found: ' + urlPath);

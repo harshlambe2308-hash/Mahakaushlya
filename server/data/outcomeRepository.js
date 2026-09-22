@@ -6,6 +6,19 @@ const { generateId } = require('../utils/idGenerator');
 const TABLE = 'outcomes';
 
 /**
+ * Shared server-side pagination (NFR-003). `page` is 1-based; `limit` defaults
+ * to 50 (max 200). Returns the sliced page plus the total pre-pagination count.
+ */
+function paginate(results, filters) {
+  const total = results.length;
+  const limit = Math.min(Math.max(parseInt(filters.limit, 10) || 50, 1), 200);
+  const page = Math.max(parseInt(filters.page, 10) || 1, 1);
+  const start = (page - 1) * limit;
+  const items = results.slice(start, start + limit);
+  return { items, total, page, limit, totalPages: Math.max(Math.ceil(total / limit), 1) };
+}
+
+/**
  * Create a new outcome submission for a trainee.
  * `status` uses the reconciled vocabulary: employed | self_employed |
  * higher_studies | unemployed (plus apprenticeship accepted as an alias of
@@ -19,10 +32,13 @@ async function create(payload) {
     status: payload.status,
     outcome_type: payload.outcomeType || null,
     employer_name: payload.employerName || null,
+    employer_business_name: payload.employerBusinessName || null,
     designation: payload.designation || null,
     monthly_salary: payload.monthlySalary != null ? payload.monthlySalary : null,
+    monthly_income: payload.monthlyIncome != null ? payload.monthlyIncome : null,
     joining_date: payload.joiningDate || null,
     work_location: payload.workLocation || null,
+    industry: payload.industry || null,
     proof_document_url: payload.proofDocumentUrl || null,
     remarks: payload.remarks || null,
     verification_status: 'pending',
@@ -43,10 +59,13 @@ async function create(payload) {
     status: record.status,
     outcomeType: record.outcome_type,
     employerName: record.employer_name,
+    employerBusinessName: record.employer_business_name,
     designation: record.designation,
     monthlySalary: record.monthly_salary,
+    monthlyIncome: record.monthly_income,
     joiningDate: record.joining_date,
     workLocation: record.work_location,
+    industry: record.industry,
     proofDocumentUrl: record.proof_document_url,
     remarks: record.remarks,
     verificationStatus: record.verification_status,
@@ -67,7 +86,7 @@ async function findByTraineeId(traineeId) {
       .from(TABLE)
       .select('*')
       .eq('trainee_id', traineeId)
-      .order('submitted_at', { ascending: false });
+      .order('created_at', { ascending: false });
     if (error) throw error;
     return data;
   }
@@ -99,13 +118,18 @@ async function findById(id) {
  */
 async function findAll(filters = {}) {
   if (env.DATA_PROVIDER === 'supabase') {
-    let query = supabase.from(TABLE).select('*').order('submitted_at', { ascending: false });
+    let query = supabase.from(TABLE).select('*').order('created_at', { ascending: false });
     if (filters.status) query = query.eq('status', filters.status);
     if (filters.verificationStatus) query = query.eq('verification_status', filters.verificationStatus);
     if (filters.traineeId) query = query.eq('trainee_id', filters.traineeId);
-    const { data, error } = await query;
+
+    // Server-side pagination (NFR-003)
+    const limit = Math.min(Math.max(parseInt(filters.limit, 10) || 50, 1), 200);
+    const page = Math.max(parseInt(filters.page, 10) || 1, 1);
+    query = query.range((page - 1) * limit, page * limit - 1);
+    const { data, error, count } = await query;
     if (error) throw error;
-    return data;
+    return { items: data, total: count, page, limit };
   }
 
   let results = [...store.outcomes];
@@ -114,7 +138,8 @@ async function findAll(filters = {}) {
     results = results.filter((o) => o.verificationStatus === filters.verificationStatus);
   }
   if (filters.traineeId) results = results.filter((o) => o.traineeId === filters.traineeId);
-  return results.sort((a, b) => new Date(b.submittedAt) - new Date(a.submittedAt));
+  results.sort((a, b) => new Date(b.submittedAt) - new Date(a.submittedAt));
+  return paginate(results, filters);
 }
 
 /**

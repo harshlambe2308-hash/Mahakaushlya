@@ -90,8 +90,9 @@ const registerTrainee = asyncHandler(async (req, res) => {
     courseName,
     trainingCenter,
     trainingPartner,
-    completionStatus:
-      completionMonth && completionYear ? `completed ${completionMonth} ${completionYear}` : 'completed',
+    completionMonth,
+    completionYear,
+    completionStatus: 'completed',
   });
 
   // Link the trainee profile back onto the user record.
@@ -146,4 +147,28 @@ const login = asyncHandler(async (req, res) => {
   );
 });
 
-module.exports = { registerTrainee, login };
+/**
+ * POST /api/admin/auth/whoami  (public, rate-limited)
+ * Used by the unified login page: identifies the portal an email belongs to
+ * BEFORE the user types a password. Deliberately minimal and anonymous —
+ * returns { portal: 'trainee' | 'officer' } only, never confirming account
+ * existence for unknown emails (they are reported as 'unknown', and the
+ * unified page falls back to the trainee tab).
+ */
+const whoami = asyncHandler(async (req, res) => {
+  const { email } = req.body || {};
+  if (!isValidEmail(email)) {
+    throw ApiError.badRequest('A valid email is required.');
+  }
+
+  const user = await userRepository.findByEmail(email);
+  if (!user) {
+    return ApiResponse.ok(res, { portal: 'unknown' }, 'No portal mapping for this email.');
+  }
+
+  const OFFICER_ROLES = ['admin', 'government', 'officer', 'analyst'];
+  const portal = OFFICER_ROLES.includes(user.role) ? 'officer' : 'trainee';
+  return ApiResponse.ok(res, { portal }, 'Portal identified.');
+});
+
+module.exports = { registerTrainee, login, whoami };
