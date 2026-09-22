@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Noto+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"tertiary-container":"#003211","on-error":"#ffffff","surface-variant":"#d3e4fe","on-tertiary-fixed":"#002109","on-background":"#0b1c30","outline":"#74777f","surface-bright":"#f8f9ff","background":"#f8f9ff","surface":"#f8f9ff","on-surface-variant":"#44474f","secondary-fixed-dim":"#ffb598","secondary":"#a63b00","surface-container":"#e5eeff","error":"#ba1a1a","on-surface":"#0b1c30","on-secondary":"#ffffff","surface-container-lowest":"#ffffff","on-tertiary-fixed-variant":"#005320","secondary-fixed":"#ffdbce","on-secondary-fixed":"#370e00","on-primary-fixed":"#001a41","outline-variant":"#c4c6d0","on-secondary-fixed-variant":"#7f2b00","surface-container-highest":"#d3e4fe","inverse-surface":"#213145","on-primary-container":"#7b91c0","surface-container-low":"#eff4ff","inverse-on-surface":"#eaf1ff","on-secondary-container":"#561b00","secondary-container":"#fc671e","tertiary-fixed":"#7ffc97","tertiary-fixed-dim":"#62df7d","error-container":"#ffdad6","primary":"#001435","primary-fixed":"#d8e2ff","on-error-container":"#93000a","inverse-primary":"#b0c7f9","tertiary":"#001b06","on-tertiary-container":"#1ea74d","surface-container-high":"#dce9ff","on-primary":"#ffffff","on-primary-fixed-variant":"#304671","primary-container":"#0f2952","surface-dim":"#cbdbf5","surface-tint":"#485e8a","on-tertiary":"#ffffff","primary-fixed-dim":"#b0c7f9"},borderRadius:{DEFAULT:"0.125rem",lg:"0.25rem",xl:"0.5rem",full:"0.75rem"},spacing:{"gutter-lg":"1.5rem",gutter:"1rem","space-xs":"0.25rem","margin-lg":"2rem","margin-md":"1.5rem",margin:"1rem","space-sm":"0.5rem","space-md":"0.75rem","space-lg":"1.25rem","space-xl":"2rem"},fontFamily:{"label-md":["Noto Sans"],"headline-lg-mobile":["Inter"],"headline-xl":["Inter"],"headline-sm":["Inter"],"label-sm":["Noto Sans"],"headline-md":["Inter"],"label-lg":["Noto Sans"],"body-md":["Inter"],"data-mono":["Inter"],"headline-lg":["Inter"],"body-lg":["Inter"],"body-sm":["Inter"]},fontSize:{"label-md":["12px",{lineHeight:"16px",letterSpacing:"0.02em",fontWeight:"600"}],"headline-lg-mobile":["20px",{lineHeight:"28px",fontWeight:"700"}],"headline-xl":["32px",{lineHeight:"40px",letterSpacing:"-0.02em",fontWeight:"700"}],"headline-sm":["16px",{lineHeight:"24px",fontWeight:"600"}],"label-sm":["11px",{lineHeight:"14px",letterSpacing:"0.04em",fontWeight:"500"}],"headline-md":["18px",{lineHeight:"26px",fontWeight:"600"}],"label-lg":["13px",{lineHeight:"18px",fontWeight:"600"}],"body-md":["13px",{lineHeight:"20px",fontWeight:"400"}],"data-mono":["12px",{lineHeight:"16px",fontWeight:"500"}],"headline-lg":["24px",{lineHeight:"32px",letterSpacing:"-0.015em",fontWeight:"700"}],"body-lg":["15px",{lineHeight:"22px",fontWeight:"400"}],"body-sm":["12px",{lineHeight:"18px",fontWeight:"400"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-64 bg-primary-container z-50 flex flex-col shadow-[0_1px_8px_rgba(0,0,0,0.12)]"><div class="h-14 px-margin flex items-center gap-space-sm bg-primary border-b-2 border-secondary"><span class="material-symbols-outlined text-secondary text-[24px]">verified</span><div class="flex flex-col"><span class="font-label-lg text-label-lg text-on-primary tracking-wide leading-tight">MahaKaushal</span><span class="font-label-sm text-[10px] text-primary-fixed-dim leading-none uppercase tracking-wider">Admin Portal</span></div></div><div class="px-margin py-space-sm bg-primary/40"><div class="flex items-center justify-between text-primary-fixed-dim font-label-sm text-label-sm"><span>JURISDICTION</span><span class="font-data-mono text-[10px] px-space-xs py-0.5 bg-secondary text-on-secondary rounded-DEFAULT font-bold">MH-PUN</span></div><p class="font-label-md text-label-md text-on-primary font-medium mt-0.5 truncate">Pune Divisional Commissionerate</p></div><nav class="flex-1 px-space-xs py-space-sm space-y-1 overflow-y-auto" data-active-classes="bg-primary text-on-primary border-l-4 border-secondary"><a class="flex items-center px-space-md py-space-sm text-surface-variant font-label-md text-label-md rounded-DEFAULT hover:bg-primary/50 hover:text-on-primary transition-colors" data-path="overview" href="#"><span class="material-symbols-outlined mr-space-md text-[18px]">dashboard</span>Overview</a><a class="flex items-center px-space-md py-space-sm text-surface-variant font-label-md text-label-md rounded-DEFAULT hover:bg-primary/50 hover:text-on-primary transition-colors" data-path="trainee-records" href="#"><span class="material-symbols-outlined mr-space-md text-[18px]">badge</span>Trainee Records</a><a aria-current="page" class="flex items-center px-space-md py-space-sm font-label-md rounded-DEFAULT transition-colors bg-primary text-on-primary border-l-4 border-secondary" data-path="non-responder-queue" href="#"><span class="material-symbols-outlined mr-space-md text-[18px]">notification_important</span>Non-Responder Queue</a><a class="flex items-center px-space-md py-space-sm text-surface-variant font-label-md text-label-md rounded-DEFAULT hover:bg-primary/50 hover:text-on-primary transition-colors" data-path="employer-validation" href="#"><span class="material-symbols-outlined mr-space-md text-[18px]">apartment</span>Employer Validation</a><a class="flex items-center px-space-md py-space-sm text-surface-variant font-label-md text-label-md rounded-DEFAULT hover:bg-primary/50 hover:text-on-primary transition-colors" data-path="analytics-reports" href="#"><span class="material-symbols-outlined mr-space-md text-[18px]">insights</span>Analytics &amp; Reports</a><a class="flex items-center px-space-md py-space-sm text-surface-variant font-label-md text-label-md rounded-DEFAULT hover:bg-primary/50 hover:text-on-primary transition-colors" data-path="skill-gap-analysis" href="#"><span class="material-symbols-outlined mr-space-md text-[18px]">troubleshoot</span>Skill Gap Analysis</a><a class="flex items-center px-space-md py-space-sm text-surface-variant font-label-md text-label-md rounded-DEFAULT hover:bg-primary/50 hover:text-on-primary transition-colors" data-path="provider-performance" href="#"><span class="material-symbols-outlined mr-space-md text-[18px]">military_tech</span>Provider Performance</a><a class="flex items-center px-space-md py-space-sm text-surface-variant font-label-md text-label-md rounded-DEFAULT hover:bg-primary/50 hover:text-on-primary transition-colors" data-path="policy-reports" href="#"><span class="material-symbols-outlined mr-space-md text-[18px]">policy</span>Policy Reports</a><a class="flex items-center px-space-md py-space-sm text-surface-variant font-label-md text-label-md rounded-DEFAULT hover:bg-primary/50 hover:text-on-primary transition-colors" data-path="system-access" href="#"><span class="material-symbols-outlined mr-space-md text-[18px]">admin_panel_settings</span>System &amp; Access</a></nav><div class="p-space-md bg-primary/60 border-t border-primary-container"><div class="flex items-center gap-space-sm"><div class="w-2 h-2 rounded-full bg-secondary animate-pulse"></div><div class="flex flex-col"><span class="font-label-sm text-[10px] text-surface-variant uppercase tracking-wider">Server Status: Online</span><span class="font-data-mono text-[10px] text-primary-fixed-dim">State Data Center, Mumbai</span></div></div></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-14 bg-surface-container-lowest z-40 shadow-[0_1px_8px_rgba(0,0,0,0.04)] px-margin-lg flex items-center justify-between"><div class="flex items-center gap-margin-md"><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded-DEFAULT bg-primary text-on-primary flex items-center justify-center font-bold text-xs">MH</div><div class="flex flex-col"><span class="font-label-md text-label-md text-primary font-bold leading-tight">महाराष्ट्र शासन</span><span class="font-label-sm text-[10px] text-on-surface-variant leading-none">Govt. of Maharashtra • SDED</span></div></div><div class="h-6 w-px bg-outline-variant"></div><div class="flex items-center bg-surface-container-low px-space-sm py-1 rounded-DEFAULT"><span class="font-label-sm text-label-sm text-on-surface-variant mr-space-xs">Cohort:</span><select class="bg-transparent font-label-md text-label-md text-on-surface font-semibold focus:outline-none cursor-pointer"><option>FY 2024-25 Q3</option><option>FY 2024-25 Q2</option><option>FY 2023-24 Annual</option></select></div><div class="flex items-center bg-surface-container-low px-space-sm py-1 rounded-DEFAULT"><span class="font-label-sm text-label-sm text-on-surface-variant mr-space-xs">District:</span><select class="bg-transparent font-label-md text-label-md text-on-surface font-semibold focus:outline-none cursor-pointer"><option>Pune (All Talukas)</option><option>Haveli</option><option>Baramati</option><option>Khed</option><option>Shirur</option></select></div></div><div class="flex items-center gap-space-md flex-1 max-w-xs mx-margin-md"><div class="relative w-full"><span class="material-symbols-outlined absolute left-2.5 top-1/2 -translate-y-1/2 text-[18px] text-outline">search</span><input class="w-full pl-8 pr-3 py-1 bg-surface-container-low text-on-surface font-body-sm text-body-sm rounded-DEFAULT placeholder:text-outline focus:outline-none focus:bg-surface-container-lowest focus:ring-1 focus:ring-primary" placeholder="Search Aadhaar, UID, Center ID..." type="text"/></div></div><div class="flex items-center gap-space-md"><button class="relative p-1.5 rounded-DEFAULT text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1 right-1 w-2 h-2 bg-secondary rounded-full"></span></button><button class="p-1.5 rounded-DEFAULT text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[20px]">help</span></button><div class="h-6 w-px bg-outline-variant"></div><div class="flex items-center gap-space-sm pl-space-xs"><div class="flex flex-col text-right"><span class="font-label-md text-label-md text-on-surface font-bold leading-tight">Rajesh Deshmukh, IAS</span><div class="flex items-center gap-1 justify-end"><span class="px-1.5 py-0.2 bg-secondary-fixed text-on-secondary-fixed font-label-sm text-[10px] rounded font-bold uppercase">District Skill Officer</span><span class="font-label-sm text-[10px] text-on-surface-variant">Pune</span></div></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-outline-variant" src="https://lh3.googleusercontent.com/aida/AEtjO1XZ5_RGann-JS9-SXlCwMRwGfPfXVcOVklpC5V0eTvQClSjZkunPNoV5M1DG7pVKUlM-w1Ek0_WIFB3LF3preqPJM9Nldd0dpUb6U78uOUf2vXckERfwAiRw05-48oV-hBpHoXbLbiqJLyACVA1ujnTD3gRId3eSN4SLj2tZ_j2UaTSnTOMTGjZRuwcMufJq9GC4jMZjSIIS2c2plWA8DUCu5w8ceF756YeOIrxRm0l6idfYW_EnUZYOFadZztVPjas9Jq8xf-bW3k"/></div></div></header><main class="relative pt-14 bg-surface w-full px-gutter-lg py-margin-md"><div class="flex flex-col w-full space-y-margin-lg">
+<!-- Top Operational Banner & Institutional Metadata -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md bg-surface-container-lowest p-margin-md rounded-xl shadow-sm">
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-lg bg-secondary/10 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[28px]">notification_important</span>
+</div>
+<div>
+<div class="flex items-center gap-space-sm">
+<span class="font-data-mono text-label-sm text-secondary bg-secondary-fixed px-space-xs py-0.5 rounded font-bold uppercase">Priority Remediation Desk</span>
+<span class="font-data-mono text-label-sm text-on-surface-variant">• Protocol GR-2024/E&amp;SD-88</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-primary tracking-tight">Non-Responder Trainee Queue</h1>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Post-placement statutory tracing, multi-channel outreach logs, and field escalation protocols under MSSDS.</p>
+</div>
+</div>
+<div class="flex items-center gap-space-sm self-start md:self-auto">
+<button class="flex items-center gap-space-xs px-space-md py-2 bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md rounded-lg shadow-sm transition-colors">
+<span class="material-symbols-outlined text-[18px]">download_for_offline</span>
+        Export Delinquency Dossier
+      </button>
+<button class="flex items-center gap-space-xs px-space-md py-2 bg-secondary hover:bg-on-secondary-container text-on-secondary font-label-md text-label-md rounded-lg shadow-sm transition-colors">
+<span class="material-symbols-outlined text-[18px]">cell_tower</span>
+        SMS Gateway Status: Active
+      </button>
+</div>
+</div>
+<!-- Metric Summary Header -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Card 1 -->
+<div class="relative bg-surface-container-lowest p-space-lg rounded-xl shadow-sm overflow-hidden flex flex-col justify-between">
+<div class="absolute top-0 left-0 right-0 h-1 bg-secondary"></div>
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Total Overdue Candidates</span>
+<span class="material-symbols-outlined text-secondary text-[20px]">person_off</span>
+</div>
+<div class="flex items-baseline gap-space-sm">
+<span class="font-headline-xl text-headline-xl text-primary font-bold tracking-tight">4,218</span>
+<span class="px-space-xs py-0.5 bg-error-container text-on-error-container rounded font-label-sm text-label-sm flex items-center">
+<span class="material-symbols-outlined text-[14px]">arrow_upward</span>+4.2%
+        </span>
+</div>
+<p class="font-body-sm text-[11px] text-on-surface-variant mt-space-xs">Across 6 regional monitoring zones</p>
+</div>
+<!-- Card 2 -->
+<div class="relative bg-surface-container-lowest p-space-lg rounded-xl shadow-sm overflow-hidden flex flex-col justify-between">
+<div class="absolute top-0 left-0 right-0 h-1 bg-secondary-container"></div>
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Avg. Days Overdue</span>
+<span class="material-symbols-outlined text-secondary-container text-[20px]">schedule</span>
+</div>
+<div class="flex items-baseline gap-space-sm">
+<span class="font-headline-xl text-headline-xl text-primary font-bold tracking-tight">18.4 <span class="font-body-md text-headline-sm font-normal text-on-surface-variant">days</span></span>
+<span class="px-space-xs py-0.5 bg-secondary-fixed text-on-secondary-fixed rounded font-label-sm text-label-sm flex items-center">
+<span class="material-symbols-outlined text-[14px]">arrow_downward</span>-1.8 d
+        </span>
+</div>
+<p class="font-body-sm text-[11px] text-on-surface-variant mt-space-xs">Target escalation threshold: 21 days</p>
+</div>
+<!-- Card 3 -->
+<div class="relative bg-surface-container-lowest p-space-lg rounded-xl shadow-sm overflow-hidden flex flex-col justify-between">
+<div class="absolute top-0 left-0 right-0 h-1 bg-on-tertiary-container"></div>
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Contact Resolution Rate</span>
+<span class="material-symbols-outlined text-on-tertiary-container text-[20px]">task_alt</span>
+</div>
+<div class="flex items-baseline gap-space-sm">
+<span class="font-headline-xl text-headline-xl text-primary font-bold tracking-tight">58.2%</span>
+<span class="px-space-xs py-0.5 bg-tertiary-fixed text-on-tertiary-fixed-variant rounded font-label-sm text-label-sm flex items-center">
+<span class="material-symbols-outlined text-[14px]">trending_up</span>+3.1%
+        </span>
+</div>
+<p class="font-body-sm text-[11px] text-on-surface-variant mt-space-xs">2,455 successfully re-verified this month</p>
+</div>
+<!-- Card 4 -->
+<div class="relative bg-surface-container-lowest p-space-lg rounded-xl shadow-sm overflow-hidden flex flex-col justify-between">
+<div class="absolute top-0 left-0 right-0 h-1 bg-primary"></div>
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Caseworkers On Duty</span>
+<span class="material-symbols-outlined text-primary text-[20px]">support_agent</span>
+</div>
+<div class="flex items-baseline gap-space-sm">
+<span class="font-headline-xl text-headline-xl text-primary font-bold tracking-tight">24 <span class="font-body-md text-headline-sm font-normal text-on-surface-variant">Active</span></span>
+<span class="font-data-mono text-label-sm text-on-surface-variant">175 queue/worker</span>
+</div>
+<p class="font-body-sm text-[11px] text-on-surface-variant mt-space-xs">Avg handling time: 4m 12s per candidate</p>
+</div>
+</div>
+<!-- Filter & Segmentation Toolbar -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between flex-wrap gap-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">tune</span>
+<span class="font-label-md text-label-md text-primary uppercase tracking-wide">Queue Filters &amp; Statutory Sorting</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="font-label-sm text-label-sm text-secondary hover:underline px-space-xs" id="resetFilters">Clear All Filters</button>
+<span class="text-outline-variant">•</span>
+<span class="font-data-mono text-label-sm text-on-surface-variant">Filtered: <strong class="text-primary font-bold">4,218 Candidates</strong></span>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-space-sm">
+<!-- Stage Filter -->
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-[11px] text-on-surface-variant">Verification Stage</label>
+<select class="h-9 px-space-sm bg-surface-container-low text-on-surface font-label-md text-label-md rounded-lg focus:outline-none focus:bg-surface-container-lowest cursor-pointer">
+<option>All Overdue Stages</option>
+<option selected="">3-Month Survey Overdue (1,840)</option>
+<option>6-Month Retention Overdue (1,620)</option>
+<option>12-Month Audit Overdue (758)</option>
+</select>
+</div>
+<!-- District Region Filter -->
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-[11px] text-on-surface-variant">Administrative Division</label>
+<select class="h-9 px-space-sm bg-surface-container-low text-on-surface font-label-md text-label-md rounded-lg focus:outline-none focus:bg-surface-container-lowest cursor-pointer">
+<option>All Maharashtra Divisions</option>
+<option selected="">Western Maharashtra (Pune, Satara, Kolhapur)</option>
+<option>Vidarbha (Nagpur, Amravati, Akola)</option>
+<option>Marathwada (Chhatrapati Sambhajinagar, Nanded)</option>
+<option>Konkan &amp; Mumbai Metropolitan</option>
+<option>North Maharashtra (Nashik, Jalgaon, Dhule)</option>
+</select>
+</div>
+<!-- Assigned Caseworker Filter -->
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-[11px] text-on-surface-variant">Assigned Officer</label>
+<select class="h-9 px-space-sm bg-surface-container-low text-on-surface font-label-md text-label-md rounded-lg focus:outline-none focus:bg-surface-container-lowest cursor-pointer">
+<option>All Officers &amp; Unassigned</option>
+<option>Unassigned Priority Queue (312)</option>
+<option selected="">Sunita Jadhav (Desk 04)</option>
+<option>Amit Khot (Desk 02)</option>
+<option>Pravin More (Field Officer MH-04)</option>
+</select>
+</div>
+<!-- Attempt Count Filter -->
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-[11px] text-on-surface-variant">Follow-up Attempt Count</label>
+<select class="h-9 px-space-sm bg-surface-container-low text-on-surface font-label-md text-label-md rounded-lg focus:outline-none focus:bg-surface-container-lowest cursor-pointer">
+<option>All Attempt Counts</option>
+<option>1st Attempt Pending</option>
+<option selected="">2nd Attempt Pending</option>
+<option>3+ Attempts Exhausted (Field Ready)</option>
+</select>
+</div>
+</div>
+</div>
+<!-- Bulk Action Bar -->
+<div class="flex flex-wrap items-center justify-between gap-space-md bg-primary p-space-md rounded-xl text-on-primary shadow-md">
+<div class="flex items-center gap-space-md">
+<div class="flex items-center gap-space-xs bg-primary-container px-space-sm py-1 rounded-lg">
+<input checked="" class="rounded text-secondary focus:ring-secondary w-4 h-4 cursor-pointer accent-secondary" id="selectAllCheckbox" type="checkbox"/>
+<label class="font-label-md text-label-md text-on-primary cursor-pointer select-none" for="selectAllCheckbox">
+<span class="font-bold text-secondary-fixed">6</span> Candidates Selected
+        </label>
+</div>
+<span class="hidden sm:inline-block text-surface-variant/40">|</span>
+<span class="hidden sm:inline-block font-body-sm text-body-sm text-surface-variant">Execute batch regulatory workflow</span>
+</div>
+<div class="flex flex-wrap items-center gap-space-sm">
+<button class="flex items-center gap-space-xs px-space-md py-1.5 bg-primary-container hover:bg-on-primary-fixed-variant text-on-primary font-label-md text-label-md rounded-lg transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[16px]">person_add</span>
+        Assign to Caseworker
+      </button>
+<button class="flex items-center gap-space-xs px-space-md py-1.5 bg-secondary hover:bg-on-secondary-container text-on-secondary font-label-md text-label-md rounded-lg transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[16px]">campaign</span>
+        MahaGov WhatsApp/SMS Blast
+      </button>
+<button class="flex items-center gap-space-xs px-space-md py-1.5 bg-surface-container-lowest/10 hover:bg-surface-container-lowest/20 text-on-primary font-label-md text-label-md rounded-lg transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[16px]">pin_drop</span>
+        Mark for Field Verification
+      </button>
+</div>
+</div>
+<!-- Main Workflow Area: Queue Table + Active Log Drawer / Card Split -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-gutter-lg items-start">
+<!-- Queue Table Column (8 Cols) -->
+<div class="xl:col-span-8 bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col">
+<div class="p-margin flex items-center justify-between bg-surface-container-low">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[22px]">format_list_bulleted</span>
+<h2 class="font-headline-sm text-headline-sm text-primary">Pending Non-Responder Registry</h2>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="font-data-mono text-label-sm text-on-surface-variant">Displaying 1–6 of 4,218 records</span>
+<div class="flex gap-1">
+<button class="w-7 h-7 flex items-center justify-center rounded bg-surface-container-lowest text-on-surface hover:bg-surface-container disabled:opacity-40">
+<span class="material-symbols-outlined text-[16px]">chevron_left</span>
+</button>
+<button class="w-7 h-7 flex items-center justify-center rounded bg-surface-container-lowest text-on-surface hover:bg-surface-container">
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<div class="overflow-x-auto w-full">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead class="bg-surface-container-high text-on-surface font-label-sm text-label-sm uppercase tracking-wider">
+<tr>
+<th class="p-space-md w-8 text-center">
+<span class="sr-only">Select</span>
+</th>
+<th class="p-space-md">Trainee Name &amp; UID</th>
+<th class="p-space-md">Course &amp; Training Partner</th>
+<th class="p-space-md">Due Follow-up Stage</th>
+<th class="p-space-md">Last Attempt &amp; Log</th>
+<th class="p-space-md">Officer</th>
+<th class="p-space-md text-right">Quick Action</th>
+</tr>
+</thead>
+<tbody class="divide-y-0">
+<!-- Active Selected Row -->
+<tr class="bg-surface-container-high/60 transition-colors cursor-pointer" onclick="selectTrainee('MH-TR-2024-9182', 'Snehal Dilip Bhosale', '+91 98221 44021', 'CNC Operator Grade-II', 'TATA Community Development Trust, Pune', '6-Month Retention Survey', '24 Days Overdue', '3 attempts')">
+<td class="p-space-md text-center">
+<input checked="" class="rounded accent-secondary w-4 h-4" type="checkbox"/>
+</td>
+<td class="p-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-primary font-bold">Snehal Dilip Bhosale</span>
+<span class="font-data-mono text-[11px] text-on-surface-variant">UID: MH-TR-2024-9182</span>
+<span class="font-data-mono text-[11px] text-secondary font-medium mt-0.5 flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[12px]">phone</span> +91 98221 44021
+                  </span>
+</div>
+</td>
+<td class="p-space-md max-w-xs">
+<div class="flex flex-col truncate">
+<span class="font-label-md text-label-md text-on-surface truncate">CNC Operator Grade-II</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant truncate">TATA Community Initiatives, Haveli</span>
+</div>
+</td>
+<td class="p-space-md">
+<div class="flex flex-col">
+<span class="px-2 py-0.5 bg-error-container text-on-error-container font-label-sm text-[11px] rounded font-semibold w-fit">
+                    6-Mo Retention
+                  </span>
+<span class="font-data-mono text-[11px] text-error font-bold mt-1">24 Days Overdue</span>
+</div>
+</td>
+<td class="p-space-md">
+<div class="flex flex-col">
+<span class="font-data-mono text-[11px] text-on-surface">18 Oct 2024, 14:20</span>
+<span class="text-[11px] text-on-surface-variant italic">No Answer / Switched Off</span>
+<span class="font-data-mono text-[10px] text-secondary font-bold">Attempt #3</span>
+</div>
+</td>
+<td class="p-space-md">
+<span class="font-label-sm text-label-sm text-on-surface">Sunita J.</span>
+</td>
+<td class="p-space-md text-right">
+<button class="px-space-sm py-1 bg-secondary text-on-secondary rounded font-label-sm text-label-sm hover:bg-on-secondary-container transition-colors shadow-sm">
+                  Log Desk
+                </button>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="bg-surface-container-lowest hover:bg-surface-container-low transition-colors cursor-pointer" onclick="selectTrainee('MH-TR-2024-8841', 'Ganesh Vitthal Patil', '+91 88790 12093', 'Solar PV Installation Tech', 'Symbiosis Skills &amp; Professional Univ', '3-Month Survey', '16 Days Overdue', '2 attempts')">
+<td class="p-space-md text-center">
+<input checked="" class="rounded accent-secondary w-4 h-4" type="checkbox"/>
+</td>
+<td class="p-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-primary font-bold">Ganesh Vitthal Patil</span>
+<span class="font-data-mono text-[11px] text-on-surface-variant">UID: MH-TR-2024-8841</span>
+<span class="font-data-mono text-[11px] text-on-surface-variant flex items-center gap-0.5 mt-0.5">
+<span class="material-symbols-outlined text-[12px]">phone</span> +91 88790 12093
+                  </span>
+</div>
+</td>
+<td class="p-space-md max-w-xs">
+<div class="flex flex-col truncate">
+<span class="font-label-md text-label-md text-on-surface truncate">Solar PV Installation Tech</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant truncate">Symbiosis Skills Univ, Kiwale</span>
+</div>
+</td>
+<td class="p-space-md">
+<div class="flex flex-col">
+<span class="px-2 py-0.5 bg-secondary-fixed text-on-secondary-fixed font-label-sm text-[11px] rounded font-semibold w-fit">
+                    3-Mo Placement
+                  </span>
+<span class="font-data-mono text-[11px] text-secondary font-bold mt-1">16 Days Overdue</span>
+</div>
+</td>
+<td class="p-space-md">
+<div class="flex flex-col">
+<span class="font-data-mono text-[11px] text-on-surface">19 Oct 2024, 11:05</span>
+<span class="text-[11px] text-on-surface-variant italic">Ringing • Not picked up</span>
+<span class="font-data-mono text-[10px] text-on-surface-variant">Attempt #2</span>
+</div>
+</td>
+<td class="p-space-md">
+<span class="font-label-sm text-label-sm text-on-surface">Amit K.</span>
+</td>
+<td class="p-space-md text-right">
+<button class="px-space-sm py-1 bg-surface-container-high text-primary hover:bg-primary hover:text-on-primary rounded font-label-sm text-label-sm transition-colors">
+                  Log Desk
+                </button>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="bg-surface-container-low/40 hover:bg-surface-container-low transition-colors cursor-pointer" onclick="selectTrainee('MH-TR-2024-3011', 'Priyanka Ashok Shinde', '+91 77382 99014', 'General Duty Assistant (Healthcare)', 'Apollo MedSkills Academy, Pune', '12-Month Audit', '31 Days Overdue', '4 attempts')">
+<td class="p-space-md text-center">
+<input checked="" class="rounded accent-secondary w-4 h-4" type="checkbox"/>
+</td>
+<td class="p-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-primary font-bold">Priyanka Ashok Shinde</span>
+<span class="font-data-mono text-[11px] text-on-surface-variant">UID: MH-TR-2024-3011</span>
+<span class="font-data-mono text-[11px] text-on-surface-variant flex items-center gap-0.5 mt-0.5">
+<span class="material-symbols-outlined text-[12px]">phone</span> +91 77382 99014
+                  </span>
+</div>
+</td>
+<td class="p-space-md max-w-xs">
+<div class="flex flex-col truncate">
+<span class="font-label-md text-label-md text-on-surface truncate">General Duty Assistant</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant truncate">Apollo MedSkills Academy, Hadapsar</span>
+</div>
+</td>
+<td class="p-space-md">
+<div class="flex flex-col">
+<span class="px-2 py-0.5 bg-error-container text-on-error-container font-label-sm text-[11px] rounded font-semibold w-fit">
+                    12-Mo Career Audit
+                  </span>
+<span class="font-data-mono text-[11px] text-error font-bold mt-1">31 Days Overdue</span>
+</div>
+</td>
+<td class="p-space-md">
+<div class="flex flex-col">
+<span class="font-data-mono text-[11px] text-on-surface">14 Oct 2024, 16:45</span>
+<span class="text-[11px] text-error italic">Number Out of Service</span>
+<span class="font-data-mono text-[10px] text-error font-bold">Attempt #4 (Field Req)</span>
+</div>
+</td>
+<td class="p-space-md">
+<span class="font-label-sm text-label-sm text-error font-bold">Pravin M. (Field)</span>
+</td>
+<td class="p-space-md text-right">
+<button class="px-space-sm py-1 bg-surface-container-high text-primary hover:bg-primary hover:text-on-primary rounded font-label-sm text-label-sm transition-colors">
+                  Log Desk
+                </button>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="bg-surface-container-lowest hover:bg-surface-container-low transition-colors cursor-pointer" onclick="selectTrainee('MH-TR-2024-4412', 'Mahesh Ramesh Waghmare', '+91 94230 55102', 'Assistant Electrician', 'Government ITI Aundh', '3-Month Survey', '12 Days Overdue', '1 attempt')">
+<td class="p-space-md text-center">
+<input checked="" class="rounded accent-secondary w-4 h-4" type="checkbox"/>
+</td>
+<td class="p-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-primary font-bold">Mahesh Ramesh Waghmare</span>
+<span class="font-data-mono text-[11px] text-on-surface-variant">UID: MH-TR-2024-4412</span>
+<span class="font-data-mono text-[11px] text-on-surface-variant flex items-center gap-0.5 mt-0.5">
+<span class="material-symbols-outlined text-[12px]">phone</span> +91 94230 55102
+                  </span>
+</div>
+</td>
+<td class="p-space-md max-w-xs">
+<div class="flex flex-col truncate">
+<span class="font-label-md text-label-md text-on-surface truncate">Assistant Electrician</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant truncate">Government ITI, Aundh</span>
+</div>
+</td>
+<td class="p-space-md">
+<div class="flex flex-col">
+<span class="px-2 py-0.5 bg-secondary-fixed text-on-secondary-fixed font-label-sm text-[11px] rounded font-semibold w-fit">
+                    3-Mo Placement
+                  </span>
+<span class="font-data-mono text-[11px] text-secondary font-bold mt-1">12 Days Overdue</span>
+</div>
+</td>
+<td class="p-space-md">
+<div class="flex flex-col">
+<span class="font-data-mono text-[11px] text-on-surface">20 Oct 2024, 09:30</span>
+<span class="text-[11px] text-on-surface-variant italic">Busy tone / Disconnected</span>
+<span class="font-data-mono text-[10px] text-on-surface-variant">Attempt #1</span>
+</div>
+</td>
+<td class="p-space-md">
+<span class="font-label-sm text-label-sm text-on-surface">Sunita J.</span>
+</td>
+<td class="p-space-md text-right">
+<button class="px-space-sm py-1 bg-surface-container-high text-primary hover:bg-primary hover:text-on-primary rounded font-label-sm text-label-sm transition-colors">
+                  Log Desk
+                </button>
+</td>
+</tr>
+<!-- Row 5 -->
+<tr class="bg-surface-container-low/40 hover:bg-surface-container-low transition-colors cursor-pointer" onclick="selectTrainee('MH-TR-2024-5109', 'Anjali Sanjay Gawli', '+91 91588 33902', 'Accounts Executive (Tally Prime)', 'MITCON Skill Development Center', '6-Month Retention Survey', '19 Days Overdue', '2 attempts')">
+<td class="p-space-md text-center">
+<input checked="" class="rounded accent-secondary w-4 h-4" type="checkbox"/>
+</td>
+<td class="p-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-primary font-bold">Anjali Sanjay Gawli</span>
+<span class="font-data-mono text-[11px] text-on-surface-variant">UID: MH-TR-2024-5109</span>
+<span class="font-data-mono text-[11px] text-on-surface-variant flex items-center gap-0.5 mt-0.5">
+<span class="material-symbols-outlined text-[12px]">phone</span> +91 91588 33902
+                  </span>
+</div>
+</td>
+<td class="p-space-md max-w-xs">
+<div class="flex flex-col truncate">
+<span class="font-label-md text-label-md text-on-surface truncate">Accounts Executive (Tally)</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant truncate">MITCON Skill Center, Shivajinagar</span>
+</div>
+</td>
+<td class="p-space-md">
+<div class="flex flex-col">
+<span class="px-2 py-0.5 bg-error-container text-on-error-container font-label-sm text-[11px] rounded font-semibold w-fit">
+                    6-Mo Retention
+                  </span>
+<span class="font-data-mono text-[11px] text-error font-bold mt-1">19 Days Overdue</span>
+</div>
+</td>
+<td class="p-space-md">
+<div class="flex flex-col">
+<span class="font-data-mono text-[11px] text-on-surface">17 Oct 2024, 15:10</span>
+<span class="text-[11px] text-on-surface-variant italic">Wrong Person Answered</span>
+<span class="font-data-mono text-[10px] text-secondary font-bold">Attempt #2</span>
+</div>
+</td>
+<td class="p-space-md">
+<span class="font-label-sm text-label-sm text-on-surface">Amit K.</span>
+</td>
+<td class="p-space-md text-right">
+<button class="px-space-sm py-1 bg-surface-container-high text-primary hover:bg-primary hover:text-on-primary rounded font-label-sm text-label-sm transition-colors">
+                  Log Desk
+                </button>
+</td>
+</tr>
+<!-- Row 6 -->
+<tr class="bg-surface-container-lowest hover:bg-surface-container-low transition-colors cursor-pointer" onclick="selectTrainee('MH-TR-2024-7729', 'Rohit Navnath Shinde', '+91 90112 77801', 'Automotive Service Technician', 'Maruti Suzuki Skill Academy', '3-Month Survey', '9 Days Overdue', '1 attempt')">
+<td class="p-space-md text-center">
+<input checked="" class="rounded accent-secondary w-4 h-4" type="checkbox"/>
+</td>
+<td class="p-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-primary font-bold">Rohit Navnath Shinde</span>
+<span class="font-data-mono text-[11px] text-on-surface-variant">UID: MH-TR-2024-7729</span>
+<span class="font-data-mono text-[11px] text-on-surface-variant flex items-center gap-0.5 mt-0.5">
+<span class="material-symbols-outlined text-[12px]">phone</span> +91 90112 77801
+                  </span>
+</div>
+</td>
+<td class="p-space-md max-w-xs">
+<div class="flex flex-col truncate">
+<span class="font-label-md text-label-md text-on-surface truncate">Auto Service Technician</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant truncate">Maruti Suzuki Skill Academy, Chakan</span>
+</div>
+</td>
+<td class="p-space-md">
+<div class="flex flex-col">
+<span class="px-2 py-0.5 bg-secondary-fixed text-on-secondary-fixed font-label-sm text-[11px] rounded font-semibold w-fit">
+                    3-Mo Placement
+                  </span>
+<span class="font-data-mono text-[11px] text-secondary font-bold mt-1">9 Days Overdue</span>
+</div>
+</td>
+<td class="p-space-md">
+<div class="flex flex-col">
+<span class="font-data-mono text-[11px] text-on-surface">21 Oct 2024, 10:15</span>
+<span class="text-[11px] text-on-surface-variant italic">Callback Requested for 4 PM</span>
+<span class="font-data-mono text-[10px] text-on-surface-variant">Attempt #1</span>
+</div>
+</td>
+<td class="p-space-md">
+<span class="font-label-sm text-label-sm text-on-surface">Sunita J.</span>
+</td>
+<td class="p-space-md text-right">
+<button class="px-space-sm py-1 bg-surface-container-high text-primary hover:bg-primary hover:text-on-primary rounded font-label-sm text-label-sm transition-colors">
+                  Log Desk
+                </button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Footnote & Statutory Notice -->
+<div class="p-space-md bg-surface-container-low flex items-center justify-between text-on-surface-variant">
+<div class="flex items-center gap-space-xs font-label-sm text-[11px]">
+<span class="material-symbols-outlined text-[16px] text-secondary">verified_user</span>
+          All records verified against State SEBC / DTE Aadhaar Registry • Automated IVR triggers dispatched daily at 09:00 IST
+        </div>
+<span class="font-data-mono text-label-sm text-[10px] uppercase font-bold text-primary">MSDC System Ver: 4.8.2-PUN</span>
+</div>
+</div>
+<!-- Active Outcome Logging Drawer / Card (4 Cols) -->
+<div class="xl:col-span-4 bg-surface-container-lowest rounded-xl shadow-md p-space-lg flex flex-col space-y-space-md sticky top-16">
+<!-- Drawer Header with Active Trainee Information -->
+<div class="flex items-start justify-between pb-space-sm bg-surface-container-low -mx-space-lg -mt-space-lg p-space-lg rounded-t-xl">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary animate-ping"></span>
+<span class="font-label-sm text-[10px] font-bold uppercase tracking-wider text-secondary">Active Case Dossier</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary font-bold mt-0.5" id="panelTraineeName">Snehal Dilip Bhosale</h3>
+<span class="font-data-mono text-[11px] text-on-surface-variant" id="panelTraineeUid">MH-TR-2024-9182</span>
+</div>
+<div class="flex flex-col items-end">
+<span class="px-2 py-0.5 bg-error-container text-on-error-container rounded font-label-sm text-[10px] font-bold uppercase" id="panelTraineeDueBadge">
+            24d Overdue
+          </span>
+<span class="font-data-mono text-[10px] text-on-surface-variant mt-1" id="panelTraineeAttempts">3 Attempts Made</span>
+</div>
+</div>
+<!-- Quick Trainee Summary Bar -->
+<div class="p-space-sm bg-surface-container-low rounded-lg flex flex-col space-y-1">
+<div class="flex justify-between font-body-sm text-[11px]">
+<span class="text-on-surface-variant">Course:</span>
+<span class="font-medium text-on-surface text-right font-semibold" id="panelTraineeCourse">CNC Operator Grade-II</span>
+</div>
+<div class="flex justify-between font-body-sm text-[11px]">
+<span class="text-on-surface-variant">VTP / Training Center:</span>
+<span class="font-medium text-on-surface text-right truncate max-w-[180px]" id="panelTraineeVtp">TATA Initiatives, Pune</span>
+</div>
+<div class="flex justify-between font-body-sm text-[11px]">
+<span class="text-on-surface-variant">Mobile Contact:</span>
+<span class="font-data-mono font-bold text-secondary text-right" id="panelTraineePhone">+91 98221 44021</span>
+</div>
+</div>
+<!-- Direct Action Dial & Message Trigger -->
+<div class="grid grid-cols-2 gap-space-xs">
+<button class="flex items-center justify-center gap-space-xs py-2 bg-primary text-on-primary rounded-lg font-label-md text-label-md hover:bg-primary-container transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[18px]">call</span>
+          Dial via IVR Box
+        </button>
+<button class="flex items-center justify-center gap-space-xs py-2 bg-surface-container-high text-on-surface font-label-md text-label-md hover:bg-surface-container rounded-lg transition-colors">
+<span class="material-symbols-outlined text-[18px]">sms</span>
+          Resend Link SMS
+        </button>
+</div>
+<!-- Outcome Selector (Standard Classification) -->
+<div class="flex flex-col space-y-1.5">
+<label class="font-label-md text-label-md text-primary flex items-center justify-between">
+<span>Official Contact Outcome</span>
+<span class="text-secondary text-[11px] font-normal">* Mandatory for log</span>
+</label>
+<div class="grid grid-cols-1 gap-1.5 font-label-sm text-label-sm">
+<label class="flex items-center gap-space-sm p-space-xs px-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container cursor-pointer transition-colors">
+<input class="accent-on-tertiary-container w-4 h-4" name="call_outcome" type="radio" value="reached_employed"/>
+<div class="flex flex-col">
+<span class="text-primary font-semibold">Reached: Currently Employed</span>
+<span class="text-[10px] text-on-surface-variant">Confirmed employer name, salary slip verified</span>
+</div>
+</label>
+<label class="flex items-center gap-space-sm p-space-xs px-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container cursor-pointer transition-colors">
+<input checked="" class="accent-secondary w-4 h-4" name="call_outcome" type="radio" value="reached_unemployed"/>
+<div class="flex flex-col">
+<span class="text-primary font-semibold">Reached: Unemployed / Seeking Job</span>
+<span class="text-[10px] text-on-surface-variant">Candidate lost placement; route to Rojgar Melava</span>
+</div>
+</label>
+<label class="flex items-center gap-space-sm p-space-xs px-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container cursor-pointer transition-colors">
+<input class="accent-primary w-4 h-4" name="call_outcome" type="radio" value="reached_opted_out"/>
+<div class="flex flex-col">
+<span class="text-primary font-semibold">Reached: Opted Out / Higher Studies</span>
+<span class="text-[10px] text-on-surface-variant">Enrolled in Degree/Polytechnic; exempt status</span>
+</div>
+</label>
+<label class="flex items-center gap-space-sm p-space-xs px-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container cursor-pointer transition-colors">
+<input class="accent-primary w-4 h-4" name="call_outcome" type="radio" value="not_reached_ringing"/>
+<div class="flex flex-col">
+<span class="text-primary font-semibold">Not Reached: Ringing No Response</span>
+<span class="text-[10px] text-on-surface-variant">Rang full 45s cycle without pickup</span>
+</div>
+</label>
+<label class="flex items-center gap-space-sm p-space-xs px-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container cursor-pointer transition-colors">
+<input class="accent-primary w-4 h-4" name="call_outcome" type="radio" value="not_reached_changed"/>
+<div class="flex flex-col">
+<span class="text-primary font-semibold">Not Reached: Number Invalid / Switched Off</span>
+<span class="text-[10px] text-on-surface-variant">Carrier voice error message recorded</span>
+</div>
+</label>
+<label class="flex items-center gap-space-sm p-space-xs px-space-sm rounded-lg bg-error-container/40 hover:bg-error-container/60 cursor-pointer transition-colors">
+<input class="accent-error w-4 h-4" name="call_outcome" type="radio" value="escalate_field"/>
+<div class="flex flex-col">
+<span class="text-error font-bold">Escalate for Physical Doorstep Visit</span>
+<span class="text-[10px] text-on-surface-variant">Forward to Taluka Skill Inspector with Gram Panchayat notice</span>
+</div>
+</label>
+</div>
+</div>
+<!-- Caseworker Notes with Auto-Save Timestamp -->
+<div class="flex flex-col space-y-1">
+<div class="flex items-center justify-between">
+<label class="font-label-md text-label-md text-primary">Official Caseworker Notes</label>
+<span class="font-data-mono text-[10px] text-on-tertiary-container flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-on-tertiary-container"></span>
+            Auto-saved 14:32 IST
+          </span>
+</div>
+<textarea class="w-full p-space-sm bg-surface-container-low text-on-surface font-body-sm text-body-sm rounded-lg focus:outline-none focus:bg-surface-container-lowest resize-none" placeholder="Enter notes: Candidate states they left previous employer due to transport issue. Currently looking for job in Bhosari MIDC area..." rows="3">Spoke with candidate brother. Confirmed candidate relocated to Chakan for auto assembly line apprenticeship. Requested formal offer letter upload on MahaSwayam portal by Friday.</textarea>
+</div>
+<!-- Verification Proof / Call Recording & Follow-up Scheduler -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm">
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-[11px] text-on-surface-variant">Schedule Follow-up</label>
+<input class="h-9 px-space-sm bg-surface-container-low text-on-surface font-data-mono text-[11px] rounded-lg focus:outline-none focus:bg-surface-container-lowest cursor-pointer" type="date" value="2024-10-25"/>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-[11px] text-on-surface-variant">Upload Voice/Proof Stub</label>
+<button class="h-9 px-space-sm bg-surface-container-low hover:bg-surface-container text-on-surface font-label-sm text-label-sm rounded-lg flex items-center justify-center gap-1 truncate">
+<span class="material-symbols-outlined text-[16px] text-secondary">attach_file</span>
+            Attach Audio / PDF
+          </button>
+</div>
+</div>
+<!-- Save & Log Actions -->
+<div class="flex items-center gap-space-sm pt-space-xs">
+<button class="flex-1 py-2.5 bg-secondary hover:bg-on-secondary-container text-on-secondary font-label-md text-label-md rounded-lg font-bold shadow-md transition-colors flex items-center justify-center gap-space-xs" id="saveOutcomeBtn">
+<span class="material-symbols-outlined text-[18px]">check_circle</span>
+          Commit Desk Log &amp; Advance
+        </button>
+<button class="p-2.5 bg-surface-container-low hover:bg-surface-container text-on-surface-variant rounded-lg transition-colors" title="Reset Log Entry">
+<span class="material-symbols-outlined text-[20px]">refresh</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Bottom Visual Analytics & Protocol Guidance -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-gutter-lg">
+<!-- Escalation Matrix & SLA Timeline -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<h3 class="font-headline-sm text-headline-sm text-primary">Escalation Protocol SLA</h3>
+<span class="material-symbols-outlined text-secondary text-[20px]">timeline</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">Standard operating timetable mandated by Skill Development &amp; Entrepreneurship Dept (SDED).</p>
+<div class="space-y-space-md relative pl-4 before:content-[''] before:absolute before:left-1 before:top-2 before:bottom-2 before:w-0.5 before:bg-surface-container-high">
+<div class="relative flex flex-col">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary-fixed-dim absolute -left-4 top-1"></span>
+<span class="font-label-sm text-label-sm text-primary font-bold">Stage 1: Multi-Channel Digital Reach (Days 1–7)</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant">Automated WhatsApp ping, IVR voice call &amp; MahaSwayam app notifications.</span>
+</div>
+<div class="relative flex flex-col">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary absolute -left-4 top-1"></span>
+<span class="font-label-sm text-label-sm text-primary font-bold">Stage 2: Desk Caseworker Dialing (Days 8–18)</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant">Dedicated tele-calling by district desk. Alternate contact &amp; VTP mediation.</span>
+</div>
+<div class="relative flex flex-col">
+<span class="w-2.5 h-2.5 rounded-full bg-error absolute -left-4 top-1"></span>
+<span class="font-label-sm text-label-sm text-primary font-bold">Stage 3: Physical Gram/Ward Escalation (Days 19–30)</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant">Taluka Inspector physical survey to permanent address on record.</span>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm bg-surface-container-low -mx-space-lg -mb-space-lg p-space-md rounded-b-xl flex items-center justify-between">
+<span class="font-label-sm text-[11px] text-on-surface-variant">Current Queue Compliance:</span>
+<span class="font-data-mono text-label-sm font-bold text-on-tertiary-container">91.4% on SLA target</span>
+</div>
+</div>
+<!-- Reason Breakdown (Non-Response Pareto) -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<h3 class="font-headline-sm text-headline-sm text-primary">Failure Analysis Breakdown</h3>
+<span class="material-symbols-outlined text-primary text-[20px]">donut_large</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">Aggregated underlying causes for unreachable status across current 4,218 backlog.</p>
+<!-- Inline Visual Bar Breakdown -->
+<div class="space-y-space-sm">
+<div>
+<div class="flex justify-between font-label-sm text-label-sm mb-1">
+<span class="text-on-surface">SIM Inactive / Number Out of Service</span>
+<span class="font-data-mono font-bold text-primary">42% (1,771)</span>
+</div>
+<div class="w-full h-2 bg-surface-container-low rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 42%;"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between font-label-sm text-label-sm mb-1">
+<span class="text-on-surface">Repeated Ringing / Call Rejection</span>
+<span class="font-data-mono font-bold text-primary">28% (1,181)</span>
+</div>
+<div class="w-full h-2 bg-surface-container-low rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 28%;"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between font-label-sm text-label-sm mb-1">
+<span class="text-on-surface">Wrong Contact Details Provided by VTP</span>
+<span class="font-data-mono font-bold text-primary">18% (759)</span>
+</div>
+<div class="w-full h-2 bg-surface-container-low rounded-full overflow-hidden">
+<div class="bg-error h-full rounded-full" style="width: 18%;"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between font-label-sm text-label-sm mb-1">
+<span class="text-on-surface">Candidate Migrated Inter-State</span>
+<span class="font-data-mono font-bold text-primary">12% (507)</span>
+</div>
+<div class="w-full h-2 bg-surface-container-low rounded-full overflow-hidden">
+<div class="bg-outline h-full rounded-full" style="width: 12%;"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm bg-surface-container-low -mx-space-lg -mb-space-lg p-space-md rounded-b-xl flex items-center justify-between">
+<span class="font-label-sm text-[11px] text-on-surface-variant">Provider Audit Trigger:</span>
+<span class="font-data-mono text-label-sm font-bold text-error">7 VTPs flagged for inaccurate data</span>
+</div>
+</div>
+<!-- Active Call Center Staffing & Duty Roster -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<h3 class="font-headline-sm text-headline-sm text-primary">Desk Caseworker Efficiency</h3>
+<span class="material-symbols-outlined text-primary text-[20px]">groups</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">Real-time throughput metrics for Pune Divisional Office remediations.</p>
+<div class="space-y-space-sm">
+<div class="flex items-center justify-between p-space-xs bg-surface-container-low rounded-lg">
+<div class="flex items-center gap-space-sm">
+<div class="w-7 h-7 rounded-full bg-primary text-on-primary font-bold text-xs flex items-center justify-center">SJ</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-primary font-bold">Sunita Jadhav</span>
+<span class="font-data-mono text-[10px] text-on-surface-variant">Desk 04 • Pune Central</span>
+</div>
+</div>
+<div class="text-right">
+<span class="font-data-mono text-label-sm font-bold text-on-tertiary-container">48/60 Completed</span>
+<span class="block font-data-mono text-[10px] text-on-surface-variant">Avg 3.8m / case</span>
+</div>
+</div>
+<div class="flex items-center justify-between p-space-xs bg-surface-container-low rounded-lg">
+<div class="flex items-center gap-space-sm">
+<div class="w-7 h-7 rounded-full bg-primary-container text-on-primary font-bold text-xs flex items-center justify-center">AK</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-primary font-bold">Amit Khot</span>
+<span class="font-data-mono text-[10px] text-on-surface-variant">Desk 02 • Haveli &amp; Baramati</span>
+</div>
+</div>
+<div class="text-right">
+<span class="font-data-mono text-label-sm font-bold text-on-tertiary-container">42/60 Completed</span>
+<span class="block font-data-mono text-[10px] text-on-surface-variant">Avg 4.1m / case</span>
+</div>
+</div>
+<div class="flex items-center justify-between p-space-xs bg-surface-container-low rounded-lg">
+<div class="flex items-center gap-space-sm">
+<div class="w-7 h-7 rounded-full bg-secondary text-on-secondary font-bold text-xs flex items-center justify-center">PM</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-primary font-bold">Pravin More</span>
+<span class="font-data-mono text-[10px] text-on-surface-variant">Field Officer • Shirur</span>
+</div>
+</div>
+<div class="text-right">
+<span class="font-data-mono text-label-sm font-bold text-secondary">19/25 Doorstep</span>
+<span class="block font-data-mono text-[10px] text-on-surface-variant">14 Geotagged</span>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm bg-surface-container-low -mx-space-lg -mb-space-lg p-space-md rounded-b-xl flex items-center justify-between">
+<span class="font-label-sm text-[11px] text-on-surface-variant">Shift Progress (09:00 - 18:00):</span>
+<span class="font-data-mono text-label-sm font-bold text-primary">74.2% quota met</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Client-side Interactive Script for Dynamic Drawer Updates -->
+<script>
+  function selectTrainee(uid, name, phone, course, vtp, stage, overdue, attempts) {
+    document.getElementById('panelTraineeUid').innerText = uid;
+    document.getElementById('panelTraineeName').innerText = name;
+    document.getElementById('panelTraineePhone').innerText = phone;
+    document.getElementById('panelTraineeCourse').innerText = course;
+    document.getElementById('panelTraineeVtp').innerText = vtp;
+    document.getElementById('panelTraineeDueBadge').innerText = overdue;
+    document.getElementById('panelTraineeAttempts').innerText = attempts + ' made';
+  }
+
+  document.getElementById('saveOutcomeBtn').addEventListener('click', function() {
+    const btn = this;
+    const originalText = btn.innerHTML;
+    btn.innerHTML = '<span class="material-symbols-outlined text-[18px] animate-spin">sync</span> Logging to MahaKaushal State DB...';
+    btn.disabled = true;
+    
+    setTimeout(function() {
+      btn.innerHTML = '<span class="material-symbols-outlined text-[18px]">done_all</span> Logged & Queued Next';
+      btn.classList.remove('bg-secondary');
+      btn.classList.add('bg-tertiary-container', 'text-on-tertiary-container');
+      
+      setTimeout(function() {
+        btn.innerHTML = originalText;
+        btn.disabled = false;
+        btn.classList.remove('bg-tertiary-container', 'text-on-tertiary-container');
+        btn.classList.add('bg-secondary');
+      }, 1600);
+    }, 900);
+  });
+</script></main></div></body></html>

@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"outline":"#747781","on-tertiary-container":"#56b76d","inverse-on-surface":"#eaf1ff","surface-tint":"#3c5d9d","error-container":"#ffdad6","on-tertiary-fixed-variant":"#005323","on-surface":"#0b1c30","inverse-surface":"#213145","secondary":"#a73a00","background":"#f8f9ff","on-surface-variant":"#434750","on-tertiary":"#ffffff","surface-container":"#e5eeff","outline-variant":"#c4c6d2","surface-dim":"#cbdbf5","primary-fixed":"#d8e2ff","secondary-fixed":"#ffdbce","primary-fixed-dim":"#aec6ff","surface-bright":"#f8f9ff","on-primary":"#ffffff","on-error-container":"#93000a","tertiary-container":"#00441b","surface-container-highest":"#d3e4fe","on-secondary-fixed":"#370e00","inverse-primary":"#aec6ff","primary":"#002353","secondary-container":"#fd651e","on-background":"#0b1c30","surface-container-low":"#eff4ff","tertiary":"#002b0f","surface":"#f8f9ff","on-secondary":"#ffffff","on-primary-fixed":"#001a42","error":"#ba1a1a","on-secondary-fixed-variant":"#7f2b00","secondary-fixed-dim":"#ffb599","tertiary-fixed-dim":"#79db8d","on-secondary-container":"#571a00","surface-container-high":"#dce9ff","surface-container-lowest":"#ffffff","tertiary-fixed":"#95f8a7","surface-variant":"#d3e4fe","on-primary-fixed-variant":"#214583","on-primary-container":"#84a4e8","on-error":"#ffffff","primary-container":"#0f3876","on-tertiary-fixed":"#00210a"},borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},spacing:{"gutter-sm":"1rem","space-xs":"0.25rem","space-md":"1rem","space-sm":"0.5rem","margin":"2rem","margin-sm":"1rem","space-xl":"2.5rem","gutter":"1.5rem","space-lg":"1.5rem"},fontFamily:{"label-sm":["Noto Sans"],"label-lg":["Noto Sans"],"headline-lg":["Noto Sans"],"label-md":["Noto Sans"],"body-sm":["Noto Sans"],"body-md":["Noto Sans"],"headline-sm":["Noto Sans"],"body-lg":["Noto Sans"],"headline-xl-mobile":["Noto Sans"],"headline-md":["Noto Sans"],"headline-lg-mobile":["Noto Sans"],"headline-xl":["Noto Sans"]},fontSize:{"label-sm":["11px",{"lineHeight":"14px","fontWeight":"500"}],"label-lg":["14px",{"lineHeight":"20px","fontWeight":"600"}],"headline-lg":["28px",{"lineHeight":"36px","fontWeight":"700"}],"label-md":["12px",{"lineHeight":"16px","fontWeight":"600"}],"body-sm":["12px",{"lineHeight":"16px","fontWeight":"400"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}],"headline-sm":["18px",{"lineHeight":"24px","fontWeight":"600"}],"body-lg":["16px",{"lineHeight":"24px","fontWeight":"400"}],"headline-xl-mobile":["28px",{"lineHeight":"36px","fontWeight":"700"}],"headline-md":["22px",{"lineHeight":"28px","fontWeight":"600"}],"headline-lg-mobile":["24px",{"lineHeight":"32px","fontWeight":"700"}],"headline-xl":["36px",{"lineHeight":"44px","fontWeight":"700"}]}}}}</script></head><body class="bg-background font-body-md text-body-md text-on-surface"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col"><div class="h-1 bg-gradient-to-r from-[#FF9933] via-white to-[#138808] w-full"></div><div class="p-space-md flex flex-col"><span class="font-headline-sm text-headline-sm text-primary tracking-tight">MahaKaushalya</span><span class="font-label-sm text-label-sm text-on-surface-variant">Outcome Tracking</span><span class="mt-space-xs inline-flex items-center px-space-xs py-0.5 rounded font-label-sm text-label-sm bg-surface-container-high text-primary">Govt Portal</span></div><nav class="flex-1 px-space-sm flex flex-col gap-space-xs" data-active-classes="bg-primary-container text-on-primary font-label-md rounded-lg"><a class="flex items-center px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md" data-path="trainee-dashboard" href="#"><span class="material-symbols-outlined mr-space-sm text-lg">dashboard</span>Trainee Dashboard</a><a aria-current="page" class="flex items-center px-space-sm py-space-sm transition-colors bg-primary-container text-on-primary font-label-md rounded-lg" data-path="update-outcome-status" href="#"><span class="material-symbols-outlined mr-space-sm text-lg">fact_check</span>Update Outcome Status</a><a class="flex items-center px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md" data-path="follow-up" href="#"><span class="material-symbols-outlined mr-space-sm text-lg">mark_chat_read</span>Follow-up (SMS/WA)</a><a class="flex items-center px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md" data-path="profile-and-settings" href="#"><span class="material-symbols-outlined mr-space-sm text-lg">tune</span>Profile &amp; Settings</a><div class="my-space-sm h-px bg-surface-container-high"></div><a class="flex items-center px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md" data-path="register-trainee" href="#"><span class="material-symbols-outlined mr-space-sm text-lg">person_add</span>Register Trainee</a><a class="flex items-center px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md" data-path="home" href="#"><span class="material-symbols-outlined mr-space-sm text-lg">home</span>Public Portal</a></nav><div class="p-space-sm bg-surface-container-low m-space-sm rounded-lg flex flex-col gap-space-xs"><span class="font-label-sm text-label-sm text-on-surface font-semibold">Helpline Desk</span><span class="font-label-sm text-label-sm text-secondary font-bold">1800-120-8040</span></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface-container-lowest/95 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-gutter"><div class="flex items-center gap-space-sm"><span class="font-label-md text-label-md text-on-surface-variant">Maharashtra State Skill Development Society (MSSDS)</span></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm pr-space-md"><span class="cursor-pointer hover:text-on-surface">A-</span><span class="cursor-pointer font-bold hover:text-on-surface">A</span><span class="cursor-pointer hover:text-on-surface">A+</span><span class="text-outline-variant mx-1">|</span><button class="font-label-sm text-label-sm text-primary hover:text-secondary-container transition-colors">मराठी</button></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1XBFPUWpbG1OVD9wUBQsrXsEdQlEWyjSCWPdiYf6NOFrNjJgs7iqao4XMlsEfYRURB7RZCtQYfkAHq9QUoiNTPfrnppJbyzAyxkFAwnqsqgB2qeReLWDTItSR6Nwrf-2jR95F_opeqFI4jykN7qq7bj3GSXq663k7Toyr8wCJe9ndFg2-L3nttUoV24Ak18jQ_Fg2oF671ahl8ageRy41dKkas-IP5QXG-0t5-NuiKw-pC9dcuASy0XFEEWPURBJhJWfTJRH4L18Q"/></div></header><main class="relative pt-16 bg-background w-full px-gutter min-h-screen"><div class="flex flex-col w-full pb-space-xl">
+<!-- Statutory Administrative Banner -->
+<div class="mb-space-lg rounded-xl bg-surface-container-lowest p-space-lg shadow-sm">
+<div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-space-md">
+<div class="flex items-start gap-space-md">
+<div class="p-space-sm bg-primary-container text-on-primary rounded-xl flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-2xl">verified_user</span>
+</div>
+<div class="flex flex-col">
+<div class="flex flex-wrap items-center gap-space-xs mb-1">
+<span class="font-headline-md text-headline-md text-primary tracking-tight">Update Employment &amp; Outcome Status</span>
+<span class="font-headline-sm text-headline-sm text-on-surface-variant">/ रोजगार स्थिती अद्यतन</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-3xl">
+            Every verified update creates an immutable audit ledger entry for MSSDS government retention tracking, DBTL welfare eligibility, and authenticated longitudinal wage progression under MahaKaushalya framework.
+          </p>
+</div>
+</div>
+<!-- Trainee Identification Badge -->
+<div class="shrink-0 bg-surface-container-low p-space-sm rounded-xl flex items-center gap-space-md">
+<img class="w-12 h-12 rounded-full object-cover shadow-sm" data-alt="Portrait photo of Rahul Jadhav, a 23-year-old male certified solar technician wearing professional navy work shirt, clean neutral corporate background, warm studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdNMbkAotZXR1a60rW_ghNVzdht7phN2oV2OhLaGc2VPJgYslyL99kvWdg7nADoHh1rKzBbuSHs9nWbGI3dw7VsgMU6alxghmtB7jFLsPIpQ7gvSXxICKeLI8Rd1dqVrLYUmw5JxtQQHtvaKTeTNarPOiRd_cRghq9qFamX8JhBs1iszu-gqXI2lLHj8YYxQ82TZhUSZti2TEN8YTqovNelMmP0YLsWTfGQSzYWoOnFMq3jeEKIUm2"/>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-lg text-label-lg text-on-surface">Rahul S. Jadhav</span>
+<span class="inline-flex items-center px-2 py-0.5 rounded-full font-label-sm text-label-sm bg-tertiary-fixed text-on-tertiary-fixed font-semibold">Active</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">ID: <span class="font-semibold text-primary">MK-2024-MH-08492</span></span>
+<span class="font-label-sm text-label-sm text-secondary font-medium">Batch: PWW-Pune-2023-B4</span>
+</div>
+</div>
+</div>
+<!-- Active Milestone Callout -->
+<div class="mt-space-md pt-space-md bg-surface-container-high/40 rounded-xl px-space-md py-space-sm flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-xl">event_available</span>
+<span class="font-label-md text-label-md text-on-surface">Milestone Reporting Window:</span>
+<span class="font-label-md text-label-md text-primary font-bold">6-Month Post-Training Milestone</span>
+<span class="px-2 py-0.5 rounded bg-error-container text-on-error-container font-label-sm text-label-sm font-semibold">Due: 31 Jan 2025</span>
+</div>
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm text-on-surface-variant">
+<span class="w-2 h-2 rounded-full bg-secondary-container animate-pulse"></span>
+        Audit Protocol: GOM-MSSDS-V4.2 • Geofencing Validated
+      </div>
+</div>
+</div>
+<!-- Main Multi-Column Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Left Main Column: Branch Switcher & Detailed Form (8 Cols) -->
+<div class="lg:col-span-8 flex flex-col gap-space-lg">
+<!-- Branch Selector Cards -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm">
+<div class="flex items-center justify-between mb-space-sm">
+<label class="font-label-lg text-label-lg text-primary">Select Current Employment Status / स्थिती निवडा <span class="text-error">*</span></label>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Select applicable status branch</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-space-sm" id="branch-selector-group">
+<!-- Option 1: Employed (Active) -->
+<button class="flex flex-col items-start p-space-md rounded-xl text-left transition-all duration-200 bg-primary-container text-on-primary shadow-sm ring-2 ring-secondary-container" id="btn-branch-employed" onclick="switchBranch('employed')" type="button">
+<div class="flex items-center justify-between w-full mb-space-xs">
+<span class="material-symbols-outlined text-2xl">work</span>
+<span class="material-symbols-outlined text-base">check_circle</span>
+</div>
+<span class="font-label-lg text-label-lg font-bold leading-tight">Employed</span>
+<span class="font-label-sm text-label-sm opacity-90 mt-0.5">नोकरी / सेवेत</span>
+<span class="mt-space-sm inline-block px-1.5 py-0.5 rounded font-label-sm text-label-sm bg-white/20 text-white">Wage Milestone</span>
+</button>
+<!-- Option 2: Self Employed -->
+<button class="flex flex-col items-start p-space-md rounded-xl text-left transition-all duration-200 bg-surface-container-low text-on-surface hover:bg-surface-container" id="btn-branch-self" onclick="switchBranch('self')" type="button">
+<div class="flex items-center justify-between w-full mb-space-xs">
+<span class="material-symbols-outlined text-2xl text-primary">storefront</span>
+<span class="material-symbols-outlined text-base text-outline-variant">radio_button_unchecked</span>
+</div>
+<span class="font-label-lg text-label-lg font-bold leading-tight">Self-Employed</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-0.5">स्वयंरोजगार / व्यवसाय</span>
+<span class="mt-space-sm inline-block px-1.5 py-0.5 rounded font-label-sm text-label-sm bg-surface-container text-on-surface-variant">Udyam Verified</span>
+</button>
+<!-- Option 3: Apprenticeship -->
+<button class="flex flex-col items-start p-space-md rounded-xl text-left transition-all duration-200 bg-surface-container-low text-on-surface hover:bg-surface-container" id="btn-branch-apprenticeship" onclick="switchBranch('apprenticeship')" type="button">
+<div class="flex items-center justify-between w-full mb-space-xs">
+<span class="material-symbols-outlined text-2xl text-primary">school</span>
+<span class="material-symbols-outlined text-base text-outline-variant">radio_button_unchecked</span>
+</div>
+<span class="font-label-lg text-label-lg font-bold leading-tight">Apprenticeship</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-0.5">शिकाऊ उमेदवार</span>
+<span class="mt-space-sm inline-block px-1.5 py-0.5 rounded font-label-sm text-label-sm bg-surface-container text-on-surface-variant">NAPS / NATS</span>
+</button>
+<!-- Option 4: Still Searching -->
+<button class="flex flex-col items-start p-space-md rounded-xl text-left transition-all duration-200 bg-surface-container-low text-on-surface hover:bg-surface-container" id="btn-branch-unemployed" onclick="switchBranch('unemployed')" type="button">
+<div class="flex items-center justify-between w-full mb-space-xs">
+<span class="material-symbols-outlined text-2xl text-secondary">person_search</span>
+<span class="material-symbols-outlined text-base text-outline-variant">radio_button_unchecked</span>
+</div>
+<span class="font-label-lg text-label-lg font-bold leading-tight">Seeking Job</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-0.5">रोजगार शोधत आहे</span>
+<span class="mt-space-sm inline-block px-1.5 py-0.5 rounded font-label-sm text-label-sm bg-secondary-fixed text-on-secondary-fixed font-medium">Re-Skilling Alert</span>
+</button>
+</div>
+</div>
+<!-- FORM CONTAINER: BRANCH 1 - EMPLOYED (DEFAULT ACTIVE) -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col gap-space-md" id="panel-employed">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs pb-space-sm bg-surface-container-low -mx-space-lg -mt-space-lg px-space-lg pt-space-md rounded-t-xl">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary">apartment</span>
+<h2 class="font-headline-sm text-headline-sm text-primary">Wage Employment Credentials</h2>
+</div>
+<span class="inline-flex items-center px-2 py-0.5 rounded font-label-sm text-label-sm bg-tertiary-container text-on-tertiary">
+<span class="material-symbols-outlined text-sm mr-1">lock</span> Encrypted Government Record
+          </span>
+</div>
+<!-- Field Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md pt-space-xs">
+<!-- Company Name -->
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface">Employer / Organization Name <span class="text-error">*</span></label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-outline">business</span>
+<input class="w-full bg-white text-on-surface pl-10 pr-3 py-2 rounded-lg font-body-md text-body-md focus:bg-surface-container-low outline-none transition-colors shadow-[0_0_0_1px_#cbd5e1] focus:shadow-[0_0_0_2px_#0f3876]" type="text" value="Mahindra Susten Solar Ltd."/>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">नोंदणीकृत कंपनीचे नाव प्रविष्ट करा</span>
+</div>
+<!-- Industry Sector -->
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface">Industry Sector <span class="text-error">*</span></label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-outline">category</span>
+<select class="w-full bg-white text-on-surface pl-10 pr-8 py-2 rounded-lg font-body-md text-body-md appearance-none focus:bg-surface-container-low outline-none transition-colors shadow-[0_0_0_1px_#cbd5e1] focus:shadow-[0_0_0_2px_#0f3876]">
+<option selected="" value="Clean Energy">Clean Energy &amp; Renewables (सौर ऊर्जा)</option>
+<option value="Automotive">Automotive &amp; EV (वाहन उद्योग)</option>
+<option value="IT">IT / ITES &amp; Electronics</option>
+<option value="Healthcare">Healthcare &amp; Allied Medical</option>
+<option value="Manufacturing">Advanced Manufacturing &amp; Fabrication</option>
+<option value="Retail">Retail &amp; E-Commerce Logistics</option>
+<option value="Construction">Construction &amp; Civil Works</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 pointer-events-none text-outline">expand_more</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Aligned to NSDC Sector Skill Council</span>
+</div>
+<!-- Job Title -->
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface">Job Title / Designation <span class="text-error">*</span></label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-outline">badge</span>
+<input class="w-full bg-white text-on-surface pl-10 pr-3 py-2 rounded-lg font-body-md text-body-md focus:bg-surface-container-low outline-none transition-colors shadow-[0_0_0_1px_#cbd5e1] focus:shadow-[0_0_0_2px_#0f3876]" type="text" value="Senior Solar PV Installation Technician"/>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">पदानुसार हुद्दा (Role designation)</span>
+</div>
+<!-- Current Gross Monthly Wage -->
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<label class="font-label-md text-label-md text-on-surface">Gross Monthly Wage (₹) <span class="text-error">*</span></label>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">+12.5% vs 3-Mo</span>
+</div>
+<div class="relative flex items-center">
+<span class="absolute left-3 font-headline-sm text-headline-sm text-primary font-bold">₹</span>
+<input class="w-full bg-white text-on-surface pl-9 pr-3 py-2 rounded-lg font-body-md text-body-md font-semibold text-primary focus:bg-surface-container-low outline-none transition-colors shadow-[0_0_0_1px_#cbd5e1] focus:shadow-[0_0_0_2px_#0f3876]" type="text" value="22,500"/>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">मासिक वेतन (Must match attached salary slip)</span>
+</div>
+<!-- Date of Joining -->
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface">Date of Joining <span class="text-error">*</span></label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-outline">calendar_today</span>
+<input class="w-full bg-white text-on-surface pl-10 pr-3 py-2 rounded-lg font-body-md text-body-md focus:bg-surface-container-low outline-none transition-colors shadow-[0_0_0_1px_#cbd5e1] focus:shadow-[0_0_0_2px_#0f3876]" type="date" value="2024-07-15"/>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">रूजू झाल्याचा दिनांक (DD/MM/YYYY)</span>
+</div>
+<!-- Work Location -->
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface">Work Location &amp; District <span class="text-error">*</span></label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-outline">location_on</span>
+<input class="w-full bg-white text-on-surface pl-10 pr-3 py-2 rounded-lg font-body-md text-body-md focus:bg-surface-container-low outline-none transition-colors shadow-[0_0_0_1px_#cbd5e1] focus:shadow-[0_0_0_2px_#0f3876]" type="text" value="Chakan MIDC Phase 2, Pune District"/>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">कार्यस्थळ / औद्योगिक वसाहत</span>
+</div>
+<!-- EPFO / UAN (Span 2) -->
+<div class="md:col-span-2 flex flex-col gap-1 bg-surface-container-low p-space-sm rounded-xl">
+<div class="flex items-center justify-between">
+<label class="font-label-md text-label-md text-on-surface flex items-center gap-1">
+<span class="material-symbols-outlined text-primary text-base">verified</span>
+                Universal Account Number (UAN) / EPFO Number
+                <span class="font-label-sm text-label-sm text-outline-variant">(Optional - Enables Auto-Verification)</span>
+</label>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container-high text-primary font-medium">Instant Clearance</span>
+</div>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-outline">pin</span>
+<input class="w-full bg-white text-on-surface pl-10 pr-3 py-2 rounded-lg font-body-md text-body-md font-mono focus:bg-surface-container-low outline-none transition-colors shadow-[0_0_0_1px_#cbd5e1] focus:shadow-[0_0_0_2px_#0f3876]" placeholder="101298456721" type="text" value="101488291033"/>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Providing valid EPFO UAN speeds up state verification from 14 days to real-time e-sign audit without physical field inspection.
+            </p>
+</div>
+</div>
+<!-- Evidence Attachment Box -->
+<div class="flex flex-col gap-space-xs mt-space-sm">
+<label class="font-label-md text-label-md text-on-surface flex items-center justify-between">
+<span>Supporting Outcome Verification Document <span class="text-error">*</span></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Accepts PDF, JPG, PNG (Max 5MB)</span>
+</label>
+<div class="flex flex-col items-center justify-center p-space-lg rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors cursor-pointer text-center relative group">
+<div class="w-12 h-12 rounded-full bg-white flex items-center justify-center text-primary shadow-sm mb-space-xs group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-2xl">cloud_upload</span>
+</div>
+<span class="font-label-lg text-label-lg text-primary">Click to browse or drag and drop verification files</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-1">Upload Latest Salary Slip (Dec 2024), Signed Appointment Letter, or Official Corporate ID Card</span>
+<!-- Staged File Pill Preview -->
+<div class="mt-space-md bg-white px-space-md py-space-xs rounded-lg shadow-sm flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-error">picture_as_pdf</span>
+<div class="flex flex-col text-left">
+<span class="font-label-md text-label-md text-on-surface font-mono">Mahindra_SalarySlip_Dec2024_RahulJadhav.pdf</span>
+<span class="font-label-sm text-label-sm text-outline">1.4 MB • SHA-256 Checksum Verified</span>
+</div>
+<span class="material-symbols-outlined text-on-tertiary-container text-lg">check_circle</span>
+<button class="text-outline hover:text-error ml-space-xs p-1" title="Remove file" type="button">
+<span class="material-symbols-outlined text-sm">close</span>
+</button>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Uploaded documents are archived directly to State Skill Mission Encrypted Vault for CAG statutory audit.</span>
+</div>
+</div>
+<!-- FORM CONTAINER: BRANCH 2 - SELF EMPLOYED (HIDDEN BY DEFAULT) -->
+<div class="hidden bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex-col gap-space-md" id="panel-self">
+<div class="flex items-center gap-space-xs pb-space-sm bg-surface-container-low -mx-space-lg -mt-space-lg px-space-lg pt-space-md rounded-t-xl">
+<span class="material-symbols-outlined text-primary">storefront</span>
+<h2 class="font-headline-sm text-headline-sm text-primary">Enterprise &amp; Self-Employment Telemetry</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md pt-space-xs">
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface">Enterprise / Enterprise Trade Name <span class="text-error">*</span></label>
+<input class="w-full bg-white text-on-surface px-3 py-2 rounded-lg font-body-md text-body-md shadow-[0_0_0_1px_#cbd5e1] outline-none" placeholder="e.g. Jadhav Solar Solutions &amp; Electricals" type="text"/>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface">Udyam Registration / Shop Act License No. <span class="text-error">*</span></label>
+<input class="w-full bg-white text-on-surface px-3 py-2 rounded-lg font-body-md text-body-md font-mono shadow-[0_0_0_1px_#cbd5e1] outline-none" placeholder="UDYAM-MH-26-0038912" type="text"/>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface">Estimated Monthly Net Revenue / Income (₹) <span class="text-error">*</span></label>
+<input class="w-full bg-white text-on-surface px-3 py-2 rounded-lg font-body-md text-body-md shadow-[0_0_0_1px_#cbd5e1] outline-none" placeholder="₹25,000 - ₹35,000" type="text"/>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface">Number of Workers / Helpers Employed</label>
+<input class="w-full bg-white text-on-surface px-3 py-2 rounded-lg font-body-md text-body-md shadow-[0_0_0_1px_#cbd5e1] outline-none" min="0" placeholder="e.g. 2" type="number"/>
+</div>
+</div>
+</div>
+<!-- FORM CONTAINER: BRANCH 3 - APPRENTICESHIP (HIDDEN BY DEFAULT) -->
+<div class="hidden bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex-col gap-space-md" id="panel-apprenticeship">
+<div class="flex items-center gap-space-xs pb-space-sm bg-surface-container-low -mx-space-lg -mt-space-lg px-space-lg pt-space-md rounded-t-xl">
+<span class="material-symbols-outlined text-primary">school</span>
+<h2 class="font-headline-sm text-headline-sm text-primary">NAPS / NATS Apprenticeship Contract</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md pt-space-xs">
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface">Host Establishment / PSU Name <span class="text-error">*</span></label>
+<input class="w-full bg-white text-on-surface px-3 py-2 rounded-lg font-body-md text-body-md shadow-[0_0_0_1px_#cbd5e1] outline-none" placeholder="e.g. Bharat Electronics Ltd. (BEL)" type="text"/>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface">Apprenticeship Contract Registration No. <span class="text-error">*</span></label>
+<input class="w-full bg-white text-on-surface px-3 py-2 rounded-lg font-body-md text-body-md font-mono shadow-[0_0_0_1px_#cbd5e1] outline-none" placeholder="CN-2024-NAPS-009124" type="text"/>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface">Monthly Stipend Paid (₹) <span class="text-error">*</span></label>
+<input class="w-full bg-white text-on-surface px-3 py-2 rounded-lg font-body-md text-body-md shadow-[0_0_0_1px_#cbd5e1] outline-none" placeholder="₹14,500" type="text"/>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface">Contract Term Duration</label>
+<select class="w-full bg-white text-on-surface px-3 py-2 rounded-lg font-body-md text-body-md shadow-[0_0_0_1px_#cbd5e1] outline-none">
+<option>12 Months (Standard NAPS)</option>
+<option>24 Months</option>
+<option>6 Months (Dual System of Training)</option>
+</select>
+</div>
+</div>
+</div>
+<!-- FORM CONTAINER: BRANCH 4 - STILL SEARCHING / UNEMPLOYED (HIDDEN BY DEFAULT) -->
+<div class="hidden bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex-col gap-space-md" id="panel-unemployed">
+<div class="flex items-center gap-space-xs pb-space-sm bg-surface-container-low -mx-space-lg -mt-space-lg px-space-lg pt-space-md rounded-t-xl">
+<span class="material-symbols-outlined text-secondary">person_search</span>
+<h2 class="font-headline-sm text-headline-sm text-primary">Unemployment Support &amp; Placement Escalation</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md pt-space-xs">
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface">Primary Impediment / Reason <span class="text-error">*</span></label>
+<select class="w-full bg-white text-on-surface px-3 py-2 rounded-lg font-body-md text-body-md shadow-[0_0_0_1px_#cbd5e1] outline-none">
+<option>Skill / Technical Mismatch with local market demand</option>
+<option>Location constraints (Cannot migrate outside home district)</option>
+<option>Wage expectation not offered by prospective employers</option>
+<option>Pursuing Higher Education / State Competitive Exams (MPSC)</option>
+<option>Family caregiving or Health medical issues</option>
+<option>Other personal circumstance</option>
+</select>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface">Assistance Requested from MSSDS</label>
+<select class="w-full bg-white text-on-surface px-3 py-2 rounded-lg font-body-md text-body-md shadow-[0_0_0_1px_#cbd5e1] outline-none">
+<option>Job Fair (Rojgar Melawa) invitation in Pune division</option>
+<option>Bridge Up-skilling Module (Next Batch)</option>
+<option>Direct Interview Referral</option>
+<option>MahaSwayam Portal Counselor Call</option>
+</select>
+</div>
+<div class="md:col-span-2 flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface">Candidate Narrative &amp; Current Activity Details</label>
+<textarea class="w-full bg-white text-on-surface p-3 rounded-lg font-body-md text-body-md shadow-[0_0_0_1px_#cbd5e1] outline-none" placeholder="Provide context regarding current interview status, interviews attended, or technical skill hurdles..." rows="3"></textarea>
+</div>
+</div>
+</div>
+<!-- Statutory Declaration Card -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col gap-space-sm">
+<label class="flex items-start gap-space-sm cursor-pointer select-none">
+<input checked="" class="mt-1 w-4 h-4 text-primary rounded accent-primary cursor-pointer" id="declaration-check" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface">
+<strong>Statutory Legal Declaration:</strong> I hereby solemnly affirm and declare that the employment milestone data and supporting documents furnished above are true, complete, and authentic. I acknowledge that misrepresentation of outcome records violates Section 24 of MSSDS Policy and will cause cancellation of government certification and benefits.
+          </span>
+</label>
+<span class="font-label-sm text-label-sm text-on-surface-variant pl-7">मी याद्वारे घोषित करतो की वरील सर्व दिलेली माहिती सत्य आणि अचूक आहे.</span>
+</div>
+<!-- Form Actions Bar -->
+<div class="flex flex-col sm:flex-row items-center justify-between gap-space-sm pt-space-xs">
+<a class="w-full sm:w-auto inline-flex items-center justify-center gap-space-xs px-space-md py-space-sm rounded bg-surface-container text-on-surface font-label-md text-label-md hover:bg-surface-container-high transition-colors" href="#">
+<span class="material-symbols-outlined text-lg">arrow_back</span>
+          Cancel / Return to Dashboard
+        </a>
+<div class="flex items-center gap-space-sm w-full sm:w-auto">
+<button class="w-full sm:w-auto inline-flex items-center justify-center gap-space-xs px-space-md py-space-sm rounded bg-surface-container-low text-primary font-label-md text-label-md hover:bg-surface-container transition-colors" type="button">
+<span class="material-symbols-outlined text-lg">save</span>
+            Save as Draft
+          </button>
+<button class="w-full sm:w-auto inline-flex items-center justify-center gap-space-xs px-space-lg py-space-sm rounded bg-primary text-on-primary font-label-md text-label-md hover:bg-primary-container shadow-md transition-all" id="submit-btn" onclick="handleSubmit()" type="button">
+<span class="material-symbols-outlined text-lg">check_circle</span>
+<span>Save &amp; Submit Outcome Report</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Right Sidebar Column: Timeline, Trainee Profile & Analytics (4 Cols) -->
+<div class="lg:col-span-4 flex flex-col gap-space-lg">
+<!-- Wage & Outcome Progression History Card -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-xl">trending_up</span>
+<h3 class="font-label-lg text-label-lg text-primary">Outcome Progression Trail</h3>
+</div>
+<span class="px-2 py-0.5 rounded-full font-label-sm text-label-sm bg-surface-container-high text-primary font-bold">2 Records</span>
+</div>
+<!-- Inline SVG Wage Graph Mini-Viz -->
+<div class="p-space-sm bg-surface-container-low rounded-xl flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold uppercase tracking-wider">Salary Growth Curve</span>
+<span class="font-label-sm text-label-sm text-on-tertiary-container font-bold">+12.5% Growth</span>
+</div>
+<div class="w-full h-24 flex items-end">
+<!-- Inline SVG Sparkline / Bar Graph -->
+<svg class="w-full h-full text-primary" fill="none" preserveaspectratio="none" viewbox="0 0 280 80">
+<!-- Grid lines -->
+<line stroke="#cbd5e1" stroke-dasharray="3 3" stroke-width="0.75" x1="0" x2="280" y1="20" y2="20"></line>
+<line stroke="#cbd5e1" stroke-dasharray="3 3" stroke-width="0.75" x1="0" x2="280" y1="50" y2="50"></line>
+<!-- Gradient Area -->
+<defs>
+<lineargradient id="wageGrad" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#0f3876" stop-opacity="0.25"></stop>
+<stop offset="100%" stop-color="#0f3876" stop-opacity="0.0"></stop>
+</lineargradient>
+</defs>
+<path d="M 20 60 L 100 45 L 240 18 L 240 80 L 20 80 Z" fill="url(#wageGrad)"></path>
+<polyline fill="none" points="20,60 100,45 240,18" stroke="#0f3876" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></polyline>
+<!-- Milestone Point 1 (Training Baseline) -->
+<circle cx="20" cy="60" fill="#ffffff" r="4" stroke="#747781" stroke-width="2"></circle>
+<!-- Milestone Point 2 (3-Month) -->
+<circle cx="100" cy="45" fill="#ffffff" r="4" stroke="#0f3876" stroke-width="2"></circle>
+<!-- Milestone Point 3 (6-Month Current) -->
+<circle cx="240" cy="18" fill="#fd651e" r="5" stroke="#ffffff" stroke-width="2"></circle>
+<!-- Text labels inside SVG -->
+<text fill="#434750" font-family="Noto Sans" font-size="8" x="10" y="75">0-Mo (₹0)</text>
+<text fill="#002353" font-family="Noto Sans" font-size="8" font-weight="bold" x="80" y="40">3-Mo (₹20k)</text>
+<text fill="#a73a00" font-family="Noto Sans" font-size="9" font-weight="bold" x="200" y="14">Current (₹22.5k)</text>
+</svg>
+</div>
+</div>
+<!-- Stepper Timeline -->
+<div class="flex flex-col gap-space-md relative pl-6 before:content-[''] before:absolute before:left-2.5 before:top-2 before:bottom-2 before:w-0.5 before:bg-surface-container-high">
+<!-- Milestone: Current Entry (In Draft / Submitting) -->
+<div class="relative flex flex-col gap-1">
+<span class="absolute -left-6 top-1 w-5 h-5 rounded-full bg-secondary-container text-white flex items-center justify-center text-xs font-bold ring-4 ring-white">
+              6
+            </span>
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-bold">6-Month Milestone (Current)</span>
+<span class="px-1.5 py-0.5 rounded font-label-sm text-label-sm bg-secondary-fixed text-on-secondary-fixed font-semibold">Active Window</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface">Target: ₹22,500/month • Mahindra Susten Solar</span>
+<span class="font-label-sm text-label-sm text-outline font-mono">Status: Awaiting Final e-Submission</span>
+</div>
+<!-- Milestone: 3-Month Historic Record -->
+<div class="relative flex flex-col gap-1">
+<span class="absolute -left-6 top-1 w-5 h-5 rounded-full bg-tertiary-container text-white flex items-center justify-center text-xs font-bold ring-4 ring-white">
+<span class="material-symbols-outlined text-xs">check</span>
+</span>
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-bold">3-Month Milestone</span>
+<span class="px-1.5 py-0.5 rounded font-label-sm text-label-sm bg-tertiary-fixed text-on-tertiary-fixed font-semibold">Verified</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface">Recorded: ₹20,000/month • Junior Technician</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">Date: 28 Aug 2024 • Audit ID: #AUD-88219</span>
+<div class="mt-1 flex items-center gap-1 text-primary hover:underline cursor-pointer font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-sm">attachment</span>
+<span>View SalarySlip_Aug2024.pdf</span>
+</div>
+</div>
+<!-- Milestone: Training Completion -->
+<div class="relative flex flex-col gap-1 opacity-80">
+<span class="absolute -left-6 top-1 w-5 h-5 rounded-full bg-surface-container-high text-primary flex items-center justify-center text-xs font-bold ring-4 ring-white">
+<span class="material-symbols-outlined text-xs">school</span>
+</span>
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface">Course Certification</span>
+<span class="font-label-sm text-label-sm text-outline">25 May 2024</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Solar PV System Installer (NSQF Level 4)</span>
+<span class="font-label-sm text-label-sm text-outline">MSSDS Govt ITI Center, Aundh, Pune</span>
+</div>
+</div>
+</div>
+<!-- Training & Qualification Baseline Details -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col gap-space-sm">
+<h3 class="font-label-lg text-label-lg text-primary flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-lg">fact_check</span>
+          Course Baseline Dossier
+        </h3>
+<div class="flex flex-col gap-space-xs text-on-surface">
+<div class="flex justify-between py-1 bg-surface-container-low px-2 rounded">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Candidate Mobile:</span>
+<span class="font-label-sm text-label-sm font-semibold">+91 98230 •••••</span>
+</div>
+<div class="flex justify-between py-1 px-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Aadhaar (Vault):</span>
+<span class="font-label-sm text-label-sm font-mono font-semibold">•••• •••• 4092</span>
+</div>
+<div class="flex justify-between py-1 bg-surface-container-low px-2 rounded">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Training Partner (TP):</span>
+<span class="font-label-sm text-label-sm font-semibold">Maha-Renewable Skills Academy</span>
+</div>
+<div class="flex justify-between py-1 px-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant">District Employment Office:</span>
+<span class="font-label-sm text-label-sm font-semibold">DEEC Pune Division</span>
+</div>
+<div class="flex justify-between py-1 bg-surface-container-low px-2 rounded">
+<span class="font-label-sm text-label-sm text-on-surface-variant">DBTL Subsidy Released:</span>
+<span class="font-label-sm text-label-sm text-on-tertiary-container font-bold">₹8,000 (Tranche 1 &amp; 2)</span>
+</div>
+</div>
+<div class="mt-space-xs p-space-xs rounded bg-surface-container text-on-surface-variant flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-primary text-base mt-0.5">info</span>
+<p class="font-body-sm text-body-sm">
+            Trainee outcome status is cross-validated with employer TDS / EPFO filings at the end of each fiscal quarter.
+          </p>
+</div>
+</div>
+<!-- Field Verifier / District Officer Dispatch Note -->
+<div class="bg-surface-container-high/60 p-space-md rounded-xl flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-lg">support_agent</span>
+<span class="font-label-md text-label-md text-primary font-bold">Assigned Field Inspector</span>
+</div>
+<div class="flex items-center gap-space-sm mt-1">
+<img class="w-10 h-10 rounded-full object-cover shadow-sm" data-alt="Portrait photo of an Indian government officer in formal attire, clear lighting, administrative office backdrop" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVpypPu9QM0r22h8jUTwoL3j9QHcPDCQmUXoYehXSId8r3PtELH5nBEjSQUSGRAwGuWB_RTk6GP0pEpj5jNCq8y0E_6uuj1uKwE6S8QvgGzy_flCnYiX8atKG2q1_vBJxax2UpfH67I1SVI2AB3yXDRugtiXqUw0RRs0Ic1gmO7xE2Z2BX_LEFEc3LiuIV1xgQ23kH5TDCpguLMvH4bMJQIGMZk6ckfFrk8bYC04nWRzIdssr6ktWa"/>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Sunil D. Kulkarni</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Skill Development Officer, Pune MIDC Sector</span>
+</div>
+</div>
+<div class="mt-space-xs flex items-center justify-between text-on-surface-variant pt-space-xs">
+<span class="font-label-sm text-label-sm">Desk Verification ETA: 3 Days</span>
+<button class="font-label-sm text-label-sm text-primary font-semibold hover:underline" type="button">
+            Request Callback
+          </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Notification Toast Modal Container (Dynamic JS) -->
+<div class="fixed bottom-6 right-6 max-w-md bg-primary text-on-primary p-space-md rounded-xl shadow-xl transform translate-y-32 opacity-0 transition-all duration-300 z-50 flex items-start gap-space-sm" id="toast-success">
+<span class="material-symbols-outlined text-on-tertiary-container text-2xl">check_circle</span>
+<div class="flex flex-col flex-1">
+<span class="font-label-lg text-label-lg font-bold">6-Month Outcome Submitted Successfully!</span>
+<span class="font-body-sm text-body-sm opacity-90">Reference ID: MK-AUD-2025-09823. Digital receipt and SMS confirmation dispatched to candidate.</span>
+</div>
+<button class="text-white/80 hover:text-white p-1" onclick="hideToast()">
+<span class="material-symbols-outlined text-sm">close</span>
+</button>
+</div>
+</div>
+<!-- Interactive Client-side Script for Tab Branching and Form UX -->
+<script>
+  function switchBranch(branchId) {
+    const branches = ['employed', 'self', 'apprenticeship', 'unemployed'];
+    
+    // Update tab button styles
+    branches.forEach(b => {
+      const btn = document.getElementById('btn-branch-' + b);
+      const icon = btn.querySelector('.material-symbols-outlined:last-child');
+      
+      if (b === branchId) {
+        btn.className = 'flex flex-col items-start p-space-md rounded-xl text-left transition-all duration-200 bg-primary-container text-on-primary shadow-sm ring-2 ring-secondary-container';
+        if (icon) {
+          icon.textContent = 'check_circle';
+          icon.className = 'material-symbols-outlined text-base';
+        }
+      } else {
+        btn.className = 'flex flex-col items-start p-space-md rounded-xl text-left transition-all duration-200 bg-surface-container-low text-on-surface hover:bg-surface-container';
+        if (icon) {
+          icon.textContent = 'radio_button_unchecked';
+          icon.className = 'material-symbols-outlined text-base text-outline-variant';
+        }
+      }
+
+      // Toggle Panels
+      const panel = document.getElementById('panel-' + b);
+      if (panel) {
+        if (b === branchId) {
+          panel.classList.remove('hidden');
+          panel.classList.add('flex');
+        } else {
+          panel.classList.add('hidden');
+          panel.classList.remove('flex');
+        }
+      }
+    });
+  }
+
+  function handleSubmit() {
+    const decCheck = document.getElementById('declaration-check');
+    if (!decCheck.checked) {
+      alert('Please accept the statutory legal declaration before submitting.');
+      return;
+    }
+    
+    const submitBtn = document.getElementById('submit-btn');
+    submitBtn.innerHTML = '<span class="material-symbols-outlined text-lg animate-spin">progress_activity</span> <span>Submitting to Ledger...</span>';
+    submitBtn.disabled = true;
+
+    setTimeout(() => {
+      submitBtn.innerHTML = '<span class="material-symbols-outlined text-lg">verified</span> <span>Record Verified & Submitted</span>';
+      submitBtn.classList.remove('bg-primary');
+      submitBtn.classList.add('bg-tertiary-container', 'text-white');
+      
+      // Show Toast
+      const toast = document.getElementById('toast-success');
+      toast.classList.remove('translate-y-32', 'opacity-0');
+      toast.classList.add('translate-y-0', 'opacity-100');
+    }, 900);
+  }
+
+  function hideToast() {
+    const toast = document.getElementById('toast-success');
+    toast.classList.add('translate-y-32', 'opacity-0');
+    toast.classList.remove('translate-y-0', 'opacity-100');
+  }
+</script></main></div></body></html>
