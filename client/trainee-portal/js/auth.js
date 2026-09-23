@@ -1,5 +1,5 @@
 import { loginAndPersist, registerAndPersist } from './api.js';
-import { isLoggedIn } from '../../shared/auth.js';
+import { isLoggedIn, hasOfficerRole } from '../../shared/auth.js';
 import { hideBanner, setButtonLoading, showApiError, showBanner, wireInternalLinks } from './ui.js';
 
 async function handleLogin(event) {
@@ -101,26 +101,62 @@ async function handleRegister(event) {
       return;
     }
 
+    // Trainee flow: registration must lead back into the authentication flow.
+    // The token minted at register time is discarded so the trainee proves the
+    // credentials they just created on the Login Page.
+    window.MahaAuth?.clearToken?.();
+
     const ttid = res.data?.prn || res.data?.traineeId || res.data?.id || '—';
     const display = document.getElementById('displayTTID');
     if (display && ttid) display.textContent = ttid;
     const modal = document.getElementById('successModal');
     if (modal) modal.classList.remove('hidden');
-    window.setTimeout(() => {
-      window.location.href = 'trainee_dashboard.html';
-    }, 1200);
   } catch (err) {
     setButtonLoading(btn, false);
     showApiError(err);
   }
 }
 
+/**
+ * Success-modal wiring for the register page.
+ * The modal's primary action now continues into the Login Page (the required
+ * trainee flow: Register → Login → Dashboard), and a secondary action returns
+ * to the registration form.
+ */
+function wireRegistrationSuccessModal() {
+  const modal = document.getElementById('successModal');
+  if (!modal) return;
+
+  modal.querySelectorAll('[data-path="trainee-dashboard"]').forEach((el) => {
+    el.removeAttribute('data-path');
+    el.setAttribute('href', 'trainee_login.html');
+    el.textContent = 'Continue to Login / लॉगिन करा';
+  });
+
+  if (!modal.querySelector('[data-auth-back]')) {
+    const back = document.createElement('button');
+    back.type = 'button';
+    back.setAttribute('data-auth-back', '');
+    back.className =
+      'w-full py-2.5 rounded-lg bg-surface-container-high text-primary text-center font-label-md text-label-md hover:bg-surface-container-highest transition-colors';
+    back.textContent = 'Back to Registration';
+    back.addEventListener('click', () => modal.classList.add('hidden'));
+    const actionsRow = modal.querySelector('div.flex.gap-space-sm.mt-space-sm') || modal;
+    actionsRow.classList.add('flex-col');
+    actionsRow.appendChild(back);
+  }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   wireInternalLinks();
+  wireRegistrationSuccessModal();
 
-  // Already logged in? Go straight to the dashboard.
-  if (isLoggedIn() && document.getElementById('passwordLoginForm')) {
-    window.location.href = 'trainee_dashboard.html';
+  // A trainee who is already signed in and opens the Login Page goes straight
+  // to their dashboard. Officer accounts are ignored here — they must use the
+  // Admin Portal.
+  const onLoginPage = /trainee_login\.html$/i.test(window.location.pathname);
+  if (onLoginPage && isLoggedIn() && !hasOfficerRole()) {
+    window.location.replace('trainee_dashboard.html');
     return;
   }
 
@@ -136,11 +172,10 @@ document.addEventListener('DOMContentLoaded', () => {
     registerForm.addEventListener('submit', handleRegister);
   }
 
-  const candidateBtn = Array.from(document.querySelectorAll('button')).find((b) =>
-    /Candidate Registration/i.test(b.textContent || '')
-  );
-  if (candidateBtn) {
-    candidateBtn.addEventListener('click', () => {
+  // "I don't have an account" strip on the Login Page -> Register Page.
+  const registerStripBtn = document.querySelector('#register-strip button[type="button"]');
+  if (registerStripBtn) {
+    registerStripBtn.addEventListener('click', () => {
       window.location.href = 'trainee_registration.html';
     });
   }

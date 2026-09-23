@@ -147,18 +147,18 @@
 <div class="h-0.5 flex-1 bg-surface-container"></div>
 </div>
 <!-- Registration Notice Action Strip -->
-<div class="bg-surface-container-low p-space-md rounded-xl flex flex-col sm:flex-row items-center justify-between gap-space-md">
+<div class="bg-surface-container-low p-space-md rounded-xl flex flex-col sm:flex-row items-center justify-between gap-space-md" id="register-strip">
 <div class="flex items-center gap-space-sm text-left">
 <div class="p-space-xs bg-secondary/10 rounded-lg text-secondary">
 <span class="material-symbols-outlined text-headline-sm">how_to_reg</span>
 </div>
 <div>
-<p class="font-label-lg text-label-lg text-on-surface">New candidate to MahaKaushal?</p>
-<p class="font-body-sm text-body-sm text-on-surface-variant">Register now to activate your state tracking and verification profile.</p>
+<p class="font-label-lg text-label-lg text-on-surface">I don't have an account</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">माझे खाते नाही — Create your MahaKaushal trainee profile and activate state tracking and verification.</p>
 </div>
 </div>
-<button class="w-full sm:w-auto px-space-md py-2 bg-surface-container-highest hover:bg-surface-container-high text-primary font-label-lg text-label-lg rounded-lg transition-colors whitespace-nowrap text-center" onclick="window.location.href='trainee_registration.html'" type="button">
-            Candidate Registration
+<button class="w-full sm:w-auto px-space-md py-2 bg-surface-container-highest hover:bg-surface-container-high text-primary font-label-lg text-label-lg rounded-lg transition-colors whitespace-nowrap text-center" type="button">
+            Register as Trainee
           </button>
 </div>
 <!-- 256-bit SDC Security Seal -->
@@ -354,10 +354,4 @@
 </div>
 </div>
 </div>
-<script>
-  // Unified entry point: all sign-ins happen at /client/unified_login.html.
-  // This page remains only as a redirector for old bookmarks/links.
-  window.location.replace(
-    new URL('../unified_login.html', window.location.href).href
-  );
-</script></body></html>
+<script>window.MAHAKAUSHALYA_PORTAL = 'trainee';</script><script type="module" src="../../shared/auth.js"></script><script type="module" src="./js/login-ui.js"></script><script type="module" src="./js/auth.js"></script></body></html>
